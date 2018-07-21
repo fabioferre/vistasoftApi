@@ -1,0 +1,81 @@
+/* ====================== definições globais ======================= */
+
+body{
+	font-family: 'Montserrat', sans-serif;;
+	background: #f2ecdd;
+	overflow-x: hidden;
+	text-transform: uppercase;
+}
+h2{
+	color: #d68b5c;
+	font-size: 24px;
+}
+
+h3{
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #9c8590;
+}
+
+i{
+	color: #7f8685;
+	font-size: 16px;
+}
+
+.hide{
+	display: none;
+}
+
+.bg-default{
+	background: #f8f5ec;
+}
+
+/* ========================Portfolio ============================= */
+.navbar-brand img{
+	width: 233px; 
+	margin-left:34px;
+}
+
+.dropdown-menu{
+	width: 250px;
+}
+
+.dropdown-item1:hover{
+	color: 	rgba(153, 102, 51,0.5);
+	background: none;
+}
+
+.dropdown-item2:hover,.select2-results__options > li{
+	background: #e6fff2;
+}
+
+.painel{
+	background: #f8f5ec;
+}
+/* ======================= tipografia============================= */
+
+.navbar-light .navbar-nav .nav-link{
+	color: #db9970;
+	font-size: 14px;
+	letter-spacing: 0.1px;
+	line-height: 85px;
+	padding: 0 15px;
+}
+
+#navSuperior a{
+	color: #9b9b9b;
+	vertical-align: middle;
+	font-weight: 400;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.dropdown-item1{
+ 	color: #996633;
+}
+
+.dropdown-menuOrder{
+	font-size: 15px;
+	color: grey;
+}

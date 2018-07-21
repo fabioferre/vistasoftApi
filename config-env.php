@@ -2,4 +2,4 @@
 
 DEFINE("Nome","Projeto");
 DEFINE("Rev","0.0");
-DEFINE("pasta", "terralima");
+DEFINE("pasta", "vistasoftApi");
