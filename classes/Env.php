@@ -8,8 +8,10 @@ class Env
     private $result;
     private $key;
     private $http;
+    protected $showtotal;
     protected $dados;
     protected $curl;
+
 
     private function conn(){
         //monta a url para a curl
@@ -19,6 +21,11 @@ class Env
         //verificar se possui pesquisa
         if(isset($this->dados)){
             $this->url        .=  '&pesquisa=' . json_encode($this->dados);
+
+        }
+
+        if(isset($this->showtotal)){
+            $this->url        .=  '&showtotal=' . json_encode($this->showtotal);
 
         }
         //inicia a conexao
@@ -49,11 +56,25 @@ class Env
         $this->dados['filter'] = $array;
         return $this;
     }
-     //filtros 
-    public function filter($array){
-        $this->dados['filter'] = $array;
+
+    //advFilter 
+    public function advFilter($array){
+        $this->dados['advFilter'] = $array;
         return $this;
     }
+
+    //order
+    public function order($array){
+        $this->dados['order'] = $array;
+        return $this;
+    }
+
+    //paginacao
+    public function paginacao($array){
+        $this->dados['paginacao'] = $array;
+        return $this;
+    }
+
 
     function __construct() 
     { 

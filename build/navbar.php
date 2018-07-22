@@ -52,7 +52,7 @@
      <div class="container">
         <!--start mobile nav-->
         <div class="mobile-nav">
-           <span class="nav-trigger"><i class="fa fa-navicon"></i></span>
+           <span class="nav-trigger"><i class="fa fa-bars"></i></span>
            <div class="nav-dropdown main-nav-dropdown">
               <ul id="main-nav" class="">
                  <li id="menu-item-635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-635"><a href="http://novoterralima.com/empresa/">Sobre Nós</a></li>

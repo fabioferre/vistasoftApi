@@ -252,17 +252,25 @@
                      <!--end property items-->
                      <hr>
                      <!--start Pagination-->
-                     <div class="pagination-main ">
+                     <form class="pagination-main" method="post">
+                        <input type="num" name="pag" id="pag" hidden>
                         <ul class="pagination">
-                           <li class="disabled"><a aria-label="Previous"><span aria-hidden="true"><i class="fa fa-angle-left"></i></span></a></li>
-                           <li class="active"><a data-houzepagi="1" href="http://novoterralima.com/status/venda-e-locacao/">1 <span class="sr-only"></span></a></li>
-                           <li><a data-houzepagi="2" href="#">2</a></li>
-                           <li><a data-houzepagi="3" href="#">3</a></li>
-                           <li><a data-houzepagi="4" href="#">4</a></li>
-                           <li><a data-houzepagi="5" href="#">5</a></li>
-                           <li><a data-houzepagi="2" rel="Next" href="http://novoterralima.com/status/venda-e-locacao/page/2/"><span aria-hidden="true"><i class="fa fa-angle-right"></i></span></a></li>
+                        <?php if ($listagem['pagina'] >= 3) { ?>
+                           <li hidden><a class="btnPag"  data-pag="<?=$listagem['pagina']-3?>" aria-label="Previous"><span aria-hidden="true"><i class="fa fa-angle-left"></i></span></a></li>
+                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']-2?>" href=""><?=$listagem['pagina']-2?><span class="sr-only"></span></a></li>
+                        <?php } if ($listagem['pagina'] >= 2) { ?>
+                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']-1?>" href=""><?=$listagem['pagina']-1?><span class="sr-only"></span></a></li>
+                        <?php } ?>
+
+                           <li class="active"><a class="btnPag" data-pag="<?=$listagem['pagina']?>" href=""><?=$listagem['pagina']?><span class="sr-only"></span></a></li>
+                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']+1?>" href=""><?=$listagem['pagina']+1?><span class="sr-only"></span></a></li>
+
+                        <?php if ($listagem['pagina'] <= $listagem['paginas'] - 3) { ?>
+                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']+2?>" href=""><?=$listagem['pagina']+2?><span class="sr-only"></span></a></li>
+                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']+3?>" rel="Next" pag="<?=$listagem['pagina']-5?>"><span aria-hidden="true"><i class="fa fa-angle-right"></i></span></a></li>
+                        <?php } ?>
                         </ul>
-                     </div>
+                     </form>
                      <!--start Pagination-->
                   </div>
                </div>
@@ -411,7 +419,11 @@
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/wp-embed.min.js?ver=4.9.7"></script>
       <script>
          jQuery(document).ready(function() {
-           
+           jQuery('.btnPag').click(function(){
+               var valpag = jQuery(this).data('pag');
+               jQuery('#pag').val(valpag);
+               jQuery('.pagination-main').submit();
+           });
          });
       </script>
    </body>
