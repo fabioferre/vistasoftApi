@@ -53,8 +53,9 @@
     <style id="rs-plugin-settings-inline-css" type="text/css">
         #rs-demo-id {}
     </style>
-    <link rel="stylesheet" id="bootstrap.min-css" href="http://novoterralima.com/wp-content/themes/houzez/css/bootstrap.min.css?ver=3.3.5" type="text/css" media="all">
-    <link rel="stylesheet" id="font-awesome.min-css" href="http://novoterralima.com/wp-content/themes/houzez/css/font-awesome.min.css?ver=4.7.0" type="text/css" media="all">
+    <link rel="stylesheet" id="bootstrap.min-css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"  type="text/css" media="all">
+    <link rel="stylesheet" id="font-awesome.min-css" href="path/to/font-awesome/css/font-awesome.min.css">
+
     <link rel="stylesheet" id="houzez-all-css" href="http://novoterralima.com/wp-content/themes/houzez/css/all.min.css?ver=1.5.7" type="text/css" media="all">
     <link rel="stylesheet" id="houzez-main-css" href="http://novoterralima.com/wp-content/themes/houzez/css/main.css?ver=1.5.7" type="text/css" media="all">
     <link rel="stylesheet" id="houzez-style-css" href="http://novoterralima.com/wp-content/themes/houzez/style.css?ver=1.5.7" type="text/css" media="all">

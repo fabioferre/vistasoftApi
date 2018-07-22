@@ -15,17 +15,6 @@
                         <option value="PT">Portugal</option>
                         <option value="US">Estados Unidos</option>
                      </select>
-                     <div class="btn-group bootstrap-select">
-                        <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Todos os países"><span class="filter-option pull-left">Todos os países</span>&nbsp;<span class="fa fa-sort"></span></button>
-                        <div class="dropdown-menu open">
-                           <ul class="dropdown-menu inner" role="menu">
-                              <li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Todos os países</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Brasil</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Portugal</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Estados Unidos</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                           </ul>
-                        </div>
-                     </div>
                   </div>
                </div>
                <div class="col-sm-12 col-xs-12">
@@ -42,23 +31,6 @@
                         <option value="retrofitados"> Retrofitados</option>
                         <option value="vista"> Vista</option>
                      </select>
-                     <div class="btn-group bootstrap-select">
-                        <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Destaques"><span class="filter-option pull-left">Destaques</span>&nbsp;<span class="fa fa-sort"></span></button>
-                        <div class="dropdown-menu open">
-                           <ul class="dropdown-menu inner" role="menu">
-                              <li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Destaques</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Arquitetura Assinada</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Baixou o valor</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Lançamentos</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Novidades</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Oportunidades</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="6"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Premium</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="7"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Reforma Total</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="8"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Retrofitados</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="9"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Vista</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                           </ul>
-                        </div>
-                     </div>
                   </div>
                </div>
                <div class="col-sm-12 col-xs-12">
@@ -78,26 +50,6 @@
                         <option value="terreno-na-praia"> Terreno na Praia</option>
                         <option value="triplex"> Triplex</option>
                      </select>
-                     <div class="btn-group bootstrap-select">
-                        <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Tipos de Imóveis"><span class="filter-option pull-left">Tipos de Imóveis</span>&nbsp;<span class="fa fa-sort"></span></button>
-                        <div class="dropdown-menu open">
-                           <ul class="dropdown-menu inner" role="menu">
-                              <li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Tipos de Imóveis</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Apartamento</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Casa</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Casa na Praia</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Casa no Campo</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Cobertura</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="6"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Conjunto</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="7"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Duplex</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="8"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Fazenda</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="9"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Loft</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="10"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Terreno</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="11"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Terreno na Praia</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="12"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Triplex</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                           </ul>
-                        </div>
-                     </div>
                   </div>
                </div>
                <div class="col-sm-12 col-xs-12">
@@ -108,21 +60,11 @@
                         <option value="venda"> Venda</option>
                         <option value="venda-e-locacao"> Venda / Locação</option>
                      </select>
-                     <div class="btn-group bootstrap-select">
-                        <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-id="widget_status" title="Status do Imóvel"><span class="filter-option pull-left">Status do Imóvel</span>&nbsp;<span class="fa fa-sort"></span></button>
-                        <div class="dropdown-menu open">
-                           <ul class="dropdown-menu inner" role="menu">
-                              <li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Status do Imóvel</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Locação</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Venda</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                              <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text"> Venda / Locação</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                           </ul>
-                        </div>
-                     </div>
                   </div>
                </div>
             </div>
          </div>
+
          <div class="range-block">
             <h4>Faixa de preço:</h4>
             <div id="slider-price" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
@@ -134,6 +76,7 @@
                <input name="max-price" class="pull-right range-input text-right" id="max-price" readonly="" type="text">
             </div>
          </div>
+
          <div class="range-block">
             <h4>Tamanho da área</h4>
             <div id="slider-size" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
@@ -145,6 +88,7 @@
                <input name="max-area" class="pull-right range-input text-right" id="max-size" readonly="" type="text">
             </div>
          </div>
+
          <div class="row">
             <div class="col-sm-12 col-xs-12">
                <label class="advance-trigger"><i class="fa fa-plus-square"></i> Outras características                                </label>
@@ -156,6 +100,7 @@
                </div>
             </div>
          </div>
+         
          <div class="range-block rang-form-block">
             <div class="row">
                <div class="col-sm-12 col-xs-12">

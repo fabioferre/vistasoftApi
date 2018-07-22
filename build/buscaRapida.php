@@ -4,7 +4,7 @@
    </div>
    <div class="widget-body">
       <ul class="children">
-         <li><a href="http://novoterralima.com/tipo-imovel/apartment/">Apartamento</a><span class="cat-count">(115)</span></li>
+         <li><a href="#">Apartamento</a><span class="cat-count">(115)</span></li>
          <li><a href="http://novoterralima.com/tipo-imovel/casa/">Casa</a><span class="cat-count">(93)</span></li>
          <li><a href="http://novoterralima.com/tipo-imovel/casa-na-praia/">Casa na Praia</a><span class="cat-count">(4)</span></li>
          <li><a href="http://novoterralima.com/tipo-imovel/casa-no-campo/">Casa no Campo</a><span class="cat-count">(4)</span></li>

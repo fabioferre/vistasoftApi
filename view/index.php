@@ -150,19 +150,7 @@
                                  <option value="a_date">Data antiga para nova</option>
                                  <option value="d_date">Data nova para antiga</option>
                               </select>
-                              <div class="btn-group bootstrap-select">
-                                 <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-id="sort_properties" title="Ordem padrão"><span class="filter-option pull-left">Ordem padrão</span>&nbsp;<span class="fa fa-sort"></span></button>
-                                 <div class="dropdown-menu open">
-                                    <ul class="dropdown-menu inner" role="menu">
-                                       <li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Ordem padrão</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                       <li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Preço (baixo para alto)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                       <li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Preço (alto para baixo)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                       <li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Destaque</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                       <li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Data antiga para nova</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                       <li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Data nova para antiga</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    </ul>
-                                 </div>
-                              </div>
+         
                            </div>
                            <div class="table-cell hidden-xs">
                               <span class="view-btn btn-list active"><i class="fa fa-th-list"></i></span>
@@ -379,27 +367,21 @@
       <!--start footer section-->
       <?php
          include'build/footer.php';
-         ?>
+      ?>
       <!--end footer section-->
-      <script type="text/javascript">
-         /* <![CDATA[ */
-         var wpcf7 = {"apiSettings":{"root":"http:\/\/novoterralima.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Verifique se voc\u00ea n\u00e3o \u00e9 um rob\u00f4."}}};
-         /* ]]> */
-      </script>
-      <script type="text/javascript" src="http://novoterralima.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.2"></script>
-      <script type="text/javascript" src="http://novoterralima.com/wp-content/themes/houzez/js/bootstrap.min.js?ver=3.3.5"></script>
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
       <script type="text/javascript">
          /* <![CDATA[ */
          var hz_plugin = {"rating_terrible":"Terrible","rating_poor":"Poor","rating_average":"Average","rating_vgood":"Very Good","rating_exceptional":"Exceptional"};
          /* ]]> */
       </script>
+
       <script type="text/javascript" src="http://novoterralima.com/wp-content/themes/houzez/js/plugins.js?ver=1.5.7"></script>
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4"></script>
-      <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4"></script>
-      <script type="text/javascript">
-         jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Fechar","currentText":"Hoje","monthNames":["janeiro","fevereiro","mar\u00e7o","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"monthNamesShort":["jan","fev","mar","abr","maio","jun","jul","ago","set","out","nov","dez"],"nextText":"Seguinte","prevText":"Anterior","dayNames":["domingo","segunda-feira","ter\u00e7a-feira","quarta-feira","quinta-feira","sexta-feira","s\u00e1bado"],"dayNamesShort":["dom","seg","ter","qua","qui","sex","s\u00e1b"],"dayNamesMin":["D","S","T","Q","Q","S","S"],"dateFormat":"dd\/mm\/yy","firstDay":1,"isRTL":false});});
-      </script>
-      <script type="text/javascript" src="http://novoterralima.com/wp-content/themes/houzez/js/i18n/datepicker-pt.js?ver=1.0"></script>
+  
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4"></script>
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4"></script>
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/jquery/ui/menu.min.js?ver=1.11.4"></script>
@@ -419,85 +401,9 @@
       </script>
       <script type="text/javascript" src="http://novoterralima.com/wp-content/themes/houzez/js/houzez_ajax_calls.js?ver=1.5.7"></script>
       <script type="text/javascript" src="http://novoterralima.com/wp-content/themes/houzez/js/custom.js?ver=1.5.7"></script>
-      <div class="sticky_nav houzez-header-main header-section-4 nav-right houzez-disabled-login" style="top: 0px;">
-         <header id="header-section" class="houzez-header-main header-section-4 nav-right   houzez-disabled-login" data-sticky="1">
-            <div class="container-fluid">
-               <div class="header-left">
-                  <div class="logo logo-desktop">
-                     <a href="http://novoterralima.com/">
-                     <img src="http://novoterralima.com/wp-content/uploads/2018/04/logo_site.png" alt="logo">
-                     </a>
-                  </div>
-                  <nav class="navi main-nav">
-                     <ul id="main-nav" class="">
-                        <li id="menu-item-635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-635"><a href="http://novoterralima.com/empresa/">Sobre Nós</a></li>
-                        <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child">
-                           <a href="http://novoterralima.com/status/venda-e-locacao/">Portfólio</a>
-                           <ul class="sub-menu">
-                              <li id="menu-item-739" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-739"><a href="http://novoterralima.com/status/locacao/">Locação</a></li>
-                              <li id="menu-item-741" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-741"><a href="http://novoterralima.com/status/venda/">Venda</a></li>
-                           </ul>
-                        </li>
-                        <li id="menu-item-4644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4644"><a href="http://novoterralima.com/corretores-terra-lima/">Corretores</a></li>
-                        <li id="menu-item-4570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4570"><a href="http://novoterralima.com/fale-conosco/?yp_rand=683893">Fale Conosco</a></li>
-                        <li id="menu-item-4562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4562"><a href="http://novoterralima.com/fale-conosco-2/">Cadastre Seu Imóvel</a></li>
-                        <li id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-608"><a href="http://novoterralima.com/resultados/">Mapa</a></li>
-                        <li id="menu-item-4561" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4561"><a href="http://novoterralima.com/category/terra-lima-imoveis/">Blog</a></li>
-                     </ul>
-                  </nav>
-               </div>
-               <div class="header-right">
-                  <div class="user">
-                  </div>
-               </div>
-            </div>
-         </header>
-      </div>
-      <div class="sticky_nav header-mobile houzez-header-mobile" style="top: 0px;">
-         <div class="header-mobile houzez-header-mobile" data-sticky="1">
-            <div class="container">
-               <!--start mobile nav-->
-               <div class="mobile-nav">
-                  <span class="nav-trigger"><i class="fa fa-navicon"></i></span>
-                  <div class="nav-dropdown main-nav-dropdown">
-                     <ul id="main-nav" class="">
-                        <li id="menu-item-635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-635"><a href="http://novoterralima.com/empresa/">Sobre Nós</a></li>
-                        <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child">
-                           <a href="http://novoterralima.com/status/venda-e-locacao/">Portfólio</a>
-                           <ul class="sub-menu">
-                              <li id="menu-item-739" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-739"><a href="http://novoterralima.com/status/locacao/">Locação</a></li>
-                              <li id="menu-item-741" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-741"><a href="http://novoterralima.com/status/venda/">Venda</a></li>
-                           </ul>
-                           <span class="expand-me"></span>
-                        </li>
-                        <li id="menu-item-4644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4644"><a href="http://novoterralima.com/corretores-terra-lima/">Corretores</a></li>
-                        <li id="menu-item-4570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4570"><a href="http://novoterralima.com/fale-conosco/?yp_rand=683893">Fale Conosco</a></li>
-                        <li id="menu-item-4562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4562"><a href="http://novoterralima.com/fale-conosco-2/">Cadastre Seu Imóvel</a></li>
-                        <li id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-608"><a href="http://novoterralima.com/resultados/">Mapa</a></li>
-                        <li id="menu-item-4561" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4561"><a href="http://novoterralima.com/category/terra-lima-imoveis/">Blog</a></li>
-                     </ul>
-                  </div>
-               </div>
-               <!--end mobile nav-->
-               <div class="header-logo logo-mobile">
-                  <a href="http://novoterralima.com/">
-                  <img src="http://novoterralima.com/wp-content/uploads/2018/04/logo_site.png" alt="Mobile logo">
-                  </a>        
-               </div>
-               <div class="header-user">
-                  <ul class="account-action">
-                     <li>
-                        <span class="user-icon"><i class="fa fa-user"></i></span>
-                        <div class="account-dropdown">
-                           <ul>
-                           </ul>
-                        </div>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
+      <?php
+         include 'build/navBarMobile.php';
+      ?>
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/wp-embed.min.js?ver=4.9.7"></script>
       <script>
          jQuery(document).ready(function() {
