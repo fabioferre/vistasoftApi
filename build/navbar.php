@@ -27,10 +27,12 @@
               <ul id="main-nav" class="">
                  <li id="menu-item-635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-635"><a href="http://novoterralima.com/empresa/">Sobre Nós</a></li>
                  <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child">
-                    <a href="http://novoterralima.com/status/venda-e-locacao/">Portfólio</a>
+                    <a href="/<?=pasta?>/Portfolio/index">Portfólio</a>
                     <ul class="sub-menu">
-                       <li id="menu-item-739" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-739"><a href="http://novoterralima.com/status/locacao/">Locação</a></li>
-                       <li id="menu-item-741" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-741"><a href="http://novoterralima.com/status/venda/">Venda</a></li>
+                       <li id="menu-item-739" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-739">
+                        <a href="/<?=pasta?>/Portfolio/locacao">Locação</a></li>
+                       <li id="menu-item-741" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-741">
+                        <a href="/<?=pasta?>/Portfolio/venda">Venda</a></li>
                     </ul>
                  </li>
                  <li id="menu-item-4644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4644"><a href="http://novoterralima.com/corretores-terra-lima/">Corretores</a></li>
