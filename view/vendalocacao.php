@@ -168,17 +168,34 @@
                      <!--start property items-->
                      <div class="property-listing list-view">
                         <div class="row">
-                           <div id="ID-1643" class="item-wrap infobox_trigger item-protegido-belissima-casa-com-agradavel-jardim-tl979">
+                           <?php foreach ($listagem as $key) { ?>
+
+                           <div id="ID-<?=$key['Codigo']?>" class="item-wrap">
                               <div class="property-item table-list">
                                  <div class="table-cell">
                                     <div class="figure-block">
                                        <figure class="item-thumb">
+
                                           <div class="label-wrap label-right hide-on-list">
-                                             <span class="label-status label-status-180 label label-default"><a href="http://novoterralima.com/status/venda/">Venda</a></span><span class="label-status label-status-171 label label-default"><a href="http://novoterralima.com/status/venda-e-locacao/">Venda / Locação</a></span>                    
+                                             <span class="label-status label-status-180 label label-default">
+                                                <a href="#">Venda</a>
+                                             </span>
+                                             
+                                             <span class="label-status label-status-171 label label-default">
+                                                <a href="http://novoterralima.com/status/venda-e-locacao/">
+                                                   Venda / Locação
+                                                </a>
+                                             </span>                    
                                           </div>
-                                          <div class="price hide-on-list"><span class="price-start">Venda</span><span class="item-price">R$3,700,000</span></div>
-                                          <a class="hover-effect" href="http://novoterralima.com/imovel/muito-bem-construida-tl979/">
-                                          <img src="http://novoterralima.com/wp-content/uploads/2017/12/219-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="258">                    </a>
+
+                                          <div class="price hide-on-list">
+                                             <span class="item-sub-price">R$<?=$key['ValorVenda']?></span>
+                                          </div>
+
+                                          <a class="hover-effect" href="#">
+                                             <img src="<?=$key['FotoDestaque']?>" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="258">                    
+                                          </a>
+
                                           <ul class="actions">
                                              <li>
                                                 <span class="add_fav" data-placement="top" data-toggle="tooltip" data-original-title="Favorito" data-propid="1643"><i class="fa fa-heart-o"></i></span>
@@ -194,31 +211,39 @@
                                                 </span>
                                              </li>
                                           </ul>
+
                                        </figure>
                                     </div>
                                  </div>
+
                                  <div class="item-body table-cell">
                                     <div class="body-left table-cell">
                                        <div class="info-row">
                                           <div class="label-wrap hide-on-grid">
-                                             <span class="label-status label-status-180 label label-default"><a href="http://novoterralima.com/status/venda/">Venda</a></span><span class="label-status label-status-171 label label-default"><a href="http://novoterralima.com/status/venda-e-locacao/">Venda / Locação</a></span>                    
+                                             <span class="label-status label-status-180 label label-default"><a href=#">Venda</a></span><span class="label-status label-status-171 label label-default"><a href="#">Venda / Locação</a></span>                    
                                           </div>
-                                          <h2 class="property-title"><a href="http://novoterralima.com/imovel/muito-bem-construida-tl979/">Protegido: Belíssima casa com agradável jardim  TL979</a></h2>
-                                          <address class="property-address">Morumbi, São Paulo - SP, 03178-200, Brasil</address>
+                                          <h2 class="property-title">
+                                             <a href="#">
+                                                <?=$key['DescricaoWeb']?>
+                                             </a>
+                                          </h2>
+                                          <address class="property-address"><?=$key['Bairro']?>, <?=$key['Cidade']?>, <?=$key['CEP']?>, <?=$key['Pais']?></address>
                                        </div>
+
                                        <div class="info-row amenities hide-on-grid">
                                           <p><span>Quartos: 4</span><span>Banheiros: 4</span><span>m² : 694</span></p>
                                           <p>Casa</p>
                                        </div>
-                                       <div class="info-row date hide-on-grid">
-                                       </div>
+                                       <div class="info-row date hide-on-grid"></div>
                                     </div>
+
                                     <div class="body-right table-cell hidden-gird-cell">
-                                       <div class="info-row price"><span class="price-start">Venda</span><span class="item-price">R$3,700,000</span></div>
+                                       <div class="info-row price"><span class="price-start">Venda</span><span class="item-price">R$ <?=$key['ValorVenda']?></span></div>
                                        <div class="info-row phone text-right">
-                                          <a href="http://novoterralima.com/imovel/muito-bem-construida-tl979/" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                                          <a href="#" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
                                        </div>
                                     </div>
+
                                     <div class="table-list full-width hide-on-list">
                                        <div class="cell">
                                           <div class="info-row amenities">
@@ -228,7 +253,7 @@
                                        </div>
                                        <div class="cell">
                                           <div class="phone">
-                                             <a href="http://novoterralima.com/imovel/muito-bem-construida-tl979/" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                                             <a href="#" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
                                           </div>
                                        </div>
                                     </div>
@@ -240,6 +265,8 @@
                                  </div>
                               </div>
                            </div>
+
+                           <?php die(); } ?>
 
                         </div>
                      </div>
@@ -386,12 +413,12 @@
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4"></script>
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/jquery/ui/menu.min.js?ver=1.11.4"></script>
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/wp-a11y.min.js?ver=4.9.7"></script>
-      <script type="text/javascript">
+     <!--  <script type="text/javascript">
          /* <![CDATA[ */
          var uiAutocompleteL10n = {"noResults":"Nenhum resultado encontrado.","oneResult":"Foi encontrado um resultado. Use as setas para cima e para baixo do teclado para navegar.","manyResults":"Foram encontrados %d resultados. Use as setas para cima e para baixo do teclado para navegar.","itemSelected":"Item selecionado."};
          /* ]]> */
-      </script>
-      <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.11.4"></script>
+      </script> -->
+      <!-- <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.11.4"></script> -->
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4"></script>
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/jquery/jquery.ui.touch-punch.js?ver=0.2.2"></script>
       <script type="text/javascript">
@@ -401,17 +428,13 @@
       </script>
       <script type="text/javascript" src="http://novoterralima.com/wp-content/themes/houzez/js/houzez_ajax_calls.js?ver=1.5.7"></script>
       <script type="text/javascript" src="http://novoterralima.com/wp-content/themes/houzez/js/custom.js?ver=1.5.7"></script>
-      <?php
-         include 'build/navBarMobile.php';
-      ?>
+     
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/wp-embed.min.js?ver=4.9.7"></script>
       <script>
          jQuery(document).ready(function() {
            
          });
       </script>
-      <div id="wp-a11y-speak-polite" aria-live="polite" aria-relevant="additions text" aria-atomic="true" class="screen-reader-text wp-a11y-speak-region"></div>
-      <div id="wp-a11y-speak-assertive" aria-live="assertive" aria-relevant="additions text" aria-atomic="true" class="screen-reader-text wp-a11y-speak-region"></div>
    </body>
 </html>
 

@@ -1,7 +1,9 @@
 <?php
 
-namespace App;
-use Config\Env;
+namespace Classes;
+
+
+use Classes\Env;
 
 class Imoveis extends Env
 {

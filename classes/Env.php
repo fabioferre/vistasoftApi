@@ -1,5 +1,5 @@
 <?php
-namespace Config;
+namespace Classes;
 
 class Env
 {
@@ -18,7 +18,8 @@ class Env
         $this->url        .=   '?key=' . $this->key;
         //verificar se possui pesquisa
         if(isset($this->dados)){
-            $this->url        .=  '&pesquisa=' . $this->dados;
+            $this->url        .=  '&pesquisa=' . json_encode($this->dados);
+
         }
         //inicia a conexao
         $ch = curl_init($this->url);
@@ -39,17 +40,13 @@ class Env
 
     //fields
     public function fields($array){
-        $this->dados = json_encode(array(
-            'fields' => $array
-        ));
+        $this->dados['fields'] = $array;
         return $this;
     }
 
     //filtros 
     public function filter($array){
-        $this->dados = json_encode(array(
-            'filter' => $array
-        ));
+        $this->dados['filter'] = $array;
         return $this;
     }
 
