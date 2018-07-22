@@ -46,16 +46,17 @@
             padding: 0 !important;
         }
     </style>
-    <link rel="stylesheet" id="contact-form-7-css" href="http://novoterralima.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.0.2" type="text/css" media="all">
-    <link rel="stylesheet" id="formcraft-common-css" href="http://novoterralima.com/wp-content/plugins/formcraft3/dist/formcraft-common.css?ver=3.5.3" type="text/css" media="all">
-    <link rel="stylesheet" id="formcraft-form-css" href="http://novoterralima.com/wp-content/plugins/formcraft3/dist/form.css?ver=3.5.3" type="text/css" media="all">
+    
+    
     <link rel="stylesheet" id="rs-plugin-settings-css" href="http://novoterralima.com/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.5.2" type="text/css" media="all">
     <style id="rs-plugin-settings-inline-css" type="text/css">
         #rs-demo-id {}
     </style>
     <link rel="stylesheet" id="bootstrap.min-css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"  type="text/css" media="all">
-    <link rel="stylesheet" id="font-awesome.min-css" href="path/to/font-awesome/css/font-awesome.min.css">
 
+    <!-- <link rel="stylesheet" id="font-awesome.min-css" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    
     <link rel="stylesheet" id="houzez-all-css" href="http://novoterralima.com/wp-content/themes/houzez/css/all.min.css?ver=1.5.7" type="text/css" media="all">
     <link rel="stylesheet" id="houzez-main-css" href="http://novoterralima.com/wp-content/themes/houzez/css/main.css?ver=1.5.7" type="text/css" media="all">
     <link rel="stylesheet" id="houzez-style-css" href="http://novoterralima.com/wp-content/themes/houzez/style.css?ver=1.5.7" type="text/css" media="all">

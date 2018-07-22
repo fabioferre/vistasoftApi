@@ -9,6 +9,7 @@ class Imoveis extends Env
 {
     protected $curl = 'imoveis/listar';
 
+    
 }
 
   

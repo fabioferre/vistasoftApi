@@ -49,6 +49,11 @@ class Env
         $this->dados['filter'] = $array;
         return $this;
     }
+     //filtros 
+    public function filter($array){
+        $this->dados['filter'] = $array;
+        return $this;
+    }
 
     function __construct() 
     { 

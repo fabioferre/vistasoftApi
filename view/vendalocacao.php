@@ -164,26 +164,28 @@
 
             <div class="row">
                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 list-grid-area container-contentbar">
-                  
+               
                   <div id="content-area">
                      <!--start property items-->
-                     <?php foreach ($listagem as $key ) { ?>
-                           <div class="property-listing list-view">
+                     
+                        <div class="property-listing list-view">
+
                         <div class="row">
-                           <div id="ID-1643" class="item-wrap infobox_trigger item-protegido-belissima-casa-com-agradavel-jardim-tl979">
+                           <?php foreach ($listagem as $key ) { ?>
+                           <div id="ID-<?=$key['Codigo']?>" class="item-wrap infobox_trigger <?=$key['DescricaoWeb']?>">
                               <div class="property-item table-list">
                                  <div class="table-cell">
                                     <div class="figure-block">
                                        <figure class="item-thumb">
                                           <div class="label-wrap label-right hide-on-list">
-                                             <span class="label-status label-status-180 label label-default"><a href="http://novoterralima.com/status/venda/">Venda</a></span><span class="label-status label-status-171 label label-default"><a href="http://novoterralima.com/status/venda-e-locacao/">Venda / Locação</a></span>                    
+                                             <span class="label-status label-status-180 label label-default"><a href="http://novoterralima.com/status/venda/">Venda</a></span><span class="label-status label-status-171 label label-default"><a href="#">Venda / Locação</a></span>                    
                                           </div>
                                           <div class="price hide-on-list"><span class="price-start">Venda</span><span class="item-price">R$ <?=$key['ValorVenda']?></span></div>
-                                          <a class="hover-effect" href="http://novoterralima.com/imovel/muito-bem-construida-tl979/">
+                                          <a class="hover-effect" href="#">
                                           <img src="http://novoterralima.com/wp-content/uploads/2017/12/219-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="258">                    </a>
                                           <ul class="actions">
                                              <li>
-                                                <span class="add_fav" data-placement="top" data-toggle="tooltip" data-original-title="Favorito" data-propid="1643"><i class="fa fa-heart-o"></i></span>
+                                                <span class="add_fav" data-placement="top" data-toggle="tooltip" data-original-title="Favorito" data-propid="1643"><i class="fa fa-heart"></i></span>
                                              </li>
                                              <li>
                                                 <span data-toggle="tooltip" data-placement="top" title="" data-original-title="(12) Fotos">
@@ -206,8 +208,8 @@
                                           <div class="label-wrap hide-on-grid">
                                              <span class="label-status label-status-180 label label-default"><a href="#"><?=$key['Status']?></a></span><span class="label-status label-status-171 label label-default"><a href="#">Venda / Locação</a></span>                    
                                           </div>
-                                          <h2 class="property-title"><a href="http://novoterralima.com/imovel/muito-bem-construida-tl979/"><?=$key['DescricaoWeb']?></a></h2>
-                                          <address class="property-address"><?=$key['Bairro']?>, <?=$key['Cidade']?> - SP, 03178-200, <?=$key['Pais']?></address>
+                                          <h2 class="property-title"><a href="#"></i><?=$key['DescricaoWeb']?></a></h2>
+                                          <address class="property-address"><?=$key['Bairro']?>, <?=$key['Cidade']?> - SP, <?=$key['CEP']?>, <?=$key['Pais']?></address>
                                        </div>
                                        <div class="info-row amenities hide-on-grid">
                                           <p><span>Quartos: <?=$key['Dormitorios']?></span><span>Banheiros: <?=$key['TotalBanheiros']?></span><span>m² : <?=$key['AreaTotal']?></span></p>
@@ -219,19 +221,19 @@
                                     <div class="body-right table-cell hidden-gird-cell">
                                        <div class="info-row price"><span class="price-start">Venda</span><span class="item-price">R$ <?=$key['ValorVenda']?></span></div>
                                        <div class="info-row phone text-right">
-                                          <a href="http://novoterralima.com/imovel/muito-bem-construida-tl979/" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                                          <a href="#" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
                                        </div>
                                     </div>
                                     <div class="table-list full-width hide-on-list">
                                        <div class="cell">
                                           <div class="info-row amenities">
-                                             <p><span>Quartos: 4</span><span>Banheiros: 4</span><span>m² : 694</span></p>
+                                             <p><span>Quartos: <?=$key['Dormitorios']?></span><span>Banheiros: <?=$key['TotalBanheiros']?></span><span>m² : <?=$key['AreaTotal']?></span></p>
                                              <p>Casa</p>
                                           </div>
                                        </div>
                                        <div class="cell">
                                           <div class="phone">
-                                             <a href="http://novoterralima.com/imovel/muito-bem-construida-tl979/" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                                             <a href="#" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
                                           </div>
                                        </div>
                                     </div>
@@ -243,10 +245,10 @@
                                  </div>
                               </div>
                            </div>
-
+                           <?php } ?>
                         </div>
                      </div>
-                  <?php } ?>
+                 
                      <!--end property items-->
                      <hr>
                      <!--start Pagination-->
@@ -254,10 +256,10 @@
                         <ul class="pagination">
                            <li class="disabled"><a aria-label="Previous"><span aria-hidden="true"><i class="fa fa-angle-left"></i></span></a></li>
                            <li class="active"><a data-houzepagi="1" href="http://novoterralima.com/status/venda-e-locacao/">1 <span class="sr-only"></span></a></li>
-                           <li><a data-houzepagi="2" href="http://novoterralima.com/status/venda-e-locacao/page/2/">2</a></li>
-                           <li><a data-houzepagi="3" href="http://novoterralima.com/status/venda-e-locacao/page/3/">3</a></li>
-                           <li><a data-houzepagi="4" href="http://novoterralima.com/status/venda-e-locacao/page/4/">4</a></li>
-                           <li><a data-houzepagi="5" href="http://novoterralima.com/status/venda-e-locacao/page/5/">5</a></li>
+                           <li><a data-houzepagi="2" href="#">2</a></li>
+                           <li><a data-houzepagi="3" href="#">3</a></li>
+                           <li><a data-houzepagi="4" href="#">4</a></li>
+                           <li><a data-houzepagi="5" href="#">5</a></li>
                            <li><a data-houzepagi="2" rel="Next" href="http://novoterralima.com/status/venda-e-locacao/page/2/"><span aria-hidden="true"><i class="fa fa-angle-right"></i></span></a></li>
                         </ul>
                      </div>
