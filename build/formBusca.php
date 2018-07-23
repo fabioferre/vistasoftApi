@@ -4,16 +4,16 @@
 </div>
 <div class="widget-range">
    <div class="widget-body">
-      <form autocomplete="off" method="post" action="<?=isset($action)?$action:'#'?>">
+      <form autocomplete="off" method="post" action="<?=$action?>" id="firstSearch" ><input type="text" name="form" hidden value="1">
          <div class="range-block rang-form-block">
             <div class="row">
                <div class="col-sm-12 col-xs-12">
                   <div class="form-group">
                      <select name="Pais" class="selectpicker bs-select-hidden" data-live-search="false" data-live-search-style="begins">
                         <option value="">Todos os países</option>
-                        <option value="BR">Brasil</option>
-                        <option value="PT">Portugal</option>
-                        <option value="US">Estados Unidos</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Estados+Unidos">Estados Unidos</option>
                      </select>
                   </div>
                </div>
@@ -36,11 +36,11 @@
                <div class="col-sm-12 col-xs-12">
                   <div class="form-group">
                      <select name="Categoria" class="selectpicker bs-select-hidden" data-live-search="false">
-                        <option value="">Tipos de Imóveis</option>
+                        <option value="<?=isset($_COOKIE)?>">Tipos de Imóveis</option>
                         <option value="Apartamento">Apartamento</option>
-                        <option value="casa"> Casa</option>
-                        <option value="casa-na-praia">Casa na Praia</option>
-                        <option value="casa-no-campo">Casa no Campo</option>
+                        <option value="Casa"> Casa</option>
+                        <option value="Casa+na+praia">Casa na Praia</option>
+                        <option value="Casa+no+campo">Casa no Campo</option>
                         <option value="Cobertura">Cobertura</option>
                         <option value="Salas+e+Conjunto">Salas e Conjunto</option>
                         <option value="duplex">Duplex</option>
@@ -57,7 +57,7 @@
                         <option value="">Status do Imóvel</option>
                         <option value="ALUGUEL"> Locação</option>
                         <option value="VENDA"> Venda</option>
-                        <option value="venda+e+locacao"> Venda / Locação</option>
+                        <option value="VENDA+LOCACAO"> Venda / Locação</option>
                      </select>
                   </div>
                </div>

@@ -11,7 +11,7 @@ class Env
     protected $showtotal = 1;
     protected $dados;
     protected $curl;
-    protected $paginaQtd;
+
 
 
     private function conn(){
@@ -72,7 +72,7 @@ class Env
 
     //paginacao
     public function paginacao($array){
-        $array['pagina'] = $this->paginaQtd?$this->paginaQtd:10;
+        $this->dados['paginacao'] = isset($array['quantidade'])? $array['quantidade'] : $array['quantidade'] = 10;
         $this->dados['paginacao'] = $array;
         return $this;
     }

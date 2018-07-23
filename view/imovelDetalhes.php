@@ -1,25 +1,16 @@
 
 
 <!DOCTYPE html>
-<html class="wf-montserratampsubsetlatin-n4-active wf-active target webanimations multiplebgs supports subpixelfont cssvalid cssvmaxunit cssvwunit textshadow requestanimationframe raf cssanimations csspseudoanimations ellipsis cssmask no-overflowscrolling cssresize csstransforms3d csstransitions no-webpanimation">
+<html>
    <head>
       <?php
          require_once('build/head.php');
          ?>
    </head>
-   <body class="property-template-default single single-property postid-1643  transparent- wpb-js-composer js-comp-ver-5.2.1 vc_responsive">
+   <body style="background: #f2ecdd">
       <?php
          require_once('build/navbar.php');
          ?>
-      <!--start compare panel-->
-      <div id="compare-controller" class="compare-panel">
-         <div class="compare-panel-header">
-            <h4 class="title"> Comparar listagens <span class="panel-btn-close pull-right"><i class="fa fa-times"></i></span></h4>
-         </div>
-         <div id="compare-properties-basket">
-         </div>
-      </div>
-      <!--end compare panel-->
       <!--start detail top-->
       <section class="detail-top detail-top-grid no-margin">
          <div class="container">
@@ -66,6 +57,7 @@
          </div>
       </section>
       <!--end detail top-->
+
       <!--start detail content-->
       <section class="section-detail-content">
          <div class="container">

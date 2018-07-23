@@ -3,7 +3,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="http://novoterralima.com/xmlrpc.php">
 
-    <title>Venda / Locação – Terra Lima Imóveis</title>
+    
     <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5&amp;appId=217780371604666"></script><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js" type="text/javascript" async=""></script><script>
         /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
         if ( typeof WebFontConfig === "undefined" ) {

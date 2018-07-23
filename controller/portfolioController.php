@@ -13,13 +13,14 @@ namespace controller;
         }
 
         public function index(){
+            // print_r($_POST['pag']);
+            // die();
+            
         	$imoveis = new \Classes\Imoveis;
-        	
-
-        	$listagem = $imoveis->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])->get();
-        	// print_r($listagem);
-
-            $action = '/'.pasta.'/Portfolio/index';
+        	$listagem = $imoveis
+            ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
+            ->get();
+            $action = '/'.pasta.'/Result/index';
             $linkDetalhe = $imoveis->detalheURL();
         	include 'view/vendalocacao.php';
 
@@ -28,36 +29,32 @@ namespace controller;
 
         public function locacao(){
         	$imoveis = new \Classes\Imoveis;
-
-        	$listagem = $imoveis->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])->get();
-
-        	$action = '/'.pasta.'/Portfolio/locacao';
+        	$listagem = $imoveis
+            ->filter(['Status'=>'ALUGUEL'])
+            ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
+            ->get();
+        	$action = '/'.pasta.'/Result/locacao';
             $linkDetalhe = $imoveis->detalheURL();
-        	include 'view/locacao.php';
+        	 include 'view/locacao.php';
         }
 
 
         public function venda(){
         	$imoveis = new \Classes\Imoveis;
-
-        	$listagem = $imoveis->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])->get();
-
-        	// print_r($_GET);
-        	$action = '/'.pasta.'/Portfolio/venda';
+        	$listagem = $imoveis
+            ->filter(['Status'=>'VENDA'])
+            ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
+            ->get();
+        	$action = '/'.pasta.'/Result/venda';
             $linkDetalhe = $imoveis->detalheURL();
         	include 'view/venda.php';
 
         }
 
-            public function listar(){
+
+        public function listar(){
         	$imoveis = new \Classes\Imoveis;
-        	
-        	$listagem = $imoveis->listarCampos()->get();
-
-        	 print_r($listagem);
-        	// $action = '/'.pasta.'/Portfolio/venda';
-        	// include 'view/venda.php';
-
+        	print_r($listagem = $imoveis->setCurl("imoveis/listarcampos")->get());
         }
   
     }
