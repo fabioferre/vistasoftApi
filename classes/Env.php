@@ -8,9 +8,10 @@ class Env
     private $result;
     private $key;
     private $http;
-    protected $showtotal;
+    protected $showtotal = 1;
     protected $dados;
     protected $curl;
+    protected $paginaQtd;
 
 
     private function conn(){
@@ -71,6 +72,7 @@ class Env
 
     //paginacao
     public function paginacao($array){
+        $array['pagina'] = $this->paginaQtd?$this->paginaQtd:10;
         $this->dados['paginacao'] = $array;
         return $this;
     }

@@ -181,8 +181,11 @@
                                              <span class="label-status label-status-180 label label-default"><a href="http://novoterralima.com/status/venda/">Venda</a></span><span class="label-status label-status-171 label label-default"><a href="#">Venda / Locação</a></span>                    
                                           </div>
                                           <div class="price hide-on-list"><span class="price-start">Venda</span><span class="item-price">R$ <?=$key['ValorVenda']?></span></div>
-                                          <a class="hover-effect" href="#">
-                                          <img src="http://novoterralima.com/wp-content/uploads/2017/12/219-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="258">                    </a>
+
+                                          <a class="hover-effect" href="<?=$linkDetalhe?>/<?=$key['Codigo']?>">
+                                             <img src="http://novoterralima.com/wp-content/uploads/2017/12/219-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="258">                    
+                                          </a>
+                                          
                                           <ul class="actions">
                                              <li>
                                                 <span class="add_fav" data-placement="top" data-toggle="tooltip" data-original-title="Favorito" data-propid="1643"><i class="fa fa-heart"></i></span>
@@ -203,40 +206,63 @@
                                  </div>
 
                                  <div class="item-body table-cell">
+
                                     <div class="body-left table-cell">
                                        <div class="info-row">
                                           <div class="label-wrap hide-on-grid">
-                                             <span class="label-status label-status-180 label label-default"><a href="#"><?=$key['Status']?></a></span><span class="label-status label-status-171 label label-default"><a href="#">Venda / Locação</a></span>                    
+
+                                             <span class="label-status label-status-180 label label-default">
+                                                <a href="#"><?=$key['Status']?> </a>
+                                             </span>
+
+                                             <span class="label-status label-status-171 label label-default">
+                                                <a href="#">Venda / Locação</a>
+                                             </span>
+
                                           </div>
-                                          <h2 class="property-title"><a href="#"></i><?=$key['DescricaoWeb']?></a></h2>
+
+                                          <h2 class="property-title">
+                                             <a href="<?=$linkDetalhe?>/<?=$key['Codigo']?>"></i><?=$key['DescricaoWeb']?></a>
+                                          </h2>
                                           <address class="property-address"><?=$key['Bairro']?>, <?=$key['Cidade']?> - SP, <?=$key['CEP']?>, <?=$key['Pais']?></address>
                                        </div>
+
                                        <div class="info-row amenities hide-on-grid">
-                                          <p><span>Quartos: <?=$key['Dormitorios']?></span><span>Banheiros: <?=$key['TotalBanheiros']?></span><span>m² : <?=$key['AreaTotal']?></span></p>
+                                          <p>
+                                             <span>Quartos: <?=$key['Dormitorios']?></span>
+                                             <span>Banheiros: <?=$key['TotalBanheiros']?></span>
+                                             <span>m² : <?=$key['AreaTotal']?></span>
+                                          </p>
                                           <p><?=$key['Categoria']?></p>
                                        </div>
-                                       <div class="info-row date hide-on-grid">
-                                       </div>
+                                       <div class="info-row date hide-on-grid"></div>
                                     </div>
+
                                     <div class="body-right table-cell hidden-gird-cell">
                                        <div class="info-row price"><span class="price-start">Venda</span><span class="item-price">R$ <?=$key['ValorVenda']?></span></div>
                                        <div class="info-row phone text-right">
-                                          <a href="#" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                                          <a href="<?=$linkDetalhe?>/<?=$key['Codigo']?>" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
                                        </div>
                                     </div>
+
                                     <div class="table-list full-width hide-on-list">
                                        <div class="cell">
                                           <div class="info-row amenities">
-                                             <p><span>Quartos: <?=$key['Dormitorios']?></span><span>Banheiros: <?=$key['TotalBanheiros']?></span><span>m² : <?=$key['AreaTotal']?></span></p>
+                                             <p>
+                                                <span>Quartos: <?=$key['Dormitorios']?></span>
+                                                <span>Banheiros: <?=$key['TotalBanheiros']?></span>
+                                                <span>m² : <?=$key['AreaTotal']?></span>
+                                             </p>
                                              <p>Casa</p>
                                           </div>
                                        </div>
                                        <div class="cell">
                                           <div class="phone">
-                                             <a href="#" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                                             <a href="<?=$linkDetalhe?>/<?=$key['Codigo']?>" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
                                           </div>
                                        </div>
                                     </div>
+
                                  </div>
                               </div>
 

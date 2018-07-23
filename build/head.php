@@ -54,7 +54,6 @@
     </style>
     <link rel="stylesheet" id="bootstrap.min-css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"  type="text/css" media="all">
 
-    <!-- <link rel="stylesheet" id="font-awesome.min-css" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     
     <link rel="stylesheet" id="houzez-all-css" href="http://novoterralima.com/wp-content/themes/houzez/css/all.min.css?ver=1.5.7" type="text/css" media="all">

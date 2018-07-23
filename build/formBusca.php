@@ -4,12 +4,12 @@
 </div>
 <div class="widget-range">
    <div class="widget-body">
-      <form autocomplete="off" method="post" action="#">
+      <form autocomplete="off" method="post" action="<?=isset($action)?$action:'#'?>">
          <div class="range-block rang-form-block">
             <div class="row">
                <div class="col-sm-12 col-xs-12">
                   <div class="form-group">
-                     <select name="country" class="selectpicker bs-select-hidden" data-live-search="false" data-live-search-style="begins">
+                     <select name="Pais" class="selectpicker bs-select-hidden" data-live-search="false" data-live-search-style="begins">
                         <option value="">Todos os países</option>
                         <option value="BR">Brasil</option>
                         <option value="PT">Portugal</option>
@@ -17,9 +17,9 @@
                      </select>
                   </div>
                </div>
-               <div class="col-sm-12 col-xs-12">
+<!--                <div class="col-sm-12 col-xs-12">
                   <div class="form-group">
-                     <select class="selectpicker bs-select-hidden" name="label" data-live-search="false">
+                     <select class="selectpicker bs-select-hidden" name="" data-live-search="false">
                         <option value="">Destaques</option>
                         <option value="arquitetura-assinada"> Arquitetura Assinada</option>
                         <option value="baixou-o-valor"> Baixou o valor</option>
@@ -32,22 +32,21 @@
                         <option value="vista"> Vista</option>
                      </select>
                   </div>
-               </div>
+               </div> -->
                <div class="col-sm-12 col-xs-12">
                   <div class="form-group">
-                     <select name="type" class="selectpicker bs-select-hidden" data-live-search="false">
+                     <select name="Categoria" class="selectpicker bs-select-hidden" data-live-search="false">
                         <option value="">Tipos de Imóveis</option>
-                        <option value="apartment"> Apartamento</option>
+                        <option value="Apartamento">Apartamento</option>
                         <option value="casa"> Casa</option>
-                        <option value="casa-na-praia"> Casa na Praia</option>
-                        <option value="casa-no-campo"> Casa no Campo</option>
-                        <option value="cobertura"> Cobertura</option>
-                        <option value="conjunto"> Conjunto</option>
-                        <option value="duplex"> Duplex</option>
-                        <option value="farm"> Fazenda</option>
-                        <option value="loft"> Loft</option>
-                        <option value="terreno"> Terreno</option>
-                        <option value="terreno-na-praia"> Terreno na Praia</option>
+                        <option value="casa-na-praia">Casa na Praia</option>
+                        <option value="casa-no-campo">Casa no Campo</option>
+                        <option value="Cobertura">Cobertura</option>
+                        <option value="Salas+e+Conjunto">Salas e Conjunto</option>
+                        <option value="duplex">Duplex</option>
+                        <option value="Fazenda">Fazenda</option>
+                        <option value="loft">Loft</option>
+                        <option value="terreno">Terreno</option>
                         <option value="triplex"> Triplex</option>
                      </select>
                   </div>
@@ -56,9 +55,9 @@
                   <div class="form-group">
                      <select class="selectpicker bs-select-hidden" id="widget_status" name="status" data-live-search="false">
                         <option value="">Status do Imóvel</option>
-                        <option value="locacao"> Locação</option>
-                        <option value="venda"> Venda</option>
-                        <option value="venda-e-locacao"> Venda / Locação</option>
+                        <option value="ALUGUEL"> Locação</option>
+                        <option value="VENDA"> Venda</option>
+                        <option value="venda+e+locacao"> Venda / Locação</option>
                      </select>
                   </div>
                </div>
