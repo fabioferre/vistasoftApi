@@ -52,9 +52,9 @@
     <style id="rs-plugin-settings-inline-css" type="text/css">
         #rs-demo-id {}
     </style>
-    <link rel="stylesheet" id="bootstrap.min-css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"  type="text/css" media="all">
+    <link rel="stylesheet" id="bootstrap.min-css" href="/<?=pasta?>/build/lib/bootstrap-3.5/css/bootstrap.min.css"  type="text/css" media="all">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/<?=pasta?>/build/plugin/fontawesome-5.1/css/all.css" >
     
     <link rel="stylesheet" id="houzez-all-css" href="http://novoterralima.com/wp-content/themes/houzez/css/all.min.css?ver=1.5.7" type="text/css" media="all">
     <link rel="stylesheet" id="houzez-main-css" href="http://novoterralima.com/wp-content/themes/houzez/css/main.css?ver=1.5.7" type="text/css" media="all">

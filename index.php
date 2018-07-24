@@ -1,7 +1,9 @@
 <?php
+    session_start();
+
     include 'config-db.php';
     include 'config-env.php';
-
+    
     foreach(glob("controller/*.php") as $key){
         include_once($key);
     }
@@ -11,7 +13,7 @@
     }
     
     
-    session_start();
+    
     
     header('Content-Type: text/html; charset=utf-8');
     date_default_timezone_set('America/Sao_Paulo');

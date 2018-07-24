@@ -245,8 +245,6 @@
          </div>
          <!--.container Start in header-->
       </div>
-      <!--Start in header end #section-body-->
-      <button class="scrolltop-btn back-top"><i class="fa fa-angle-up"></i></button>
 
       <!--start footer section-->
       <?php

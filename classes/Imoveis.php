@@ -47,7 +47,6 @@ class Imoveis extends Env
             $pesquisa['Pais'] = array('like',$param['Pais']);
         }
 
-        
         return $pesquisa; 
     }
 

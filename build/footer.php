@@ -1,5 +1,5 @@
+<button class="scrolltop-btn back-top"><i class="fa fa-angle-up"></i></button>
 <footer id="footer-section">
-
     <div class="footer">
     <div class="container">
         <div class="row">

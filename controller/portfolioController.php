@@ -48,7 +48,7 @@ namespace controller;
 
         }
 
-
+        
         public function listar(){
         	$imoveis = new \Classes\Imoveis;
         	print_r($listagem = $imoveis->setCurl("imoveis/listarcampos")->get());

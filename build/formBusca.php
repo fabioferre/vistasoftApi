@@ -54,7 +54,7 @@
                <div class="col-sm-12 col-xs-12">
                   <div class="form-group">
                      <select class="selectpicker bs-select-hidden" id="widget_status" name="status" data-live-search="false">
-                        <option value="0">Status Do imóvel</option>
+                        <option value="das">Status Do imóvel</option>
                         <option value="ALUGUEL"> Locação</option>
                         <option value="VENDA"> Venda</option>
                         <option value="VENDA+LOCACAO"> Venda / Locação</option>
