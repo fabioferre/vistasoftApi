@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
    <head>
@@ -16,20 +14,11 @@
 
       <div id="section-body" class="">
          <div class="container">
-            <!--start compare panel-->
-            <div id="compare-controller" class="compare-panel">
-               <div class="compare-panel-header">
-                  <h4 class="title"> Comparar listagens <span class="panel-btn-close pull-right"><i class="fa fa-times"></i></span></h4>
-               </div>
-               <div id="compare-properties-basket">
-               </div>
-            </div>
-            <!--end compare panel-->
             <div class="page-title breadcrumb-top">
                <div class="row">
                   <div class="col-sm-12">
                      <div class="page-title-left">
-                        <h2>Venda / Locação</h2>
+                        <h2>Venda / Locação – Terra Lima Imóveis</h2>
                      </div>
                      <div class="page-title-right">
                         <div class="view">
@@ -65,8 +54,7 @@
 
                         <div class="row">
 
-                           <?php 
-                       
+                        <?php 
                            foreach ($listagem as $key ) {   if(isset($key['Codigo'])){?>
                             
                            <div id="ID-<?=$key['Codigo']?>" class="item-wrap infobox_trigger <?=$key['DescricaoWeb']?>">
@@ -165,7 +153,7 @@
                                  </div>
                               </div>
                            </div>
-                           <?php } }?>
+                           <?php } } ?>
                         </div>
                      </div>
                  
@@ -183,24 +171,26 @@
                         <?php } ?>
 
                            <li class="active"><a class="btnPag" data-pag="<?=$listagem['pagina']?>" href="#"><?=$listagem['pagina']?><span class="sr-only"></span></a></li>
-
+                        <?php if ($listagem['total'] > 0) { ?>
                            <li><a class="btnPag" data-pag="<?=$listagem['pagina']+1?>" href="#"><?=$listagem['pagina']+1?><span class="sr-only"></span></a></li>
-
-                        <?php if ($listagem['pagina'] <= $listagem['paginas'] - 3) { ?>
+                        <?php }
+                        if ($listagem['pagina'] <= $listagem['paginas'] - 3) { ?>
                            <li><a class="btnPag" data-pag="<?=$listagem['pagina']+2?>" href="#"><?=$listagem['pagina']+2?><span class="sr-only"></span></a></li>
                            <li><a class="btnPag" data-pag="<?=$listagem['pagina']+3?>" rel="Next" pag="<?=$listagem['pagina']-5?>"><span aria-hidden="true"><i class="fa fa-angle-right"></i></span></a></li>
                         <?php } ?>
                         </ul>
                      </form>
-                     <!--start Pagination-->
+                     <!--end Pagination-->
+
                   </div>
+                  
                </div>
+
                <!-- end container-content -->
                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-md-offset-0 col-sm-offset-3 container-sidebar ">
                   <aside id="sidebar" class="sidebar-white">
                      <?php
                         include 'build/formBusca.php';
-                        include 'build/buscaRapida.php';
                         include 'build/equipe.php';
                      ?>
 
@@ -343,7 +333,6 @@
            jQuery('.btnPag').click(function(){
                var valpag = jQuery(this).data('pag');
                jQuery('#pag').val(valpag);
-
                jQuery('.pagination-main').submit();
            });
 

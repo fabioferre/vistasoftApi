@@ -192,7 +192,6 @@
 
                      <?php
                         include 'build/formBusca.php';
-                        include 'build/buscaRapida.php';
                         include 'build/equipe.php';
                      ?>
                      

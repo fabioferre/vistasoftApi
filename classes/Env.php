@@ -8,6 +8,7 @@ class Env
     private $result;
     private $key;
     private $http;
+    private $codigo;
     protected $showtotal = 1;
     protected $dados;
     protected $curl;
@@ -27,6 +28,11 @@ class Env
 
         if(isset($this->showtotal)){
             $this->url        .=  '&showtotal=' . json_encode($this->showtotal);
+
+        }
+
+        if(isset($this->codigo)){
+            $this->url        .=  '&imovel=' . json_encode($this->codigo);
 
         }
         //inicia a conexao
@@ -67,6 +73,11 @@ class Env
     //order
     public function order($array){
         $this->dados['order'] = $array;
+        return $this;
+    }
+
+    public function setCodigo($codigo){
+        $this->codigo = $codigo;
         return $this;
     }
 

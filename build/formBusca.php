@@ -10,10 +10,10 @@
                <div class="col-sm-12 col-xs-12">
                   <div class="form-group">
                      <select name="Pais" class="selectpicker bs-select-hidden" data-live-search="false" data-live-search-style="begins">
-                        <option value="">Todos os países</option>
+                        <option value="0">Todos os Países</option>
                         <option value="Brasil">Brasil</option>
                         <option value="Portugal">Portugal</option>
-                        <option value="Estados+Unidos">Estados Unidos</option>
+                        <option value="Estados Unidos">Estados Unidos</option>
                      </select>
                   </div>
                </div>
@@ -36,13 +36,13 @@
                <div class="col-sm-12 col-xs-12">
                   <div class="form-group">
                      <select name="Categoria" class="selectpicker bs-select-hidden" data-live-search="false">
-                        <option value="<?=isset($_COOKIE)?>">Tipos de Imóveis</option>
+                        <option value="0">Tipos de imóveis</option>
                         <option value="Apartamento">Apartamento</option>
                         <option value="Casa"> Casa</option>
-                        <option value="Casa+na+praia">Casa na Praia</option>
-                        <option value="Casa+no+campo">Casa no Campo</option>
+                        <option value="Casa na praia">Casa na Praia</option>
+                        <option value="Casa no campo">Casa no Campo</option>
                         <option value="Cobertura">Cobertura</option>
-                        <option value="Salas+e+Conjunto">Salas e Conjunto</option>
+                        <option value="Salas e Conjunto">Salas e Conjunto</option>
                         <option value="duplex">Duplex</option>
                         <option value="Fazenda">Fazenda</option>
                         <option value="loft">Loft</option>
@@ -54,7 +54,7 @@
                <div class="col-sm-12 col-xs-12">
                   <div class="form-group">
                      <select class="selectpicker bs-select-hidden" id="widget_status" name="status" data-live-search="false">
-                        <option value="">Status do Imóvel</option>
+                        <option value="0">Status Do imóvel</option>
                         <option value="ALUGUEL"> Locação</option>
                         <option value="VENDA"> Venda</option>
                         <option value="VENDA+LOCACAO"> Venda / Locação</option>
@@ -75,6 +75,7 @@
                <input name="max-price" class="pull-right range-input text-right" id="max-price" readonly="" type="text">
             </div>
          </div>
+
 
          <div class="range-block">
             <h4>Tamanho da área</h4>

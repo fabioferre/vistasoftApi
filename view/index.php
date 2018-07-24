@@ -265,7 +265,6 @@
                   <aside id="sidebar" class="sidebar-white">
                      <?php
                         include 'build/formBusca.php';
-                        include 'build/buscaRapida.php';
                         include 'build/equipe.php';
                      ?>
 

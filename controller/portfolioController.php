@@ -13,9 +13,6 @@ namespace controller;
         }
 
         public function index(){
-            // print_r($_POST['pag']);
-            // die();
-            
         	$imoveis = new \Classes\Imoveis;
         	$listagem = $imoveis
             ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
