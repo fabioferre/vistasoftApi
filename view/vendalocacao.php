@@ -171,7 +171,7 @@
                         <?php } ?>
 
                            <li class="active"><a class="btnPag" data-pag="<?=$listagem['pagina']?>" href="#"><?=$listagem['pagina']?><span class="sr-only"></span></a></li>
-                        <?php if ($listagem['total'] > 0) { ?>
+                        <?php if ($listagem['total'] > 1) { ?>
                            <li><a class="btnPag" data-pag="<?=$listagem['pagina']+1?>" href="#"><?=$listagem['pagina']+1?><span class="sr-only"></span></a></li>
                         <?php }
                         if ($listagem['pagina'] <= $listagem['paginas'] - 3) { ?>
