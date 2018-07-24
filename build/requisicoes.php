@@ -32,3 +32,12 @@
       <script type="text/javascript" src="http://novoterralima.com/wp-content/themes/houzez/js/custom.js?ver=1.5.7"></script>
      
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/wp-embed.min.js?ver=4.9.7"></script>
+      <script>
+         jQuery(document).ready(function() {
+           jQuery('.btnPag').click(function(){
+               var valpag = jQuery(this).data('pag');
+               jQuery('#pag').val(valpag);
+               jQuery('.pagination-main').submit();
+           });
+         });
+      </script>

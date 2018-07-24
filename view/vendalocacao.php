@@ -298,12 +298,6 @@
       
       <script>
          jQuery(document).ready(function() {
-           jQuery('.btnPag').click(function(){
-               var valpag = jQuery(this).data('pag');
-               jQuery('#pag').val(valpag);
-               jQuery('.pagination-main').submit();
-           });
-
            jQuery('#firstSearch').submit(function(){
                var action = jQuery(this).attr("action");
                window.location.href(action);

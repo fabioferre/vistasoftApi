@@ -4,7 +4,7 @@
    </div>
    <div class="widget-range">
       <div class="widget-body">
-         <form  method="post" action="<?=$action?>" id="firstSearch" >
+         <form  method="post" action="'/'<?=pasta?>'/Result/index'" id="firstSearch" >
             <div class="range-block rang-form-block">
                <div class="row">
                   <div class="col-sm-12 col-xs-12">

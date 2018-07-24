@@ -56,21 +56,24 @@
                         <div class="property-listing list-view">
 
                         <div class="row">
-                           <?php foreach ($listagem as $key ) { ?>
+
+                        <?php 
+                           foreach ($listagem as $key ) {   if(isset($key['Codigo'])){ ?>
+                            
                            <div id="ID-<?=$key['Codigo']?>" class="item-wrap infobox_trigger <?=$key['DescricaoWeb']?>">
                               <div class="property-item table-list">
                                  <div class="table-cell">
                                     <div class="figure-block">
                                        <figure class="item-thumb">
                                           <div class="label-wrap label-right hide-on-list">
-                                             <span class="label-status label-status-180 label label-default"><a href="http://novoterralima.com/status/venda/">Venda</a></span><span class="label-status label-status-171 label label-default"><a href="#">Venda / Locação</a></span>                    
+                                             <span class="label-status label-status-180 label label-default"><a href="http://novoterralima.com/status/venda/">Venda</a></span>           
                                           </div>
                                           <div class="price hide-on-list"><span class="price-start">Venda</span><span class="item-price">R$ <?=$key['ValorVenda']?></span></div>
 
                                           <a class="hover-effect" href="<?=$linkDetalhe?>/<?=$key['Codigo']?>">
                                              <img src="http://novoterralima.com/wp-content/uploads/2017/12/219-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="258">                    
                                           </a>
-
+                                          
                                           <ul class="actions">
                                              <li>
                                                 <span class="add_fav" data-placement="top" data-toggle="tooltip" data-original-title="Favorito" data-propid="1643"><i class="fa fa-heart"></i></span>
@@ -100,10 +103,7 @@
                                                 <a href="#"><?=$key['Status']?> </a>
                                              </span>
 
-                                             <span class="label-status label-status-171 label label-default">
-                                                <a href="#">Venda / Locação</a>
-                                             </span>
-
+                                          
                                           </div>
 
                                           <h2 class="property-title">
@@ -156,34 +156,41 @@
                                  </div>
                               </div>
                            </div>
-                           <?php } ?>
+                           <?php } } ?>
                         </div>
                      </div>
                  
                      <!--end property items-->
                      <hr>
                      <!--start Pagination-->
-                     <form class="pagination-main" method="post">
+                     <form class="pagination-main" method="post" >
                         <input type="num" name="pag" id="pag" hidden>
                         <ul class="pagination">
-                        <?php if ($listagem['pagina'] >= 3) { ?>
-                           <li hidden><a class="btnPag"  data-pag="<?=$listagem['pagina']-3?>" aria-label="Previous"><span aria-hidden="true"><i class="fa fa-angle-left"></i></span></a></li>
-                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']-2?>" href=""><?=$listagem['pagina']-2?><span class="sr-only"></span></a></li>
-                        <?php } if ($listagem['pagina'] >= 2) { ?>
-                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']-1?>" href=""><?=$listagem['pagina']-1?><span class="sr-only"></span></a></li>
+                        <?php if ($listagem['pagina'] > 1 ) { ?>
+                           <li hidden>
+                              <a class="btnPag"  data-pag="<?=$listagem['pagina']-1?>" aria-label="Previous">
+                                 <span aria-hidden="true"> <i class="fa fa-angle-left"></i> Anterior</span>
+                              </a>
+                           </li>
                         <?php } ?>
-
-                           <li class="active"><a class="btnPag" data-pag="<?=$listagem['pagina']?>" href=""><?=$listagem['pagina']?><span class="sr-only"></span></a></li>
-                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']+1?>" href=""><?=$listagem['pagina']+1?><span class="sr-only"></span></a></li>
-
-                        <?php if ($listagem['pagina'] <= $listagem['paginas'] - 3) { ?>
-                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']+2?>" href=""><?=$listagem['pagina']+2?><span class="sr-only"></span></a></li>
-                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']+3?>" rel="Next" pag="<?=$listagem['pagina']-5?>"><span aria-hidden="true"><i class="fa fa-angle-right"></i></span></a></li>
+                           <li class="active">
+                              <a class="btnPag" data-pag="<?=$listagem['pagina']?>" href="#">
+                                 <?=$listagem['pagina']?><span class="sr-only"></span>
+                              </a>
+                           </li>
+                        <?php if ($listagem['pagina'] < ($listagem['paginas'] ) ) { ?> 
+                           <li>
+                              <a class="btnPag" data-pag="<?=$listagem['pagina']+1?>" rel="Next" >
+                                 <span aria-hidden="true">Próxima <i class="fa fa-angle-right"></i></span>
+                              </a>
+                           </li>
                         <?php } ?>
                         </ul>
                      </form>
-                     <!--start Pagination-->
+                     <!--end Pagination-->
+
                   </div>
+
                </div>
 
                <!-- end container-content -->
@@ -252,8 +259,14 @@
          include'build/requisicoes.php';
       ?>
       <!--end footer section-->
-
-     
+      <script>
+         jQuery(document).ready(function() {
+           jQuery('#firstSearch').submit(function(){
+               var action = jQuery(this).attr("action");
+               window.location.href(action);
+           });
+         });
+      </script>
    </body>
 </html>
 

@@ -17,7 +17,6 @@ namespace controller;
         	$listagem = $imoveis
             ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
             ->get();
-            $action = '/'.pasta.'/Result/index';
             $linkDetalhe = $imoveis->detalheURL();
         	include 'view/vendalocacao.php';
 
@@ -25,14 +24,15 @@ namespace controller;
 
 
         public function locacao(){
+            print_r($_POST);
         	$imoveis = new \Classes\Imoveis;
-        	$listagem = $imoveis
+            $listagem = $imoveis
             ->filter(['Status'=>'ALUGUEL'])
             ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
             ->get();
-        	$action = '/'.pasta.'/Result/locacao';
             $linkDetalhe = $imoveis->detalheURL();
-        	 include 'view/locacao.php';
+        	include 'view/locacao.php';
+            // print_r($listagem);
         }
 
 
@@ -42,9 +42,10 @@ namespace controller;
             ->filter(['Status'=>'VENDA'])
             ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
             ->get();
-        	$action = '/'.pasta.'/Result/venda';
             $linkDetalhe = $imoveis->detalheURL();
         	include 'view/venda.php';
+            print_r($listagem);
+            
 
         }
 
