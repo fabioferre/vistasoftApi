@@ -4,7 +4,7 @@
    </div>
    <div class="widget-range">
       <div class="widget-body">
-         <form  method="post" action="'/'<?=pasta?>'/Result/index'" id="firstSearch" >
+         <form  method="post" action="/<?=pasta?>/Result/index" id="firstSearch" >
             <div class="range-block rang-form-block">
                <div class="row">
                   <div class="col-sm-12 col-xs-12">
@@ -39,10 +39,10 @@
                            <option value="">Tipos de imóveis</option>
                            <option value="Apartamento">Apartamento</option>
                            <option value="Casa">Casa</option>
-                           <option value="Casa+na+praia">Casa na Praia</option>
-                           <option value="Casa+no+campo">Casa no Campo</option>
+                           <option value="Casa na praia">Casa na Praia</option>
+                           <option value="Casa no campo">Casa no Campo</option>
                            <option value="Cobertura">Cobertura</option>
-                           <option value="Salas+e+Conjunto">Salas e Conjunto</option>
+                           <option value="Salas e Conjunto">Salas e Conjunto</option>
                            <option value="duplex">Duplex</option>
                            <option value="Fazenda">Fazenda</option>
                            <option value="loft">Loft</option>
@@ -57,7 +57,7 @@
                            <option value="">Status Do imóvel</option>
                            <option value="ALUGUEL"> Locação</option>
                            <option value="VENDA"> Venda</option>
-                           <option value="VENDA+LOCACAO"> Venda / Locação</option>
+                           <option value=""> Venda / Locação</option>
                         </select>
                      </div>
                   </div>
