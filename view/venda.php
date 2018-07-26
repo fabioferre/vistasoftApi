@@ -65,8 +65,8 @@
                                           </div>
                                           <div class="price hide-on-list"><span class="price-start">Venda</span><span class="item-price">R$ <?=$key['ValorVenda']?></span></div>
 
-                                          <a class="hover-effect" href="<?=$linkDetalhe?>/<?=$key['Codigo']?>">
-                                             <img src="<?=$key['FotoDestaque']?>" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="250">      
+                                          <a class="hover-effect limitImg" href="<?=$linkDetalhe?>/<?=$key['Codigo']?>">
+                                             <img src="<?=$key['FotoDestaque']?>" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image limitImg" alt="" width="385" height="250">      
                                           </a>
                                           
                                           <ul class="actions">

@@ -97,20 +97,25 @@
 
                                    <!-- Indicadores-->
                                     <ol class="carousel-indicators">
-                                     <?php foreach ($e['Foto'] as $key => $value ) { ?>
-                                     <li data-target="#myCarousel" data-slide-to="<?=$key?>" class="<?=$key == 1? 'active': ''?>"></li>
-                                     <?php } ?>
+                                     <?php $i=0; 
+                                      foreach ($e['Foto'] as $key => $value ) { ?>
+
+                                      <li data-target="#myCarousel" data-slide-to="<?=$i?>" class="<?=$i == 1?'active':''?>"></li>
+
+                                     <?php $i++; } ?>
                                    </ol>
 
                                    <!-- Slides -->
                                    <div class="carousel-inner" style="height: 450px;">
-                                    <?php foreach ($e['Foto'] as $key => $value) { ?>
-                                     
-                                     <div class="item <?=$key == 1? 'active': ''?>">
-                                       <img src="<?=$value['Foto']?>" alt="" >
+                  
+                                    <?php $i=0 ;
+                                      foreach ($e['Foto'] as $key => $value ) { ?>
+
+                                     <div class="item <?=$i == 1?'active':''?>">
+                                       <img src="<?=$value['Foto']?>" alt="">
                                      </div>
-                                     
-                                    <?php } ?>
+
+                                    <?php $i++; } ?>
                                    </div>
 
                                    <!-- Controle de direita e esquerda -->
@@ -177,7 +182,9 @@
                                           
                                           <li><strong>Preço:</strong>  
                                              <?=$e['ValorVenda'] > 0?"Venda - R$".$e['ValorVenda'] : '' ?>
-                                             <?=$e['ValorLocacao'] > 0?"Aluguel - R$".$e['ValorLocacao']."/Por Mês" : '' ?>
+                                          </li>
+                                          <li>
+                                            <?=$e['ValorLocacao'] > 0?"Aluguel - R$".$e['ValorLocacao']."/Por Mês" : '' ?>
                                           </li>
 
                                           <li><strong>Tamanho do imóvel:</strong> 
@@ -187,6 +194,7 @@
                                           <li><strong>Quartos:</strong> 
                                             <?=$e['Dormitorios']?>
                                           </li>
+                                          
 
                                           <li><strong>Vagas:</strong>
                                             <?=$e['Vagas'] > 0?$e['Vagas']: 'Não informado' ?>
@@ -210,11 +218,11 @@
                                        <h2 class="title-left">Destaques</h2>
                                     </div>
                                     <ul class="list-three-col list-features">
-                                       <li><a href="http://novoterralima.com/destaque/copa-cozinha/">Copa Cozinha</a></li>
-                                       <li><a href="http://novoterralima.com/destaque/cozinha-integrada/">Cozinha Integrada</a></li>
-                                       <li><a href="http://novoterralima.com/destaque/sala-de-estar/">Sala de Estar</a></li>
-                                       <li><a href="http://novoterralima.com/destaque/sala-de-jantar/">Sala de Jantar</a></li>
-                                       <li><a href="http://novoterralima.com/destaque/suite-americana/">Suíte Americana</a></li>
+                                       <li><a href="#">Copa Cozinha</a></li>
+                                       <li><a href="#">Cozinha Integrada</a></li>
+                                       <li><a href="#">Sala de Estar</a></li>
+                                       <li><a href="#">Sala de Jantar</a></li>
+                                       <li><a href="#">Suíte Americana</a></li>
                                     </ul>
                                  </div>
                               </div>

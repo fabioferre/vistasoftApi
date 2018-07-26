@@ -12,7 +12,7 @@ namespace controller;
                 $_SESSION = $imoveis->busca($_POST);
             }
 
-            print_r($_SESSION);
+            // print_r($_SESSION);
             if (isset($_SESSION) ){
                 $dados = $_SESSION;
                 $pagina['pagina'] = isset($_POST['pag'])? $_POST['pag']: 1;

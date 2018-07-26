@@ -40,12 +40,13 @@ namespace controller;
             ->setCodigo($idImovel)
             ->get();
 
-            print_r($e);
+            
             if (empty($e['status']) ) {
 
                 $e['ValorVenda'] = $imoveis->formataValor($e['ValorVenda'], 1000);
                 $e['ValorLocacao'] = $imoveis->formataValor($e['ValorLocacao'], 100);
-                // include 'view/imovelDetalhe.php';
+                include 'view/imovelDetalhe.php';
+                // print_r($e);
 
             }else{
                 header('Location: /'.pasta.'/Portfolio/ ');

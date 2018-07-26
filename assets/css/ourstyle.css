@@ -4,7 +4,9 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
+.limitImg{
+    height: 170px;
+}
 
 .advance-search-header, 
 .advanced-search-mobile, 
