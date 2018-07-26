@@ -345,12 +345,12 @@
                                     <div class="media agent-media">
                                        <div class="media-left">
                                         <a href="#">
-                                          <img src="<?=$e['FotoProprietario']?>" alt="<?=$e['Proprietario']?>" width="75" height="75">
+                                          <img src="<?=$e['Corretor'][$e['CodigoCorretor']]['Foto']?>" alt="<?=$e['Corretor'][$e['CodigoCorretor']]['Nome']?>" width="75" height="75">
                                         </a>
                                       </div>
                                        <div class="media-body">
                                           <dl>
-                                             <dd><i class="fa fa-user"></i><?=$e['Proprietario']?></dd>
+                                             <dd><i class="fa fa-user"></i><?=$e['Corretor'][$e['CodigoCorretor']]['Nome']?></dd>
                                              <!-- <dd><a href="http://novoterralima.com/author/ana-claudia/" class="view">Ver listagens</a></dd> -->
                                           </dl>
                                        </div>

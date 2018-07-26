@@ -15,11 +15,7 @@ namespace controller;
             $fields = array(
                 "Codigo",
                 "Status",
-                'Proprietario',
-                "CodigoProprietario",
-                "FotoProprietario",
                 "TituloSite",
-                "Observacoes",
                 ["Foto"=>['Foto','FotoPequena','ExibirSite','Destaque','Ordem']],
                 "Categoria",
                 "Bairro",
@@ -35,7 +31,9 @@ namespace controller;
                 "Pais",
                 "CEP",
                 "BairroComercial",
-                "Caracteristicas"
+                "Caracteristicas",
+                "CodigoCorretor",
+                ["Corretor"=>['Nome','TelefoneComercial', 'Foto' ]]
             );
 
             $e = $imoveis
@@ -50,7 +48,7 @@ namespace controller;
                 $e['ValorVenda'] = $imoveis->formataValor($e['ValorVenda'], 1000);
                 $e['ValorLocacao'] = $imoveis->formataValor($e['ValorLocacao'], 100);
                 include 'view/imovelDetalhe.php';
-                // print_r($e);
+                // print_r($e['Corretor']);
 
             }else{
                 header('Location: /'.pasta.'/Portfolio/ ');

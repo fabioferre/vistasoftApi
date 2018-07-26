@@ -7,7 +7,7 @@ namespace controller;
         public function index(){
             $imoveis = new \Classes\Imoveis;
             $linkDetalhe = $imoveis->setURL();
-
+            $_COOKIE['layout-btn'] = 'btn-grid-3-col';
             if (isset($_POST['busca']) ) {
                 $_SESSION = $imoveis->busca($_POST);
             }

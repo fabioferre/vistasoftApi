@@ -38,7 +38,7 @@
          
                            </div>
                            <div class="table-cell hidden-xs">
-                              <span class="view-btn btn-list active"><i class="fa fa-th-list"></i></span>
+                              <span class="view-btn btn-list"><i class="fa fa-th-list"></i></span>
                               <span class="view-btn btn-grid"><i class="fa fa-th-large"></i></span>
                            </div>
                         </div>
@@ -264,7 +264,12 @@
 
       <script>
          jQuery(document).ready(function() {
-           
+            jQuery.cookie('properties-layout', 'grid-view');
+            jQuery.cookie('layout-btn', 'btn-grid');
+            jQuery('.property-listing').removeClass('list-view grid-view grid-view-3-col');
+            jQuery('.property-listing').addClass('grid-view');
+            jQuery('.view-btn').removeClass('active');
+            jQuery('.view-btn.btn-grid').addClass('active');
          });
       </script>
    </body>
