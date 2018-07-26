@@ -63,7 +63,9 @@
                                     <div class="figure-block">
                                        <figure class="item-thumb">
                                           <div class="label-wrap label-right hide-on-list">
-                                             <span class="label-status label-status-180 label label-default"><a href="http://novoterralima.com/status/venda/">Venda</a></span>           
+                                             <span class="label-status label-status-180 label label-default">
+                                                <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'venda'?'venda': 'locacao'?>"><?=$key['Status']?></a>
+                                             </span>           
                                           </div>
                                           <div class="price hide-on-list"><span class="price-start">Venda</span><span class="item-price">R$ <?=$key['ValorVenda']?></span></div>
 
@@ -97,7 +99,7 @@
                                           <div class="label-wrap hide-on-grid">
 
                                              <span class="label-status label-status-180 label label-default">
-                                                <a href="#"><?=$key['Status']?> </a>
+                                                <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'venda'?'venda': 'locacao'?>"><?=$key['Status']?> </a>
                                              </span>
 
                                           
@@ -206,9 +208,9 @@
                               <figure class="item-thumb">
                                  <span class="label-featured label label-success">Destaque</span>
                                  <div class="label-wrap label-right">
-                                    <span class="label-status label-status-180 label label-default"><a href="http://novoterralima.com/status/venda/">Venda</a></span>                               
+                                    <span class="label-status label-status-180 label label-default"><a href="#">Venda</a></span>                               
                                  </div>
-                                 <a href="http://novoterralima.com/imovel/cobertura-co-vista-para-o-parque-tl977/" class="hover-effect">
+                                 <a href="#" class="hover-effect">
                                  <img src="http://novoterralima.com/wp-content/uploads/2017/12/218-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" srcset="http://novoterralima.com/wp-content/uploads/2017/12/218-385x258.jpg 385w, http://novoterralima.com/wp-content/uploads/2017/12/218-150x100.jpg 150w" sizes="(max-width: 385px) 100vw, 385px" width="385" height="258">                               </a>
                                  <figcaption class="thumb-caption clearfix">
                                     <div class="cap-price pull-left"><span class="price-start">Venda</span> R$6,500,000</div>
@@ -228,7 +230,7 @@
                                  <div class="label-wrap label-right">
                                     <span class="label-status label-status-171 label label-default"><a href="http://novoterralima.com/status/venda-e-locacao/">Venda / Locação</a></span>                               
                                  </div>
-                                 <a href="http://novoterralima.com/imovel/tl664/" class="hover-effect">
+                                 <a href="#" class="hover-effect">
                                  <img src="http://novoterralima.com/wp-content/uploads/2017/12/182-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" srcset="http://novoterralima.com/wp-content/uploads/2017/12/182-385x258.jpg 385w, http://novoterralima.com/wp-content/uploads/2017/12/182-300x200.jpg 300w, http://novoterralima.com/wp-content/uploads/2017/12/182-150x100.jpg 150w, http://novoterralima.com/wp-content/uploads/2017/12/182-350x234.jpg 350w, http://novoterralima.com/wp-content/uploads/2017/12/182.jpg 640w" sizes="(max-width: 385px) 100vw, 385px" width="385" height="258">                             </a>
                                  <figcaption class="thumb-caption clearfix">
                                     <div class="cap-price pull-left"><span class="price-start">Venda</span> R$3,200,000</div>
@@ -247,9 +249,9 @@
                               <figure class="item-thumb">
                                  <span class="label-featured label label-success">Destaque</span>
                                  <div class="label-wrap label-right">
-                                    <span class="label-status label-status-171 label label-default"><a href="http://novoterralima.com/status/venda-e-locacao/">Venda / Locação</a></span>                               
+                                    <span class="label-status label-status-171 label label-default"><a href="#">Venda / Locação</a></span>                               
                                  </div>
-                                 <a href="http://novoterralima.com/imovel/cobertura-duplex-tl316/" class="hover-effect">
+                                 <a href="#" class="hover-effect">
                                  <img src="http://novoterralima.com/wp-content/uploads/2017/11/141-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="258">                               </a>
                                  <figcaption class="thumb-caption clearfix">
                                     <div class="cap-price pull-left"><span class="price-start">Venda</span> R$35,000,000</div>

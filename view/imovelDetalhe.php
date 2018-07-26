@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
    <head>
-      <title><?=$e['DescricaoWeb']?></title>
+      <title><?=$e['TituloSite']?></title>
       <meta property='og:url' content='http://novoterralima.com/imovel/apartamento-reformado-e-mobiliado-tl1639/'/>
       <meta property='og:title' content='Reformado e mobiliado TL1639'/>
       <meta property='og:description' content='Descrição'/>
@@ -33,7 +33,7 @@
                               <div class="table-cell hidden-sm hidden-xs">
                                  <span class="label-wrap">
                                     <span class="label-status label-status-23 label label-default">
-                                       <a href="/<?=pasta?>/Portfolio/<?=$imovel[$idImovel]['Status'] == 'VENDA'? 'venda': 'locacao'?>">
+                                       <a href="/<?=pasta?>/Portfolio/<?=$e['Status'] == 'VENDA'? 'venda': 'locacao'?>">
                                           <?=$e['Status']?>
                                        </a>
                                     </span>                
@@ -241,14 +241,14 @@
                                           <div class="figure-block">
                                              <figure class="item-thumb">
                                                 <div class="label-wrap label-right hide-on-list">
-                                                   <span class="label-status label-status-23 label label-default"><a href="http://novoterralima.com/status/locacao/">Locação</a></span>                    
+                                                   <span class="label-status label-status-23 label label-default"><a href="#">Locação</a></span>                    
                                                 </div>
                                                 <div class="price hide-on-list"><span class="price-start">Aluguel</span><span class="item-price">R$10,000</span></div>
                                                 <a class="hover-effect" href="http://novoterralima.com/imovel/apartamento-impar-localizacao/">
                                                 <img width="385" height="258" src="http://novoterralima.com/wp-content/uploads/2017/11/05-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" srcset="http://novoterralima.com/wp-content/uploads/2017/11/05-385x258.jpg 385w, http://novoterralima.com/wp-content/uploads/2017/11/05-300x200.jpg 300w, http://novoterralima.com/wp-content/uploads/2017/11/05-768x512.jpg 768w, http://novoterralima.com/wp-content/uploads/2017/11/05-150x100.jpg 150w, http://novoterralima.com/wp-content/uploads/2017/11/05-720x480.jpg 720w" sizes="(max-width: 385px) 100vw, 385px" />                    </a>
                                                 <ul class="actions">
                                                    <li>
-                                                      <span class="add_fav" data-placement="top" data-toggle="tooltip" data-original-title="Favorito" data-propid="761"><i class="fa fa-heart-o"></i></span>
+                                                      <span class="add_fav" data-placement="top" data-toggle="tooltip" data-original-title="Favorito" data-propid="761"><i class="fa fa-heart"></i></span>
                                                    </li>
 
                                                    <li>
@@ -268,7 +268,7 @@
                                              <div class="info-row">
                                                 <div class="label-wrap hide-on-grid">
                                                    <span class="label-status label-status-23 label label-default">
-                                                      <a href="http://novoterralima.com/status/locacao/">Locação</a>
+                                                      <a href="#">Locação</a>
                                                    </span>                    
                                                 </div>
 
@@ -296,7 +296,7 @@
                                              </div>
 
                                              <div class="info-row phone text-right">
-                                                <a href="http://novoterralima.com/imovel/apartamento-impar-localizacao/" class="btn btn-primary">
+                                                <a href="# class="btn btn-primary">
                                                    Detalhes <i class="fa fa-angle-right fa-right"></i>
                                                 </a>
                                              </div>
@@ -313,7 +313,7 @@
 
                                              <div class="cell">
                                                 <div class="phone">
-                                                   <a href="http://novoterralima.com/imovel/apartamento-impar-localizacao/" class="btn btn-primary"> 
+                                                   <a href="#" class="btn btn-primary"> 
                                                       Detalhes <i class="fa fa-angle-right fa-right"></i>
                                                    </a>
                                                 </div>
@@ -343,18 +343,22 @@
                               <div class="form-small">
                                  <form method="post" action="#">
                                     <div class="media agent-media">
-                                       <div class="media-left"><a href="http://novoterralima.com/author/ana-claudia/"><img src="http://novoterralima.com/wp-content/themes/houzez/images/profile-avatar.png" alt="Ana Claudia" width="75" height="75"></a></div>
+                                       <div class="media-left">
+                                        <a href="#">
+                                          <img src="<?=$e['FotoProprietario']?>" alt="<?=$e['Proprietario']?>" width="75" height="75">
+                                        </a>
+                                      </div>
                                        <div class="media-body">
                                           <dl>
-                                             <dd><i class="fa fa-user"></i> Ana Claudia</dd>
-                                             <dd><a href="http://novoterralima.com/author/ana-claudia/" class="view">Ver listagens</a></dd>
+                                             <dd><i class="fa fa-user"></i><?=$e['Proprietario']?></dd>
+                                             <!-- <dd><a href="http://novoterralima.com/author/ana-claudia/" class="view">Ver listagens</a></dd> -->
                                           </dl>
                                        </div>
                                     </div>
                                     <input type="hidden" name="target_email" value="ana&#99;&#108;&#97;udi&#97;&#64;te&#114;r&#97;lim&#97;&#105;mov&#101;is&#46;&#99;&#111;&#109;.b&#114;">
                                     <input type="hidden" name="agent_contact_form_ajax" value="bfa4cd7f70"/>
                                     <input type="hidden" name="property_permalink" value="http://novoterralima.com/imovel/apartamento-reformado-e-mobiliado-tl1639/"/>
-                                    <input type="hidden" name="property_title" value="Reformado e mobiliado TL1639"/>
+                                    <input type="hidden" name="property_title" value="#"/>
                                     <input type="hidden" name="action" value="houzez_agent_send_message">
                                     <div class="form-group">
                                        <input class="form-control" name="name" value="" type="text"
@@ -369,7 +373,8 @@
                                           placeholder="E-mail">
                                     </div>
                                     <div class="form-group">
-                                       <textarea class="form-control" name="message" rows="4" placeholder="Descrição">Olá, estou interessado em [Reformado e mobiliado TL1639]</textarea>
+                                       <textarea class="form-control" name="message" rows="4" placeholder="Descrição">Olá, estou interessado em <?=$e['TituloSite']?>
+                                        </textarea>
                                     </div>
                                     <button class="agent_contact_form btn btn-secondary btn-block">Solicitar informação</button>
                                     <div class="form_messages"></div>
