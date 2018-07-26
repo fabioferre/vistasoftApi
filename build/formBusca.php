@@ -17,6 +17,7 @@
                         </select>
                      </div>
                   </div>
+                  
    <!--                <div class="col-sm-12 col-xs-12">
                      <div class="form-group">
                         <select class="selectpicker bs-select-hidden" name="" data-live-search="false">
@@ -33,6 +34,7 @@
                         </select>
                      </div>
                   </div> -->
+
                   <div class="col-sm-12 col-xs-12">
                      <div class="form-group">
                         <select name="categoria" class="selectpicker bs-select-hidden" >
@@ -113,3 +115,4 @@
       </div>
    </div>
 </div>
+

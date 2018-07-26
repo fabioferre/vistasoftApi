@@ -4,7 +4,10 @@
     <link rel="pingback" href="http://novoterralima.com/xmlrpc.php">
 
     
-    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5&amp;appId=217780371604666"></script><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js" type="text/javascript" async=""></script><script>
+    <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5&amp;appId=217780371604666"></script>
+    <script src="/<?=pasta?>/assets/js/webfont.js" type="text/javascript" async=""></script>
+
+    <script>
         /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
         if ( typeof WebFontConfig === "undefined" ) {
             WebFontConfig = new Object();
@@ -25,7 +28,7 @@
     <link rel="alternate" type="application/rss+xml" title="Feed para Terra Lima Imóveis »" href="http://novoterralima.com/feed/">
     <link rel="alternate" type="application/rss+xml" title="Feed de comentários para Terra Lima Imóveis »" href="http://novoterralima.com/comments/feed/">
     <link rel="alternate" type="application/rss+xml" title="Feed para Terra Lima Imóveis » Venda / Locação Situação" href="http://novoterralima.com/status/venda-e-locacao/feed/">
-    <meta property="og:site_name" content="Terra Lima Imóveis"><meta property="og:url" content="http://novoterralima.com/imovel/muito-bem-construida-tl979/">  
+ 
 
     <script type="text/javascript">
                 window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/novoterralima.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.7"}};
@@ -61,11 +64,13 @@
     <link rel="stylesheet" id="houzez-style-inline-css" href="/<?=pasta?>/assets/css/ourstyle.css"  type="text/css" >
 
     <link rel="stylesheet" id="montserrat-css" href="http://fonts.googleapis.com/css?family=Montserrat%3A300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic&amp;ver=4.9.7" type="text/css" media="all">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat&amp;amp;subset=latin"><script type="text/javascript" src="http://novoterralima.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat&amp;amp;subset=latin">
+    <script type="text/javascript" src="/<?=pasta?>/build/lib/jquery/jquery.js?ver=1.12.4"></script>
 
     <script type="text/javascript" src="/<?=pasta?>/assets/js/jquery-migrate.min.js?ver=1.4.1"></script>
-    <script type="text/javascript" src="http://novoterralima.com/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.5.2"></script>
-    <script type="text/javascript" src="http://novoterralima.com/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.5.2"></script>
+    <script type="text/javascript" src="/<?=pasta?>/assets/js/jquery.themepunch.tools.min.js?ver=5.4.5.2"></script>
+    <script type="text/javascript" src="/<?=pasta?>/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.5.2"></script>
+    
     <link rel="https://api.w.org/" href="http://novoterralima.com/wp-json/">
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://novoterralima.com/xmlrpc.php?rsd">
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://novoterralima.com/wp-includes/wlwmanifest.xml"> 
@@ -104,3 +109,6 @@
     .fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
     .fb_customer_chat_bounce_in_v1{animation-duration:250ms;animation-name:fb_bounce_in_v1}.fb_customer_chat_bounce_out_v1{animation-duration:250ms;animation-name:fb_bounce_out_v1}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_in_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_out_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bubble_pop_in{animation-duration:250ms;animation-name:fb_customer_chat_bubble_bounce_in_animation}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{background-color:#fff;height:100%;overflow:hidden;position:fixed;visibility:hidden;width:100%}@keyframes fb_bounce_in_v1{0%{opacity:0;transform:scale(.8, .8);transform-origin:bottom right}80%{opacity:.8;transform:scale(1.03, 1.03)}100%{opacity:1;transform:scale(1, 1)}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_v2_mobile_chat_started{0%{opacity:0;top:20px}100%{opacity:1;top:0}}@keyframes fb_bounce_out_v1{from{opacity:1}to{opacity:0}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}</style>
    
+   <script type="text/javascript">
+       
+   </script>

@@ -8,7 +8,7 @@ class Env
     private $result;
     private $key;
     private $http;
-    private $codigo;
+    protected $codigo;
     protected $showtotal = 1;
     protected $dados;
     protected $curl;
@@ -20,21 +20,23 @@ class Env
         $this->url         =  $this->http;
         $this->url        .=    $this->curl;
         $this->url        .=   '?key=' . $this->key;
+
+
+        if(isset($this->codigo)){
+           $teste =  '&imovel=' . json_encode($this->codigo);
+            
+            $this->url        .=  str_replace('"', '', $teste );
+        }
+
         //verificar se possui pesquisa
         if(isset($this->dados)){
             $this->url        .=  '&pesquisa=' . json_encode($this->dados);
-
         }
 
         if(isset($this->showtotal)){
             $this->url        .=  '&showtotal=' . json_encode($this->showtotal);
-
         }
 
-        if(isset($this->codigo)){
-            $this->url        .=  '&imovel=' . json_encode($this->codigo);
-
-        }
         //inicia a conexao
         $ch = curl_init($this->url);
         curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
@@ -91,8 +93,12 @@ class Env
 
     function __construct() 
     { 
-        $this->http = 'http://sandbox-rest.vistahost.com.br/';
-        $this->key         =  'c9fdd79584fb8d369a6a579af1a8f681'; //Informe sua chave aqui
+        // teste ---------
+        // $this->http = 'http://sandbox-rest.vistahost.com.br/';
+        // $this->key         =  'c9fdd79584fb8d369a6a579af1a8f681'; //Informe sua chave aqui
+
+        $this->http = 'http://terralim-rest.vistahost.com.br/';
+        $this->key         =  '3815e08521f4a1cf4f2a387790db686f'; //Informe sua chave aqui
 
     } 
 

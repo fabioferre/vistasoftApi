@@ -264,11 +264,7 @@
 
       <script>
          jQuery(document).ready(function() {
-            jQuery('.btnPag').click(function(){
-               var valpag = jQuery(this).data('pag');
-               jQuery('#pag').val(valpag);
-               jQuery('.pagination-main').submit();
-           });
+           
          });
       </script>
    </body>

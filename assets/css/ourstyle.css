@@ -1,3 +1,11 @@
+.limitText{
+    max-width: 80ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
 .advance-search-header, 
 .advanced-search-mobile, 
 .advanced-search-mobile .single-search .form-control,

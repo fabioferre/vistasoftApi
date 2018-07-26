@@ -22,18 +22,18 @@
                      </div>
                      <div class="page-title-right">
                         <div class="view">
-                           <div class="sort-tab table-cell">
+                           <form class="sort-tab table-cell" method="post" id="order">
                               Ordenar por:                            
                               <select id="sort_properties" class="selectpicker bs-select-hidden" title="" data-live-search-style="begins" data-live-search="false">
-                                 <option value="">Ordem padrão</option>
-                                 <option value="a_price">Preço (baixo para alto)</option>
-                                 <option value="d_price">Preço (alto para baixo)</option>
+                                 <option value="" >Ordem padrão</option>
+                                 <option value="a_price" >Preço (baixo para alto)</option>
+                                 <option value="d_price" >Preço (alto para baixo)</option>
                                  <option value="featured">Destaque</option>
-                                 <option value="a_date">Data antiga para nova</option>
-                                 <option value="d_date">Data nova para antiga</option>
+                                 <option value="a_date" >Data antiga para nova</option>
+                                 <option value="d_date" >Data nova para antiga</option>
                               </select>
          
-                           </div>
+                           </form>
                            <div class="table-cell hidden-xs">
                               <span class="view-btn btn-list active"><i class="fa fa-th-list"></i></span>
                               <span class="view-btn btn-grid"><i class="fa fa-th-large"></i></span>
@@ -68,7 +68,7 @@
                                           <div class="price hide-on-list"><span class="price-start">Venda</span><span class="item-price">R$ <?=$key['ValorVenda']?></span></div>
 
                                           <a class="hover-effect" href="<?=$linkDetalhe?>/<?=$key['Codigo']?>">
-                                             <img src="http://novoterralima.com/wp-content/uploads/2017/12/219-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="258">                    
+                                             <img src="<?=$key['FotoDestaque']?>" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="250">                    
                                           </a>
                                           
                                           <ul class="actions">
@@ -113,7 +113,7 @@
                                           <p>
                                              <span>Quartos: <?=$key['Dormitorios']?></span>
                                              <span>Banheiros: <?=$key['TotalBanheiros']?></span>
-                                             <span>m² : <?=$key['AreaTotal']?></span>
+                                             <span>m² : <?=$key['AreaTotal']?> </span>
                                           </p>
                                           <p><?=$key['Categoria']?></p>
                                        </div>

@@ -61,12 +61,12 @@
                                     <div class="figure-block">
                                        <figure class="item-thumb">
                                           <div class="label-wrap label-right hide-on-list">
-                                             <span class="label-status label-status-180 label label-default"><a href="http://novoterralima.com/status/venda/">Venda</a></span><span class="label-status label-status-171 label label-default"><a href="#">Venda / Locação</a></span>                    
+                                             <span class="label-status label-status-180 label label-default"><a href="http://novoterralima.com/status/venda/">Venda</a></span>                    
                                           </div>
                                           <div class="price hide-on-list"><span class="price-start">Venda</span><span class="item-price">R$ <?=$key['ValorVenda']?></span></div>
 
                                           <a class="hover-effect" href="<?=$linkDetalhe?>/<?=$key['Codigo']?>">
-                                             <img src="http://novoterralima.com/wp-content/uploads/2017/12/219-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="258">                    
+                                             <img src="<?=$key['FotoDestaque']?>" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="250">      
                                           </a>
                                           
                                           <ul class="actions">
@@ -160,7 +160,7 @@
                  
                      <!--end property items-->
                      <hr>
-                      <!--start Pagination-->
+                     <!--start Pagination-->
                      <form class="pagination-main" method="post" >
                         <input type="num" name="pag" id="pag" hidden>
                         <ul class="pagination">
@@ -172,10 +172,7 @@
                         <?php } ?>
 
                            <li class="active"><a class="btnPag" data-pag="<?=$listagem['pagina']?>" href="#"><?=$listagem['pagina']?><span class="sr-only"></span></a></li>
-
-                        <?php 
-                           $i = $listagem['pagina'] - 4;
-                           if ($listagem['pagina'] <= ($listagem['pagina'] - 4) ) { ?>
+                        <?php if ($listagem['pagina'] < ($listagem['total'] - 4) ) { ?>
                            <li><a class="btnPag" data-pag="<?=$listagem['pagina']+1?>" href="#"><?=$listagem['pagina']+1?><span class="sr-only"></span></a></li>
                            <li><a class="btnPag" data-pag="<?=$listagem['pagina']+2?>" href="#"><?=$listagem['pagina']+2?><span class="sr-only"></span></a></li>
                            <li><a class="btnPag" data-pag="<?=$listagem['pagina']+3?>" rel="Next" pag="<?=$listagem['pagina']-5?>"><span aria-hidden="true"><i class="fa fa-angle-right"></i></span></a></li>
