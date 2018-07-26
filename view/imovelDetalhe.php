@@ -4,14 +4,13 @@
 <html lang="pt-BR">
    <head>
       <title><?=$e['DescricaoWeb']?></title>
-
-       <?php
-         include 'build/head.php';
-      ?>
-
       <meta property='og:url' content='http://novoterralima.com/imovel/apartamento-reformado-e-mobiliado-tl1639/'/>
       <meta property='og:title' content='Reformado e mobiliado TL1639'/>
       <meta property='og:description' content='Descrição'/>
+       <?php
+         include 'build/head.php';
+      ?>
+      <link rel="stylesheet" type="text/css" href="/<?=pasta?>/assets/css/mediaqueries.css">
    </head>
 
    <body class="property-template-default single single-property postid-816  transparent- wpb-js-composer js-comp-ver-5.2.1 vc_responsive">
@@ -93,7 +92,7 @@
                                     <span class="label label-primary label-status-23"></span>
                                  </span>
 
-                                <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 450px;">
+                                <div id="myCarousel" class="carousel slide" data-ride="carousel" >
 
                                    <!-- Indicadores-->
                                     <ol class="carousel-indicators">
@@ -106,13 +105,13 @@
                                    </ol>
 
                                    <!-- Slides -->
-                                   <div class="carousel-inner" style="height: 450px;">
+                                   <div class="carousel-inner" >
                   
                                     <?php $i=0 ;
                                       foreach ($e['Foto'] as $key => $value ) { ?>
 
                                      <div class="item <?=$i == 1?'active':''?>">
-                                       <img src="<?=$value['Foto']?>" alt="">
+                                       <img src="<?=$value['Foto']?>" alt="" >
                                      </div>
 
                                     <?php $i++; } ?>
