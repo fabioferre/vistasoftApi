@@ -38,10 +38,10 @@ class Imoveis extends Env
         $param['min-price'] = str_replace(',', '', $param['min-price']); $param['max-price'] = str_replace(',', '', $param['max-price']);
         $param['min-price'] = str_replace('R$', '', $param['min-price']); $param['max-price'] = str_replace('R$', '', $param['max-price']);
 
-        if ($param['status'] == 'VENDA') {
-            $pesquisa['Status'] = $param['status'];
-            $pesquisa['ValorVenda'] = array($param['min-price'], $param['max-price']);
-        }
+        
+        
+        $pesquisa['ValorVenda'] = array($param['min-price'], $param['max-price']);
+        
         if ($param['status'] == 'ALUGUEL') {
             $pesquisa['Status'] = $param['status'];
             $pesquisa['ValorLocacao'] = array($param['min-price'], $param['max-price']);

@@ -543,7 +543,7 @@ blockquote p {
       .breadcrumb li a:hover {
         color: #00aeef; }
     .breadcrumb li:after {
-      font-family: "FontAwesome";
+      font-family: 'Font Awesome 5 Free';
       color: #9b9b9b;
       content: "\f105";
       padding: 0 5px; }
@@ -646,7 +646,10 @@ blockquote p {
   .input-icon:before {
     color: #959595;
     text-align: center;
-    font-family: "FontAwesome";
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    src: url("../webfonts/fa-solid-900.eot");
     height: 43px;
     width: 40px;
     line-height: 43px;
@@ -677,7 +680,7 @@ blockquote p {
   content: "\f0e0"; }
 
 .input-pass:before {
-  content: "\f023"; }
+  content: "\f084"; }
 
 .input-search:before {
   content: "\f002"; }
@@ -3260,7 +3263,11 @@ h4 {
       padding-right: 18px; }
       .nav-dropdown li .expand-me:before {
         content: '\f0da';
-        font-family: "FontAwesome"; }
+        font-family: 'Font Awesome 5 Free'; 
+        font-style: normal;
+        font-weight: 900;
+        src: url("../webfonts/fa-solid-900.eot");
+      }
     .nav-dropdown li:hover {
       background-color: #00aeef; }
       .nav-dropdown li:hover > .expand-me {
@@ -3554,7 +3561,10 @@ h4 {
             background-color: transparent !important; }
           .account-dropdown > ul .sub-menu > li a:before {
             display: inline-block;
-            font-family: FontAwesome;
+            font-family: 'Font Awesome 5 Free';
+            font-style: normal;
+            font-weight: 900;
+            src: url("../webfonts/fa-solid-900.eot");
             content: '\f105';
             margin-right: 25px; }
       .account-dropdown > ul .sub-menu > li.active > a {
@@ -3895,10 +3905,14 @@ h4 {
       .navi > ul > li > a {
         padding: 0 9px; } }
 .navi > ul .has-child > a:after {
-  font-family: "FontAwesome";
+  content: '\f0d7';
+  font-family: 'Font Awesome 5 Free';
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 0 10px;
+ font-style: normal;
+  font-weight: 900;
+  src: url("../webfonts/fa-solid-900.eot");
   float: right; }
   @media only screen and (max-width: 1199px) {
     .navi > ul .has-child > a:after {
@@ -5023,7 +5037,10 @@ h4 {
   width: 230px;
   position: relative; }
   .search-expand-btn:after {
-    font-family: "FontAwesome";
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+  font-weight: 900;
+  src: url("../webfonts/fa-solid-900.eot");
     content: '\f0d8';
     margin-left: 15px;
     position: absolute;
@@ -5605,7 +5622,10 @@ h4 {
   cursor: pointer;
   font-size: 16px; }
   #save_search_click:after {
-    font-family: "FontAwesome";
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+  font-weight: 900;
+  src: url("../webfonts/fa-solid-900.eot");
     content: '\f006';
     display: inline-block;
     margin-left: 10px;
@@ -6749,9 +6769,13 @@ div.mce-edit-area {
       color: #4cc6f4; }
     .board-panel-menu .sub-menu a:before {
       display: inline-block;
-      font-family: FontAwesome;
+      font-family: 'Font Awesome 5 Free';
+      font-style: normal;
+  font-weight: 900;
+  src: url("../webfonts/fa-solid-900.eot");
       content: '\f105';
-      margin-right: 18px; }
+      margin-right: 18px; 
+    }
   @media (min-width: 768px) and (max-width: 991px) {
     .board-panel-menu > li > a {
       padding: 14px 14px 14px 18px !important;
@@ -7163,7 +7187,7 @@ div.mce-edit-area {
       font-size: 13px; }
       .message-seach form button:before {
         content: '\f002';
-        font-family: "FontAwesome";
+        font-family: 'Font Awesome 5 Free';
         display: block;
         color: #777; }
 
@@ -7726,7 +7750,7 @@ div.mce-edit-area {
     width: 78px;
     height: 78px;
     cursor: pointer;
-    font-family: "FontAwesome";
+    font-family: 'Font Awesome 5 Free';
     line-height: 78px;
     text-align: center;
     font-size: 18px;
@@ -8017,7 +8041,7 @@ div.mce-edit-area {
     font-size: 13px; }
     .single-input-search button:before {
       content: '\f002';
-      font-family: "FontAwesome";
+      font-family: 'Font Awesome 5 Free';
       display: block;
       color: #777; }
 
@@ -9676,7 +9700,7 @@ div.mce-edit-area {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    font-family: "FontAwesome"; }
+    font-family: 'Font Awesome 5 Free'; }
     .accord-block .accord-tab .expand-icon:before {
       content: "\f107"; }
   .accord-block .accord-tab.active .expand-icon:before {
@@ -10318,7 +10342,7 @@ div.mce-edit-area {
       z-index: 10;
       cursor: pointer;
       text-align: center;
-      font-family: "FontAwesome"; }
+      font-family: 'Font Awesome 5 Free'; }
       .lightbox-popup .popup-inner .expand-icon:before {
         content: "\f065"; }
       .lightbox-popup .popup-inner .expand-icon:hover {
@@ -12826,7 +12850,7 @@ div[class*="col-"] > .item-wrap {
   margin-left: -10px; }
   .widget-categories a:before, .widget_categories a:before, .widget_archive a:before, .widget_meta a:before, .widget_recent_entries a:before, .widget_pages a:before, .widget-pages a:before, .widget_recent_comments a:before, .widget_nav_menu a:before {
     content: "\f0da";
-    font-family: "FontAwesome";
+    font-family: 'Font Awesome 5 Free';
     font-size: 12px;
     line-height: 14px;
     position: absolute;
@@ -12903,7 +12927,7 @@ div[class*="col-"] > .item-wrap {
   .widget-pages li a:before {
     content: "\f0da";
     margin-right: 10px;
-    font-family: "FontAwesome"; }
+    font-family: 'Font Awesome 5 Free'; }
   .widget-pages li li {
     font-size: 12px; }
 
@@ -12968,7 +12992,7 @@ div[class*="col-"] > .item-wrap {
   border: none; }
   .widget_search form button:before {
     content: '\f002';
-    font-family: "FontAwesome";
+    font-family: 'Font Awesome 5 Free';
     display: block;
     color: #000; }
 
@@ -13205,7 +13229,7 @@ div[class*="col-"] > .item-wrap {
   .footer-widget.widget-categories li a:before, .footer-widget.widget_categories li a:before, .footer-widget.widget_archive li a:before, .footer-widget.widget_meta li a:before, .footer-widget.widget_recent_entries li a:before, .footer-widget.widget_pages li a:before, .footer-widget.widget-pages li a:before, .footer-widget.widget_recent_comments li a:before, .footer-widget.widget_nav_menu li a:before {
     content: "\f0da";
     margin-right: 10px;
-    font-family: "FontAwesome"; }
+    font-family: 'Font Awesome 5 Free'; }
   .footer-widget.widget_calendar caption,
   .footer-widget.widget_calendar table td,
   .footer-widget.widget_calendar table th {
@@ -13229,7 +13253,7 @@ div[class*="col-"] > .item-wrap {
     border: none; }
     .footer-widget.widget_search form button:before {
       content: '\f002';
-      font-family: "FontAwesome";
+      font-family: 'Font Awesome 5 Free';
       display: block;
       color: #000; }
   .footer-widget.widget_tag_cloud .tagcloud a {
@@ -13282,7 +13306,7 @@ div[class*="col-"] > .item-wrap {
 .footer-widget.widget-pages li a:before,
 .footer-widget.widget_nav_menu li a:before {
   content: "\f0da";
-  font-family: "FontAwesome";
+  font-family: 'Font Awesome 5 Free';
   font-size: 12px;
   line-height: 14px;
   left: 0; }
@@ -14530,7 +14554,7 @@ textarea.wpcf7-form-control {
     content: "\f0dc";
     display: inline-block;
     vertical-align: middle;
-    font-family: "FontAwesome";
+    font-family: 'Font Awesome 5 Free';
     position: absolute;
     right: 14px;
     top: 0;

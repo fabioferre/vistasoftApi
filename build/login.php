@@ -16,7 +16,7 @@
                <li class="active">Login</li>
                <li>Register</li>
             </ul>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
          </div>
          <div class="modal-body login-block class-for-register-msg">
             <div class="tab-content">
@@ -31,6 +31,7 @@
                            <input id="password" name="password" placeholder="Senha" type="password">
                         </div>
                      </div>
+                     
                      <div class="forget-block clearfix">
                         <div class="form-group pull-left">
                            <div class="checkbox">

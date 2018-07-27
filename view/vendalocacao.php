@@ -10,6 +10,7 @@
     
       <?php
          require_once('build/navbar.php');
+         include 'build/login.php';
       ?>
 
       <div id="section-body" class="">
@@ -18,7 +19,7 @@
                <div class="row">
                   <div class="col-sm-12">
                      <div class="page-title-left">
-                        <h2>Venda / Locação – Terra Lima Imóveis</h2>
+                        <h2>Venda / Locação </h2>
                      </div>
                      <div class="page-title-right">
                         <div class="view">

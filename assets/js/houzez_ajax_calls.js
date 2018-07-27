@@ -921,7 +921,7 @@ jQuery(document).ready(function ($) {
 
                     beforeSend: function () {
                         $this.children('i').remove();
-                        $this.prepend('<i class="fa-left ' + process_loader_spinner + '"></i>');
+                        $this.prepend('<i class="fas fa-left ' + process_loader_spinner + '"></i>');
                     },
                     success: function (response) {
                         if (response.success) {

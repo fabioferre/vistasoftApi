@@ -9,9 +9,6 @@ namespace controller;
 
             $idImovel = isset($_GET['params'][0])?$_GET['params'][0]:0;
 
-
-            // print_r($idImovel);
-
             $fields = array(
                 "Codigo",
                 "Status",
@@ -49,7 +46,6 @@ namespace controller;
                 $e['ValorLocacao'] = $imoveis->formataValor($e['ValorLocacao'], 100);
                 include 'view/imovelDetalhe.php';
                 // print_r($e['Corretor']);
-
             }else{
                 header('Location: /'.pasta.'/Portfolio/ ');
             }

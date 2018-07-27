@@ -28,7 +28,7 @@
                   <li id="menu-item-635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-635"><a href="#">Sobre Nós</a>
                   </li>
                   <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child">
-                    <a href="/<?=pasta?>/Portfolio/index">Portfólio <i class="fa fa-caret-down"></i></a>
+                    <a href="/<?=pasta?>/Portfolio/index">Portfólio </a>
                     <ul class="sub-menu">
                        <li id="menu-item-739" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-739">
                         <a href="/<?=pasta?>/Portfolio/locacao">Locação</a>
@@ -75,8 +75,11 @@
            <span class="nav-trigger"><i class="fa fa-bars"></i></span>
            <div class="nav-dropdown main-nav-dropdown">
               <ul id="main-nav" class="">
-                 <li id="menu-item-635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-635"><a href="http://novoterralima.com/empresa/">Sobre Nós</a></li>
-                 <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child">
+                  <li id="menu-item-635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-635">
+                    <a href="#">Sobre Nós</a>
+                  </li>
+
+                  <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child i">
                     <a href="/<?=pasta?>/Portfolio/index"> Portfólio </a> 
                     <ul class="sub-menu">
                        <li id="menu-item-739" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-739">
@@ -85,13 +88,26 @@
                         <a href="/<?=pasta?>/Portfolio/venda">Venda</a></li>
                     </ul>
                     <span class="expand-me"></span>
-                 </li>
-                 <li id="menu-item-4644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4644"><a href="http://novoterralima.com/corretores-terra-lima/">Corretores</a></li>
-                 <li id="menu-item-4570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4570"><a href="http://novoterralima.com/fale-conosco/?yp_rand=683893">Fale Conosco</a></li>
-                 <li id="menu-item-4562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4562">
-                  <a href="/<?=pasta?>/Portfolio/cadastroImovel">Cadastre Seu Imóvel</a></li>
-                 <li id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-608"><a href="http://novoterralima.com/resultados/">Mapa</a></li>
-                 <li id="menu-item-4561" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4561"><a href="http://novoterralima.com/category/terra-lima-imoveis/">Blog</a></li>
+                  </li>
+
+                  <li id="menu-item-4644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4644">
+                     <a href="#">Corretores</a>
+                  </li>
+
+                  <li id="menu-item-4570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4570">
+                     <a href="#">Fale Conosco</a>
+                  </li>
+
+                  <li id="menu-item-4562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4562">
+                     <a href="/<?=pasta?>/Portfolio/cadastroImovel">Cadastre Seu Imóvel</a>
+                  </li>
+
+                  <li id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-608">
+                     <a href="#">Mapa</a>
+                  </li>
+                  <li id="menu-item-4561" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4561">
+                     <a href="#">Blog</a>
+                  </li>
               </ul>
            </div>
         </div>

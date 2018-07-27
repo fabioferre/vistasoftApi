@@ -1,3 +1,11 @@
+.i{
+    font-style: normal;
+  font-weight: 900;
+  src: url("../webfonts/fa-solid-900.eot");
+  src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
+
+}
+
 .limitText{
     max-width: 80ch;
     overflow: hidden;
@@ -7,7 +15,12 @@
 .limitImg{
     height: 170px;
 }
-
+.indicePesquisa{
+    background: white;
+    color: #000;
+    font-weight: 400;
+    padding-right: 83px;
+}
 .advance-search-header, 
 .advanced-search-mobile, 
 .advanced-search-mobile .single-search .form-control,
