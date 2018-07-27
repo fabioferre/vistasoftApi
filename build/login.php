@@ -31,7 +31,7 @@
                            <input id="password" name="password" placeholder="Senha" type="password">
                         </div>
                      </div>
-                     
+
                      <div class="forget-block clearfix">
                         <div class="form-group pull-left">
                            <div class="checkbox">
@@ -62,7 +62,7 @@
                            <input id="register_pass" name="register_pass" placeholder="Senha" type="password">
                         </div>
                         <div class="input-pass input-icon">
-                           <input id="register_pass_retype" name="register_pass_retype" placeholder="Redigisse a senha" type="password">
+                           <input id="register_pass_retype" name="register_pass_retype" placeholder="Redigite a senha" type="password">
                         </div>
                      </div>
                      <div class="form-group">
