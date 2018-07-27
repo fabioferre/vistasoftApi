@@ -39,12 +39,16 @@ class Imoveis extends Env
         $param['min-price'] = str_replace('R$', '', $param['min-price']); $param['max-price'] = str_replace('R$', '', $param['max-price']);
 
         
-        
-        $pesquisa['ValorVenda'] = array($param['min-price'], $param['max-price']);
-        
-        if ($param['status'] == 'ALUGUEL') {
+        if ($param['status'] == 'VENDA') {
+            $pesquisa['Status'] = $param['status'];
+            $pesquisa['ValorVenda'] = array($param['min-price'], $param['max-price']);
+        }
+        elseif ($param['status'] == 'ALUGUEL') {
             $pesquisa['Status'] = $param['status'];
             $pesquisa['ValorLocacao'] = array($param['min-price'], $param['max-price']);
+        }else{
+            $pesquisa['Status'] = 'VENDA E ALUGUEL';
+            $pesquisa['ValorVenda'] = array($param['min-price'], $param['max-price']);
         }
 
         if ($param['min-area'] > 10) {
@@ -64,8 +68,10 @@ class Imoveis extends Env
 
 
     public function formataValor($var, $valor){
-        if ($var >= $valor) {
-            $var = number_format($var,0,',',',');
+        if (!empty($var)) {
+           if ($var >= $valor) {
+                $var = number_format($var,0,',',',');
+            }
         }
         return $var;
     }

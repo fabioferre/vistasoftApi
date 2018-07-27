@@ -59,7 +59,7 @@
                            <option value="">Status Do imóvel</option>
                            <option value="ALUGUEL"> Locação</option>
                            <option value="VENDA"> Venda</option>
-                           <option value=""> Venda / Locação</option>
+                           <option value="BOTH"> Venda / Locação</option>
                         </select>
                      </div>
                   </div>

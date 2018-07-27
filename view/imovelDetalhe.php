@@ -112,7 +112,7 @@
                                       foreach ($e['Foto'] as $key => $value ) { ?>
 
                                      <div class="item <?=$i == 1?'active':''?>">
-                                       <img src="<?=$value['Foto']?>" alt="" >
+                                       <img src="<?=$value['Foto']?>" alt=""  style="width: 100%">
                                      </div>
 
                                     <?php $i++; } ?>

@@ -66,8 +66,20 @@ namespace controller;
             ->get();
             
             $linkDetalhe = $imoveis->setURL();
+
+            
+
+            foreach ($listagem as $key ) {
+                if (isset($listagem[$key['Codigo']]['ValorLocacao'])) {
+                    $listagem[$key['Codigo']]['ValorLocacao'] = $imoveis->formataValor($listagem[$key['Codigo']]['ValorLocacao'], 100);
+                }
+                if (isset($listagem[$key['Codigo']]['ValorVenda'])) {
+                    $listagem[$key['Codigo']]['ValorVenda'] = $imoveis->formataValor($listagem[$key['Codigo']]['ValorVenda'], 100);
+                }
+            }
+
         	include 'view/vendalocacao.php';
-            print_r($listagem);
+            // print_r($listagem);
         }
 
 
@@ -78,6 +90,12 @@ namespace controller;
             ->filter(['Status'=>'ALUGUEL'])
             ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
             ->get();
+
+            foreach ($listagem as $key ) {
+                if (isset($listagem[$key['Codigo']]['ValorLocacao'])) {
+                    $listagem[$key['Codigo']]['ValorLocacao'] = $imoveis->formataValor($listagem[$key['Codigo']]['ValorLocacao'], 100);
+                }
+            }
             
             $linkDetalhe = $imoveis->setURL();
         	include 'view/locacao.php';
@@ -92,6 +110,12 @@ namespace controller;
             ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
             ->get();
             
+            foreach ($listagem as $key ) {
+                if (isset($listagem[$key['Codigo']]['ValorVenda'])) {
+                    $listagem[$key['Codigo']]['ValorVenda'] = $imoveis->formataValor($listagem[$key['Codigo']]['ValorVenda'], 100);
+                }
+            }
+
             $linkDetalhe = $imoveis->setURL();
         	include 'view/venda.php';
             

@@ -59,12 +59,22 @@
                         
                         <div class="row">
                            <div class="list-search col-md-12" style="background-color: rgba(0, 174, 239, 0.05)">
-                             <div class="indicePesquisa form-control">
-                                 <?=isset($_SESSION['Status']) ?  $_SESSION['Status']: ''?>
+                             <div class="indicePesquisa">
+                                 <?=!empty($_SESSION['Status']) ?  $_SESSION['Status']: ''?>
 
-                                 <?=isset($_SESSION['Categoria']) ?'de '. $_SESSION['Categoria'][1]. ',': ''?>
+                                 <?=!empty($_SESSION['Categoria']) ?'de '. $_SESSION['Categoria'][1]. ',': ''?>
                                  
-                                 <?=isset($_SESSION['Pais']) ? $_SESSION['Pais'][1]: ''?>
+                                 <?=!empty($_SESSION['Pais'])? $_SESSION['Pais'][1].',': ''?>
+
+                                 <?php
+                                    if ($_SESSION['Status'] == 'ALUGUEL') {
+                                       echo "Preço desde - R$".$_SESSION['ValorLocacao'][0]." até R$". $_SESSION['ValorLocacao'][1] ;
+                                    }else{
+                                       echo "Preço desde - R$". $_SESSION['ValorVenda'][0]." até R$". $_SESSION['ValorVenda'][1];
+                                    }
+                                 ?>
+
+                                 <?=!empty($_SESSION['AreaTotal'])?', Àrea desde - '. $_SESSION['AreaTotal'][0].'m² até '. $_SESSION['AreaTotal'][1].'m² ': ''?>
                              </div>
                            </div>
                         </div>
