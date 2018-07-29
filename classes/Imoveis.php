@@ -3,15 +3,12 @@
 namespace Classes;
 
 
-use Classes\Env;
 
-class Imoveis extends Env
+class Imoveis extends App
 {
 
-
-    protected $codigo;
     protected $curl = 'imoveis/listar';
-    protected $dados = ['fields' => ['Finalidade','ValorLocacao','ValorVenda','Bairro','Cidade','Dormitorios','Status','FotoDestaque','TotalBanheiros','AreaTotal','Categoria','DescricaoWeb','Codigo','CEP','Pais','UF','Caracteristicas','InfraEstrutura'],];
+    protected $dados = ['fields' => ['Finalidade','ValorLocacao','ValorVenda','Bairro','Cidade','Dormitorios','Status','FotoDestaque','TotalBanheiros','AreaTerreno','AreaConstruida','Categoria','DescricaoWeb','TituloSite','Codigo','CEP','Pais','UF','EmDestaque', 'SuperDestaqueWeb'],];
 
     public function setCurl($curl){
         $this->curl = $curl;
@@ -19,18 +16,20 @@ class Imoveis extends Env
     }
 
 
+    public function destaques($status){
+        $filtro = array('EmDestaque' => 'Sim');
 
-    public function setURL(){
-    	return  '/'.pasta.'/Portfolio/imovel';
-    }
-    
+        if (!empty($status) ) {
+            $filtro['Status'] = $status;
+        }
 
-  	public function getOptions(){
-        $disponiveis = $this
-        ->setField(['fields'=>['Pais','Categoria','Status']]);
-        return $disponiveis;
-    }
+        $retorno = $this
+        ->filter($filtro)
+        ->paginacao(['pagina'=> 1,'quantidade'=> 3 ])
+        ->get();
 
+        return $retorno;
+    }   
 
 
     public function busca($param){
@@ -47,13 +46,12 @@ class Imoveis extends Env
             $pesquisa['Status'] = $param['status'];
             $pesquisa['ValorLocacao'] = array($param['min-price'], $param['max-price']);
         }else{
-            $pesquisa['Status'] = 'VENDA E ALUGUEL';
             $pesquisa['ValorVenda'] = array($param['min-price'], $param['max-price']);
         }
 
-        if ($param['min-area'] > 10) {
-            $pesquisa['AreaTotal'] = array($param['min-area'], $param['max-area']);
-        }
+        
+        $pesquisa['AreaTerreno'] = array($param['min-area'], $param['max-area']);
+        
         
         if (!empty($param['categoria']) ) {
             $pesquisa['Categoria'] =  array('like', $param['categoria']);       

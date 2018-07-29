@@ -140,6 +140,7 @@ var nice = false;
             $('.method-option').slideUp();
         }
     });
+
     function paypal_option(ele){
         if($(ele).attr('checked')) {
             $(ele).parents('.method-row').next('.method-option').slideDown();
@@ -159,6 +160,8 @@ var nice = false;
             $('#houzez_stripe_recurring').remove();
         }
     });
+
+    
 
     //Add form checkout id
     var houzez_payment_type = $("input[name='houzez_payment_type']");

@@ -35,31 +35,12 @@
      
       <script type="text/javascript" src="http://novoterralima.com/wp-includes/js/wp-embed.min.js?ver=4.9.7"></script>
       <script>
-         jQuery(document).ready(function() {
-           jQuery('.btnPag').click(function(){
-               var valpag = jQuery(this).data('pag');
-               jQuery('#pag').val(valpag);
-               jQuery('.pagination-main').submit();
-           });
-
-           // jQuery('.opt').click(function(){
-           //    jQuery('#order').submit();
-           // });
-
-           // jQuery.ajax({
-           //     url: '/<?=pasta?>/Result/option',
-           //     success: function(data){
-           //        jQuery.each(data, function (i, e) {
-                    
-           //           if (i == 'Pais') {
-           //              console.log(e);
-           //              jQuery('#pais').append('<option value="'+e+'" >'+e+'</option>');
-           //           }
-   
-           //        });
-           //     }
-
-           // });
-
+        
+         jQuery('.btnPag').click(function(){
+             var valpag = jQuery(this).data('pag');
+             jQuery('#pag').val(valpag);
+             jQuery('.pagination-main').submit();
          });
+
+        
       </script>

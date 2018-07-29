@@ -1,22 +1,21 @@
 <?php
 namespace Classes;
 
-class Env
+class App
 {
 
     private $url;
-    private $result;
+    public $result;
     private $key;
     private $http;
-    protected $codigo;
+    public $codigo;
     protected $showtotal = 1;
     protected $dados;
     protected $curl;
+    protected $cadastro;
 
-
-
-    private function conn(){
-        //monta a url para a curl
+    Private function setUrl(){
+                //monta a url para a curl
         $this->url         =  $this->http;
         $this->url        .=    $this->curl;
         $this->url        .=   '?key=' . $this->key;
@@ -28,6 +27,13 @@ class Env
             $this->url        .=  str_replace('"', '', $teste );
         }
 
+        if(isset($this->codigo)){
+           $teste =  '&cliente=' . json_encode($this->codigo);
+            
+            $this->url        .=  str_replace('"', '', $teste );
+        }
+       
+
         //verificar se possui pesquisa
         if(isset($this->dados)){
             $this->url        .=  '&pesquisa=' . json_encode($this->dados);
@@ -36,6 +42,15 @@ class Env
         if(isset($this->showtotal)){
             $this->url        .=  '&showtotal=' . json_encode($this->showtotal);
         }
+
+
+    }
+
+
+
+    private function connGet(){
+
+        $this->setUrl();
 
         //inicia a conexao
         $ch = curl_init($this->url);
@@ -47,12 +62,46 @@ class Env
         $this->result = json_decode( $result, true );
       
     }
+
+    public function connPost(){
+
+        $this->setUrl();
+
+        $ch = curl_init($this->url);
+        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $this->cadastro);
+
+        $result = curl_exec($ch);
+        $this->result = json_decode( $result, true );
+
+        curl_close($ch);
+    }
+
     
     //retorna todos os dados
     public function get(){
-        $this->conn();
+        $this->connGet();
         return $this->result;
     }
+
+    public function post(){
+        $this->connPost();
+        if($this->result['status'] == 200){
+            $this->codigo = $this->result['codigo'];
+        }
+        
+        return $this->result;
+    }
+
+    public function set($array){
+        $this->cadastro = $array;
+        unset($this->dados);
+        return $this;
+
+    }
+
 
     //fields
     public function fields($array){
@@ -93,7 +142,7 @@ class Env
 
     function __construct() 
     { 
-        // teste ---------
+        // // teste ---------
         // $this->http = 'http://sandbox-rest.vistahost.com.br/';
         // $this->key         =  'c9fdd79584fb8d369a6a579af1a8f681'; //Informe sua chave aqui
 

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
    <head>
@@ -15,7 +13,8 @@
 
    <body class="property-template-default single single-property postid-816  transparent- wpb-js-composer js-comp-ver-5.2.1 vc_responsive">
       <?php
-         include 'build/navbar.php';
+         require_once('build/navbar.php');
+         include 'build/login.php';
       ?>
       <div id="section-body" class="">
        
@@ -28,7 +27,7 @@
                         <div class="header-left">
                            <div class="table-list">
                               <div class="table-cell limitText ">
-                                 <h1><?=$e['Codigo']?> - <?=$e['DescricaoWeb']?> </h1>
+                                 <h1><?=$e['Codigo']?> - <?=$e['TituloSite']?> </h1>
                               </div>
                               <div class="table-cell hidden-sm hidden-xs">
                                  <span class="label-wrap">
@@ -41,20 +40,37 @@
                               </div>
                            </div>
                            <address class="property-address"> 
-                              <?=$e['Bairro']?>, <?=$e['BairroComercial']?> <?=$e['Cidade']?> - <?=$e['UF']?>
+                              <?=$e['Bairro']?>, <?=!empty($e['BairroComercial'])?$e['BairroComercial']. ',':''?> <?=$e['Cidade']?> - <?=$e['UF']?>
                            </address>
                         </div>
+                        
                         <div class="header-right">
                            <ul class="actions">
                               <li class="share-btn">
                                  <div class="share_tooltip tooltip_left fade">
-                                    <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fnovoterralima.com%2Fimovel%2Fapartamento-reformado-e-mobiliado-tl1639%2F" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="fab fa-facebook"></i>
+                                    <a href="http://www.facebook.com/sharer.php?u=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                      <i class="fab fa-facebook"></i>
                                     </a>
-                                    <a href="https://twitter.com/intent/tweet?text=Reformado+e+mobiliado+TL1639&url=http%3A%2F%2Fnovoterralima.com%2Fimovel%2Fapartamento-reformado-e-mobiliado-tl1639%2F&via=Terra+Lima+Im%C3%B3veis" onclick="if(!document.getElementById('td_social_networks_buttons')){window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;}"><i class="fab fa-twitter"></i></a>
-                                    <a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fnovoterralima.com%2Fimovel%2Fapartamento-reformado-e-mobiliado-tl1639%2F&amp;media=http://novoterralima.com/wp-content/uploads/2017/11/23-1024x682.jpg" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="fab fa-pinterest"></i></a>
-                                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fnovoterralima.com%2Fimovel%2Fapartamento-reformado-e-mobiliado-tl1639%2F&title=Reformado+e+mobiliado+TL1639&source=http%3A%2F%2Fnovoterralima.com%2F" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="fab fa-linkedin"></i></a>
-                                    <a href="http://plus.google.com/share?url=http%3A%2F%2Fnovoterralima.com%2Fimovel%2Fapartamento-reformado-e-mobiliado-tl1639%2F" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="fab fa-google-plus"></i></a>
-                                    <a href="mailto:example.com?subject=Reformado+e+mobiliado+TL1639&body=http%3A%2F%2Fnovoterralima.com%2Fimovel%2Fapartamento-reformado-e-mobiliado-tl1639%2F"><i class="fa fa-envelope"></i></a>
+
+                                    <a href="https://twitter.com/intent/tweet?text=<?=$e['TituloSite']?>&url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>" onclick="if(!document.getElementById('td_social_networks_buttons')){window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;}">
+                                      <i class="fab fa-twitter"></i>
+                                    </a>
+
+                                    <a href="http://pinterest.com/pin/create/button/?url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>&amp;media=<?=$e['FotoDestaque']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                      <i class="fab fa-pinterest"></i>
+                                    </a>
+
+                                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>&title=<?=$e['TituloSite']?>&source=/<?=pasta?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                      <i class="fab fa-linkedin"></i>
+                                    </a>
+
+                                    <a href="http://plus.google.com/share?url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                      <i class="fab fa-google-plus"></i>
+                                    </a>
+
+                                    <a href="mailto:example.com?subject=<?=$e['TituloSite']?>&body=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>">
+                                      <i class="fa fa-envelope"></i>
+                                    </a>
                                  </div>
                                  <span title="" data-placement="right" data-toggle="tooltip" data-original-title="compartilhar"><i class="fa fa-share-alt"></i></span>            
                               </li>
@@ -65,13 +81,16 @@
                                  <span data-toggle="tooltip" data-placement="right" data-original-title="Imprimir"><i id="houzez-print" class="fa fa-print" data-propid="816"></i></span>
                               </li> -->
                            </ul>
-                           <span class="item-price">
-                             <?=$e['ValorVenda'] > 0?"Venda - R$".$e['ValorVenda'] : '' ?>
-                           </span> 
-                           <span class="item-price">
-                              <?=$e['ValorLocacao'] > 0?"Aluguel - R$".$e['ValorLocacao']."/Por Mês" : '' ?>
-                           </span>   
-                           
+              
+                            <span class="item-price">
+                              <span class="price-start"><?=$e['Status']?></span>
+                              <?=$e['ValorVenda'] > 0?"R$".$e['ValorVenda'] : '' ?>
+
+                              <span class="item-sub-price">
+                                <?=$e['ValorLocacao'] > 0?"R$".$e['ValorLocacao']."/Por Mês" : '' ?>
+                              </span> 
+                            </span>
+
                         </div>
                      </div>
                   </div>
@@ -154,12 +173,13 @@
                                     </p>
                                  </div>
                               </div>
+
                               <div class="tab-pane fade">
                                  <div id="address" class="detail-address detail-block target-block">
                                     <div class="detail-title">
                                        <h2 class="title-left">Endereço</h2>
                                        <div class="title-right">
-                                          <a target="_blank" href="http://maps.google.com/?q=%20Bairro%20Bela%20Vista,%20São%20Paulo%20-%20SP">Abrir no Google Maps <i class="fa fa-map-marker"></i></a>
+                                          <a target="_blank" href="http://maps.google.com/?q=<?=$e['Bairro']?>,<?=$e['Cidade']?>-<?=$e['UF']?>,<?=$e['CEP']?> ">Abrir no Google Maps <i class="fa fa-map-marker"></i></a>
                                        </div>
                                     </div>
                                     <ul class="list-three-col">
@@ -183,12 +203,17 @@
                                           <li><strong>Preço:</strong>  
                                              <?=$e['ValorVenda'] > 0?"Venda - R$".$e['ValorVenda'] : '' ?>
                                           </li>
+
                                           <li>
                                             <?=$e['ValorLocacao'] > 0?"Aluguel - R$".$e['ValorLocacao']."/Por Mês" : '' ?>
                                           </li>
 
                                           <li><strong>Tamanho do imóvel:</strong> 
-                                            <?=$e['AreaTotal'] > 0? $e['AreaTotal']: 'não infomado' ?>
+                                            <?=$e['AreaConstruida'] > 0? $e['AreaConstruida'].' m²': 'não infomado' ?>
+                                          </li>
+
+                                          <li><strong>Área do terreno:</strong> 
+                                            <?=$e['AreaTerreno'] > 0?$e['AreaTerreno'].' m²': 'não infomado' ?>
                                           </li>
 
                                           <li><strong>Quartos:</strong> 
@@ -230,6 +255,8 @@
                            <!--end tab-content-->
                         </div>
                         <!--end detail content tabber-->
+
+
                         <div class="property-similer">
                            <div class="detail-title">
                               <h2 class="title-left">Propriedades similares</h2>

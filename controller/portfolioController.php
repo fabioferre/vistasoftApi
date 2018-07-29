@@ -13,6 +13,7 @@ namespace controller;
                 "Codigo",
                 "Status",
                 "TituloSite",
+                "FotoDestaque",
                 ["Foto"=>['Foto','FotoPequena','ExibirSite','Destaque','Ordem']],
                 "Categoria",
                 "Bairro",
@@ -22,10 +23,12 @@ namespace controller;
                 "Dormitorios",
                 "Suites",
                 "Vagas",
-                "AreaTotal",
+                "AreaConstruida",
+                "AreaTerreno",
                 "DescricaoWeb",
                 "UF",
                 "Pais",
+                "DescricaoEmpreendimento",
                 "CEP",
                 "BairroComercial",
                 "Caracteristicas",
@@ -45,38 +48,23 @@ namespace controller;
                 $e['ValorVenda'] = $imoveis->formataValor($e['ValorVenda'], 1000);
                 $e['ValorLocacao'] = $imoveis->formataValor($e['ValorLocacao'], 100);
                 include 'view/imovelDetalhe.php';
-                // print_r($e['Corretor']);
+                // print_r($e);
             }else{
                 header('Location: /'.pasta.'/Portfolio/ ');
             }
         
         }
 
-        
-        public function cadastroImovel(){
-            include 'view/registerImovel.php';
-        }
+
 
         public function index(){
         	$imoveis = new \Classes\Imoveis;
 
-
         	$listagem = $imoveis
             ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
             ->get();
-            
-            $linkDetalhe = $imoveis->setURL();
 
-            
-
-            foreach ($listagem as $key ) {
-                if (isset($listagem[$key['Codigo']]['ValorLocacao'])) {
-                    $listagem[$key['Codigo']]['ValorLocacao'] = $imoveis->formataValor($listagem[$key['Codigo']]['ValorLocacao'], 100);
-                }
-                if (isset($listagem[$key['Codigo']]['ValorVenda'])) {
-                    $listagem[$key['Codigo']]['ValorVenda'] = $imoveis->formataValor($listagem[$key['Codigo']]['ValorVenda'], 100);
-                }
-            }
+            $destaques = $imoveis->destaques('');
 
         	include 'view/vendalocacao.php';
             // print_r($listagem);
@@ -91,13 +79,9 @@ namespace controller;
             ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
             ->get();
 
-            foreach ($listagem as $key ) {
-                if (isset($listagem[$key['Codigo']]['ValorLocacao'])) {
-                    $listagem[$key['Codigo']]['ValorLocacao'] = $imoveis->formataValor($listagem[$key['Codigo']]['ValorLocacao'], 100);
-                }
-            }
-            
-            $linkDetalhe = $imoveis->setURL();
+            $destaques = $imoveis->destaques('ALUGUEL');
+
+            // print_r($listagem);
         	include 'view/locacao.php';
             
         }
@@ -110,16 +94,9 @@ namespace controller;
             ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
             ->get();
             
-            foreach ($listagem as $key ) {
-                if (isset($listagem[$key['Codigo']]['ValorVenda'])) {
-                    $listagem[$key['Codigo']]['ValorVenda'] = $imoveis->formataValor($listagem[$key['Codigo']]['ValorVenda'], 100);
-                }
-            }
+            $destaques = $imoveis->destaques('VENDA');
 
-            $linkDetalhe = $imoveis->setURL();
         	include 'view/venda.php';
-            
-
         }
 
         
@@ -127,6 +104,39 @@ namespace controller;
         	$imoveis = new \Classes\Imoveis;
         	print_r($listagem = $imoveis->setCurl("imoveis/listarcampos")->get());
         }
+
+
+
+        public function ShowFormCadastroImovel(){
+            include 'view/registerImovel.php';
+        }
+
+
+        public function setImovel (){
+        $imoveis = new \Classes\Imoveis;
+        print_r($_POST);
+        $dados = $imoveis->setCurl("imoveis/detalhes")->set(
+            'cadastro={"fields":
+                            {
+                            "Categoria":"Apartamento",
+                            "Endereco":"'.$_POST["Endereco"].'",
+                            "Numero":"11111",
+                            "Complemento":"9054",
+                            "Bairro":"'.$_POST["Bairro"].'",
+                            "Cidade":"'.$_POST["Cidade"].'",
+                            "UF":"'.$_POST["UF"].'",
+                            "CEP":"04897340",
+                            "Situacao":"Novo"
+                             }
+                     }')->post();
+
+
+        // print_r($imoveis->codigo);
+       
+        // print_r($imoveis);
+
+        }
+
   
     }
 

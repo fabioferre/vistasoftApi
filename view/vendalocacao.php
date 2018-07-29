@@ -55,10 +55,13 @@
 
                         <div class="row">
 
-                        <?php 
-                           foreach ($listagem as $key ) {   if(isset($key['Codigo'])){?>
+                        <?php foreach ($listagem as $key ) { 
+                           if(isset($key['Codigo'])){ 
+                              $key['ValorVenda'] = $imoveis->formataValor($key['ValorVenda'], 1000);
+                              $key['ValorLocacao'] = $imoveis->formataValor($key['ValorLocacao'], 100);
+                        ?>
                             
-                           <div id="ID-<?=$key['Codigo']?>" class="item-wrap infobox_trigger <?=$key['DescricaoWeb']?>">
+                           <div id="ID-<?=$key['Codigo']?>" class="item-wrap infobox_trigger <?=$key['TituloSite']?>">
                               <div class="property-item table-list">
                                  <div class="table-cell">
                                     <div class="figure-block">
@@ -68,9 +71,18 @@
                                                 <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'venda'?'venda': 'locacao'?>"><?=$key['Status']?></a>
                                              </span>           
                                           </div>
-                                          <div class="price hide-on-list"><span class="price-start">Venda</span><span class="item-price">R$ <?=$key['ValorVenda']?></span></div>
+                                          <div class="price hide-on-list">
+                                                <?php if (!empty($key['ValorVenda'])) { ?>
+                                                   <span class="price-start">Venda</span>
+                                                   <span class="item-price">R$<?=$key['ValorVenda']?></span>
+                                                <?php } ?>
 
-                                          <a class="hover-effect limitImg" href="<?=$linkDetalhe?>/<?=$key['Codigo']?>">
+                                                <span class="item-sub-price">
+                                                   <?=!empty($key['ValorLocacao'])?'R$'.$key['ValorLocacao'].'/Por Mês': ''?>
+                                                </span>
+                                          </div>
+
+                                          <a class="hover-effect limitImg" href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>">
                                              <img src="<?=$key['FotoDestaque']?>" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image limitImg" alt="" width="385" height="250">                    
                                           </a>
                                           
@@ -98,16 +110,15 @@
                                     <div class="body-left table-cell">
                                        <div class="info-row">
                                           <div class="label-wrap hide-on-grid">
-
                                              <span class="label-status label-status-180 label label-default">
-                                                <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'venda'?'venda': 'locacao'?>"><?=$key['Status']?> </a>
+                                                <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'VENDA'?'venda': 'locacao'?>"><?=$key['Status']?> </a>
                                              </span>
-
-                                          
                                           </div>
 
                                           <h2 class="property-title">
-                                             <a href="<?=$linkDetalhe?>/<?=$key['Codigo']?>"></i><?=$key['DescricaoWeb']?></a>
+                                             <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>">
+                                                <?=$key['Codigo']?> - <?=$key['TituloSite']?>
+                                             </a>
                                           </h2>
                                           <address class="property-address"><?=$key['Bairro']?>, <?=$key['Cidade']?> - SP, <?=$key['CEP']?>, <?=$key['Pais']?></address>
                                        </div>
@@ -116,7 +127,7 @@
                                           <p>
                                              <span>Quartos: <?=$key['Dormitorios']?></span>
                                              <span>Banheiros: <?=$key['TotalBanheiros']?></span>
-                                             <span>m² : <?=$key['AreaTotal']?> </span>
+                                             <span>m² : <?=$key['AreaTerreno']?> </span>
                                           </p>
                                           <p><?=$key['Categoria']?></p>
                                        </div>
@@ -124,9 +135,17 @@
                                     </div>
 
                                     <div class="body-right table-cell hidden-gird-cell">
-                                       <div class="info-row price"><span class="price-start">Venda</span><span class="item-price">R$ <?=$key['ValorVenda']?></span></div>
+                                       <div class="info-row price">
+                                          <?php if (!empty($key['ValorVenda'])) { ?>
+                                             <span class="price-start">Venda</span>
+                                             <span class="item-price">R$<?=$key['ValorVenda']?></span>
+                                          <?php } ?>
+
+                                          <span class="item-sub-price"><?=!empty($key['ValorLocacao'])?'R$'.$key['ValorLocacao'].'/Por Mês': ''?></span>
+                                       </div>
+
                                        <div class="info-row phone text-right">
-                                          <a href="<?=$linkDetalhe?>/<?=$key['Codigo']?>" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                                          <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
                                        </div>
                                     </div>
 
@@ -136,14 +155,14 @@
                                              <p>
                                                 <span>Quartos: <?=$key['Dormitorios']?></span>
                                                 <span>Banheiros: <?=$key['TotalBanheiros']?></span>
-                                                <span>m² : <?=$key['AreaTotal']?></span>
+                                                <span>m² : <?=$key['AreaTerreno']?></span>
                                              </p>
                                              <p>Casa</p>
                                           </div>
                                        </div>
                                        <div class="cell">
                                           <div class="phone">
-                                             <a href="<?=$linkDetalhe?>/<?=$key['Codigo']?>" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                                             <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
                                           </div>
                                        </div>
                                     </div>
@@ -195,79 +214,9 @@
                      <?php
                         include 'build/formBusca.php';
                         include 'build/equipe.php';
+                        include 'build/destaques.php';
                      ?>
 
-                     
-
-                     
-                     <div id="houzez_featured_properties-5" class="widget widget_houzez_featured_properties">
-                        <div class="widget-top">
-                           <h3 class="widget-title">Highlights</h3>
-                        </div>
-                        <div class="widget-body">
-                           <div class="figure-block">
-                              <figure class="item-thumb">
-                                 <span class="label-featured label label-success">Destaque</span>
-                                 <div class="label-wrap label-right">
-                                    <span class="label-status label-status-180 label label-default"><a href="#">Venda</a></span>                               
-                                 </div>
-                                 <a href="#" class="hover-effect">
-                                 <img src="http://novoterralima.com/wp-content/uploads/2017/12/218-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" srcset="http://novoterralima.com/wp-content/uploads/2017/12/218-385x258.jpg 385w, http://novoterralima.com/wp-content/uploads/2017/12/218-150x100.jpg 150w" sizes="(max-width: 385px) 100vw, 385px" width="385" height="258">                               </a>
-                                 <figcaption class="thumb-caption clearfix">
-                                    <div class="cap-price pull-left"><span class="price-start">Venda</span> R$6,500,000</div>
-                                    <ul class="list-unstyled actions pull-right">
-                                       <li>
-                                          <span title="" data-placement="top" data-toggle="tooltip" data-original-title="4 Fotos">
-                                          <i class="fa fa-camera"></i>
-                                          </span>
-                                       </li>
-                                    </ul>
-                                 </figcaption>
-                              </figure>
-                           </div>
-                           <div class="figure-block">
-                              <figure class="item-thumb">
-                                 <span class="label-featured label label-success">Destaque</span>
-                                 <div class="label-wrap label-right">
-                                    <span class="label-status label-status-171 label label-default"><a href="http://novoterralima.com/status/venda-e-locacao/">Venda / Locação</a></span>                               
-                                 </div>
-                                 <a href="#" class="hover-effect">
-                                 <img src="http://novoterralima.com/wp-content/uploads/2017/12/182-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" srcset="http://novoterralima.com/wp-content/uploads/2017/12/182-385x258.jpg 385w, http://novoterralima.com/wp-content/uploads/2017/12/182-300x200.jpg 300w, http://novoterralima.com/wp-content/uploads/2017/12/182-150x100.jpg 150w, http://novoterralima.com/wp-content/uploads/2017/12/182-350x234.jpg 350w, http://novoterralima.com/wp-content/uploads/2017/12/182.jpg 640w" sizes="(max-width: 385px) 100vw, 385px" width="385" height="258">                             </a>
-                                 <figcaption class="thumb-caption clearfix">
-                                    <div class="cap-price pull-left"><span class="price-start">Venda</span> R$3,200,000</div>
-                                    <ul class="list-unstyled actions pull-right">
-                                       <li>
-                                          <span title="" data-placement="top" data-toggle="tooltip" data-original-title="7 Fotos">
-                                          <i class="fa fa-camera"></i>
-                                          </span>
-                                       </li>
-                                    </ul>
-                                 </figcaption>
-                              </figure>
-                           </div>
-
-                           <div class="figure-block">
-                              <figure class="item-thumb">
-                                 <span class="label-featured label label-success">Destaque</span>
-                                 <div class="label-wrap label-right">
-                                    <span class="label-status label-status-171 label label-default"><a href="#">Venda / Locação</a></span>                               
-                                 </div>
-                                 <a href="#" class="hover-effect">
-                                 <img src="http://novoterralima.com/wp-content/uploads/2017/11/141-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="258">                               </a>
-                                 <figcaption class="thumb-caption clearfix">
-                                    <div class="cap-price pull-left"><span class="price-start">Venda</span> R$35,000,000</div>
-                                    <ul class="list-unstyled actions pull-right">
-                                       <li>
-                                          <span title="" data-placement="top" data-toggle="tooltip" data-original-title="3 Fotos">
-                                          <i class="fa fa-camera"></i>
-                                          </span>
-                                       </li>
-                                    </ul>
-                                 </figcaption>
-                              </figure>
-                           </div>
-                        </div>
-                     </div>
                      <div id="houzez_contact-5" class="widget widget-contact">
                         <div class="widget-top">
                            <h3 class="widget-title">Fale Conosco</h3>

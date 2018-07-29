@@ -89,7 +89,9 @@
                            <div class="article-detail">
                               <article id="post-4608" class="post-4608 page type-page status-publish hentry" >
                                  <div class="entry-content">
-                                    <form class="row row-fluid" >
+
+                                  <!-- FOMULARIO -->
+                                    <form action="setImovel" method="POST" class="row row-fluid" >
                                        <!-- nome completo -->
                                        <div class="col-sm-12 pt-2">
                                           <input type="text" class="form-control" placeholder="Nome completo">
@@ -205,6 +207,9 @@
                                        <!-- Preço -->
                                        <div class="col-sm-12 pt-2">
                                           <input type="text" class="form-control" placeholder="Valor do Imóvel" name="Valor">
+                                       </div>
+                                                   <div class="col-sm-12 pt-2">
+                                          <input type="submit" class="btn btn-primary" placeholder="Valor do Imóvel" name="enviar" value="salvar">
                                        </div>
 
 

@@ -9,11 +9,11 @@
          ?>
    </head>
    <body>
-      
       <?php
          require_once('build/navbar.php');
+         include 'build/login.php';
       ?>
-
+      
       <div id="section-body" class="">
          <div class="container">
             <!--end compare panel-->
@@ -57,10 +57,13 @@
 
                         <div class="row">
 
-                        <?php 
-                           foreach ($listagem as $key ) {   if(isset($key['Codigo'])){ ?>
+                        <?php foreach ($listagem as $key ) { 
+                           if(isset($key['Codigo'])){ 
+                              $key['ValorVenda'] = $imoveis->formataValor($key['ValorVenda'], 1000);
+                              $key['ValorLocacao'] = $imoveis->formataValor($key['ValorLocacao'], 100);
+                        ?>
                             
-                           <div id="ID-<?=$key['Codigo']?>" class="item-wrap infobox_trigger <?=$key['DescricaoWeb']?>">
+                           <div id="ID-<?=$key['Codigo']?>" class="item-wrap infobox_trigger <?=$key['TituloSite']?>">
                               <div class="property-item table-list">
                                  <div class="table-cell">
                                     <div class="figure-block">
@@ -72,8 +75,8 @@
                                              <span class="item-price"> R$ <?=$key['ValorLocacao']?></span>
                                           </div>
 
-                                          <a class="hover-effect limitImg" href="<?=$linkDetalhe?>/<?=$key['Codigo']?>">
-                                             <img src="<?=$key['FotoDestaque']?>" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image limitImg" alt="" width="385" height="250">                                  
+                                          <a class="hover-effect limitImg" href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>">
+                                             <img src="<?=$key['FotoDestaque']?>" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image limitImg" alt="" width="385" height="250">                       
                                           </a>
                                           
                                           <ul class="actions">
@@ -103,25 +106,27 @@
                                     <div class="body-left table-cell">
                                        <div class="info-row">
                                           <div class="label-wrap hide-on-grid">
-
                                              <span class="label-status label-status-180 label label-default">
                                                 <a href="/<?=pasta?>/Portfolio/locacao"><?=$key['Status']?> </a>
                                              </span>
-
-                                          
                                           </div>
 
                                           <h2 class="property-title">
-                                             <a href="<?=$linkDetalhe?>/<?=$key['Codigo']?>"></i><?=$key['DescricaoWeb']?></a>
+                                             <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>">
+                                                <?=$key['Codigo']?> - <?=$key['TituloSite']?>
+                                             </a>
                                           </h2>
-                                          <address class="property-address"><?=$key['Bairro']?>, <?=$key['Cidade']?> - SP, <?=$key['CEP']?>, <?=$key['Pais']?></address>
+
+                                          <address class="property-address">
+                                             <?=$key['Bairro']?>, <?=$key['Cidade']?> - SP, <?=$key['CEP']?>, <?=$key['Pais']?>
+                                          </address>
                                        </div>
 
                                        <div class="info-row amenities hide-on-grid">
                                           <p>
                                              <span>Quartos: <?=$key['Dormitorios']?></span>
                                              <span>Banheiros: <?=$key['TotalBanheiros']?></span>
-                                             <span>m² : <?=$key['AreaTotal']?></span>
+                                             <span>m² : <?=$key['AreaTerreno']?></span>
                                           </p>
                                           <p><?=$key['Categoria']?></p>
                                        </div>
@@ -131,7 +136,9 @@
                                     <div class="body-right table-cell hidden-gird-cell">
                                        <div class="info-row price"><span class="price-start">Locação</span><span class="item-price">R$ <?=$key['ValorLocacao']?></span></div>
                                        <div class="info-row phone text-right">
-                                          <a href="<?=$linkDetalhe?>/<?=$key['Codigo']?>" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                                          <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary">
+                                             Detalhes <i class="fa fa-angle-right fa-right"></i>
+                                          </a>
                                        </div>
                                     </div>
 
@@ -141,14 +148,16 @@
                                              <p>
                                                 <span>Quartos: <?=$key['Dormitorios']?></span>
                                                 <span>Banheiros: <?=$key['TotalBanheiros']?></span>
-                                                <span>m² : <?=$key['AreaTotal']?></span>
+                                                <span>m² : <?=$key['AreaTerreno']?></span>
                                              </p>
                                              <p>Casa</p>
                                           </div>
                                        </div>
                                        <div class="cell">
                                           <div class="phone">
-                                             <a href="<?=$linkDetalhe?>/<?=$key['Codigo']?>" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                                             <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary">    
+                                                Detalhes <i class="fa fa-angle-right fa-right"></i>
+                                             </a>
                                           </div>
                                        </div>
                                     </div>
@@ -199,6 +208,7 @@
                      <?php
                         include 'build/formBusca.php';
                         include 'build/equipe.php';
+                        include 'build/destaques.php';
                      ?>
                      
                      <div id="houzez_featured_properties-5" class="widget widget_houzez_featured_properties">

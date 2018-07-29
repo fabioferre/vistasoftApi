@@ -337,6 +337,7 @@
                                  </figcaption>
                               </figure>
                            </div>
+                           
                         </div>
                      </div>
                      <div id="houzez_contact-5" class="widget widget-contact">

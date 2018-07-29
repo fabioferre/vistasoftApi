@@ -6,9 +6,7 @@ namespace controller;
 
         public function index(){
             $imoveis = new \Classes\Imoveis;
-            $linkDetalhe = $imoveis->setURL();
-
-
+            
             if (isset($_POST['busca']) ) {
                 $_SESSION = $imoveis->busca($_POST);
             }
@@ -23,16 +21,8 @@ namespace controller;
                 ->filter($dados)
                 ->paginacao($pagina)
                 ->get();
-                
-                foreach ($listagem as $key ) {
-                    if (isset($listagem[$key['Codigo']]['ValorLocacao'])) {
-                        $listagem[$key['Codigo']]['ValorLocacao'] = $imoveis->formataValor($listagem[$key['Codigo']]['ValorLocacao'], 100);
-                    }
 
-                    if (isset($listagem[$key['Codigo']]['ValorVenda'])) {
-                        $listagem[$key['Codigo']]['ValorVenda'] = $imoveis->formataValor($listagem[$key['Codigo']]['ValorVenda'], 100);
-                    }
-                }
+                $destaques = $imoveis->destaques('');
 
                 include 'view/resultPesquisa.php';
             }else{
