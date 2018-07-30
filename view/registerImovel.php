@@ -267,11 +267,11 @@
 
                                        <div class="col-sm-12 pt-2" id="imgs">
                                           <label for="envImg" class="btn-env">enviar arquivos</label>
-                                          <input type="file" id="envImg">
+                                          <input type="file" id="envImg" multiple="multiple" name="myfiles[]">
                                        </div>
 
                                        <div class="col-sm-10 pt-2">
-                                          <button type="button" class="btn col-md-12 btn-salva" style="color: white; font-size: 17px;">
+                                          <button type="submit" class="btn col-md-12 btn-salva" style="color: white; font-size: 17px;">
                                              enviar imóvel
                                           </button>
                                        </div>
@@ -327,13 +327,10 @@
          <script type="text/javascript">
 
             jQuery("#envImg").change(function(){
-              jQuery("#id").empty();
               var names = [];
 
               for (var i = 0; i < jQuery(this).get(0).files.length; ++i) {
                 var thisfile = jQuery(this).get(0).files[i].name;
-                // jQuery("#id").append("&lt;img alt='images/images/eventos/"++"' /> <br/>");
-
                 jQuery("#imgs").append(` <div class="loadImg">`+thisfile+`</div> `);
 
               }
