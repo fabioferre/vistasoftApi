@@ -68,7 +68,7 @@
            background: url(../assets/img/cloud.png) no-repeat left #d89265;
            color: #fff;
            cursor: pointer;
-           margin: 10px;
+           margin: 10px 10px 10px 0;
            padding: 5px 10px 5px 50px;
            font-weight: 600; 
          }
@@ -136,152 +136,145 @@
             <section class="section-detail-content default-page" >
                <div class="container" >
                   <div class="row">
-                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container-contentbar" >
-                        <div class="page-main">
-                           <div class="article-detail">
-                              <article id="post-4608" class="post-4608 page type-page status-publish hentry" >
-                                 <div class="entry-content">
 
-                                  <!-- FOMULARIO -->
-                                    <form action="setImovel" method="POST" class="row row-fluid" >
-                                       <!-- nome completo -->
-                                       <div class="col-sm-12 pt-2">
-                                          <input type="text" class="form-control" placeholder="Nome completo">
-                                       </div>
+                     <div class="row-fluid" >
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 container-contentbar" style="margin-bottom: 50px;">
+                           
+                           <!-- FOMULARIO -->
+                           <form action="setImovel" method="POST" class="" >
+                              <!-- nome completo -->
+                              <div class="col-sm-12 pt-2">
+                                 <input type="text" class="form-control" placeholder="Nome completo">
+                              </div>
 
-                                      <!-- e-mail -->
-                                       <div class="col-sm-7 pt-2">
-                                          <div class="input-group">
-                                             <input type="text" class="form-control" placeholder="E-mail">
+                             <!-- e-mail -->
+                              <div class="col-sm-7 pt-2">
+                                 <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="E-mail">
 
-                                             <span class="input-group-btn">
-                                               <button class="btn btn-default" type="button"><i class="fas fa-envelope"></i></button>
-                                             </span>
-                                          </div><!-- /input-group -->
-                                       </div>
+                                    <span class="input-group-btn">
+                                      <button class="btn btn-default" type="button"><i class="fas fa-envelope"></i></button>
+                                    </span>
+                                 </div><!-- /input-group -->
+                              </div>
 
-                                       <!-- telefone -->
-                                       <div class="col-sm-5 pt-2" >
-                                          <input type="text" class="form-control" placeholder="telefone" name="Telefone">
-                                       </div>
+                              <!-- telefone -->
+                              <div class="col-sm-5 pt-2" >
+                                 <input type="text" class="form-control" placeholder="telefone" name="Telefone">
+                              </div>
 
-                                       <!-- Endereço -->
-                                       <div class="col-sm-12 pt-2">
-                                          <input type="text" class="form-control" placeholder="Endereço" name="Endereco">
-                                       </div>
+                              <!-- Endereço -->
+                              <div class="col-sm-12 pt-2">
+                                 <input type="text" class="form-control" placeholder="Endereço" name="Endereco">
+                              </div>
 
-                                       <!--  Bairro -->
-                                       <div class="col-sm-12 pt-2" >
-                                          <input type="text" class="form-control" placeholder="Bairro" name="Bairro">
-                                       </div>
+                              <!--  Bairro -->
+                              <div class="col-sm-12 pt-2" >
+                                 <input type="text" class="form-control" placeholder="Bairro" name="Bairro">
+                              </div>
 
-                                       <!-- Cidade -->
-                                       <div class="col-sm-10 pt-2">
-                                          <input type="text" class="form-control" placeholder="Cidade" name="Cidade">
-                                       </div>
+                              <!-- Cidade -->
+                              <div class="col-sm-10 pt-2">
+                                 <input type="text" class="form-control" placeholder="Cidade" name="Cidade">
+                              </div>
 
-                                       <!-- UF -->
-                                       <div class="col-sm-2 pt-2">
-                                          <input type="text" class="form-control" placeholder="UF" name="UF">
-                                       </div>
+                              <!-- UF -->
+                              <div class="col-sm-2 pt-2">
+                                 <input type="text" class="form-control" placeholder="UF" name="UF">
+                              </div>
 
-                                       <!-- como conheceu -->
-                                       <div class="col-sm-7 pt-2">
-                                          <div class="custom-select" >
-                                             <select >
-                                                <option value="">Como Conheceu  a Terra Lima Imóveis</option>
-                                                <option value="google">google</option>
-                                                <option value="facebook">Facebook</option>
-                                                <option value="instagram">Instagram</option>
-                                                <option value="indicação">Indicação</option>
-                                                <option value="corretor">Corretor</option>
-                                             </select>
-                                          </div>
-                                       </div>
-
-                                       <!-- Finalidade -->
-                                       <div class="col-sm-5 pt-2">
-                                          <div class="custom-select" >
-                                             <select name="Finalidade">
-                                                <option value="">Finalidade</option>
-                                                <option value="residencial">Residencial</option>
-                                                <option value="comercial">Comercial</option>
-                                                <option value="investimento">Investimento</option>
-                                                <option value="permuta">Permuta</option>
-                                             </select>
-                                          </div>
-                                       </div>
-
-                                       <!-- Tipo de imovel -->
-                                       <div class="col-sm-12 pt-2">
-                                          <div class="custom-select">
-                                             <select name="Categoria">
-                                                <option value="">Tipo de imóvel</option>
-                                                <option value="casa">casa</option>
-                                                <option value="apartamento">apartamento</option>
-                                                <option value="comercial">Comercial</option>
-                                                <option value="condominio">Casa/condominio</option>
-                                                <option value="Cobertura">Cobertura</option>
-                                                <option value="duplex">duplex</option>
-                                                <option value="triplex">triplex</option>
-                                             </select>
-                                          </div>
-                                       </div>
-                                       
-                                       <!-- Dormitorios -->
-                                       <div class="col-sm-3 pt-2">
-                                          <input type="text" class="form-control" placeholder="Dormitorios" name="Dormitorios">
-                                       </div>
-
-                                       <!-- Vagas -->
-                                       <div class="col-sm-3 pt-2">
-                                          <input type="text" class="form-control" placeholder="Vagas" name="Vagas">
-                                       </div>
-
-                                        <!-- Área Construida -->
-                                       <div class="col-sm-3 pt-2">
-                                          <input type="text" class="form-control" placeholder="Área Construida M²" name="AreaTotal">
-                                       </div>
-
-
-                                       <!-- Financiado? -->
-                                       <div class="col-sm-3 pt-2">
-                                          <div class="custom-select">
-                                             <select name="Categoria">
-                                                <option value="">Financiado?</option>
-                                                <option value="Sim">Sim</option>
-                                                <option value="Não">Não</option>
-                                             </select>
-                                          </div>
-                                       </div>
-
-                                       
-                                       <!-- Preço -->
-                                       <div class="col-sm-12 pt-2">
-                                          <input type="text" class="form-control" placeholder="Valor do Imóvel" name="Valor">
-                                       </div>
-                                              
-                                       <span class="col-sm-12 pt-2" style="font-size: 18px;">
-                                          Envie Até 10 Fotos de Seu Imóvel
-                                       </span>
-
-                                       <div class="col-sm-12 pt-2" id="imgs">
-                                          <label for="envImg" class="btn-env">enviar arquivos</label>
-                                          <input type="file" id="envImg" multiple="multiple" name="myfiles[]">
-                                       </div>
-
-                                       <div class="col-sm-10 pt-2">
-                                          <button type="submit" class="btn col-md-12 btn-salva" style="color: white; font-size: 17px;">
-                                             enviar imóvel
-                                          </button>
-                                       </div>
-
-                                    </form>
+                              <!-- como conheceu -->
+                              <div class="col-sm-7 pt-2">
+                                 <div class="custom-select" >
+                                    <select >
+                                       <option value="">Como Conheceu  a Terra Lima Imóveis</option>
+                                       <option value="google">google</option>
+                                       <option value="facebook">Facebook</option>
+                                       <option value="instagram">Instagram</option>
+                                       <option value="indicação">Indicação</option>
+                                       <option value="corretor">Corretor</option>
+                                    </select>
                                  </div>
-                                 <!-- .entry-content -->
-                              </article>
-                              <!-- #post-## -->
-                           </div>
+                              </div>
+
+                              <!-- Finalidade -->
+                              <div class="col-sm-5 pt-2">
+                                 <div class="custom-select" >
+                                    <select name="Finalidade">
+                                       <option value="">Finalidade</option>
+                                       <option value="residencial">Residencial</option>
+                                       <option value="comercial">Comercial</option>
+                                       <option value="investimento">Investimento</option>
+                                       <option value="permuta">Permuta</option>
+                                    </select>
+                                 </div>
+                              </div>
+
+                              <!-- Tipo de imovel -->
+                              <div class="col-sm-12 pt-2">
+                                 <div class="custom-select">
+                                    <select name="Categoria">
+                                       <option value="">Tipo de imóvel</option>
+                                       <option value="casa">casa</option>
+                                       <option value="apartamento">apartamento</option>
+                                       <option value="comercial">Comercial</option>
+                                       <option value="condominio">Casa/condominio</option>
+                                       <option value="Cobertura">Cobertura</option>
+                                       <option value="duplex">duplex</option>
+                                       <option value="triplex">triplex</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              
+                              <!-- Dormitorios -->
+                              <div class="col-sm-3 pt-2">
+                                 <input type="text" class="form-control" placeholder="Dormitorios" name="Dormitorios">
+                              </div>
+
+                              <!-- Vagas -->
+                              <div class="col-sm-3 pt-2">
+                                 <input type="text" class="form-control" placeholder="Vagas" name="Vagas">
+                              </div>
+
+                               <!-- Área Construida -->
+                              <div class="col-sm-3 pt-2">
+                                 <input type="text" class="form-control" placeholder="Área Construida M²" name="AreaTotal">
+                              </div>
+
+
+                              <!-- Financiado? -->
+                              <div class="col-sm-3 pt-2">
+                                 <div class="custom-select">
+                                    <select name="Categoria">
+                                       <option value="">Financiado?</option>
+                                       <option value="Sim">Sim</option>
+                                       <option value="Não">Não</option>
+                                    </select>
+                                 </div>
+                              </div>
+
+                              
+                              <!-- Preço -->
+                              <div class="col-sm-12 pt-2">
+                                 <input type="text" class="form-control" placeholder="Valor do Imóvel" name="Valor">
+                              </div>
+                                    
+                              <div class="col-sm-12 pt-2" style="font-size: 18px;">
+                                 Envie Até 10 Fotos de Seu Imóvel
+                              </div>
+
+
+                              <div class="col-sm-12 pt-2" id="imgs">
+                                 <label for="envImg" class="btn-env">enviar arquivos</label>
+                                 <input type="file" id="envImg" multiple="multiple" name="myfiles[]">
+                              </div>
+
+                              <div class="col-sm-10 pt-2">
+                                 <button type="submit" class="btn col-md-12 btn-salva" style="color: white; font-size: 17px;">
+                                    enviar imóvel
+                                 </button>
+                              </div>
+                           </form>
                         </div>
                      </div>
 

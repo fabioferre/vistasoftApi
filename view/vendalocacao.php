@@ -84,6 +84,7 @@
                                  <div class="table-cell">
                                     <div class="figure-block">
                                        <figure class="item-thumb">
+                                          <!-- <span class="label-featured label label-success"></span> -->
                                           <div class="label-wrap label-right hide-on-list">
                                              <span class="label-status label-status-180 label label-default">
                                                 <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'venda'?'venda': 'locacao'?>"><?=$key['Status']?></a>
