@@ -219,35 +219,6 @@
                         include 'build/destaques.php';
                      ?>
 
-                     
-                     <div id="houzez_featured_properties-5" class="widget widget_houzez_featured_properties">
-                        <div class="widget-top">
-                           <h3 class="widget-title">Highlights</h3>
-                        </div>
-                        <div class="widget-body">
-                           <div class="figure-block">
-                              <figure class="item-thumb">
-                                 <span class="label-featured label label-success">Destaque</span>
-                                 <div class="label-wrap label-right">
-                                    <span class="label-status label-status-180 label label-default"><a href="#">Venda</a></span>                               
-                                 </div>
-                                 <a href="#" class="hover-effect">
-                                 <img src="http://novoterralima.com/wp-content/uploads/2017/12/218-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" srcset="http://novoterralima.com/wp-content/uploads/2017/12/218-385x258.jpg 385w, http://novoterralima.com/wp-content/uploads/2017/12/218-150x100.jpg 150w" sizes="(max-width: 385px) 100vw, 385px" width="385" height="258">                               </a>
-                                 <figcaption class="thumb-caption clearfix">
-                                    <div class="cap-price pull-left"><span class="price-start">Venda</span> R$6,500,000</div>
-                                    <ul class="list-unstyled actions pull-right">
-                                       <li>
-                                          <span title="" data-placement="top" data-toggle="tooltip" data-original-title="4 Fotos">
-                                          <i class="fa fa-camera"></i>
-                                          </span>
-                                       </li>
-                                    </ul>
-                                 </figcaption>
-                              </figure>
-                           </div>
-                           </div>
-                        </div>
-                     </div>
 
                      <div id="houzez_contact-5" class="widget widget-contact">
                         <div class="widget-top">

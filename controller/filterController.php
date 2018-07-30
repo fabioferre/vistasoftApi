@@ -11,7 +11,7 @@ namespace controller;
                 $_SESSION = $imoveis->busca($_POST);
             }
 
-            print_r($_SESSION);
+            // print_r($_SESSION);
             // print_r($_POST);
             if (isset($_SESSION) ){
                 $dados = $_SESSION;
@@ -22,7 +22,8 @@ namespace controller;
                 ->paginacao($_POST)
                 ->get();
 
-                $destaques = $imoveis->destaques('');
+                $imoveisdes = new \Classes\Imoveis;
+                $destaques = $imoveisdes->destaques('');
 
                 include 'view/resultPesquisa.php';
             }else{

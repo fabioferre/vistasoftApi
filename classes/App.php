@@ -125,7 +125,6 @@ class App
         if (empty($_POST['order']) ) {
             $orderBy = array('DataCadastro'=>'desc');
         }else{
-
             $_SESSION['order'] = $array['order'];
             $order = explode('_', $_SESSION['order']);
             $orderBy = array($order[0]=> $order[1]);

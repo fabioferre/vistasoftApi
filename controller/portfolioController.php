@@ -63,7 +63,8 @@ namespace controller;
             ->paginacao($_POST)
             ->get();
 
-            $destaques = $imoveis->destaques('');
+            $imoveisdes = new \Classes\Imoveis;
+            $destaques = $imoveisdes->destaques('');
         	include 'view/vendalocacao.php';
             // print_r($listagem);
         }
@@ -78,7 +79,8 @@ namespace controller;
             ->paginacao($_POST)
             ->get();
 
-            $destaques = $imoveis->destaques('ALUGUEL');
+            $imoveisdes  = new \Classes\Imoveis;
+            $destaques = $imoveisdes ->destaques('ALUGUEL');
 
             // print_r($listagem);
         	include 'view/locacao.php';
@@ -94,7 +96,8 @@ namespace controller;
             ->paginacao($_POST)
             ->get();
             
-            $destaques = $imoveis->destaques('VENDA');
+            $imoveisdes  = new \Classes\Imoveis;
+            $destaques = $imoveisdes->destaques('VENDA');
 
         	include 'view/venda.php';
         }
