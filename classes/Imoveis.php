@@ -48,9 +48,9 @@ class Imoveis extends App
             $pesquisa['ValorVenda'] = array($param['min-price'], $param['max-price']);
         }
 
-        
-        $pesquisa['AreaTerreno'] = array($param['min-area'], $param['max-area']);
-        
+        if ($param['min-area'] > 10 || $param['max-area'] < 6000 ) {
+           $pesquisa['AreaTerreno'] = array($param['min-area'], $param['max-area']);
+        }
         
         if (!empty($param['categoria']) ) {
             $pesquisa['Categoria'] =  array('like', $param['categoria']);       
@@ -73,7 +73,23 @@ class Imoveis extends App
         }
         return $var;
     }
-    
+
+    public function checkSelect($var, $select){
+        $retorno = '';
+        
+        $check = isset($_SESSION[$var][1])? $_SESSION[$var][1]: '' ;
+        if ($check == $select) {
+            $retorno = "selected";
+        }
+
+        $check2 = isset($_SESSION[$var])? $_SESSION[$var]: '' ;
+        if ($check2 == $select) {
+            $retorno = "selected";
+        }
+
+        echo $retorno ;
+    }
+   
 }
 
   

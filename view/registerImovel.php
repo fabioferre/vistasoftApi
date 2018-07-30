@@ -55,9 +55,61 @@
           .form-control:focus, .custom-select:hover{
             border: 1px solid #fe374d;
           }
-          i{
+
+
+          .btn-salva{
+            background-color: #d89265; 
+            font-weight: 600; 
+            padding-bottom: 10px;
+          }
+
+
+         .btn-env {
+           background: url(../assets/img/cloud.png) no-repeat left #d89265;
+           color: #fff;
+           cursor: pointer;
+           margin: 10px;
+           padding: 5px 10px 5px 50px;
+           font-weight: 600; 
+         }
+
+         input[type='file'] {
+           display: none
+         }
+         
+         .btn-env:hover, .btn-salva:hover{
+            background-color: #d68b5c;
+         }
+
+         @keyframes animacao-box{
+            from {
+               width: 0%;
+               height: 0px;
+               background: #fff;
+            }
+            to{
+               width: 100%;
+               height: 35px;
+               background: #22c222;
+            }
+         }
+
+         .loadImg{
+            color: white;
+            width: 100%;
+            background: #22c222;
+            font-size: 13px;
+            border-radius: 3px; 
+            padding:5px;
+            margin-bottom: 5px;
+            animation:animacao-box 5s;
+         }
+          
+
+         i{
             color: #afafaf;
           }
+
     </style>
     <body>
      <?php
@@ -208,10 +260,21 @@
                                        <div class="col-sm-12 pt-2">
                                           <input type="text" class="form-control" placeholder="Valor do Imóvel" name="Valor">
                                        </div>
-                                                   <div class="col-sm-12 pt-2">
-                                          <input type="submit" class="btn btn-primary" placeholder="Valor do Imóvel" name="enviar" value="salvar">
+                                              
+                                       <span class="col-sm-12 pt-2" style="font-size: 18px;">
+                                          Envie Até 10 Fotos de Seu Imóvel
+                                       </span>
+
+                                       <div class="col-sm-12 pt-2" id="imgs">
+                                          <label for="envImg" class="btn-env">enviar arquivos</label>
+                                          <input type="file" id="envImg">
                                        </div>
 
+                                       <div class="col-sm-10 pt-2">
+                                          <button type="button" class="btn col-md-12 btn-salva" style="color: white; font-size: 17px;">
+                                             enviar imóvel
+                                          </button>
+                                       </div>
 
                                     </form>
                                  </div>
@@ -228,36 +291,10 @@
                           <?php
                               include 'build/formBusca.php';
                               include 'build/equipe.php';
+                              include 'build/destaques.php';
                            ?>
 
-                           <div id="houzez_featured_properties-4" class="widget widget_houzez_featured_properties">
-                              <div class="widget-top">
-                                 <h3 class="widget-title">Highlights</h3>
-                              </div>
-                              <div class="widget-body">
-                                 <div class="figure-block">
-                                    <figure class="item-thumb">
-                                       <span class="label-featured label label-success">Destaque</span>
-                                       <div class="label-wrap label-right">
-                                          <span class="label-status label-status-171 label label-default"><a href="http://novoterralima.com/status/venda-e-locacao/">Venda / Locação</a></span>                               
-                                       </div>
-                                       <a href="http://novoterralima.com/imovel/cobertura-duplex-tl316/" class="hover-effect">
-                                       <img src="http://novoterralima.com/wp-content/uploads/2017/11/141-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" width="385" height="258">                              </a>
-                                       <figcaption class="thumb-caption clearfix">
-                                          <div class="cap-price pull-left"><span class="price-start">Venda</span> R$35,000,000</div>
-                                          <ul class="list-unstyled actions pull-right">
-                                             <li>
-                                                <span title="" data-placement="top" data-toggle="tooltip" data-original-title="3 Fotos">
-                                                <i class="fa fa-camera"></i>
-                                                </span>
-                                             </li>
-                                          </ul>
-                                       </figcaption>
-                                    </figure>
-                                 </div>
-                              </div>
-                           </div>
-
+               
                            <div id="houzez_contact-4" class="widget widget-contact">
                               <div class="widget-top">
                                  <h3 class="widget-title">Fale Conosco</h3>
@@ -283,14 +320,25 @@
       </div>
 
 
-        
-
-
-        
-        <?php
+         <?php
             include'build/footer.php';
             include'build/requisicoes.php';
-        ?>
+         ?>
+         <script type="text/javascript">
+
+            jQuery("#envImg").change(function(){
+              jQuery("#id").empty();
+              var names = [];
+
+              for (var i = 0; i < jQuery(this).get(0).files.length; ++i) {
+                var thisfile = jQuery(this).get(0).files[i].name;
+                // jQuery("#id").append("&lt;img alt='images/images/eventos/"++"' /> <br/>");
+
+                jQuery("#imgs").append(` <div class="loadImg">`+thisfile+`</div> `);
+
+              }
+            })
+         </script>
     </body>
 </html>
 

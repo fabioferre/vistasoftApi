@@ -1,4 +1,4 @@
-<div id="houzez_agent_search-6" class="widget widget_houzez_agent_search">
+<!-- <div id="houzez_agent_search-6" class="widget widget_houzez_agent_search">
    
    <div class="widget-top">
       <h3 class="widget-title">Nossa Equipe</h3>
@@ -53,4 +53,4 @@
          </form>
       </div>
    </div>
-</div>
+</div> -->

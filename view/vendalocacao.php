@@ -21,9 +21,9 @@
                      <div class="page-title-left">
                         <h2>Venda / Locação </h2>
                      </div>
+
                      <div class="page-title-right">
                         <div class="view">
-
                            <form class="sort-tab table-cell" method="post" id="order">
                               Ordenar por:                            
                               <select id="sort_properties" class="selectpicker bs-select-hidden"  name="order">
@@ -31,23 +31,23 @@
                                     Ordem padrão
                                  </option>
 
-                                 <option value="ValorVenda_asc" <?=$_SESSION['order'] == 'ValorVenda_asc'? 'selected': '' ?> >
+                                 <option value="ValorVenda_asc" <?=$imoveis->checkSelect('order','ValorVenda_asc')?>  >
                                     Preço (baixo para alto)
                                  </option>
 
-                                 <option value="ValorVenda_desc" <?=$_SESSION['order'] == 'ValorVenda_desc'? 'selected': '' ?> >
+                                 <option value="ValorVenda_desc" <?=$imoveis->checkSelect('order','ValorVenda_desc')?> >
                                     Preço (alto para baixo)
                                  </option>
 
-                                 <option value="EmDestaque_asc" <?=$_SESSION['order'] == 'EmDestaque_asc'? 'selected': '' ?> >
+                                 <option value="EmDestaque_asc" <?=$imoveis->checkSelect('order','EmDestaque_asc')?>  >
                                     Destaques
                                  </option>
 
-                                 <option value="DataLancamento_asc" <?=$_SESSION['order'] == 'DataLancamento_asc'? 'selected': '' ?> >
+                                 <option value="DataLancamento_asc" <?=$imoveis->checkSelect('order','DataLancamento_asc')?>  >
                                     Data antiga para nova
                                  </option>
 
-                                 <option value="DataLancamento_desc" <?=$_SESSION['order'] == 'DataLancamento_desc'? 'selected': '' ?> >
+                                 <option value="DataLancamento_desc" <?=$imoveis->checkSelect('order','DataLancamento_desc')?>  >
                                     Data nova para antiga
                                  </option>
                               </select>
@@ -58,6 +58,7 @@
                            </div>
                         </div>
                      </div>
+                     
                   </div>
                </div>
             </div>
@@ -200,7 +201,7 @@
                      <hr>
                      <!--start Pagination-->
                      <form class="pagination-main" method="post" >
-                        <input type="num" name="pag" id="pag" hidden>
+                        <input type="num" name="pagina" id="pag" hidden>
                         <ul class="pagination">
                         <?php if ($listagem['pagina'] >= 3) { ?>
                            <li hidden><a class="btnPag"  data-pag="<?=$listagem['pagina']-3?>" aria-label="Previous"><span aria-hidden="true"><i class="fa fa-angle-left"></i></span></a></li>

@@ -142,7 +142,14 @@ class App
 
     //paginacao
     public function paginacao($array){
-        $this->dados['paginacao'] = isset($array['quantidade'])? $array['quantidade'] : $array['quantidade'] = 10;
+        if (empty($array['quantidade']) ) {
+            $array['quantidade'] = 10;
+        }
+
+        if (empty($array['pagina']) ){
+           $array['pagina'] = 1;
+        }
+
         $this->dados['paginacao'] = $array;
         return $this;
     }

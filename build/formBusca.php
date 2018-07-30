@@ -10,10 +10,21 @@
                   <div class="col-sm-12 col-xs-12">
                      <div class="form-group">
                         <select name="pais" class="selectpicker bs-select-hidden" >
-                           <option value="">Todos os Países</option>
-                           <option value="Brasil">Brasil</option>
-                           <option value="Portugal">Portugal</option>
-                           <option value="Estados Unidos">Estados Unidos</option>
+                           <option value="">
+                              Todos os Países
+                           </option>
+
+                           <option value="Brasil" <?=$imoveis->checkSelect('Pais','Brasil')?> >
+                              Brasil
+                           </option>
+
+                           <option value="Portugal" <?=$imoveis->checkSelect('Pais','Portugal')?> >
+                               Portugal
+                           </option>
+
+                           <option value="Estados Unidos" <?=$imoveis->checkSelect('Pais','Estados Unidos')?> >
+                              Estados Unidos
+                           </option>
                         </select>
                      </div>
                   </div>
@@ -38,28 +49,74 @@
                   <div class="col-sm-12 col-xs-12">
                      <div class="form-group">
                         <select name="categoria" class="selectpicker bs-select-hidden" >
-                           <option value="">Tipos de imóveis</option>
-                           <option value="Apartamento">Apartamento</option>
-                           <option value="Casa">Casa</option>
-                           <option value="Casa na praia">Casa na Praia</option>
-                           <option value="Casa no campo">Casa no Campo</option>
-                           <option value="Cobertura">Cobertura</option>
-                           <option value="Salas e Conjunto">Salas e Conjunto</option>
-                           <option value="duplex">Duplex</option>
-                           <option value="Fazenda">Fazenda</option>
-                           <option value="loft">Loft</option>
-                           <option value="terreno">Terreno</option>
-                           <option value="triplex"> Triplex</option>
+                           <option value=""  >
+                              Tipos de imóveis
+                           </option>
+
+                           <option value="Apartamento" <?=$imoveis->checkSelect('Categoria','Apartamento')?> >
+                              Apartamento
+                           </option>
+
+                           <option value="Casa" <?=$imoveis->checkSelect('Categoria','Casa') ?>  >
+                              Casa
+                           </option>
+
+                           <option value="Casa na praia" <?=$imoveis->checkSelect('Categoria','Casa na praia') ?> >
+                              Casa na Praia
+                           </option>
+
+                           <option value="Casa no campo" <?=$imoveis->checkSelect('Categoria','Casa no campo') ?> >
+                              Casa no Campo
+                           </option>
+
+                           <option value="Cobertura" <?=$imoveis->checkSelect('Categoria','Cobertura') ?> > 
+                              Cobertura
+                           </option>
+
+                           <option value="Salas e Conjunto" <?=$imoveis->checkSelect('Categoria','Salas e Conjuntos') ?> >
+                              Salas e Conjunto
+                           </option>
+
+                           <option value="duplex" <?=$imoveis->checkSelect('Categoria','duplex') ?> >
+                              Duplex
+                           </option>
+
+                           <option value="Fazenda" <?=$imoveis->checkSelect('Categoria','Fazenda') ?> >
+                              Fazenda
+                           </option>
+
+                           <option value="loft" <?=$imoveis->checkSelect('Categoria','loft') ?> >
+                              Loft
+                           </option>
+
+                           <option value="terreno" <?=$imoveis->checkSelect('Categoria','terreno') ?> >
+                              Terreno
+                           </option>
+
+                           <option value="triplex" <?=$imoveis->checkSelect('Categoria','triplex') ?> >
+                               Triplex
+                           </option>
                         </select>
                      </div>
                   </div>
                   <div class="col-sm-12 col-xs-12">
                      <div class="form-group">
                         <select class="selectpicker bs-select-hidden" id="widget_status" name="status" >
-                           <option value="">Status Do imóvel</option>
-                           <option value="ALUGUEL"> Locação</option>
-                           <option value="VENDA"> Venda</option>
-                           <option value="BOTH"> Venda / Locação</option>
+                           <option value="">
+                                 Status Do imóvel
+                           </option>
+
+                           <option value="ALUGUEL" <?=$imoveis->checkSelect('Status','ALUGUEL')?> >
+                               Locação
+                           </option>
+
+                           <option value="VENDA" <?=$imoveis->checkSelect('Status','VENDA')?> >
+                               Venda
+                           </option>
+
+                           <option value="BOTH" <?=$imoveis->checkSelect('Status','VENDA E ALUGUEL')?> >
+                               Venda / Locação
+                           </option>
                         </select>
                      </div>
                   </div>
@@ -106,7 +163,7 @@
                <div class="row">
                   <div class="col-sm-12 col-xs-12">
                      <button type="submit" class="btn btn-secondary btn-block" name="busca" value="1">
-                        <i class="fa fa-search fa-left"></i> Pesquisa
+                        <i class="fa fa-search fa-left" style="color:#ffffff"></i> Pesquisa
                      </button>
                   </div>
                </div>

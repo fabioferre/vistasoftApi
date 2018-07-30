@@ -11,15 +11,15 @@ namespace controller;
                 $_SESSION = $imoveis->busca($_POST);
             }
 
-            // print_r($_SESSION);
+            print_r($_SESSION);
             // print_r($_POST);
             if (isset($_SESSION) ){
                 $dados = $_SESSION;
-                $pagina['pagina'] = isset($_POST['pag'])? $_POST['pag']: 1;
 
                 $listagem = $imoveis
+                ->order($_POST)
                 ->filter($dados)
-                ->paginacao($pagina)
+                ->paginacao($_POST)
                 ->get();
 
                 $destaques = $imoveis->destaques('');
@@ -31,13 +31,6 @@ namespace controller;
 
         }
 
-        public function option(){
-            $imoveis = new \Classes\Imoveis;
-            $disponivel = $imoveis->getOptions()->get();
-
-            header("Content-type: Application/json");
-            echo json_encode($disponivel);
-        }
     }
 
 

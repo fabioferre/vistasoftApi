@@ -58,18 +58,14 @@ namespace controller;
 
         public function index(){
         	$imoveis = new \Classes\Imoveis;
-
-            
         	$listagem = $imoveis
             ->order($_POST)
-            ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
+            ->paginacao($_POST)
             ->get();
 
             $destaques = $imoveis->destaques('');
-            print_r($_SESSION);
-            // print_r($order);
         	include 'view/vendalocacao.php';
-            print_r($listagem);
+            // print_r($listagem);
         }
 
 
@@ -77,8 +73,9 @@ namespace controller;
         	$imoveis = new \Classes\Imoveis;
 
             $listagem = $imoveis
+            ->order($_POST)
             ->filter(['Status'=>'ALUGUEL'])
-            ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
+            ->paginacao($_POST)
             ->get();
 
             $destaques = $imoveis->destaques('ALUGUEL');
@@ -92,8 +89,9 @@ namespace controller;
         public function venda(){
         	$imoveis = new \Classes\Imoveis;
         	$listagem = $imoveis
+            ->order($_POST)
             ->filter(['Status'=>'VENDA'])
-            ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
+            ->paginacao($_POST)
             ->get();
             
             $destaques = $imoveis->destaques('VENDA');
@@ -110,6 +108,8 @@ namespace controller;
 
 
         public function ShowFormCadastroImovel(){
+            $imoveis = new \Classes\Imoveis;
+            $destaques = $imoveis->destaques('');
             include 'view/registerImovel.php';
         }
 

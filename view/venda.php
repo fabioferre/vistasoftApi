@@ -24,18 +24,34 @@
                      </div>
                      <div class="page-title-right">
                         <div class="view">
-                           <div class="sort-tab table-cell">
+                           <form class="sort-tab table-cell" method="post" id="order">
                               Ordenar por:                            
-                              <select id="sort_properties" class="selectpicker bs-select-hidden" title="" data-live-search-style="begins" data-live-search="false">
-                                 <option value="">Ordem padrão</option>
-                                 <option value="a_price">Preço (baixo para alto)</option>
-                                 <option value="d_price">Preço (alto para baixo)</option>
-                                 <option value="featured">Destaque</option>
-                                 <option value="a_date">Data antiga para nova</option>
-                                 <option value="d_date">Data nova para antiga</option>
+                              <select id="sort_properties" class="selectpicker bs-select-hidden"  name="order">
+                                 <option value="" >
+                                    Ordem padrão
+                                 </option>
+
+                                 <option value="ValorVenda_asc" <?=$imoveis->checkSelect('order','ValorVenda_asc')?>  >
+                                    Preço (baixo para alto)
+                                 </option>
+
+                                 <option value="ValorVenda_desc" <?=$imoveis->checkSelect('order','ValorVenda_desc')?> >
+                                    Preço (alto para baixo)
+                                 </option>
+
+                                 <option value="EmDestaque_asc" <?=$imoveis->checkSelect('order','EmDestaque_asc')?>  >
+                                    Destaques
+                                 </option>
+
+                                 <option value="DataLancamento_asc" <?=$imoveis->checkSelect('order','DataLancamento_asc')?>  >
+                                    Data antiga para nova
+                                 </option>
+
+                                 <option value="DataLancamento_desc" <?=$imoveis->checkSelect('order','DataLancamento_desc')?>  >
+                                    Data nova para antiga
+                                 </option>
                               </select>
-         
-                           </div>
+                           </form>
                            <div class="table-cell hidden-xs">
                               <span class="view-btn btn-list active"><i class="fa fa-th-list"></i></span>
                               <span class="view-btn btn-grid"><i class="fa fa-th-large"></i></span>
@@ -174,7 +190,7 @@
                      <hr>
                      <!--start Pagination-->
                      <form class="pagination-main" method="post" >
-                        <input type="num" name="pag" id="pag" hidden>
+                        <input type="num" name="pagina" id="pag" hidden>
                         <ul class="pagination">
                         <?php if ($listagem['pagina'] >= 3) { ?>
                            <li hidden><a class="btnPag"  data-pag="<?=$listagem['pagina']-3?>" aria-label="Previous"><span aria-hidden="true"><i class="fa fa-angle-left"></i></span></a></li>
