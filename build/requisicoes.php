@@ -42,5 +42,4 @@
              jQuery('.pagination-main').submit();
          });
 
-        
       </script>

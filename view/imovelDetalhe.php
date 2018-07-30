@@ -243,11 +243,14 @@
                                        <h2 class="title-left">Destaques</h2>
                                     </div>
                                     <ul class="list-three-col list-features">
-                                       <li><a href="#">Copa Cozinha</a></li>
-                                       <li><a href="#">Cozinha Integrada</a></li>
-                                       <li><a href="#">Sala de Estar</a></li>
-                                       <li><a href="#">Sala de Jantar</a></li>
-                                       <li><a href="#">Suíte Americana</a></li>
+
+                                    <?php foreach ($e['Caracteristicas'] as $key => $value) { 
+                                          if ($value == 'Sim') {  ?>
+
+                                             <li><a href="#"><?=$key?></a></li>
+
+                                    <?php } } ?>
+
                                     </ul>
                                  </div>
                               </div>
@@ -257,7 +260,7 @@
                         <!--end detail content tabber-->
 
 
-                        <div class="property-similer">
+                        <!-- <div class="property-similer">
                            <div class="detail-title">
                               <h2 class="title-left">Propriedades similares</h2>
                            </div>
@@ -357,7 +360,8 @@
                               </div>
                            </div>
                            <hr>
-                        </div>
+                        </div> -->
+
                      </div>
                   </div>
 

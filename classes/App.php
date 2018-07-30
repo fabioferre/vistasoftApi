@@ -91,7 +91,6 @@ class App
         if($this->result['status'] == 200){
             $this->codigo = $this->result['codigo'];
         }
-        
         return $this->result;
     }
 
@@ -99,7 +98,6 @@ class App
         $this->cadastro = $array;
         unset($this->dados);
         return $this;
-
     }
 
 
@@ -123,7 +121,17 @@ class App
 
     //order
     public function order($array){
-        $this->dados['order'] = $array;
+
+        if (empty($_POST['order']) ) {
+            $orderBy = array('DataCadastro'=>'desc');
+        }else{
+
+            $_SESSION['order'] = $array['order'];
+            $order = explode('_', $_SESSION['order']);
+            $orderBy = array($order[0]=> $order[1]);
+        }
+
+        $this->dados['order'] = $orderBy;
         return $this;
     }
 

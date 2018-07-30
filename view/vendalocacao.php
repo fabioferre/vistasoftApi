@@ -23,17 +23,34 @@
                      </div>
                      <div class="page-title-right">
                         <div class="view">
+
                            <form class="sort-tab table-cell" method="post" id="order">
                               Ordenar por:                            
-                              <select id="sort_properties" class="selectpicker bs-select-hidden" title="" data-live-search-style="begins" data-live-search="false">
-                                 <option value="" >Ordem padrão</option>
-                                 <option value="a_price" >Preço (baixo para alto)</option>
-                                 <option value="d_price" >Preço (alto para baixo)</option>
-                                 <option value="featured">Destaque</option>
-                                 <option value="a_date" >Data antiga para nova</option>
-                                 <option value="d_date" >Data nova para antiga</option>
+                              <select id="sort_properties" class="selectpicker bs-select-hidden"  name="order">
+                                 <option value="" >
+                                    Ordem padrão
+                                 </option>
+
+                                 <option value="ValorVenda_asc" <?=$_SESSION['order'] == 'ValorVenda_asc'? 'selected': '' ?> >
+                                    Preço (baixo para alto)
+                                 </option>
+
+                                 <option value="ValorVenda_desc" <?=$_SESSION['order'] == 'ValorVenda_desc'? 'selected': '' ?> >
+                                    Preço (alto para baixo)
+                                 </option>
+
+                                 <option value="EmDestaque_asc" <?=$_SESSION['order'] == 'EmDestaque_asc'? 'selected': '' ?> >
+                                    Destaques
+                                 </option>
+
+                                 <option value="DataLancamento_asc" <?=$_SESSION['order'] == 'DataLancamento_asc'? 'selected': '' ?> >
+                                    Data antiga para nova
+                                 </option>
+
+                                 <option value="DataLancamento_desc" <?=$_SESSION['order'] == 'DataLancamento_desc'? 'selected': '' ?> >
+                                    Data nova para antiga
+                                 </option>
                               </select>
-         
                            </form>
                            <div class="table-cell hidden-xs">
                               <span class="view-btn btn-list active"><i class="fa fa-th-list"></i></span>

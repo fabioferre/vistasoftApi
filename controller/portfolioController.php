@@ -21,7 +21,6 @@ namespace controller;
                 "ValorVenda",
                 "ValorLocacao",
                 "Dormitorios",
-                "Suites",
                 "Vagas",
                 "AreaConstruida",
                 "AreaTerreno",
@@ -42,7 +41,7 @@ namespace controller;
             ->setCodigo($idImovel)
             ->get();
 
-            
+
             if (empty($e['status']) ) {
 
                 $e['ValorVenda'] = $imoveis->formataValor($e['ValorVenda'], 1000);
@@ -52,7 +51,7 @@ namespace controller;
             }else{
                 header('Location: /'.pasta.'/Portfolio/ ');
             }
-        
+
         }
 
 
@@ -60,14 +59,17 @@ namespace controller;
         public function index(){
         	$imoveis = new \Classes\Imoveis;
 
+            
         	$listagem = $imoveis
+            ->order($_POST)
             ->paginacao(['pagina'=> isset($_POST['pag'])?$_POST['pag']:1])
             ->get();
 
             $destaques = $imoveis->destaques('');
-
+            print_r($_SESSION);
+            // print_r($order);
         	include 'view/vendalocacao.php';
-            // print_r($listagem);
+            print_r($listagem);
         }
 
 

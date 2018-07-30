@@ -8,7 +8,7 @@ class Imoveis extends App
 {
 
     protected $curl = 'imoveis/listar';
-    protected $dados = ['fields' => ['Finalidade','ValorLocacao','ValorVenda','Bairro','Cidade','Dormitorios','Status','FotoDestaque','TotalBanheiros','AreaTerreno','AreaConstruida','Categoria','DescricaoWeb','TituloSite','Codigo','CEP','Pais','UF','EmDestaque', 'SuperDestaqueWeb'],];
+    protected $dados = ['fields' => ['Finalidade','ValorLocacao','ValorVenda','Bairro','Cidade','Dormitorios','Status','FotoDestaque','TotalBanheiros','AreaTerreno','AreaConstruida','Categoria','DescricaoWeb','TituloSite','Codigo','CEP','Pais','UF','EmDestaque', 'SuperDestaqueWeb','DataCadastro'],];
 
     public function setCurl($curl){
         $this->curl = $curl;
@@ -30,7 +30,6 @@ class Imoveis extends App
 
         return $retorno;
     }   
-
 
     public function busca($param){
         $param['min-area'] = str_replace(' m²', '', $param['min-area']); $param['max-area'] = str_replace(' m²', '', $param['max-area']);
@@ -65,6 +64,7 @@ class Imoveis extends App
 
 
 
+
     public function formataValor($var, $valor){
         if (!empty($var)) {
            if ($var >= $valor) {
@@ -73,7 +73,7 @@ class Imoveis extends App
         }
         return $var;
     }
-
+    
 }
 
   

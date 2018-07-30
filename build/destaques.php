@@ -18,7 +18,7 @@
                         <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'venda'?'venda': 'locacao'?>"><?=$key['Status']?></a>
                      </span>
                   </div>
-                  <a href="#" class="hover-effect">
+                  <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="hover-effect">
                      <img src="<?=$key['FotoDestaque']?>" width="385" height="258">                               
                   </a>
 
