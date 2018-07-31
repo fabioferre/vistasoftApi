@@ -5,10 +5,11 @@ namespace controller;
     class Portfolio{
 
         public function imovel(){
-            $imoveis = new \Classes\Imoveis;
+            $imoveisdes = new \Classes\Imoveis;
+            $destaques = $imoveisdes->destaques('');
 
+    
             $idImovel = isset($_GET['params'][0])?$_GET['params'][0]:0;
-
             $fields = array(
                 "Codigo",
                 "Status",
@@ -35,26 +36,23 @@ namespace controller;
                 ["Corretor"=>['Nome','TelefoneComercial', 'Foto', 'Email','Perfil' ]]
             );
 
+            $imoveis = new \Classes\Imoveis;
             $e = $imoveis
             ->setCurl('imoveis/detalhes')
             ->fields($fields)
             ->setCodigo($idImovel)
             ->get();
 
-
+            
             if (empty($e['status']) ) { //verifica se tem algum erro com codigo
                 $similares = new \Classes\Imoveis;
-
-                $sml = $similares
-                ->filter(['Status' => $e['Status'], 'Categoria'=> $e['Categoria']  ])
-                ->paginacao(['quantidade'=> 4])
-                ->get(); //imóveis similares
+                $sml = $similares->filter(['Status' => $e['Status'], 'Categoria'=> $e['Categoria'] ]) ->paginacao(['quantidade'=> 4])->get(); //imóveis similares
 
                 $e['ValorVenda'] = $imoveis->formataValor($e['ValorVenda'], 1000);
                 $e['ValorLocacao'] = $imoveis->formataValor($e['ValorLocacao'], 100);
 
                 include 'view/imovelDetalhe.php';
-                // print_r($sml);
+                // print_r($e);
             }else{
                 header('Location: /'.pasta.'/Portfolio/ ');
             }

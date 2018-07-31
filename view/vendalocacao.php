@@ -109,9 +109,13 @@
                </div>
 
                
-               <?php
-                  include 'build/navSide.php';
-               ?>
+               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container-sidebar ">
+                  <aside id="sidebar" class="sidebar-white">
+                     <?php
+                        include 'build/navAside.php';
+                     ?>
+                  </aside>
+               </div>
                <!-- end container-sidebar -->
             </div>
          </div>

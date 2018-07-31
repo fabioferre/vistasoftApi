@@ -67,11 +67,16 @@ if(isset($key['Codigo'])){
                </h2>
 
                <address class="property-address">
-                  <?=$key['Bairro']?> <?=$key['Cidade']?> - SP, <?=$key['CEP']?>, <?=$key['Pais']?>
+                  <?=!empty($key['Bairro'])? $key['Bairro'].', ': '' ?> 
 
-                  <?php
-                     !empty($key['Bairro'])?$key['Bairro'].',': '';
-                  ?>
+                  <?=!empty($key['Cidade'])? $key['Cidade']: '' ?>
+
+                  <?=!empty($key['UF'])?' - '.$key['UF'].' ': '' ?>
+
+                  <?=!empty($key['CEP'])?','. $key['CEP'].', ': '' ?>
+
+                  <?=!empty($key['Pais'])? $key['Pais']: '' ?>
+
                </address>
             </div>
 
@@ -113,7 +118,7 @@ if(isset($key['Codigo'])){
                      <span>Banheiros: <?=$key['TotalBanheiros']?></span>
                      <span>m²: <?=$key['AreaTerreno']?></span>
                   </p>
-                  <p>Casa</p>
+                  <p><?=$key['Categoria']?></p>
                </div>
             </div>
             <div class="cell">
