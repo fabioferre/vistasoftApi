@@ -24,9 +24,11 @@ class Imoveis extends App
         }
 
         $retorno = $this
+        ->order('')
         ->filter($filtro)
         ->paginacao(['pagina'=> 1,'quantidade'=> 3 ])
         ->get();
+
 
         return $retorno;
     }   
