@@ -6,111 +6,7 @@
          ?>
          
     </head>
-    <style type="text/css">
-        .breadcrumb-top .page-title-left h1 {
-            font-weight: 400;
-            color: #d89265;
-            font-size: 24px;
-            width: 135%;
-        }
-        .article-detail {
-             background-color: #f2ecdd;
-             padding: 40px;
-         }
-         .pt-2{
-            padding-top: 20px;
-         }
-         .btn-default{
-            height: 36px;
-         }
-         .form-control{
-            border-radius: 0px;
-            height: 36px;
 
-          }
-
-         .custom-select{
-            height: 35px;
-            overflow: hidden;
-            src: url("../webfonts/fa-solid-900.eot");
-            background: url(../assets/img/caret.png) no-repeat right #fff; /* novo ícone para o <select> */
-            border: 1px solid #ccc;
-            transition: border 0.5s;
-            color: #777777;
-            font-weight: 500;
-         }
-
-         .custom-select select { /* <select> */
-            background: transparent; /* importante para exibir o novo ícone */
-             width: 115%;
-             padding: 5px;
-             font-size: 16px;
-             line-height: 1;
-             border: 0;
-             border-radius: 0;
-             height: 34px;
-             -webkit-appearance: none;
-          }  
-          
-          .form-control:focus, .custom-select:hover{
-            border: 1px solid #fe374d;
-          }
-
-
-          .btn-salva{
-            background-color: #d89265; 
-            font-weight: 600; 
-            padding-bottom: 10px;
-          }
-
-
-         .btn-env {
-           background: url(../assets/img/cloud.png) no-repeat left #d89265;
-           color: #fff;
-           cursor: pointer;
-           margin: 10px 10px 10px 0;
-           padding: 5px 10px 5px 50px;
-           font-weight: 600; 
-         }
-
-         input[type='file'] {
-           display: none
-         }
-         
-         .btn-env:hover, .btn-salva:hover{
-            background-color: #d68b5c;
-         }
-
-         @keyframes animacao-box{
-            from {
-               width: 0%;
-               height: 0px;
-               background: #fff;
-            }
-            to{
-               width: 100%;
-               height: 35px;
-               background: #22c222;
-            }
-         }
-
-         .loadImg{
-            color: white;
-            width: 100%;
-            background: #22c222;
-            font-size: 13px;
-            border-radius: 3px; 
-            padding:5px;
-            margin-bottom: 5px;
-            animation:animacao-box 5s;
-         }
-          
-
-         i{
-            color: #afafaf;
-          }
-
-    </style>
     <body>
      <?php
      require_once('build/navbar.php');
@@ -279,32 +175,11 @@
                      </div>
 
 
-                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container-sidebar ">
-                        <aside id="sidebar" class="sidebar-white">
-                          <?php
-                              include 'build/formBusca.php';
-                              include 'build/equipe.php';
-                              include 'build/destaques.php';
-                           ?>
+                     <?php
+                        include 'build/navSide.php';
+                     ?>
 
-               
-                           <div id="houzez_contact-4" class="widget widget-contact">
-                              <div class="widget-top">
-                                 <h3 class="widget-title">Fale Conosco</h3>
-                              </div>
-                              <div class="widget-body">
-                                 <div class="contact_text">Conquistar a satisfação dos nossos clientes através de um imóvel residencial, de temporada, de propriedade rural, comercial ou simplesmente como investimento, seja no Brasil ou no exterior.
-                                    <br>
-                                 </div>
-                                 <ul class="list-unstyled">
-                                    <li><i class="fa fa-location-arrow"></i> Av. Brg. Faria Lima, 1982, 12° Andar</li>
-                                    <li><i class="fa fa-phone"></i> +55 11 3628-4111</li>
-                                    <li><i class="fa fa-envelope-o"></i> <a href="mailto:contato@terralimaimoveis.com.br">contato@terralimaimoveis.com.br</a></li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </aside>
-                     </div>
+
                   </div>
                </div>
             </section>
@@ -313,22 +188,21 @@
       </div>
 
 
-         <?php
-            include'build/footer.php';
-            include'build/requisicoes.php';
-         ?>
-         <script type="text/javascript">
+      <?php
+         include'build/footer.php';
+      ?>
+      <script type="text/javascript">
 
-            jQuery("#envImg").change(function(){
-              var names = [];
+         jQuery("#envImg").change(function(){
+           var names = [];
 
-              for (var i = 0; i < jQuery(this).get(0).files.length; ++i) {
-                var thisfile = jQuery(this).get(0).files[i].name;
-                jQuery("#imgs").append(` <div class="loadImg">`+thisfile+`</div> `);
+           for (var i = 0; i < jQuery(this).get(0).files.length; ++i) {
+             var thisfile = jQuery(this).get(0).files[i].name;
+             jQuery("#imgs").append(` <div class="loadImg">`+thisfile+`</div> `);
 
-              }
-            })
-         </script>
+           }
+         })
+      </script>
     </body>
 </html>
 

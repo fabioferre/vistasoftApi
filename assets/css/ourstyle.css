@@ -1,4 +1,110 @@
+/*form cadastre seu imovel*/
 
+.breadcrumb-top .page-title-left h1 {
+    font-weight: 400;
+    color: #d89265;
+    font-size: 24px;
+    width: 135%;
+}
+
+.article-detail {
+     background-color: #f2ecdd;
+     padding: 40px;
+ }
+
+ .pt-2{
+    padding-top: 20px;
+ }
+
+ .btn-default{
+    height: 36px;
+ }
+
+ .form-control{
+    border-radius: 0px;
+    height: 36px;
+}
+
+ .custom-select{
+    height: 35px;
+    overflow: hidden;
+    src: url("../webfonts/fa-solid-900.eot");
+    background: url(../assets/img/caret.png) no-repeat right #fff; /* novo ícone para o <select> */
+    border: 1px solid #ccc;
+    transition: border 0.5s;
+    color: #777777;
+    font-weight: 500;
+ }
+
+ .custom-select select { /* <select> */
+    background: transparent; /* importante para exibir o novo ícone */
+     width: 115%;
+     padding: 5px;
+     font-size: 16px;
+     line-height: 1;
+     border: 0;
+     border-radius: 0;
+     height: 34px;
+     -webkit-appearance: none;
+  }  
+  
+  .form-control:focus, .custom-select:hover{
+    border: 1px solid #fe374d;
+  }
+
+
+  .btn-salva{
+    background-color: #d89265; 
+    font-weight: 600; 
+    padding-bottom: 10px;
+  }
+
+
+ .btn-env {
+   background: url(../assets/img/cloud.png) no-repeat left #d89265;
+   color: #fff;
+   cursor: pointer;
+   margin: 10px 10px 10px 0;
+   padding: 5px 10px 5px 50px;
+   font-weight: 600; 
+ }
+
+ input[type='file'] {
+   display: none
+ }
+ 
+ .btn-env:hover, .btn-salva:hover{
+    background-color: #d68b5c;
+ }
+
+ @keyframes animacao-box{
+    from {
+       width: 0%;
+       height: 0px;
+       background: #fff;
+    }
+    to{
+       width: 100%;
+       height: 35px;
+       background: #22c222;
+    }
+ }
+
+ .loadImg{
+    color: white;
+    width: 100%;
+    background: #22c222;
+    font-size: 13px;
+    border-radius: 3px; 
+    padding:5px;
+    margin-bottom: 5px;
+    animation:animacao-box 5s;
+ }
+  
+
+ i{
+    color: #afafaf;
+  }
 
 .limitText{
     max-width: 80ch;

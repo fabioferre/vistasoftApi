@@ -32,7 +32,7 @@ namespace controller;
                 "BairroComercial",
                 "Caracteristicas",
                 "CodigoCorretor",
-                ["Corretor"=>['Nome','TelefoneComercial', 'Foto' ]]
+                ["Corretor"=>['Nome','TelefoneComercial', 'Foto', 'Email','Perfil' ]]
             );
 
             $e = $imoveis
@@ -42,12 +42,19 @@ namespace controller;
             ->get();
 
 
-            if (empty($e['status']) ) {
+            if (empty($e['status']) ) { //verifica se tem algum erro com codigo
+                $similares = new \Classes\Imoveis;
+
+                $sml = $similares
+                ->filter(['Status' => $e['Status'], 'Categoria'=> $e['Categoria']  ])
+                ->paginacao(['quantidade'=> 4])
+                ->get(); //imóveis similares
 
                 $e['ValorVenda'] = $imoveis->formataValor($e['ValorVenda'], 1000);
                 $e['ValorLocacao'] = $imoveis->formataValor($e['ValorLocacao'], 100);
+
                 include 'view/imovelDetalhe.php';
-                // print_r($e);
+                // print_r($sml);
             }else{
                 header('Location: /'.pasta.'/Portfolio/ ');
             }
@@ -79,7 +86,7 @@ namespace controller;
             ->paginacao($_POST)
             ->get();
 
-            $imoveisdes  = new \Classes\Imoveis;
+            $imoveisdes  = new \Classes\Imoveis; //objeto imoveis destaque
             $destaques = $imoveisdes ->destaques('ALUGUEL');
 
             // print_r($listagem);

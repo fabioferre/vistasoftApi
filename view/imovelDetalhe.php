@@ -106,10 +106,10 @@
                   <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 container-contentbar">
                      <div class="detail-bar">
                         <div class="detail-media detail-content-slideshow">
-                           <div class="tab-content">
+                            <div class="tab-content">
                               <div id="gallery" class="tab-pane fade in active">
                                  <span class="label-wrap visible-sm visible-xs">
-                                    <span class="label label-primary label-status-23"></span>
+                                    <span class="label label-primary label-status-23"><?=$e['Status']?></span>
                                  </span>
 
                                 <div id="myCarousel" class="carousel slide" data-ride="carousel" >
@@ -149,6 +149,56 @@
                                  </div>
                               </div>
                            </div>
+
+
+                           <div class="media-tabs">
+                         <!--      <ul class="media-tabs-list">
+                                 <li data-placement="bottom" data-toggle="tooltip" data-original-title="Map View">
+                                    <a href="#singlePropertyMap" data-toggle="tab">
+                                    <i class="fa fa-map"></i>
+                                    </a>
+                                 </li>
+                              </ul> -->
+                              <ul class="actions">
+                                 <li class="share-btn">
+                                    <div class="share_tooltip tooltip_left fade">
+                                       <a href="http://www.facebook.com/sharer.php?u=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                         <i class="fab fa-facebook"></i>
+                                       </a>
+
+                                       <a href="https://twitter.com/intent/tweet?text=<?=$e['TituloSite']?>&url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>" onclick="if(!document.getElementById('td_social_networks_buttons')){window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;}">
+                                         <i class="fab fa-twitter"></i>
+                                       </a>
+
+                                       <a href="http://pinterest.com/pin/create/button/?url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>&amp;media=<?=$e['FotoDestaque']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                         <i class="fab fa-pinterest"></i>
+                                       </a>
+
+                                       <a href="http://www.linkedin.com/shareArticle?mini=true&url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>&title=<?=$e['TituloSite']?>&source=/<?=pasta?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                         <i class="fab fa-linkedin"></i>
+                                       </a>
+
+                                       <a href="http://plus.google.com/share?url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                         <i class="fab fa-google-plus"></i>
+                                       </a>
+
+                                       <a href="mailto:example.com?subject=<?=$e['TituloSite']?>&body=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>">
+                                         <i class="fa fa-envelope"></i>
+                                       </a>
+                                    </div>
+                                    <span title="" data-placement="right" data-toggle="tooltip" data-original-title="compartilhar">
+                                       <i class="fa fa-share-alt"></i>
+                                    </span>        
+                                 </li>
+
+                                 <li>
+                                    <span class="add_fav" data-placement="right" data-toggle="tooltip" data-original-title="Favorito" data-propid="1643">
+                                       <i class="fa fa-heart"></i>
+                                    </span>        
+                                 </li>
+                              </ul>
+                           </div>
+
                         </div>
 
                         <!--start detail content tabber-->
@@ -260,154 +310,194 @@
                         <!--end detail content tabber-->
 
 
-                        <!-- <div class="property-similer">
+                        <div class="property-similer">
                            <div class="detail-title">
                               <h2 class="title-left">Propriedades similares</h2>
                            </div>
                            <div class="property-listing grid-view">
                               <div class="row">
-                                 <div id="ID-761" class="item-wrap infobox_trigger item-localizacao-impar-no-coracao-do-jardins-tl1970">
+
+                                 <?php foreach ($sml as $key) { 
+                                    if (isset($key['Codigo'])) {
+                                       $key['ValorVenda'] = $imoveis->formataValor($e['ValorVenda'], 1000);
+                                       $key['ValorLocacao'] = $imoveis->formataValor($e['ValorLocacao'], 100);
+                                 ?>
+                                 <div id="ID-<?=$key['Codigo']?>" class="item-wrap infobox_trigger <?=$key['TituloSite']?>">
                                     <div class="property-item table-list">
                                        <div class="table-cell">
                                           <div class="figure-block">
                                              <figure class="item-thumb">
+                                                <!-- <span class="label-featured label label-success"></span> -->
                                                 <div class="label-wrap label-right hide-on-list">
-                                                   <span class="label-status label-status-23 label label-default"><a href="#">Locação</a></span>                    
+                                                   <span class="label-status label-status-180 label label-default">
+                                                      <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'venda'?'venda': 'locacao'?>"><?=$key['Status']?></a>
+                                                   </span>           
                                                 </div>
-                                                <div class="price hide-on-list"><span class="price-start">Aluguel</span><span class="item-price">R$10,000</span></div>
-                                                <a class="hover-effect" href="http://novoterralima.com/imovel/apartamento-impar-localizacao/">
-                                                <img width="385" height="258" src="http://novoterralima.com/wp-content/uploads/2017/11/05-385x258.jpg" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image" alt="" srcset="http://novoterralima.com/wp-content/uploads/2017/11/05-385x258.jpg 385w, http://novoterralima.com/wp-content/uploads/2017/11/05-300x200.jpg 300w, http://novoterralima.com/wp-content/uploads/2017/11/05-768x512.jpg 768w, http://novoterralima.com/wp-content/uploads/2017/11/05-150x100.jpg 150w, http://novoterralima.com/wp-content/uploads/2017/11/05-720x480.jpg 720w" sizes="(max-width: 385px) 100vw, 385px" />                    </a>
+                                                <div class="price hide-on-list">
+                                                      <?php if (!empty($key['ValorVenda'])) { ?>
+                                                         <span class="price-start">Venda</span>
+                                                         <span class="item-price">R$<?=$key['ValorVenda']?></span>
+                                                      <?php } ?>
+
+                                                      <span class="item-sub-price">
+                                                         <?=!empty($key['ValorLocacao'])?'R$'.$key['ValorLocacao'].'/Por Mês': ''?>
+                                                      </span>
+                                                </div>
+
+                                                <a class="hover-effect limitImg" href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>">
+                                                   <img src="<?=$key['FotoDestaque']?>" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image limitImg" alt="" width="385" height="250">                    
+                                                </a>
+                                                
                                                 <ul class="actions">
                                                    <li>
-                                                      <span class="add_fav" data-placement="top" data-toggle="tooltip" data-original-title="Favorito" data-propid="761"><i class="fa fa-heart"></i></span>
+                                                      <span class="add_fav" data-placement="top" data-toggle="tooltip" data-original-title="Favorito" data-propid="1643"><i class="fa fa-heart"></i></span>
                                                    </li>
-
                                                    <li>
-                                                      <span data-toggle="tooltip" data-placement="top" title="(11) Fotos">
+                                                      <span data-toggle="tooltip" data-placement="top" title="" data-original-title="(12) Fotos">
                                                       <i class="fa fa-camera"></i>
                                                       </span>
                                                    </li>
+                                                   <li>
+                                                      <span id="compare-link-1643" class="compare-property" data-propid="1643" data-toggle="tooltip" data-placement="top" title="" data-original-title="Comparar">
+                                                      <i class="fa fa-plus"></i>
+                                                      </span>
+                                                   </li>
                                                 </ul>
-
                                              </figure>
                                           </div>
                                        </div>
-                                       <div class="item-body table-cell">
 
+                                       <div class="item-body table-cell">
 
                                           <div class="body-left table-cell">
                                              <div class="info-row">
                                                 <div class="label-wrap hide-on-grid">
-                                                   <span class="label-status label-status-23 label label-default">
-                                                      <a href="#">Locação</a>
-                                                   </span>                    
+                                                   <span class="label-status label-status-180 label label-default">
+                                                      <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'VENDA'?'venda': 'locacao'?>"><?=$key['Status']?> </a>
+                                                   </span>
                                                 </div>
 
                                                 <h2 class="property-title">
-                                                   <a href="http://novoterralima.com/imovel/apartamento-impar-localizacao/">
-                                                      Localização ímpar no coração do Jardins TL1970
+                                                   <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>">
+                                                      <?=$key['Codigo']?> - <?=$key['TituloSite']?>
                                                    </a>
                                                 </h2>
-
-                                                <address class="property-address">Jardim Paulista, São Paulo - SP, 04002-010, Brasil</address>
+                                                <address class="property-address"><?=$key['Bairro']?>, <?=$key['Cidade']?> - SP, <?=$key['CEP']?>, <?=$key['Pais']?></address>
                                              </div>
 
                                              <div class="info-row amenities hide-on-grid">
-                                                <p><span>Quartos: 3</span><span>m2: 262</span></p>
-                                                <p>Apartamento</p>
+                                                <p>
+                                                   <span>Quartos: <?=$key['Dormitorios']?></span>
+                                                   <span>Banheiros: <?=$key['TotalBanheiros']?></span>
+                                                   <span>m² : <?=$key['AreaTerreno']?> </span>
+                                                </p>
+                                                <p><?=$key['Categoria']?></p>
                                              </div>
-
                                              <div class="info-row date hide-on-grid"></div>
                                           </div>
 
-
                                           <div class="body-right table-cell hidden-gird-cell">
-                                             <div class="info-row price"><span class="price-start">
-                                                Aluguel</span><span class="item-price">R$10,000</span>
+                                             <div class="info-row price">
+                                                <?php if (!empty($key['ValorVenda'])) { ?>
+                                                   <span class="price-start">Venda</span>
+                                                   <span class="item-price">R$<?=$key['ValorVenda']?></span>
+                                                <?php } ?>
+
+                                                <span class="item-sub-price"><?=!empty($key['ValorLocacao'])?'R$'.$key['ValorLocacao'].'/Por Mês': ''?></span>
                                              </div>
 
                                              <div class="info-row phone text-right">
-                                                <a href="# class="btn btn-primary">
-                                                   Detalhes <i class="fa fa-angle-right fa-right"></i>
-                                                </a>
+                                                <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
                                              </div>
                                           </div>
-
 
                                           <div class="table-list full-width hide-on-list">
                                              <div class="cell">
                                                 <div class="info-row amenities">
-                                                   <p><span>Quartos: 3</span><span>m2: 262</span></p>
-                                                   <p>Apartamento</p>
+                                                   <p>
+                                                      <span>Quartos: <?=$key['Dormitorios']?></span>
+                                                      <span>Banheiros: <?=$key['TotalBanheiros']?></span>
+                                                      <span>m² : <?=$key['AreaTerreno']?></span>
+                                                   </p>
+                                                   <p>Casa</p>
                                                 </div>
                                              </div>
-
                                              <div class="cell">
                                                 <div class="phone">
-                                                   <a href="#" class="btn btn-primary"> 
-                                                      Detalhes <i class="fa fa-angle-right fa-right"></i>
-                                                   </a>
+                                                   <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
                                                 </div>
                                              </div>
                                           </div>
+
                                        </div>
                                     </div>
+
                                     <div class="item-foot date hide-on-list">
                                        <div class="item-foot-left">
                                        </div>
                                     </div>
                                  </div>
+                              <?php } }?>
                               </div>
                            </div>
                            <hr>
-                        </div> -->
+                        </div>
 
                      </div>
                   </div>
 
 
+
                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-md-offset-0 col-sm-offset-3 container-sidebar ">
                      <aside id="sidebar" class="sidebar-white">
-
-
                         <div class="widget widget-contact-agent ">
                            <div class="widget-body">
                               <div class="form-small">
                                  <form method="post" action="#">
                                     <div class="media agent-media">
                                        <div class="media-left">
-                                        <a href="#">
-                                          <img src="<?=$e['Corretor'][$e['CodigoCorretor']]['Foto']?>" alt="<?=$e['Corretor'][$e['CodigoCorretor']]['Nome']?>" width="75" height="75">
-                                        </a>
-                                      </div>
+                                          <a href="#">
+                                             <img src="<?=!empty($e['Corretor'][$e['CodigoCorretor']]['Foto'])? $e['Corretor'][$e['CodigoCorretor']]['Foto']: 'http://novoterralima.com/wp-content/themes/houzez/images/profile-avatar.png' ?>" alt="<?=$e['Corretor'][$e['CodigoCorretor']]['Nome']?>" width="75" height="75">
+                                          </a>
+                                       </div>
+
                                        <div class="media-body">
                                           <dl>
-                                             <dd><i class="fa fa-user"></i><?=$e['Corretor'][$e['CodigoCorretor']]['Nome']?></dd>
-                                             <!-- <dd><a href="http://novoterralima.com/author/ana-claudia/" class="view">Ver listagens</a></dd> -->
+                                             <dd>
+                                                <i class="fa fa-user"></i> <?=$e['Corretor'][$e['CodigoCorretor']]['Nome']?> 
+                                             </dd>
+
+                                             <!-- <dd>
+                                                <a href="http://novoterralima.com/author/<?=$e['Corretor'][$e['CodigoCorretor']]['Nome']?>/" class="view">
+                                                   Ver listagens
+                                                </a>
+                                             </dd> -->
                                           </dl>
                                        </div>
                                     </div>
-                                    <input type="hidden" name="target_email" value="ana&#99;&#108;&#97;udi&#97;&#64;te&#114;r&#97;lim&#97;&#105;mov&#101;is&#46;&#99;&#111;&#109;.b&#114;">
-                                    <input type="hidden" name="agent_contact_form_ajax" value="bfa4cd7f70"/>
-                                    <input type="hidden" name="property_permalink" value="http://novoterralima.com/imovel/apartamento-reformado-e-mobiliado-tl1639/"/>
-                                    <input type="hidden" name="property_title" value="#"/>
-                                    <input type="hidden" name="action" value="houzez_agent_send_message">
+
+                                    <input name="target_email" value="vitorkortez@gmail.com" type="hidden">
+                                    <input name="agent_contact_form_ajax" value="0b00f3127d" type="hidden">
+                                    <input name="property_permalink" value="/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" type="hidden">
+                                    <input name="property_title" value="<?=$e['TituloSite'].'-'.$e['Codigo']?>" type="hidden">
+                                    <input name="action" value="houzez_agent_send_message" type="hidden">
+
                                     <div class="form-group">
-                                       <input class="form-control" name="name" value="" type="text"
-                                          placeholder="Seu nome">
+                                       <input class="form-control" name="name" value="" placeholder="Seu nome" type="text">
                                     </div>
+
                                     <div class="form-group">
-                                       <input class="form-control" name="phone" value="" type="text"
-                                          placeholder="Telefone">
+                                       <input class="form-control" name="phone" value="" placeholder="Telefone" type="text">
                                     </div>
+
                                     <div class="form-group">
-                                       <input class="form-control" name="email" value="" type="email"
-                                          placeholder="E-mail">
+                                       <input class="form-control" name="email" value="" placeholder="E-mail" type="email">
                                     </div>
+
                                     <div class="form-group">
-                                       <textarea class="form-control" name="message" rows="4" placeholder="Descrição">Olá, estou interessado em <?=$e['TituloSite']?>
-                                        </textarea>
+                                       <textarea class="form-control" name="message" rows="4" placeholder="Descrição">Olá, estou interessado em [ <?=$e['TituloSite'] .' - '. $e['Codigo']  ?>]</textarea>
                                     </div>
+
                                     <button class="agent_contact_form btn btn-secondary btn-block">Solicitar informação</button>
                                     <div class="form_messages"></div>
                                  </form>
@@ -415,11 +505,6 @@
                            </div>
                         </div>
 
-                        <?php
-                           include 'build/formBusca.php';
-                        ?>
-
-                     
                         <div id="houzez_contact-4" class="widget widget-contact">
                            <div class="widget-top">
                               <h3 class="widget-title">Fale Conosco</h3>
@@ -435,10 +520,9 @@
                               </ul>
                            </div>
                         </div>
-
-
                      </aside>
                   </div>
+
                </div>
             </div>
          </section>
@@ -447,7 +531,6 @@
 
       <?php
          include 'build/footer.php';
-         require 'build/requisicoes.php';
       ?>
    </body>
 </html>
