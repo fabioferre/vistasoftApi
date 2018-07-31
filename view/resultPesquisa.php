@@ -103,7 +103,7 @@
                               if($listagem['total'] >= 1){
 
                                  foreach ($listagem as $key ) { 
-                                    include 'build/imovel.php';
+                                    include 'build/imovelView.php';
 
                                  }
 
@@ -119,24 +119,33 @@
                  
                      <!--end property items-->
                      <hr>
-                     <!--start Pagination-->
-                     <form class="pagination-main" method="post" >
+                       <!--start Pagination-->
+                     <form class="pagination-main limitText" method="post" style="max-width: 26ch;" >
                         <input type="num" name="pagina" id="pag" hidden>
-                        <ul class="pagination">
-                        <?php if ($listagem['pagina'] >= 3) { ?>
-                           <li hidden><a class="btnPag"  data-pag="<?=$listagem['pagina']-3?>" aria-label="Previous"><span aria-hidden="true"><i class="fa fa-angle-left"></i></span></a></li>
-                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']-2?>" href="#"><?=$listagem['pagina']-2?><span class="sr-only"></span></a></li>
-                        <?php } if ($listagem['pagina'] >= 2) { ?>
-                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']-1?>" href="#"><?=$listagem['pagina']-1?><span class="sr-only"></span></a></li>
+                         <ul class="pagination ">
+
+                        <?php if ($listagem['pagina'] > 1) { ?>  
+                              <li>
+                                 <a class="btnPag"  data-pag="<?=$listagem['pagina']-1?>" aria-label="Previous">
+                                    <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+                                 </a>
+                              </li>
                         <?php } ?>
 
-                           <li class="active"><a class="btnPag" data-pag="<?=$listagem['pagina']?>" href="#"><?=$listagem['pagina']?><span class="sr-only"></span></a></li>
-                        <?php if ($listagem['pagina'] < ($listagem['total'] - 4) ) { ?>
-                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']+1?>" href="#"><?=$listagem['pagina']+1?><span class="sr-only"></span></a></li>
-                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']+2?>" href="#"><?=$listagem['pagina']+2?><span class="sr-only"></span></a></li>
-                           <li><a class="btnPag" data-pag="<?=$listagem['pagina']+3?>" rel="Next" pag="<?=$listagem['pagina']-5?>"><span aria-hidden="true"><i class="fa fa-angle-right"></i></span></a></li>
+                        <li class="active">
+                           <a class="btnPag" data-pag="<?=$listagem['pagina']?>" href="#">
+                              <?=$listagem['pagina']?><span class="sr-only"></span>
+                           </a>
+                        </li>
+
+                        <?php for ($listagem['pagina'] += 1; $listagem['pagina'] < $listagem['total']; $listagem['pagina']++) { ?>
+                              <li>
+                                 <a class="btnPag" data-pag="<?=$listagem['pagina']?>"  href="#">
+                                    <?=$listagem['pagina']?><span class="sr-only"></span>
+                                 </a>
+                              </li>
                         <?php } ?>
-                        </ul>
+                         </ul>
                      </form>
                      <!--end Pagination-->
 

@@ -296,7 +296,7 @@
 
                   <ul class="list-unstyled actions pull-right">
                      <li>
-                        <span title="" data-placement="top" data-toggle="tooltip" data-original-title="4 Fotos">
+                        <span title="" data-placement="top" data-toggle="tooltip" data-original-title="<?=$imoveis->countPhoto($key['Codigo']);?>">
                         <i class="fa fa-camera"></i>
                         </span>
                      </li>

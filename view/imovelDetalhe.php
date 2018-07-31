@@ -40,7 +40,15 @@
                               </div>
                            </div>
                            <address class="property-address"> 
-                              <?=$e['Bairro']?>, <?=!empty($e['BairroComercial'])?$e['BairroComercial']. ',':''?> <?=$e['Cidade']?> - <?=$e['UF']?>
+                              <?=!empty($e['Bairro'])? $e['Bairro'].', ': '' ?> 
+
+                              <?=!empty($e['Cidade'])? $e['Cidade']: '' ?>
+
+                              <?=!empty($e['UF'])?' - '.$e['UF'].' ': '' ?>
+
+                              <?=!empty($e['CEP'])?','. $e['CEP'].', ': '' ?>
+
+                              <?=!empty($e['Pais'])? $e['Pais']: '' ?>
                            </address>
                         </div>
                         
@@ -319,7 +327,7 @@
                                  <?php 
 
                                    foreach ($sml as $key) { 
-                                     include 'build/imovel.php'; 
+                                     include 'build/imovelView.php'; 
                                    }
                                    
                                  ?>

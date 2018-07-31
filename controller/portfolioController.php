@@ -42,7 +42,7 @@ namespace controller;
             ->fields($fields)
             ->setCodigo($idImovel)
             ->get();
-
+            
             
             if (empty($e['status']) ) { //verifica se tem algum erro com codigo
                 $similares = new \Classes\Imoveis;
@@ -71,7 +71,6 @@ namespace controller;
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
         	include 'view/vendalocacao.php';
-            // print_r($listagem);
         }
 
 

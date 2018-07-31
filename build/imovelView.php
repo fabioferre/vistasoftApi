@@ -2,6 +2,7 @@
 if(isset($key['Codigo'])){ 
    $key['ValorVenda'] = $imoveis->formataValor($key['ValorVenda'], 1000);
    $key['ValorLocacao'] = $imoveis->formataValor($key['ValorLocacao'], 100);
+
 ?>
  
 <div id="ID-<?=$key['Codigo']?>" class="item-wrap infobox_trigger <?=$key['TituloSite']?>">
@@ -36,7 +37,7 @@ if(isset($key['Codigo'])){
                      <span class="add_fav" data-placement="top" data-toggle="tooltip" data-original-title="Favorito" data-propid="1643"><i class="fa fa-heart"></i></span>
                   </li>
                   <li>
-                     <span data-toggle="tooltip" data-placement="top" title="" data-original-title="(12) Fotos">
+                     <span data-toggle="tooltip" data-placement="top" title="" data-original-title="<?=$imoveis->countPhoto($key['Codigo']);?>">
                      <i class="fa fa-camera"></i>
                      </span>
                   </li>
@@ -62,7 +63,7 @@ if(isset($key['Codigo'])){
 
                <h2 class="property-title">
                   <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>">
-                     <?=$key['Codigo']?> - <?=$key['TituloSite']?>
+                     <?=$key['TituloSite']?> - <?=$key['Codigo']?>
                   </a>
                </h2>
 

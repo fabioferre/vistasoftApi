@@ -13,6 +13,7 @@ class App
     protected $dados;
     protected $curl;
     protected $cadastro;
+    private $response = 12;
 
     Private function setUrl(){
                 //monta a url para a curl
@@ -153,6 +154,12 @@ class App
         return $this;
     }
 
+    // public function setResponsive(){
+    //     $ch = curl_init('http://localhost/protected/index.php');
+    //     curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+    //     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
+    //     curl_setopt($ch, CURLOPT_POST, true);
+    // }
 
     function __construct() 
     { 

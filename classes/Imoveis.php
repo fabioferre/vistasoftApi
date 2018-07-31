@@ -18,20 +18,28 @@ class Imoveis extends App
 
     public function destaques($status){
         $filtro = array('EmDestaque' => 'Sim');
-
         if (!empty($status) ) {
             $filtro['Status'] = $status;
         }
-
         $retorno = $this
         ->order('')
         ->filter($filtro)
         ->paginacao(['pagina'=> 1,'quantidade'=> 3 ])
         ->get();
 
-
         return $retorno;
     }   
+
+    public function countPhoto($id){
+        $retorno = $this
+        ->setCurl('imoveis/detalhes')
+        ->fields([ ["Foto"=>['Foto'] ] ])
+        ->setCodigo($id)
+        ->get();
+
+        return count($retorno['Foto']); ;
+    }
+
 
     public function busca($param){
         $param['min-area'] = str_replace(' m²', '', $param['min-area']); $param['max-area'] = str_replace(' m²', '', $param['max-area']);
@@ -91,7 +99,8 @@ class Imoveis extends App
 
         echo $retorno ;
     }
-   
+    
+
 }
 
   

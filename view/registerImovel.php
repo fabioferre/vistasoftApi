@@ -6,7 +6,39 @@
          ?>
          
     </head>
+    <style type="text/css">
+         i{
+            color: #afafaf;
+         }
+         .form-control{
+             border-radius: 0px;
+             height: 36px;
+         }
 
+         .form-control:focus, .custom-select:hover{
+             border: 1px solid #fe374d;
+         }
+
+        .breadcrumb-top .page-title-left h1 {
+             font-weight: 400;
+             color: #d89265;
+             font-size: 24px;
+             width: 135%;
+         }
+
+         .article-detail {
+              background-color: #f2ecdd;
+              padding: 40px;
+          }
+
+          .pt-2{
+             padding-top: 20px;
+          }
+
+          .btn-default{
+             height: 36px;
+          }
+    </style>
     <body>
      <?php
      require_once('build/navbar.php');
@@ -175,9 +207,13 @@
                      </div>
 
 
-                     <?php
-                        include 'build/navSide.php';
-                     ?>
+                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 container-sidebar ">
+                        <aside id="sidebar" class="sidebar-white">
+                           <?php
+                              include 'build/navAside.php';
+                           ?>
+                        </aside>
+                     </div>
 
 
                   </div>
