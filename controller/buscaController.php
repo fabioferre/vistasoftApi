@@ -10,7 +10,7 @@ namespace controller;
             if (isset($_POST['busca']) ) {
                 $_SESSION = $imoveis->busca($_POST);
             }
-            print_r($_SESSION);
+            // print_r($_SESSION);
             // print_r($_POST);
 
             if (isset($_SESSION) ){
