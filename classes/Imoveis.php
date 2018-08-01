@@ -41,10 +41,11 @@ class Imoveis extends App
 
 
     public function busca($param){
+        
         if (!empty($param['carac'])) {
             $pesquisa = $param['carac'];
         }
-        
+
         $param['min-area'] = str_replace(' m²', '', $param['min-area']); $param['max-area'] = str_replace(' m²', '', $param['max-area']);
         $param['min-price'] = str_replace(',', '', $param['min-price']); $param['max-price'] = str_replace(',', '', $param['max-price']);
         $param['min-price'] = str_replace('R$', '', $param['min-price']); $param['max-price'] = str_replace('R$', '', $param['max-price']);

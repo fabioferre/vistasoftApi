@@ -357,7 +357,7 @@
                                        <div class="media-body">
                                           <dl>
                                              <dd>
-                                                <i class="fa fa-user"></i> <?=$e['Corretor'][$e['CodigoCorretor']]['Nome']?> 
+                                                <i class="fa fa-user"></i> <?=isset($e['Corretor'][$e['CodigoCorretor']]['Nome'])?$e['Corretor'][$e['CodigoCorretor']]['Nome']: 'indefinido' ?> 
                                              </dd>
 
                                              <!-- <dd>
