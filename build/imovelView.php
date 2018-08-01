@@ -41,11 +41,11 @@ if(isset($key['Codigo'])){
                      <i class="fa fa-camera"></i>
                      </span>
                   </li>
-                  <li>
+              <!--     <li>
                      <span id="compare-link-1643" class="compare-property" data-propid="1643" data-toggle="tooltip" data-placement="top" title="" data-original-title="Comparar">
                      <i class="fa fa-plus"></i>
                      </span>
-                  </li>
+                  </li> -->
                </ul>
             </figure>
          </div>

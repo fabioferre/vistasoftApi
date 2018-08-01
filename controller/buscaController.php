@@ -10,12 +10,12 @@ namespace controller;
             if (isset($_POST['busca']) ) {
                 $_SESSION = $imoveis->busca($_POST);
             }
-
-            // print_r($_SESSION);
+            print_r($_SESSION);
             // print_r($_POST);
+
             if (isset($_SESSION) ){
                 $dados = $_SESSION;
-
+                
                 $listagem = $imoveis
                 ->order($_POST)
                 ->filter($dados)
@@ -25,12 +25,16 @@ namespace controller;
                 $imoveisdes = new \Classes\Imoveis;
                 $destaques = $imoveisdes->destaques('');
 
-                include 'view/resultPesquisa.php';
+                // print_r($listagem);
+                include 'view/buscaResult.php';
             }else{
                 header('Location: /'.pasta.'/Portfolio/ ');
             }
 
         }
+
+
+      
 
     }
 

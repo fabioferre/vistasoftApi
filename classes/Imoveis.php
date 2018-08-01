@@ -26,7 +26,6 @@ class Imoveis extends App
         ->filter($filtro)
         ->paginacao(['pagina'=> 1,'quantidade'=> 3 ])
         ->get();
-
         return $retorno;
     }   
 
@@ -42,11 +41,14 @@ class Imoveis extends App
 
 
     public function busca($param){
+        if (!empty($param['carac'])) {
+            $pesquisa = $param['carac'];
+        }
+        
         $param['min-area'] = str_replace(' m²', '', $param['min-area']); $param['max-area'] = str_replace(' m²', '', $param['max-area']);
         $param['min-price'] = str_replace(',', '', $param['min-price']); $param['max-price'] = str_replace(',', '', $param['max-price']);
         $param['min-price'] = str_replace('R$', '', $param['min-price']); $param['max-price'] = str_replace('R$', '', $param['max-price']);
 
-        
         if ($param['status'] == 'VENDA') {
             $pesquisa['Status'] = $param['status'];
             $pesquisa['ValorVenda'] = array($param['min-price'], $param['max-price']);
@@ -69,6 +71,7 @@ class Imoveis extends App
         if (!empty($param['pais']) ) {
             $pesquisa['Pais'] = array('like',$param['pais']);
         } 
+
         return $pesquisa;
     }
 

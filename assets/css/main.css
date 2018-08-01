@@ -36,7 +36,8 @@ body {
   .property-item-v2 .item-body-bottom:before, .item-caption .item-caption-list:before, .board-header:before, .msg-type-block .msg-attachment-row:before, .pkgs-status li:before, .steps-nav:before, .account-block:before, .invoice-header:before, .invoice-contact:before, .area-title:before, .my-property .media-body:before, .add-tab-content .add-tab-row:before, .my-profile-search:before, .header-detail:before, .media-tabs:before, .form-small .agent-media-head:before, .yelp-category .yelp-cat-list li:before, .detail-title:before, .document-list li:before, .plan-tabber .tab-pane:before, .floor-title-block:before, .print-header:before, .print-header-detail:before, .accord-block .accord-tab:before, .profile-tabs:before, .property-filter-wrap:before, .lightbox-popup .popup-inner:before, .lightbox-header:before, .lightbox-slide-nav:before, .article-footer:before, .comment-navigation:before, .document-topic-list li:before, .info-title:before, .method-row:before, .pkg-total-list li:before, .widget-download li:before, .widget-calculate .morg-result:before, .widget-categories ul:before, .widget_categories ul:before, .widget_archive ul:before, .widget_meta ul:before, .widget_recent_entries ul:before, .widget_pages ul:before, .widget-pages ul:before, .widget_recent_comments ul:before, .widget_nav_menu ul:before, .widget-categories li:before, .widget_categories li:before, .widget_archive li:before, .widget_meta li:before, .widget_recent_entries li:before, .widget_pages li:before, .widget-pages li:before, .widget_recent_comments li:before, .widget_nav_menu li:before, .header-mobile:after, .splash-header .splash-header-inner:after, .navi > ul:after, .blog-header:after, .auto-complete .search-footer:after, .item-foot:after, .property-listing:after, .property-item-v2 .item-body-top:after,
   .property-item-v2 .item-body-bottom:after, .item-caption .item-caption-list:after, .board-header:after, .msg-type-block .msg-attachment-row:after, .pkgs-status li:after, .steps-nav:after, .account-block:after, .invoice-header:after, .invoice-contact:after, .area-title:after, .my-property .media-body:after, .add-tab-content .add-tab-row:after, .my-profile-search:after, .header-detail:after, .media-tabs:after, .form-small .agent-media-head:after, .yelp-category .yelp-cat-list li:after, .detail-title:after, .document-list li:after, .plan-tabber .tab-pane:after, .floor-title-block:after, .print-header:after, .print-header-detail:after, .accord-block .accord-tab:after, .profile-tabs:after, .property-filter-wrap:after, .lightbox-popup .popup-inner:after, .lightbox-header:after, .lightbox-slide-nav:after, .article-footer:after, .comment-navigation:after, .document-topic-list li:after, .info-title:after, .method-row:after, .pkg-total-list li:after, .widget-download li:after, .widget-calculate .morg-result:after, .widget-categories ul:after, .widget_categories ul:after, .widget_archive ul:after, .widget_meta ul:after, .widget_recent_entries ul:after, .widget_pages ul:after, .widget-pages ul:after, .widget_recent_comments ul:after, .widget_nav_menu ul:after, .widget-categories li:after, .widget_categories li:after, .widget_archive li:after, .widget_meta li:after, .widget_recent_entries li:after, .widget_pages li:after, .widget-pages li:after, .widget_recent_comments li:after, .widget_nav_menu li:after {
     content: " ";
-    display: table; }
+    display: table; 
+  }
   .header-mobile:after, .splash-header .splash-header-inner:after, .navi > ul:after, .blog-header:after, .auto-complete .search-footer:after, .item-foot:after, .property-listing:after, .property-item-v2 .item-body-top:after,
   .property-item-v2 .item-body-bottom:after, .item-caption .item-caption-list:after, .board-header:after, .msg-type-block .msg-attachment-row:after, .pkgs-status li:after, .steps-nav:after, .account-block:after, .invoice-header:after, .invoice-contact:after, .area-title:after, .my-property .media-body:after, .add-tab-content .add-tab-row:after, .my-profile-search:after, .header-detail:after, .media-tabs:after, .form-small .agent-media-head:after, .yelp-category .yelp-cat-list li:after, .detail-title:after, .document-list li:after, .plan-tabber .tab-pane:after, .floor-title-block:after, .print-header:after, .print-header-detail:after, .accord-block .accord-tab:after, .profile-tabs:after, .property-filter-wrap:after, .lightbox-popup .popup-inner:after, .lightbox-header:after, .lightbox-slide-nav:after, .article-footer:after, .comment-navigation:after, .document-topic-list li:after, .info-title:after, .method-row:after, .pkg-total-list li:after, .widget-download li:after, .widget-calculate .morg-result:after, .widget-categories ul:after, .widget_categories ul:after, .widget_archive ul:after, .widget_meta ul:after, .widget_recent_entries ul:after, .widget_pages ul:after, .widget-pages ul:after, .widget_recent_comments ul:after, .widget_nav_menu ul:after, .widget-categories li:after, .widget_categories li:after, .widget_archive li:after, .widget_meta li:after, .widget_recent_entries li:after, .widget_pages li:after, .widget-pages li:after, .widget_recent_comments li:after, .widget_nav_menu li:after {
     clear: both; }
@@ -3265,8 +3266,9 @@ h4 {
         content: '\f0da';
         font-family: 'Font Awesome 5 Free'; 
         font-style: normal;
-        font-weight: 900;
         src: url("../webfonts/fa-solid-900.eot");
+        font-weight: 900;
+        
       }
     .nav-dropdown li:hover {
       background-color: #00aeef; }
@@ -3946,7 +3948,11 @@ h4 {
       background: none;
       color: #00aeef; }
   .navi > ul ul .has-child > a:after {
-    content: '\f0da'; }
+    content: '\f0da'; 
+    font-family: 'Font Awesome 5 Free'; 
+    font-style: normal;
+    src: url("../webfonts/fa-solid-900.eot");
+  }
   .navi > ul ul li.active > a {
     color: #00aeef; }
   .navi > ul ul li.active > ul {
@@ -4171,7 +4177,11 @@ h4 {
     .top-bar .top-nav > ul > li > a:hover {
       background-color: transparent; }
   .top-bar .top-nav > ul .has-child > a:after {
-    content: '\f107'; }
+    content: '\f107'; 
+    font-family: 'Font Awesome 5 Free'; 
+        font-style: normal;
+        src: url("../webfonts/fa-solid-900.eot");
+  }
   .top-bar .top-nav > ul ul {
     top: 50px;
     width: 180px; }
@@ -5039,8 +5049,8 @@ h4 {
   .search-expand-btn:after {
     font-family: 'Font Awesome 5 Free';
     font-style: normal;
-  font-weight: 900;
-  src: url("../webfonts/fa-solid-900.eot");
+    font-weight: 900;
+    src: url("../webfonts/fa-solid-900.eot");
     content: '\f0d8';
     margin-left: 15px;
     position: absolute;
@@ -5049,7 +5059,11 @@ h4 {
 .search-expand-btn.active + .advanced-search-openclose {
   z-index: 999; }
 .search-expand-btn.active:after {
-  content: '\f0d7'; }
+  content: '\f0d7'; 
+  font-family: 'Font Awesome 5 Free'; 
+  font-style: normal;
+  src: url("../webfonts/fa-solid-900.eot");
+}
 
 .search-expand-btn.active,
 .banner-caption {
@@ -5631,7 +5645,11 @@ h4 {
     margin-left: 10px;
     color: #ffba01; }
   #save_search_click.saved:after {
-    content: '\f005'; }
+    content: '\f005'; 
+    font-family: 'Font Awesome 5 Free'; 
+        font-style: normal;
+        src: url("../webfonts/fa-solid-900.eot");
+  }
   #save_search_click i {
     font-size: 14px;
     margin-right: 5px; }
@@ -7187,7 +7205,9 @@ div.mce-edit-area {
       font-size: 13px; }
       .message-seach form button:before {
         content: '\f002';
-        font-family: 'Font Awesome 5 Free';
+        font-family: 'Font Awesome 5 Free'; 
+        font-style: normal;
+        src: url("../webfonts/fa-solid-900.eot");
         display: block;
         color: #777; }
 
@@ -8041,8 +8061,10 @@ div.mce-edit-area {
     font-size: 13px; }
     .single-input-search button:before {
       content: '\f002';
-      font-family: 'Font Awesome 5 Free';
       display: block;
+      font-family: 'Font Awesome 5 Free'; 
+        font-style: normal;
+        src: url("../webfonts/fa-solid-900.eot");
       color: #777; }
 
 .profile-menu-tabs {
@@ -12850,7 +12872,12 @@ div[class*="col-"] > .item-wrap {
   margin-left: -10px; }
   .widget-categories a:before, .widget_categories a:before, .widget_archive a:before, .widget_meta a:before, .widget_recent_entries a:before, .widget_pages a:before, .widget-pages a:before, .widget_recent_comments a:before, .widget_nav_menu a:before {
     content: "\f0da";
-    font-family: 'Font Awesome 5 Free';
+     font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    src: url("../webfonts/fa-solid-900.eot");
+    src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg"); 
+
     font-size: 12px;
     line-height: 14px;
     position: absolute;
@@ -12992,7 +13019,9 @@ div[class*="col-"] > .item-wrap {
   border: none; }
   .widget_search form button:before {
     content: '\f002';
-    font-family: 'Font Awesome 5 Free';
+    font-family: 'Font Awesome 5 Free'; 
+    font-style: normal;
+    src: url("../webfonts/fa-solid-900.eot");
     display: block;
     color: #000; }
 
@@ -13229,7 +13258,11 @@ div[class*="col-"] > .item-wrap {
   .footer-widget.widget-categories li a:before, .footer-widget.widget_categories li a:before, .footer-widget.widget_archive li a:before, .footer-widget.widget_meta li a:before, .footer-widget.widget_recent_entries li a:before, .footer-widget.widget_pages li a:before, .footer-widget.widget-pages li a:before, .footer-widget.widget_recent_comments li a:before, .footer-widget.widget_nav_menu li a:before {
     content: "\f0da";
     margin-right: 10px;
-    font-family: 'Font Awesome 5 Free'; }
+    font-family: 'Font Awesome 5 Free'; 
+    font-style: normal;
+    src: url("../webfonts/fa-solid-900.eot");
+
+  }
   .footer-widget.widget_calendar caption,
   .footer-widget.widget_calendar table td,
   .footer-widget.widget_calendar table th {
@@ -13253,7 +13286,9 @@ div[class*="col-"] > .item-wrap {
     border: none; }
     .footer-widget.widget_search form button:before {
       content: '\f002';
-      font-family: 'Font Awesome 5 Free';
+      font-family: 'Font Awesome 5 Free'; 
+      font-style: normal;
+      src: url("../webfonts/fa-solid-900.eot");
       display: block;
       color: #000; }
   .footer-widget.widget_tag_cloud .tagcloud a {
@@ -13306,7 +13341,9 @@ div[class*="col-"] > .item-wrap {
 .footer-widget.widget-pages li a:before,
 .footer-widget.widget_nav_menu li a:before {
   content: "\f0da";
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Font Awesome 5 Free'; 
+    font-style: normal;
+    src: url("../webfonts/fa-solid-900.eot");
   font-size: 12px;
   line-height: 14px;
   left: 0; }
