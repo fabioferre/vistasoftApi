@@ -2805,21 +2805,21 @@ jQuery(document).ready(function ($) {
                 houzez_search_on_change(current_form, form_widget, current_page);
             })
 
-            $('select[name="country"]').on('change', function() {
-                var current_form = $(this).parents('form');
-                var form_widget = $(this).parents('.widget_houzez_advanced_search');
-                var only_country = 'yes';
-                houzez_search_on_change(current_form, form_widget, current_page, '', '', '', '', only_country);
-                populate_state_dropdown(current_form);
-            })
+            // $('select[name="country"]').on('change', function() {
+            //     var current_form = $(this).parents('form');
+            //     var form_widget = $(this).parents('.widget_houzez_advanced_search');
+            //     var only_country = 'yes';
+            //     houzez_search_on_change(current_form, form_widget, current_page, '', '', '', '', only_country);
+            //     populate_state_dropdown(current_form);
+            // })
 
-            $('select[name="state"]').on('change', function() {
-                var current_form = $(this).parents('form');
-                var form_widget = $(this).parents('.widget_houzez_advanced_search');
-                var only_state = 'yes';
-                houzez_search_on_change(current_form, form_widget, current_page, '', '', '', only_state);
-                populate_city_dropdown(current_form);
-            });
+            // $('select[name="state"]').on('change', function() {
+            //     var current_form = $(this).parents('form');
+            //     var form_widget = $(this).parents('.widget_houzez_advanced_search');
+            //     var only_state = 'yes';
+            //     houzez_search_on_change(current_form, form_widget, current_page, '', '', '', only_state);
+            //     populate_city_dropdown(current_form);
+            // });
 
             $('select[name="location"]').on('change', function() {
                 var current_form = $(this).parents('form');

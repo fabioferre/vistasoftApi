@@ -40,43 +40,66 @@ class Imoveis extends App
     }
 
 
-    public function busca($param){
-        
-        if (!empty($param['carac'])) {
-            $pesquisa = $param['carac'];
+   
+
+
+    public function FormatFilter(){ //prepara valor da busca para filter
+        $params = $this->getParams();
+        $params = $this->formatStr($params, '%2C','R%');
+        $params = $this->formatStr($params, '+m%C2%B2','');
+    
+        if (isset($params['Categoria']) ) {
+            $params['Categoria'] = explode('-', $params['Categoria']);
         }
 
-        $param['min-area'] = str_replace(' m²', '', $param['min-area']); $param['max-area'] = str_replace(' m²', '', $param['max-area']);
-        $param['min-price'] = str_replace(',', '', $param['min-price']); $param['max-price'] = str_replace(',', '', $param['max-price']);
-        $param['min-price'] = str_replace('R$', '', $param['min-price']); $param['max-price'] = str_replace('R$', '', $param['max-price']);
-
-        if ($param['status'] == 'VENDA') {
-            $pesquisa['Status'] = $param['status'];
-            $pesquisa['ValorVenda'] = array($param['min-price'], $param['max-price']);
+        if (isset($params['Pais']) ) {
+            $params['Pais'] = explode('-', $params['Pais']);
         }
-        elseif ($param['status'] == 'ALUGUEL') {
-            $pesquisa['Status'] = $param['status'];
-            $pesquisa['ValorLocacao'] = array($param['min-price'], $param['max-price']);
+
+        if ($params['Status'] == 'ALUGUEL') {
+            $params['ValorLocacao'] = array($param['min-price'], $params['max-price']);
         }else{
-            $pesquisa['ValorVenda'] = array($param['min-price'], $param['max-price']);
+            $params['ValorVenda'] = array($params['min-price'], $params['max-price']);
         }
 
-        if ($param['min-area'] > 10 || $param['max-area'] < 6000 ) {
-           $pesquisa['AreaTerreno'] = array($param['min-area'], $param['max-area']);
-        }
-        
-        if (!empty($param['categoria']) ) {
-            $pesquisa['Categoria'] =  array('like', $param['categoria']);       
+        if ($params['min-area'] > 10 || $params['max-area'] < 6000 ) {
+           $params['AreaTerreno'] = array($params['min-area'], $params['max-area']);
         }
 
-        if (!empty($param['pais']) ) {
-            $pesquisa['Pais'] = array('like',$param['pais']);
-        } 
-
-        return $pesquisa;
+        unset($params['min-area'], $params['max-area'],$params['busca'],$params['min-price'], $params['max-price']);
+        return $params;
     }
 
 
+    public function getParams(){ //pega parametro da url
+        $uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI']: '';
+        if ($uri != ''){
+            $urls  = explode('/', $uri);
+            $param = str_replace('?','', end($urls));
+            $param = explode('&', $param);
+            $params = array();
+            foreach($param as $pa){
+                $vp = explode('=', $pa);            
+                $params[$vp[0]] = sizeof($vp)==2?$vp[1]:NULL;
+            }
+
+            foreach ($params as $key => $value) { //tira os campos vazio
+                if (!empty($value)) {
+                    $retorno[$key] = $value;
+                }
+            }
+            return $retorno;
+        }
+    }
+
+
+    public function formatStr($var, $str,$str2){
+        $retorno = str_replace($str, '', $var);
+        if (!empty($str2)) {
+            $retorno = str_replace($str2, '', $retorno);
+        }
+        return $retorno;
+    }
 
 
     public function formataValor($var, $valor){

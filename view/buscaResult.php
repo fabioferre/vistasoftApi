@@ -182,9 +182,7 @@
             jQuery('.view-btn').removeClass('active');
             jQuery('.view-btn.btn-grid').addClass('active');
 
-
-
-
+            // history.pushState(jQuery(this).serialize(),'Result/index', jQuery(this).serialize());
          });
       </script>
    </body>
