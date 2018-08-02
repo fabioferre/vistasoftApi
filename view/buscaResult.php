@@ -46,11 +46,11 @@
                                     Destaques
                                  </option>
 
-                                 <option value="DataLancamento-asc" <?=$imoveis->selected('orderBy','DataLancamento-asc') ?> >
+                                 <option value="DataCadastro-asc" <?=$imoveis->selected('orderBy','DataCadastro-asc') ?> >
                                     Data antiga para nova
                                  </option>
 
-                                 <option value="DataLancamento-desc" <?=$imoveis->selected('orderBy','DataLancamento-desc') ?> >
+                                 <option value="DataCadastro-desc" <?=$imoveis->selected('orderBy','DataCadastro-desc') ?> >
                                     Data nova para antiga
                                  </option>
                               </select>
@@ -84,7 +84,7 @@
 
                                  <?=!empty($f['Status']) ?  $f['Status'].', ' : ''?>
 
-                                 <?= "Preço desde - ".$params['min-price']." até ". $params['max-price'] ?>
+                                 <?=!empty($params['min-price'])? "Preço desde - ".$params['min-price']." até ". $params['max-price']:'' ?>
 
                                  <?=!empty($f['AreaTerreno'])?', Àrea desde - '. $f['AreaTerreno'][0].'m² até '. $f['AreaTerreno'][1].'m² ': ''?>
                              </div>

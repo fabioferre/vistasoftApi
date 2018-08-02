@@ -305,7 +305,7 @@
                                     <?php foreach ($e['Caracteristicas'] as $key => $value) { 
                                           if ($value == 'Sim') {  ?>
 
-                                             <li><a href="#"><?=$key?></a></li>
+                                            <li><a href="/<?=pasta?>/Result/index?&Categoria=<?=$key?>"><?=$key?></a></li>
 
                                     <?php } } ?>
 

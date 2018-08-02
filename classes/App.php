@@ -124,12 +124,12 @@ class App
     public function order($array){
 
         if (!empty($array['order']) ) {
-            $_SESSION['orderBy'] = $array['order'];
-            
+            // $_SESSION['orderBy'] = $array['order'];
+
             $order = explode('-', $array['order']);
             $orderBy = array($order[0]=> $order[1]);
         }else{
-            $orderBy = array('DataLancamento'=> 'asc');
+            $orderBy = array('DataCadastro'=> 'desc');
         }
 
         $this->dados['order'] = $orderBy;

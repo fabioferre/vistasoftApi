@@ -71,6 +71,7 @@ namespace controller;
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
         	include 'view/vendalocacao.php';
+            
         }
 
 

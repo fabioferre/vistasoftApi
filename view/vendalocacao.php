@@ -31,23 +31,23 @@
                                     Ordem padrão
                                  </option>
 
-                                 <option value="ValorVenda_asc" <?=$imoveis->selected('order','ValorVenda_asc')?>  >
+                                 <option value="ValorVenda-asc" <?=$imoveis->selected('orderBy','ValorVenda-asc') ?> >
                                     Preço (baixo para alto)
                                  </option>
 
-                                 <option value="ValorVenda_desc" <?=$imoveis->selected('order','ValorVenda_desc')?> >
+                                 <option value="ValorVenda-desc" <?=$imoveis->selected('orderBy','ValorVenda-desc') ?> >
                                     Preço (alto para baixo)
                                  </option>
 
-                                 <option value="EmDestaque_asc" <?=$imoveis->selected('order','EmDestaque_asc')?>  >
+                                 <option value="EmDestaque-asc" <?=$imoveis->selected('orderBy','EmDestaque-asc') ?> >
                                     Destaques
                                  </option>
 
-                                 <option value="DataLancamento_asc" <?=$imoveis->selected('order','DataLancamento_asc')?>  >
+                                 <option value="DataCadastro-asc" <?=$imoveis->selected('orderBy','DataCadastro-asc') ?> >
                                     Data antiga para nova
                                  </option>
 
-                                 <option value="DataLancamento_desc" <?=$imoveis->selected('order','DataLancamento_desc')?>  >
+                                 <option value="DataCadastro-desc" <?=$imoveis->selected('orderBy','DataCadastro-desc') ?> >
                                     Data nova para antiga
                                  </option>
                               </select>
