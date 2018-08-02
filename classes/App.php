@@ -120,15 +120,16 @@ class App
         return $this;
     }
 
-    //order
+    //orde
     public function order($array){
 
-        if (empty($_POST['order']) ) {
-            $orderBy = array('DataCadastro'=>'desc');
-        }else{
-            $_SESSION['order'] = $array['order'];
-            $order = explode('_', $_SESSION['order']);
+        if (!empty($array['order']) ) {
+            $_SESSION['orderBy'] = $array['order'];
+            
+            $order = explode('-', $array['order']);
             $orderBy = array($order[0]=> $order[1]);
+        }else{
+            $orderBy = array('DataLancamento'=> 'asc');
         }
 
         $this->dados['order'] = $orderBy;
@@ -163,7 +164,11 @@ class App
 
     function __construct() 
     { 
-   
+        include 'config-api-access.php';
+    
+        $this->http = $config['http'] ;
+        $this->key  =  $config['key'] ; //Informe sua chave aqui
+
     } 
 
 

@@ -32,23 +32,23 @@
                                     Ordem padrão
                                  </option>
 
-                                 <option value="ValorVenda_asc" <?=$imoveis->checkSelect('order','ValorVenda_asc')?>  >
+                                 <option value="ValorVenda_asc" <?=$imoveis->selected('order','ValorVenda_asc')?>  >
                                     Preço (baixo para alto)
                                  </option>
 
-                                 <option value="ValorVenda_desc" <?=$imoveis->checkSelect('order','ValorVenda_desc')?> >
+                                 <option value="ValorVenda_desc" <?=$imoveis->selected('order','ValorVenda_desc')?> >
                                     Preço (alto para baixo)
                                  </option>
 
-                                 <option value="EmDestaque_asc" <?=$imoveis->checkSelect('order','EmDestaque_asc')?>  >
+                                 <option value="EmDestaque_asc" <?=$imoveis->selected('order','EmDestaque_asc')?>  >
                                     Destaques
                                  </option>
 
-                                 <option value="DataLancamento_asc" <?=$imoveis->checkSelect('order','DataLancamento_asc')?>  >
+                                 <option value="DataLancamento_asc" <?=$imoveis->selected('order','DataLancamento_asc')?>  >
                                     Data antiga para nova
                                  </option>
 
-                                 <option value="DataLancamento_desc" <?=$imoveis->checkSelect('order','DataLancamento_desc')?>  >
+                                 <option value="DataLancamento_desc" <?=$imoveis->selected('order','DataLancamento_desc')?>  >
                                     Data nova para antiga
                                  </option>
                               </select>
@@ -100,7 +100,7 @@
                            </a>
                         </li>
 
-                        <?php for ($listagem['pagina'] += 1; $listagem['pagina'] < $listagem['total']; $listagem['pagina']++) { ?>
+                        <?php for ($listagem['pagina'] += 1; $listagem['pagina'] < $listagem['paginas']; $listagem['pagina']++) { ?>
                               <li>
                                  <a class="btnPag" data-pag="<?=$listagem['pagina']?>"  href="#">
                                     <?=$listagem['pagina']?><span class="sr-only"></span>

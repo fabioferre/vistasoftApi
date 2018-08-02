@@ -11,20 +11,20 @@
                <div class="row">
                   <div class="col-sm-12 col-xs-12">
                      <div class="form-group">
-                        <select name="pais" class="selectpicker bs-select-hidden" >
+                        <select name="Pais" class="selectpicker bs-select-hidden" >
                            <option value="">
                               Todos os Países
                            </option>
 
-                           <option value="Brasil-like" <?=$imoveis->checkSelect('Pais','Brasil')?> >
+                           <option value="Brasil-like">
                               Brasil
                            </option>
 
-                           <option value="Portugal-like" <?=$imoveis->checkSelect('Pais','Portugal')?> >
+                           <option value="Portugal-like">
                                Portugal
                            </option>
 
-                           <option value="Estados Unidos-like" <?=$imoveis->checkSelect('Pais','Estados Unidos')?> >
+                           <option value="Estados Unidos-like">
                               Estados Unidos
                            </option>
                         </select>
@@ -50,52 +50,52 @@
 
                   <div class="col-sm-12 col-xs-12">
                      <div class="form-group">
-                        <select name="categoria" class="selectpicker bs-select-hidden" >
+                        <select name="Categoria" class="selectpicker bs-select-hidden" >
                            <option value=""  >
                               Tipos de imóveis
                            </option>
 
-                           <option value="Apartamento-like" <?=$imoveis->checkSelect('Categoria','Apartamento')?> >
+                           <option value="Apartamento-like" >
                               Apartamento
                            </option>
 
-                           <option value="Casa-like" <?=$imoveis->checkSelect('Categoria','Casa') ?>  >
+                           <option value="Casa-like">
                               Casa
                            </option>
 
-                           <option value="Casa na praia-like" <?=$imoveis->checkSelect('Categoria','Casa na praia') ?> >
+                           <option value="Casa na praia-like">
                               Casa na Praia
                            </option>
 
-                           <option value="Casa no campo-like" <?=$imoveis->checkSelect('Categoria','Casa no campo') ?> >
+                           <option value="Casa no campo-like">
                               Casa no Campo
                            </option>
 
-                           <option value="Cobertura-like" <?=$imoveis->checkSelect('Categoria','Cobertura') ?> > 
+                           <option value="Cobertura-like"> 
                               Cobertura
                            </option>
 
-                           <option value="Salas e Conjunto-like" <?=$imoveis->checkSelect('Categoria','Salas e Conjuntos') ?> >
+                           <option value="Salas e Conjunto-like" >
                               Salas e Conjunto
                            </option>
 
-                           <option value="duplex-like" <?=$imoveis->checkSelect('Categoria','duplex') ?> >
+                           <option value="duplex-like">
                               Duplex
                            </option>
 
-                           <option value="Fazenda-like" <?=$imoveis->checkSelect('Categoria','Fazenda') ?> >
+                           <option value="Fazenda-like">
                               Fazenda
                            </option>
 
-                           <option value="loft-like" <?=$imoveis->checkSelect('Categoria','loft') ?> >
+                           <option value="loft-like">
                               Loft
                            </option>
 
-                           <option value="terreno-like" <?=$imoveis->checkSelect('Categoria','terreno') ?> >
+                           <option value="terreno-like">
                               Terreno
                            </option>
 
-                           <option value="triplex-like" <?=$imoveis->checkSelect('Categoria','triplex') ?> >
+                           <option value="triplex-like">
                                Triplex
                            </option>
                         </select>
@@ -103,20 +103,20 @@
                   </div>
                   <div class="col-sm-12 col-xs-12">
                      <div class="form-group">
-                        <select class="selectpicker bs-select-hidden" id="widget_status" name="status" >
+                        <select class="selectpicker bs-select-hidden" id="widget_status" name="Status" >
                            <option value="">
                                  Status Do imóvel
                            </option>
 
-                           <option value="ALUGUEL" <?=$imoveis->checkSelect('Status','ALUGUEL')?> >
+                           <option value="ALUGUEL" >
                                Locação
                            </option>
 
-                           <option value="VENDA" <?=$imoveis->checkSelect('Status','VENDA')?> >
+                           <option value="VENDA">
                                Venda
                            </option>
 
-                           <option value="BOTH" <?=$imoveis->checkSelect('Status','VENDA E ALUGUEL')?> >
+                           <option value="BOTH" >
                                Venda / Locação
                            </option>
                         </select>
@@ -155,7 +155,7 @@
                </div>
                <div class="col-sm-12 col-xs-12">
                   <div class="features-list field-expand">
-                     <div class="clearfix"></div><label class="checkbox-inline"><input name="Aberturas" id="feature-aberturas" value="Sim" type="checkbox">Aberturas</label><label class="checkbox-inline"><input name="Adega" id="feature-adega" value="Sim" type="checkbox">Adega</label><label class="checkbox-inline"><input name="ArCentral" id="feature-ar-central" value="Sim" type="checkbox">Ar Central</label><label class="checkbox-inline"><input name="AquecimentoCentral" id="feature-ar-condicionado" value="Sim" type="checkbox">Aquecimento central</label><label class="checkbox-inline"><input name="AreaServico" id="feature-area-de-servico" value="Sim" type="checkbox">Área de Serviço</label><label class="checkbox-inline"><input name="BanheiroAuxiliar" id="feature-banheiro-senhor" value="Sim" type="checkbox">Banheiro Auxiliar</label><label class="checkbox-inline"><input name="BanheiroSocial" id="feature-banheiro-senhora" value="Sim" type="checkbox">Banheiro Sócial</label><label class="checkbox-inline"><input name="Bicicletario" id="feature-biblioteca" value="Sim" type="checkbox">Bicicletario</label><label class="checkbox-inline"><input name="Closet" id="feature-Closet" value="Sim" type="checkbox">Closet</label><label class="checkbox-inline"><input name="Churrasqueira" id="feature-churrasqueira" value="Sim" type="checkbox">Churrasqueira</label><label class="checkbox-inline"><input name="ChurrasqueiraCondominio" id="feature-ChurrasqueiraCondominio" value="Sim" type="checkbox">Churrasqueira C.</label><label class="checkbox-inline"><input name="CircuitoFechadoTV" id="feature-circuito-de-tv" value="Sim" type="checkbox">Circuito de TV</label><label class="checkbox-inline"><input name="CozinhaAmericana" id="feature-CozinhaAmericana" value="Sim" type="checkbox">Cozinha Americana</label><label class="checkbox-inline"><input name="CopaCozinha" id="feature-copa-cozinha" value="Sim" type="checkbox">Copa Cozinha</label><label class="checkbox-inline"><input name="CozinhaMontada" id="feature-CozinhaMontada" value="Sim" type="checkbox">Cozinha Montada</label><label class="checkbox-inline"><input name="CozinhaPlanejada" id="feature-cozinha-planejada" value="Sim" type="checkbox">Cozinha Planejada</label><label class="checkbox-inline"><input name="Despensa" id="feature-dependencia-de-empregados" value="Sim" type="checkbox">Dep. Empregados</label><label class="checkbox-inline"><input name="Deposito" id="feature-deposito" value="Sim" type="checkbox">Depósito</label><label class="checkbox-inline"><input name="Despensa" id="feature-despensa" value="Sim" type="checkbox">Despensa</label><label class="checkbox-inline"><input name="Edicula" id="feature-edicula" value="Sim" type="checkbox">Edícula</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-escritorio" value="Sim" type="checkbox">Escritório</label> --><label class="checkbox-inline"><input name="EspacoGourmet" id="feature-espaco-gourmet" value="Sim" type="checkbox">Espaço Gourmet</label><label class="checkbox-inline"><input name="GasCentral" id="feature-gas-central" value="Sim" type="checkbox">Gás Central</label><label class="checkbox-inline"><input name="HomeTheater" id="feature-home-theater" value="Sim" type="checkbox">Home Theater</label><label class="checkbox-inline"><input name="Interfone" id="feature-interfone" value="Sim" type="checkbox">Interfone</label><label class="checkbox-inline"><input name="Jardim" id="feature-jardim" value="Sim" type="checkbox">Jardim</label><label class="checkbox-inline"><input name="JardimInverno" id="feature-jardim-de-inverno" value="Sim" type="checkbox">Jardim de Inverno</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-jardim-miraflores" value="Sim" type="checkbox">Jardim Miraflores</label> --><label class="checkbox-inline"><input name="Lareira" id="feature-lareira" value="Sim" type="checkbox">Lareira</label><label class="checkbox-inline"><input name="Lavabo" id="feature-lavabo" value="Sim" type="checkbox">Lavabo</label><label class="checkbox-inline"><input name="Living" id="feature-living" value="Sim" type="checkbox">Living</label><label class="checkbox-inline"><input name="Piscina" id="feature-piscina" value="Sim" type="checkbox">Piscina</label><label class="checkbox-inline"><input name="PiscinaAquecida" id="feature-PiscinaAquecida" value="Sim" type="checkbox">Piscina Aquecida</label><label class="checkbox-inline"><input name="Playground" id="feature-playground" value="Sim" type="checkbox">Playground</label><label class="checkbox-inline"><input name="Portaria" id="feature-Portaria" value="Sim" type="checkbox">Portaria</label><label class="checkbox-inline"><input name="Portaria24Hrs" id="feature-portaria-24h" value="Sim" type="checkbox">Portaria 24H</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-prataria-e-loucaria" value="Sim" type="checkbox">Prataria e Louçaria</label> --><label class="checkbox-inline"><input name="Quadra" id="feature-Quadra" value="Sim" type="checkbox">Quadra</label><label class="checkbox-inline"><input name="QuadraPoliEsportiva" id="feature-quadra-poliesportiva" value="Sim" type="checkbox">Q. Poliesportiva</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-quarto-de-motorista" value="Sim" type="checkbox">Qto. Motorista</label> --><label class="checkbox-inline"><input name="QuadraTenis" id="feature-quadra-de-tenis" value="Sim" type="checkbox">Quadra de Tênis</label><label class="checkbox-inline"><input name="Sala" id="feature-sala-de-estar" value="Sim" type="checkbox">Sala de Estar</label><label class="checkbox-inline"><input name="SalaJantar" id="feature-sala-de-jantar" value="Sim" type="checkbox">Sala de Jantar</label><label class="checkbox-inline"><input name="SalaFitness" id="feature-sala-fitness" value="Sim" type="checkbox">Sala Fitness</label><label class="checkbox-inline"><input name="SalaoBrinquedo" id="feature-sala-de-jogos" value="Sim" type="checkbox">Salão de brinquedos</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-sala-intima" value="Sim" type="checkbox">Sala Íntima</label> --><label class="checkbox-inline"><input name="SalaoFestas" id="feature-salao-de-festas" value="Sim" type="checkbox">Salão de Festas</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-salao-de-festas-2" value="Sim" type="checkbox">Salão de Festas</label> --><label class="checkbox-inline"><input name="Sauna" id="feature-sauna" value="Sim" type="checkbox">Sauna</label><label class="checkbox-inline"><input name="SegurancaPatrimonial" id="feature-seguranca" value="Sim" type="checkbox">Segurança</label><label class="checkbox-inline"><input name="SuiteMaster" id="feature-suite-americana" value="Sim" type="checkbox">Suíte Americana</label><label class="checkbox-inline"><input name="Terraco" id="feature-terraco" value="Sim" type="checkbox">Terraço</label><label class="checkbox-inline"><input name="Varanda" id="feature-varanda" value="Sim" type="checkbox">Varanda</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-vestiario" value="Sim" type="checkbox">Vestiário</label> --><label class="checkbox-inline"><input name="WCEmpregada" id="feature-zelador" value="Sim" type="checkbox">WC Empregada</label> <label class="checkbox-inline"><input name="Zelador" id="feature-zelador" value="Sim" type="checkbox">Zelador</label> 
+                     <div class="clearfix"></div><label class="checkbox-inline"><input name="Aberturas" id="Aberturas" value="Sim" type="checkbox">Aberturas</label><label class="checkbox-inline"><input name="Adega" id="Adega" value="Sim" type="checkbox">Adega</label><label class="checkbox-inline"><input name="ArCentral" id="feature-ar-central" value="Sim" type="checkbox">Ar Central</label><label class="checkbox-inline"><input name="AquecimentoCentral" id="feature-ar-condicionado" value="Sim" type="checkbox">Aquecimento central</label><label class="checkbox-inline"><input name="AreaServico" id="feature-area-de-servico" value="Sim" type="checkbox">Área de Serviço</label><label class="checkbox-inline"><input name="BanheiroAuxiliar" id="feature-banheiro-senhor" value="Sim" type="checkbox">Banheiro Auxiliar</label><label class="checkbox-inline"><input name="BanheiroSocial" id="feature-banheiro-senhora" value="Sim" type="checkbox">Banheiro Sócial</label><label class="checkbox-inline"><input name="Bicicletario" id="feature-biblioteca" value="Sim" type="checkbox">Bicicletario</label><label class="checkbox-inline"><input name="Closet" id="feature-Closet" value="Sim" type="checkbox">Closet</label><label class="checkbox-inline"><input name="Churrasqueira" id="feature-churrasqueira" value="Sim" type="checkbox">Churrasqueira</label><label class="checkbox-inline"><input name="ChurrasqueiraCondominio" id="feature-ChurrasqueiraCondominio" value="Sim" type="checkbox">Churrasqueira C.</label><label class="checkbox-inline"><input name="CircuitoFechadoTV" id="feature-circuito-de-tv" value="Sim" type="checkbox">Circuito de TV</label><label class="checkbox-inline"><input name="CozinhaAmericana" id="feature-CozinhaAmericana" value="Sim" type="checkbox">Cozinha Americana</label><label class="checkbox-inline"><input name="CopaCozinha" id="feature-copa-cozinha" value="Sim" type="checkbox">Copa Cozinha</label><label class="checkbox-inline"><input name="CozinhaMontada" id="feature-CozinhaMontada" value="Sim" type="checkbox">Cozinha Montada</label><label class="checkbox-inline"><input name="CozinhaPlanejada" id="feature-cozinha-planejada" value="Sim" type="checkbox">Cozinha Planejada</label><label class="checkbox-inline"><input name="Despensa" id="feature-dependencia-de-empregados" value="Sim" type="checkbox">Dep. Empregados</label><label class="checkbox-inline"><input name="Deposito" id="feature-deposito" value="Sim" type="checkbox">Depósito</label><label class="checkbox-inline"><input name="Despensa" id="feature-despensa" value="Sim" type="checkbox">Despensa</label><label class="checkbox-inline"><input name="Edicula" id="feature-edicula" value="Sim" type="checkbox">Edícula</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-escritorio" value="Sim" type="checkbox">Escritório</label> --><label class="checkbox-inline"><input name="EspacoGourmet" id="feature-espaco-gourmet" value="Sim" type="checkbox">Espaço Gourmet</label><label class="checkbox-inline"><input name="GasCentral" id="feature-gas-central" value="Sim" type="checkbox">Gás Central</label><label class="checkbox-inline"><input name="HomeTheater" id="feature-home-theater" value="Sim" type="checkbox">Home Theater</label><label class="checkbox-inline"><input name="Interfone" id="feature-interfone" value="Sim" type="checkbox">Interfone</label><label class="checkbox-inline"><input name="Jardim" id="feature-jardim" value="Sim" type="checkbox">Jardim</label><label class="checkbox-inline"><input name="JardimInverno" id="feature-jardim-de-inverno" value="Sim" type="checkbox">Jardim de Inverno</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-jardim-miraflores" value="Sim" type="checkbox">Jardim Miraflores</label> --><label class="checkbox-inline"><input name="Lareira" id="feature-lareira" value="Sim" type="checkbox">Lareira</label><label class="checkbox-inline"><input name="Lavabo" id="feature-lavabo" value="Sim" type="checkbox">Lavabo</label><label class="checkbox-inline"><input name="Living" id="feature-living" value="Sim" type="checkbox">Living</label><label class="checkbox-inline"><input name="Piscina" id="feature-piscina" value="Sim" type="checkbox">Piscina</label><label class="checkbox-inline"><input name="PiscinaAquecida" id="feature-PiscinaAquecida" value="Sim" type="checkbox">Piscina Aquecida</label><label class="checkbox-inline"><input name="Playground" id="feature-playground" value="Sim" type="checkbox">Playground</label><label class="checkbox-inline"><input name="Portaria" id="feature-Portaria" value="Sim" type="checkbox">Portaria</label><label class="checkbox-inline"><input name="Portaria24Hrs" id="feature-portaria-24h" value="Sim" type="checkbox">Portaria 24H</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-prataria-e-loucaria" value="Sim" type="checkbox">Prataria e Louçaria</label> --><label class="checkbox-inline"><input name="Quadra" id="feature-Quadra" value="Sim" type="checkbox">Quadra</label><label class="checkbox-inline"><input name="QuadraPoliEsportiva" id="feature-quadra-poliesportiva" value="Sim" type="checkbox">Q. Poliesportiva</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-quarto-de-motorista" value="Sim" type="checkbox">Qto. Motorista</label> --><label class="checkbox-inline"><input name="QuadraTenis" id="feature-quadra-de-tenis" value="Sim" type="checkbox">Quadra de Tênis</label><label class="checkbox-inline"><input name="Sala" id="feature-sala-de-estar" value="Sim" type="checkbox">Sala de Estar</label><label class="checkbox-inline"><input name="SalaJantar" id="feature-sala-de-jantar" value="Sim" type="checkbox">Sala de Jantar</label><label class="checkbox-inline"><input name="SalaFitness" id="feature-sala-fitness" value="Sim" type="checkbox">Sala Fitness</label><label class="checkbox-inline"><input name="SalaoBrinquedo" id="feature-sala-de-jogos" value="Sim" type="checkbox">Salão de brinquedos</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-sala-intima" value="Sim" type="checkbox">Sala Íntima</label> --><label class="checkbox-inline"><input name="SalaoFestas" id="feature-salao-de-festas" value="Sim" type="checkbox">Salão de Festas</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-salao-de-festas-2" value="Sim" type="checkbox">Salão de Festas</label> --><label class="checkbox-inline"><input name="Sauna" id="feature-sauna" value="Sim" type="checkbox">Sauna</label><label class="checkbox-inline"><input name="SegurancaPatrimonial" id="feature-seguranca" value="Sim" type="checkbox">Segurança</label><label class="checkbox-inline"><input name="SuiteMaster" id="feature-suite-americana" value="Sim" type="checkbox">Suíte Americana</label><label class="checkbox-inline"><input name="Terraco" id="feature-terraco" value="Sim" type="checkbox">Terraço</label><label class="checkbox-inline"><input name="Varanda" id="feature-varanda" value="Sim" type="checkbox">Varanda</label><!-- <label class="checkbox-inline"><input name="feature[" id="feature-vestiario" value="Sim" type="checkbox">Vestiário</label> --><label class="checkbox-inline"><input name="WCEmpregada" id="feature-zelador" value="Sim" type="checkbox">WC Empregada</label> <label class="checkbox-inline"><input name="Zelador" id="feature-zelador" value="Sim" type="checkbox">Zelador</label> 
                   </div>
                </div>
             </div>

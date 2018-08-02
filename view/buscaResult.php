@@ -34,23 +34,23 @@
                                     Ordem padrão
                                  </option>
 
-                                 <option value="ValorVenda_asc" <?=$imoveis->checkSelect('order','ValorVenda_asc')?>  >
+                                 <option value="ValorVenda-asc" <?=$imoveis->selected('orderBy','ValorVenda-asc') ?> >
                                     Preço (baixo para alto)
                                  </option>
 
-                                 <option value="ValorVenda_desc" <?=$imoveis->checkSelect('order','ValorVenda_desc')?> >
+                                 <option value="ValorVenda-desc" <?=$imoveis->selected('orderBy','ValorVenda-desc') ?> >
                                     Preço (alto para baixo)
                                  </option>
 
-                                 <option value="EmDestaque_asc" <?=$imoveis->checkSelect('order','EmDestaque_asc')?>  >
+                                 <option value="EmDestaque-asc" <?=$imoveis->selected('orderBy','EmDestaque-asc') ?> >
                                     Destaques
                                  </option>
 
-                                 <option value="DataLancamento_asc" <?=$imoveis->checkSelect('order','DataLancamento_asc')?>  >
+                                 <option value="DataLancamento-asc" <?=$imoveis->selected('orderBy','DataLancamento-asc') ?> >
                                     Data antiga para nova
                                  </option>
 
-                                 <option value="DataLancamento_desc" <?=$imoveis->checkSelect('order','DataLancamento_desc')?>  >
+                                 <option value="DataLancamento-desc" <?=$imoveis->selected('orderBy','DataLancamento-desc') ?> >
                                     Data nova para antiga
                                  </option>
                               </select>
@@ -78,21 +78,15 @@
                         <div class="row">
                            <div class="list-search col-md-12" style="background-color: rgba(0, 174, 239, 0.05)">
                              <div class="indicePesquisa">
-                                 <?=!empty($_SESSION['Pais'])? $_SESSION['Pais'][1].', ': ''?>
+                                 <?=!empty($f['Pais'])? $f['Pais'][0].', ': ''?>
 
-                                 <?=!empty($_SESSION['Categoria']) ? $_SESSION['Categoria'][1]. ', ': ''?>
+                                 <?=!empty($f['Categoria']) ? $f['Categoria'][0]. ', ': ''?>
 
-                                 <?=!empty($_SESSION['Status']) ?  $_SESSION['Status'].', ' : ''?>
+                                 <?=!empty($f['Status']) ?  $f['Status'].', ' : ''?>
 
-                                 <?php
-                                    if (!empty($_SESSION['Status'])? $_SESSION['Status'] == 'ALUGUEL': 0) {
-                                       echo "Preço desde - R$".$_SESSION['ValorLocacao'][0]." até R$". $_SESSION['ValorLocacao'][1] ;
-                                    }else{
-                                       echo "Preço desde - R$". $_SESSION['ValorVenda'][0]." até R$". $_SESSION['ValorVenda'][1];
-                                    }
-                                 ?>
+                                 <?= "Preço desde - ".$params['min-price']." até ". $params['max-price'] ?>
 
-                                 <?=!empty($_SESSION['AreaTerreno'])?', Àrea desde - '. $_SESSION['AreaTerreno'][0].'m² até '. $_SESSION['AreaTerreno'][1].'m² ': ''?>
+                                 <?=!empty($f['AreaTerreno'])?', Àrea desde - '. $f['AreaTerreno'][0].'m² até '. $f['AreaTerreno'][1].'m² ': ''?>
                              </div>
                            </div>
                         </div>
@@ -138,7 +132,7 @@
                            </a>
                         </li>
 
-                        <?php for ($listagem['pagina'] += 1; $listagem['pagina'] < $listagem['total']; $listagem['pagina']++) { ?>
+                        <?php for ($listagem['pagina'] += 1; $listagem['pagina'] < $listagem['paginas']; $listagem['pagina']++) { ?>
                               <li>
                                  <a class="btnPag" data-pag="<?=$listagem['pagina']?>"  href="#">
                                     <?=$listagem['pagina']?><span class="sr-only"></span>
@@ -181,8 +175,7 @@
             jQuery('.property-listing').addClass('grid-view');
             jQuery('.view-btn').removeClass('active');
             jQuery('.view-btn.btn-grid').addClass('active');
-
-            // history.pushState(jQuery(this).serialize(),'Result/index', jQuery(this).serialize());
+           
          });
       </script>
    </body>

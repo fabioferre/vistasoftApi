@@ -43,10 +43,10 @@ class Imoveis extends App
    
 
 
-    public function FormatFilter(){ //prepara valor da busca para filter
-        $params = $this->getParams();
-        $params = $this->formatStr($params, '%2C','R%');
-        $params = $this->formatStr($params, '+m%C2%B2','');
+    public function FormatFilter($params){ //prepara valor da busca para filter
+        
+        $params = $this->formatStr($params, '%2C','R%24+', '');
+        $params = $this->formatStr($params, '+m%C2%B2','','');
     
         if (isset($params['Categoria']) ) {
             $params['Categoria'] = explode('-', $params['Categoria']);
@@ -56,11 +56,14 @@ class Imoveis extends App
             $params['Pais'] = explode('-', $params['Pais']);
         }
 
-        if ($params['Status'] == 'ALUGUEL') {
-            $params['ValorLocacao'] = array($param['min-price'], $params['max-price']);
-        }else{
-            $params['ValorVenda'] = array($params['min-price'], $params['max-price']);
+        if (isset($params['Status']) ) {
+            if ($params['Status'] == 'ALUGUEL') {
+                $params['ValorLocacao'] = array($param['min-price'], $params['max-price']);
+            }else{
+                $params['ValorVenda'] = array($params['min-price'], $params['max-price']);
+            }
         }
+        
 
         if ($params['min-area'] > 10 || $params['max-area'] < 6000 ) {
            $params['AreaTerreno'] = array($params['min-area'], $params['max-area']);
@@ -93,10 +96,10 @@ class Imoveis extends App
     }
 
 
-    public function formatStr($var, $str,$str2){
-        $retorno = str_replace($str, '', $var);
+    public function formatStr($var, $str,$str2,$rpl){
+        $retorno = str_replace($str, $rpl, $var);
         if (!empty($str2)) {
-            $retorno = str_replace($str2, '', $retorno);
+            $retorno = str_replace($str2, $rpl, $retorno);
         }
         return $retorno;
     }
@@ -111,22 +114,12 @@ class Imoveis extends App
         return $var;
     }
 
-    public function checkSelect($var, $select){
-        $retorno = '';
-        
-        $check = isset($_SESSION[$var][1])? $_SESSION[$var][1]: '' ;
-        if ($check == $select) {
-            $retorno = "selected";
+    public function selected($var, $valor){
+        $check = isset($_SESSION[$var])? $_SESSION[$var] : '';
+        if ($check == $valor) {
+            echo "selected";
         }
-
-        $check2 = isset($_SESSION[$var])? $_SESSION[$var]: '' ;
-        if ($check2 == $select) {
-            $retorno = "selected";
-        }
-
-        echo $retorno ;
     }
-    
 
 }
 
