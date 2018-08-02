@@ -24,7 +24,8 @@ namespace controller;
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
 
-            // print_r($listagem);
+
+            // print_r($f);
             include 'view/buscaResult.php';
  
         

@@ -47,13 +47,15 @@ class Imoveis extends App
         
         $params = $this->formatStr($params, '%2C','R%24+', '');
         $params = $this->formatStr($params, '+m%C2%B2','','');
-    
+        $params = $this->formatStr($params, '%20','',' ');
+        
+
         if (isset($params['Categoria']) ) {
             $params['Categoria'] = explode('-', $params['Categoria']);
         }
 
         if (isset($params['Pais']) ) {
-            $params['Pais'] = explode('-', $params['Pais']);
+            // $params['Pais'] = explode('-', $params['Pais']);
         }
 
         if (isset($params['Status']) ) {
@@ -63,13 +65,15 @@ class Imoveis extends App
                 $params['ValorVenda'] = array($params['min-price'], $params['max-price']);
             }
         }
+
+        if (isset($params['min-area'])) {
+            if ($params['min-area'] > 10 || $params['max-area'] < 6000 ) {
+                $params['AreaTerreno'] = array($params['min-area'], $params['max-area']);
+            }
+        }
         
 
-        if ($params['min-area'] > 10 || $params['max-area'] < 6000 ) {
-           $params['AreaTerreno'] = array($params['min-area'], $params['max-area']);
-        }
-
-        unset($params['min-area'], $params['max-area'],$params['busca'],$params['min-price'], $params['max-price']);
+        unset($params['min-area'], $params['max-area'],$params['min-price'], $params['max-price']);
         return $params;
     }
 

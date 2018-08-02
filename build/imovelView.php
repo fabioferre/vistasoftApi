@@ -23,8 +23,8 @@ if(isset($key['Codigo'])){
                      <span class="item-price">R$<?=$key['ValorVenda']?></span>
                   <?php } ?>
 
-                  <span class="item-sub-price">
-                     <?=!empty($key['ValorLocacao'])?'R$'.$key['ValorLocacao'].'/Por Mês': ''?>
+                  <span class="item-price">
+                     <?=!empty($key['ValorLocacao'])?'R$'.$key['ValorLocacao']: ''?>      
                   </span>
                </div>
 
@@ -102,7 +102,7 @@ if(isset($key['Codigo'])){
                <?php } ?>
 
                <span class="item-price">
-                  <?=!empty($key['ValorLocacao'])?'R$'.$key['ValorLocacao'].'/Por Mês': ''?>      
+                  <?=!empty($key['ValorLocacao'])?'R$'.$key['ValorLocacao']: ''?>      
                </span>
             </div>
 

@@ -29,15 +29,15 @@
         'params'       => array()
     );
 
-    // foreach($uri as $val){
-    //     $vars['params'][] = $val;
-    // }
+    foreach($uri as $val){
+        $vars['params'][] = $val;
+    }
 
     $rota = 'controller\\'.ucfirst($vars['controller']).'::'.$vars['action'];
     
     if(method_exists('controller\\'.ucfirst($vars['controller']),$vars['action'])){
 
-        // $_GET['params'] = $vars['params']; 
+        $_GET['params'] = $vars['params']; 
         call_user_func($rota);   
     }else{
         include("view/404.php");

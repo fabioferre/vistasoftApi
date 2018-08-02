@@ -301,11 +301,13 @@
                                        <h2 class="title-left">Destaques</h2>
                                     </div>
                                     <ul class="list-three-col list-features">
-
                                     <?php foreach ($e['Caracteristicas'] as $key => $value) { 
-                                          if ($value == 'Sim') {  ?>
+                                          if ($value == 'Sim') { 
+                                             $pesquisa = $key;
+                                             $pesquisa = $imoveis->formatStr($pesquisa, ' ','','' );
+                                    ?>
 
-                                            <li><a href="/<?=pasta?>/Result/index?&Categoria=<?=$key?>"><?=$key?></a></li>
+                                            <li><a href="/<?=pasta?>/Result/index?&<?=$pesquisa?>=Sim"><?=$key?></a></li>
 
                                     <?php } } ?>
 
