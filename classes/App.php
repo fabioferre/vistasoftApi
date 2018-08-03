@@ -161,7 +161,7 @@ class App
 
     function __construct() 
     { 
-        include 'config-api-access.php';
+        include 'classes/config-api-access.php';
     
         $this->http = $config['http'] ;
         $this->key  =  $config['key'] ; //Informe sua chave aqui
