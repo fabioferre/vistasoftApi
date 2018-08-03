@@ -67,10 +67,11 @@ namespace controller;
             ->order($_POST)
             ->paginacao($_POST)
             ->get();
-
+            
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
         	include 'view/vendalocacao.php';
+            // echo($imoveisdes->countType('Apartamento'));
             
         }
 

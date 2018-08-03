@@ -63,7 +63,7 @@
                               Casa
                            </option>
 
-                           <option value="Casa na praia-like">
+                           <option value="casa de praia-like">
                               Casa na Praia
                            </option>
 
@@ -183,73 +183,74 @@
          <li>
             <a href="/<?=pasta?>/Result/index?&Categoria=Apartamento-like">
             Apartamento
-            </a><span class="cat-count">(115)</span>
+            
+            </a><span class="cat-count">(<?=$imoveisdes->countType('Apartamento')?>)</span>
          </li>
 
          <li>
             <a href="/<?=pasta?>/Result/index?&Categoria=Casa-like">
                Casa
-            </a><span class="cat-count">(93)</span>
+            </a><span class="cat-count">(<?=$imoveisdes->countType('Casa')?>)</span>
          </li>
 
          <li>
             <a href="/<?=pasta?>/Result/index?&Categoria=Casa na Praia-like">
                Casa na Praia
-            </a><span class="cat-count">(4)</span>
+            </a><span class="cat-count">(<?=$imoveisdes->countType('casa de Praia')?>)</span>
          </li>
 
          <li>
             <a href="/<?=pasta?>/Result/index?&Categoria=Casa no Campo-like">
                Casa no Campo
-            </a><span class="cat-count">(4)</span>
+            </a><span class="cat-count">(<?=$imoveisdes->countType('casa no campo')?>)</span>
          </li>
 
          <li>
             <a href="/<?=pasta?>/Result/index?&Categoria=Cobertura-like">
                Cobertura
-            </a><span class="cat-count">(20)</span>
+            </a><span class="cat-count">(<?=$imoveisdes->countType('cobertura')?>)</span>
          </li>
 
          <li>
             <a href="/<?=pasta?>/Result/index?&Categoria=Conjunto-like">
                Conjunto
-            </a><span class="cat-count">(3)</span>
+            </a><span class="cat-count">(<?=$imoveisdes->countType('conjunto')?>)</span>
          </li>
 
          <li>
             <a href="/<?=pasta?>/Result/index?&Categoria=Duplex-like">
                Duplex
-            </a><span class="cat-count">(10)</span>
+            </a><span class="cat-count">(<?=$imoveisdes->countType('duplex')?>)</span>
          </li>
 
          <li>
             <a href="/<?=pasta?>/Result/index?&Categoria=Fazenda-like">
                Fazenda
-            </a><span class="cat-count">(2)</span>
+            </a><span class="cat-count">(<?=$imoveisdes->countType('fazenda')?>)</span>
          </li>
 
          <li>
             <a href="/<?=pasta?>/Result/index?&Categoria=Loft-like">
                Loft
-            </a><span class="cat-count">(7)</span>
+            </a><span class="cat-count">(<?=$imoveisdes->countType('loft')?>)</span>
          </li>
 
          <li>
             <a href="/<?=pasta?>/Result/index?&Categoria=Terreno-like">
                Terreno
-            </a><span class="cat-count">(2)</span>
+            </a><span class="cat-count">(<?=$imoveisdes->countType('terreno')?>)</span>
          </li>
 
          <li>
             <a href="/<?=pasta?>/Result/index?&Categoria=Terreno na Praia-like">
                Terreno na Praia
-            </a><span class="cat-count">(1)</span>
+            </a><span class="cat-count">(<?=$imoveisdes->countType('terreno na praia')?>)</span>
          </li>
 
          <li>
             <a href="/<?=pasta?>/Result/index?&Categoria=Triplex-like">
                Triplex
-            </a><span class="cat-count">(1)</span>
+            </a><span class="cat-count">(<?=$imoveisdes->countType('triplex')?>)</span>
          </li>
       </ul>
    </div>
