@@ -324,8 +324,8 @@
 
       <?php foreach ($destaques as $key ) { 
          if(isset($key['Codigo'])){ 
-            $key['ValorVenda'] = $imoveis->formataValor($key['ValorVenda'], 1000);
-            $key['ValorLocacao'] = $imoveis->formataValor($key['ValorLocacao'], 100);
+            $key['ValorVenda'] = $imoveisdes->formataValor($key['ValorVenda'], 1000);
+            $key['ValorLocacao'] = $imoveisdes->formataValor($key['ValorLocacao'], 100);
       ?>
 
          <div class="figure-block">

@@ -67,6 +67,8 @@ namespace controller;
             ->order($_POST)
             ->paginacao($_POST)
             ->get();
+
+            print_r($_POST);
             
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
@@ -117,8 +119,8 @@ namespace controller;
 
 
         public function ShowFormCadastroImovel(){
-            $imoveis = new \Classes\Imoveis;
-            $destaques = $imoveis->destaques('');
+            $imoveisdes = new \Classes\Imoveis;
+            $destaques = $imoveisdes->destaques('');
             include 'view/registerImovel.php';
         }
 

@@ -124,8 +124,7 @@ class App
     public function order($array){
 
         if (!empty($array['order']) ) {
-            // $_SESSION['orderBy'] = $array['order'];
-
+            $_SESSION['orderBy'] = $array['order'];
             $order = explode('-', $array['order']);
             $orderBy = array($order[0]=> $order[1]);
         }else{
@@ -143,8 +142,11 @@ class App
 
     //paginacao
     public function paginacao($array){
-        if (empty($array['quantidade']) || empty($array['pagina'])) {
-            $array['quantidade'] = 10;
+        if (empty($array['quantidade']) ) {
+            $array['quantidade'] = 10;        
+        }
+
+        if (empty($array['pagina'])) {
             $array['pagina'] = 1;
         }
         

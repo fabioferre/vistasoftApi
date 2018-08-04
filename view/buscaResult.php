@@ -121,9 +121,12 @@
                      <!--end property items-->
                      <hr>
                        <!--start Pagination-->
-                     <form class="pagination-main limitText" method="post" style="max-width: 26ch;" >
-                        <input type="num" name="pagina" id="pag" hidden>
-                         <ul class="pagination ">
+                     <div class="pagination-main limitText"  style="max-width: 26ch;" >
+                        <form method="post" id="pagination">
+                           <input type="num" name="pagina" id="pag" hidden>
+                        </form>
+
+                        <ul class="pagination ">
 
                         <?php if ($listagem['pagina'] > 1) { ?>  
                               <li>
@@ -146,8 +149,8 @@
                                  </a>
                               </li>
                         <?php } ?>
-                         </ul>
-                     </form>
+                        </ul>
+                     </div>
                      <!--end Pagination-->
 
                   </div>
