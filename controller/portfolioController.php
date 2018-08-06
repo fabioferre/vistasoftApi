@@ -68,7 +68,7 @@ namespace controller;
             ->paginacao($_POST)
             ->get();
 
-            print_r($_POST);
+            // print_r($_POST);
             
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
