@@ -129,6 +129,7 @@ class App
             $orderBy = array($order[0]=> $order[1]);
         }else{
             $orderBy = array('DataCadastro'=> 'desc');
+           
         }
 
         $this->dados['order'] = $orderBy;

@@ -27,7 +27,7 @@
                            <form class="sort-tab table-cell" method="post" id="order">
                               Ordenar por:                            
                               <select id="sort_properties" class="selectpicker bs-select-hidden"  name="order">
-                                 <option value="" >
+                                 <option value=""  <?=$imoveis->selected('orderBy','DataCadastro-desc') ?>  >
                                     Ordem padrão
                                  </option>
 
@@ -47,7 +47,7 @@
                                     Data antiga para nova
                                  </option>
 
-                                 <option value="DataCadastro-desc" <?=$imoveis->selected('orderBy','DataCadastro-desc') ?> >
+                                 <option value="DataCadastro-desc">
                                     Data nova para antiga
                                  </option>
                               </select>

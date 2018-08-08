@@ -48,7 +48,7 @@
                   </li>
 
                   <li id="menu-item-4562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4562">
-                  <a href="/<?=pasta?>/Portfolio/ShowFormCadastroImovel">Cadastre Seu Imóvel</a>
+                  <a href="/<?=pasta?>/Portfolio/cadastroImovel">Cadastre Seu Imóvel</a>
                   </li>
 
                   <li id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-608">

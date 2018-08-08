@@ -193,12 +193,12 @@
 
 
                               <div class="col-sm-12 pt-2" id="imgs">
-                                 <label for="envImg" class="btn-env">enviar arquivos</label>
-                                 <input type="file" id="envImg" multiple="multiple" name="myfiles[]">
+                                 <label for="envImg" class="btn-env" title="Envie Até 10 fotos">enviar arquivos</label>
+                                 <input type="file" id="envImg" multiple="multiple" name="myfiles[]" >
                               </div>
 
                               <div class="col-sm-10 pt-2">
-                                 <button type="submit" class="btn col-md-12 btn-salva" style="color: white; font-size: 17px;">
+                                 <button type="nutton" class="btn col-md-12 btn-salva" style="color: white; font-size: 17px;">
                                     enviar imóvel
                                  </button>
                               </div>

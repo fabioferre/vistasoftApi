@@ -118,7 +118,8 @@ namespace controller;
 
 
 
-        public function ShowFormCadastroImovel(){
+        public function cadastroImovel(){
+
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
             include 'view/registerImovel.php';
