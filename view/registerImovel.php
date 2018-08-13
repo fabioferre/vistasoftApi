@@ -198,7 +198,7 @@
                               </div>
 
                               <div class="col-sm-10 pt-2">
-                                 <button type="nutton" class="btn col-md-12 btn-salva" style="color: white; font-size: 17px;">
+                                 <button type="button" class="btn col-md-12 btn-salva" style="color: white; font-size: 17px;">
                                     enviar imóvel
                                  </button>
                               </div>
