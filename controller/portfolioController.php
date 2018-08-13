@@ -119,12 +119,10 @@ namespace controller;
 
 
         public function cadastroImovel(){
-
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
             include 'view/registerImovel.php';
         }
-
 
         public function setImovel (){
         $imoveis = new \Classes\Imoveis;

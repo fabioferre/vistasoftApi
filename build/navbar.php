@@ -19,13 +19,16 @@
      <div class="container-fluid">
         <div class="header-left">
            <div class="logo logo-desktop">
-              <a href="#">
+              <a href="http://novoterralima.com/">
               <img src="http://novoterralima.com/wp-content/uploads/2018/04/logo_site.png" alt="logo">
               </a>
            </div>
            <nav class="navi main-nav">
               <ul id="main-nav" class="">
-                  <li id="menu-item-635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-635"><a href="#">Sobre Nós</a>
+                  <li id="menu-item-635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-635">
+                    <a href="http://novoterralima.com/empresa/">
+                      Sobre Nós
+                    </a>
                   </li>
                   <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child">
                     <a href="/<?=pasta?>/Portfolio/index">Portfólio </a>
@@ -40,11 +43,11 @@
                   </li>
 
                   <li id="menu-item-4644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4644">
-                  <a href="#">Corretores</a>
+                  <a href="http://novoterralima.com/corretores-terra-lima/">Corretores</a>
                   </li>
 
                   <li id="menu-item-4570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4570">
-                  <a href="#">Fale Conosco</a>
+                  <a href="http://novoterralima.com/fale-conosco/?yp_rand=683893">Fale Conosco</a>
                   </li>
 
                   <li id="menu-item-4562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4562">
@@ -52,10 +55,10 @@
                   </li>
 
                   <li id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-608">
-                     <a href="#">Mapa</a>
+                     <a href="http://novoterralima.com/resultados/">Mapa</a>
                   </li>
                   <li id="menu-item-4561" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4561">
-                     <a href="#">Blog</a>
+                     <a href="http://novoterralima.com/category/terra-lima-imoveis/">Blog</a>
                   </li>
               </ul>
            </nav>
@@ -76,7 +79,7 @@
            <div class="nav-dropdown main-nav-dropdown">
               <ul id="main-nav" class="">
                   <li id="menu-item-635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-635">
-                    <a href="#">Sobre Nós</a>
+                    <a href="http://novoterralima.com/empresa/">Sobre Nós</a>
                   </li>
 
                   <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child i">
@@ -91,11 +94,11 @@
                   </li>
 
                   <li id="menu-item-4644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4644">
-                     <a href="#">Corretores</a>
+                     <a href="http://novoterralima.com/corretores-terra-lima/">Corretores</a>
                   </li>
 
                   <li id="menu-item-4570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4570">
-                     <a href="#">Fale Conosco</a>
+                     <a href="http://novoterralima.com/fale-conosco/?yp_rand=683893">Fale Conosco</a>
                   </li>
 
                   <li id="menu-item-4562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4562">
@@ -103,10 +106,10 @@
                   </li>
 
                   <li id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-608">
-                     <a href="#">Mapa</a>
+                     <a href="http://novoterralima.com/resultados/">Mapa</a>
                   </li>
                   <li id="menu-item-4561" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4561">
-                     <a href="#">Blog</a>
+                     <a href="http://novoterralima.com/category/terra-lima-imoveis/">Blog</a>
                   </li>
               </ul>
            </div>
