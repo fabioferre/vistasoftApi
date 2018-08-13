@@ -9,6 +9,13 @@
             <input type="text" name="&" hidden>
             <div class="range-block rang-form-block">
                <div class="row">
+
+                  <div class="col-sm-12 col-xs-12 agent_name_search_field">
+                     <div class="form-group">
+                        <input class="form-control" value="" name="Codigo" placeholder="Digite o id do imovel" type="text">
+                     </div>
+                  </div>
+
                   <div class="col-sm-12 col-xs-12">
                      <div class="form-group">
                         <select name="Pais" class="selectpicker bs-select-hidden" >
@@ -106,6 +113,10 @@
                         <select class="selectpicker bs-select-hidden" id="widget_status" name="Status" >
                            <option value="">
                                  Status Do imóvel
+                           </option>
+
+                           <option value="destaque">
+                                 Destaques
                            </option>
 
                            <option value="ALUGUEL" >

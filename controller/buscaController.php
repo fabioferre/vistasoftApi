@@ -8,13 +8,13 @@ namespace controller;
             $imoveis = new \Classes\Imoveis;
             
             $params = $imoveis->getParams();
+            // print_r($params);
             $f = $imoveis->FormatFilter($params);
 
             $params = $imoveis->formatStr($params, '%2C','', ','); 
             $params = $imoveis->formatStr($params, 'R%24+','', 'R$');//valores formatado para exibição
-            // print_r($filtros);
-
-
+            
+            // print_r($f);
             $listagem = $imoveis
             ->filter($f)
             ->order($_POST)
@@ -25,7 +25,7 @@ namespace controller;
             $destaques = $imoveisdes->destaques('');
 
 
-            // print_r($f);
+            // print_r($listagem);
             include 'view/buscaResult.php';
  
         

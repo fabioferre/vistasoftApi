@@ -30,6 +30,7 @@
                       Sobre Nós
                     </a>
                   </li>
+
                   <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child">
                     <a href="/<?=pasta?>/Portfolio/index">Portfólio </a>
                     <ul class="sub-menu">
@@ -43,7 +44,7 @@
                   </li>
 
                   <li id="menu-item-4644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4644">
-                  <a href="http://novoterralima.com/corretores-terra-lima/">Corretores</a>
+                    <a href="http://novoterralima.com/corretores-terra-lima/">Corretores</a>
                   </li>
 
                   <li id="menu-item-4570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4570">

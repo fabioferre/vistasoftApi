@@ -38,12 +38,23 @@
          .btn-default{
             height: 36px;
          }
-         .require{
+
+         .alerta,.require{
             position: absolute;
+            color: red;
+         } 
+         .require{
             font-size: 30px;
             top: 35%;
             right: 2%;
-            color: red;
+         }
+
+         .alerta{
+            background-color: white;
+            line-height:10px; 
+            font-size: 12px;
+            right: 50px;
+            top: 25%;
          }
     </style>
     <body>
@@ -59,7 +70,7 @@
                <div class="row">
                   <div class="col-sm-12">
                      <div class="page-title-left">
-                        <h1 class="title-head">
+                        <h1 class="title-head" >
                            Cadastre Seu Imóvel                
                         </h1>
                      </div>
@@ -95,7 +106,7 @@
 
                               <!-- telefone -->
                               <div class="col-sm-5 pt-2" >
-                                 <input type="text" class="form-control" placeholder="telefone" name="Telefone">
+                                 <input type="text" class="form-control" placeholder="telefone" name="Numero">
                               </div>
 
                               <!-- Endereço -->
@@ -119,10 +130,11 @@
                               </div>
 
                               <!-- como conheceu -->
-                              <div class="col-sm-7 pt-2">
+                              <div class="col-sm-7 pt-2 required">
+                                 <span class="alerta"></span> 
                                  <span class="require">*</span>
                                  <div class="custom-select" >
-                                    <select name="howMet" required="required">
+                                    <select name="Complemento" required="required" class="require-campo">
                                        <option value="">Como Conheceu  a Terra Lima Imóveis</option>
                                        <option value="google">google</option>
                                        <option value="facebook">Facebook</option>
@@ -134,10 +146,11 @@
                               </div>
 
                               <!-- Finalidade -->
-                              <div class="col-sm-5 pt-2">
+                              <div class="col-sm-5 pt-2 required">
+                                 <span class="alerta"></span> 
                                  <span class="require">*</span>
                                  <div class="custom-select" >
-                                    <select name="Finalidade" required="required">
+                                    <select name="Finalidade" required="required" class="require-campo">
                                        <option value="">Finalidade</option>
                                        <option value="residencial">Residencial</option>
                                        <option value="comercial">Comercial</option>
@@ -148,10 +161,11 @@
                               </div>
 
                               <!-- Tipo de imovel -->
-                              <div class="col-sm-12 pt-2">
+                              <div class="col-sm-12 pt-2 required">
+                                 <span class="alerta"></span> 
                                  <span class="require" style="right: 0.5%">*</span>
                                  <div class="custom-select">
-                                    <select name="Categoria" required="required">
+                                    <select name="Categoria" required="required" class="require-campo">
                                        <option value="">Tipo de imóvel</option>
                                        <option value="casa">casa</option>
                                        <option value="apartamento">apartamento</option>
@@ -165,28 +179,32 @@
                               </div>
                               
                               <!-- Dormitorios -->
-                              <div class="col-sm-3 pt-2">
+                              <div class="col-sm-3 pt-2 required">
+                                 <span class="alerta"></span> 
                                  <span class="require">*</span>
-                                 <input type="text" class="form-control" placeholder="Dormitorios" name="Dormitorios" required="required">
+                                 <input type="text" class="form-control require-campo" placeholder="Dormitorios" name="Dormitorios" required="required">
                               </div>
 
                               <!-- Vagas -->
-                              <div class="col-sm-3 pt-2">
+                              <div class="col-sm-3 pt-2 required" >
+                                 <span class="alerta"></span> 
                                  <span class="require">*</span>
-                                 <input type="text" class="form-control" placeholder="Vagas" name="Vagas" required="required">
+                                 <input type="text" class="form-control require-campo" placeholder="Vagas" name="Vagas" required="required">
                               </div>
 
                                <!-- Área Construida -->
-                              <div class="col-sm-3 pt-2">
+                              <div class="col-sm-3 pt-2 required">
+                                 <span class="alerta"></span> 
                                  <span class="require">*</span>
-                                 <input type="text" class="form-control" placeholder="Área Construida M²" name="AreaTotal" required="required">
+                                 <input type="text" class="form-control require-campo" placeholder="Área Construida M²" name="AreaTotal" required="required">
                               </div>
 
                               <!-- Financiado? -->
-                              <div class="col-sm-3 pt-2">
+                              <div class="col-sm-3 pt-2 required">
+                                 <span class="alerta"></span> 
                                  <span class="require">*</span>
                                  <div class="custom-select">
-                                    <select name="Categoria" required="required" class="required">
+                                    <select name="Financiado" class="require-campo" required="required">
                                        <option value="">Financiado?</option>
                                        <option value="Sim">Sim</option>
                                        <option value="Não">Não</option>
@@ -195,9 +213,10 @@
                               </div>
 
                               <!-- Preço -->
-                              <div class="col-sm-12 pt-2">
+                              <div class="col-sm-12 pt-2 required">
+                                 <span class="alerta"></span> 
                                  <span class="require" style="right: 0.5%">*</span>
-                                 <input type="text" class="form-control required" placeholder="Valor do Imóvel" name="Valor" required="required">
+                                 <input type="text" class="form-control require-campo" placeholder="Valor do Imóvel" name="Valor" required="required">
                               </div>
                                     
                               <div class="col-sm-12 pt-2" style="font-size: 18px;">
@@ -207,11 +226,11 @@
 
                               <div class="col-sm-12 pt-2" id="imgs">
                                  <label for="envImg" class="btn-env" title="Envie Até 10 fotos">enviar arquivos</label>
-                                 <input type="file" id="envImg" multiple="multiple" name="myfiles[]" >
+                                 <input type="file" id="envImg" multiple="multiple" name="foto[]" >
                               </div>
 
                               <div class="col-sm-10 pt-2">
-                                 <button type="button" class="btn col-md-12 btn-salva" style="color: white; font-size: 17px;">
+                                 <button type="submit" class="btn col-md-12 btn-salva" style="color: white; font-size: 17px;">
                                     enviar imóvel
                                  </button>
                               </div>
@@ -250,16 +269,20 @@
            }
          })
 
-         jQuery('.required').blur(function(){
-            var campo = jQuery(this);
-            var btn = jQuery('.btn-salva');
-            if (campo.val() == 0) {
-               
+         jQuery('.required').click(function(){
+            var div = jQuery(this);
+            var campo = div.find('.require-campo');
+            var alert = div.find('.alerta');
+            
+            campo.blur(function(){
+               if (campo.val() == 0) {
+                  alert.html('Obrigatório');
+               }else{
+                  alert.html('');
+               }
+            });
 
-
-
-
-            }
+            
          });
 
       </script>

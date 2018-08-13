@@ -78,21 +78,27 @@
                         <div class="row">
                            <div class="list-search col-md-12" style="background-color: rgba(0, 174, 239, 0.05)">
                              <div class="indicePesquisa">
+                              <?php if (!empty($f['Codigo'])) {
+                                 echo 'Imovel - '. $f['Codigo'];
+                              }else{ ?>
                                  <?=!empty($f['Pais'])? $f['Pais'][0].', ': ''?>
 
                                  <?=!empty($f['Categoria']) ? $f['Categoria'][0]. ', ': ''?>
 
                                  <?=!empty($f['Status']) ?  $f['Status'].', ' : ''?>
+                                 <?=!empty($f['EmDestaque']) ?  'Destaques, ' : ''?>
 
                                  <?=!empty($params['min-price'])? "Preço desde - ".$params['min-price']." até ". $params['max-price']:'' ?>
 
                                  <?=!empty($f['AreaTerreno'])?', Àrea desde - '. $f['AreaTerreno'][0].'m² até '. $f['AreaTerreno'][1].'m² ': ''?>
 
-                                 <?php foreach ($f as $key => $value) { 
-                                          if ($value == 'Sim') {  
-                                             echo " $key ";
-                                          } 
+                                 <?php 
+                                    foreach ($f as $key => $value) { 
+                                       if ($value == 'Sim') {  
+                                          echo " $key ";
                                        } 
+                                    } 
+                                 }
                                  ?>
                              </div>
                            </div>
