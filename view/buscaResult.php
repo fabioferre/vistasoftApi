@@ -24,12 +24,11 @@
                      <div class="page-title-left">
                         <h2>Resultados</h2>
                      </div>
-
                      <div class="page-title-right">
                         <div class="view">
                            <form class="sort-tab table-cell" method="post" id="order">
                               Ordenar por:                            
-                             <select id="sort_properties" class="selectpicker bs-select-hidden"  name="order">
+                               <select id="sort_properties" class="selectpicker bs-select-hidden"  name="order">
                                  <option value="DataCadastro-desc" <?=$imoveis->selected('orderBy','DataCadastro-desc') ?>>
                                     Ordem padrão
                                  </option>
@@ -61,7 +60,6 @@
                            </div>
                         </div>
                      </div>
-                     
                   </div>
                </div>
             </div>

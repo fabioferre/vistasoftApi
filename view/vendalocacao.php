@@ -15,16 +15,17 @@
 
       <div id="section-body" class="">
          <div class="container">
-            <div class="page-title breadcrumb-top">
+           <div class="page-title breadcrumb-top">
                <div class="row">
                   <div class="col-sm-12">
                      <div class="page-title-left">
-                        <h2>Venda / Locação </h2>
+                        <h2>Venda/Locação</h2>
                      </div>
-
                      <div class="page-title-right">
                         <div class="view">
-                           <select id="sort_properties" class="selectpicker bs-select-hidden"  name="order">
+                           <form class="sort-tab table-cell" method="post" id="order">
+                              Ordenar por:                            
+                               <select id="sort_properties" class="selectpicker bs-select-hidden"  name="order">
                                  <option value="DataCadastro-desc" <?=$imoveis->selected('orderBy','DataCadastro-desc') ?>>
                                     Ordem padrão
                                  </option>
@@ -56,7 +57,6 @@
                            </div>
                         </div>
                      </div>
-                     
                   </div>
                </div>
             </div>
