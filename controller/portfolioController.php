@@ -2,7 +2,7 @@
 
 namespace controller;
 
-    class Imoveis{
+    class Portfolio{
 
         public function imovel(){
             $imoveisdes = new \Classes\Imoveis;
@@ -69,12 +69,9 @@ namespace controller;
             ->get();
 
             // print_r($_POST);
-            
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
         	include 'view/vendalocacao.php';
-            // echo($imoveisdes->countType('Apartamento'));
-            
         }
 
 
@@ -113,9 +110,7 @@ namespace controller;
         
         public function listar(){
         	$imoveis = new \Classes\Imoveis;
-            echo "<pre>";
-        	print_r($listagem = $imoveis->setCurl("imoveis/listarConteudo")->fields(['Categoria'])->get());
-            echo "</pre>";
+        	print_r($listagem = $imoveis->setCurl("imoveis/listarConteudo")->fields(['Cidade'])->get());
         }
 
 
@@ -126,19 +121,29 @@ namespace controller;
             include 'view/registerImovel.php';
         }
 
+
         public function setImovel (){
         $imoveis = new \Classes\Imoveis;
-        $dados = json_encode($_POST);
-        print_r($dados);
-
-        $retorno = $imoveis
-        ->setCurl("imoveis/detalhes")
-        ->set( 'cadastro={"fields": '.$dados.'}')->post();
+        print_r($_POST);
+        $dados = $imoveis->setCurl("imoveis/detalhes")->set(
+            'cadastro={"fields":
+                            {
+                            "Categoria":"Apartamento",
+                            "Endereco":"'.$_POST["Endereco"].'",
+                            "Numero":"11111",
+                            "Complemento":"9054",
+                            "Bairro":"'.$_POST["Bairro"].'",
+                            "Cidade":"'.$_POST["Cidade"].'",
+                            "UF":"'.$_POST["UF"].'",
+                            "CEP":"04897340",
+                            "Situacao":"Novo"
+                             }
+                     }')->post();
 
 
         // print_r($imoveis->codigo);
        
-        print_r($retorno);
+        // print_r($imoveis);
 
         }
 

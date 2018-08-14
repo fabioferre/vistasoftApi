@@ -32,7 +32,7 @@
                               <div class="table-cell hidden-sm hidden-xs">
                                  <span class="label-wrap">
                                     <span class="label-status label-status-23 label label-default">
-                                       <a href="/<?=pasta?>/Imoveis/<?=$e['Status'] == 'VENDA'? 'venda': 'locacao'?>">
+                                       <a href="/<?=pasta?>/Imoveis/<?=$e['Status'] == 'Locacao'? 'locacao': 'venda'?>">
                                           <?=$e['Status']?>
                                        </a>
                                     </span>                
@@ -117,8 +117,12 @@
                             <div class="tab-content">
                               <div id="gallery" class="tab-pane fade in active">
                                  <span class="label-wrap visible-sm visible-xs">
-                                    <span class="label label-primary label-status-23"><?=$e['Status']?></span>
-                                 </span>
+                                    <span class="label label-primary label-status-23">
+                                       <a href="/<?=pasta?>/Imoveis/<?=$e['Status'] == 'Locacao'? 'locacao': 'venda'?>">
+                                          <?=$e['Status']?>
+                                       </a>
+                                     </span>
+                                  </span>  
 
                                 <div id="myCarousel" class="carousel slide" data-ride="carousel" >
 

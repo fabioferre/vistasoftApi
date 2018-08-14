@@ -2,19 +2,19 @@
 
 namespace controller;
 
-    class Resultado{
+    class Result{
 
-        public function pesquisa(){
+        public function index(){
             $imoveis = new \Classes\Imoveis;
             
             $params = $imoveis->getParams();
-            // print_r($params);
             $f = $imoveis->FormatFilter($params);
 
             $params = $imoveis->formatStr($params, '%2C','', ','); 
             $params = $imoveis->formatStr($params, 'R%24+','', 'R$');//valores formatado para exibição
-            
-            // print_r($f);
+            // print_r($filtros);
+
+
             $listagem = $imoveis
             ->filter($f)
             ->order($_POST)
@@ -25,7 +25,7 @@ namespace controller;
             $destaques = $imoveisdes->destaques('');
 
 
-            // print_r($listagem);
+            // print_r($f);
             include 'view/buscaResult.php';
  
         

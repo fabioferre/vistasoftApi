@@ -55,12 +55,17 @@ class Imoveis extends App
         $params = $this->formatStr($params, '%20','',' ');
         
 
+        if (isset($params['Categoria']) ) {
+            $params['Categoria'] = explode('-', $params['Categoria']);
+        }
+
+        if (isset($params['Pais']) ) {
+            $params['Pais'] = explode('-', $params['Pais']);
+        }
+
         if (isset($params['Status']) ) {
             if ($params['Status'] == 'ALUGUEL') {
                 $params['ValorLocacao'] = array($param['min-price'], $params['max-price']);
-            }elseif ($params['Status'] == 'destaque') {
-                unset($params['Status']);
-                $params['EmDestaque'] = 'sim';
             }else{
                 $params['ValorVenda'] = array($params['min-price'], $params['max-price']);
             }
@@ -71,6 +76,7 @@ class Imoveis extends App
                 $params['AreaTerreno'] = array($params['min-area'], $params['max-area']);
             }
         }
+        
 
         unset($params['min-area'], $params['max-area'],$params['min-price'], $params['max-price']);
         return $params;

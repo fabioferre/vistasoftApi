@@ -27,7 +27,7 @@
                            <form class="sort-tab table-cell" method="post" id="order">
                               Ordenar por:                            
                              <select id="sort_properties" class="selectpicker bs-select-hidden"  name="order">
-                                 <option value="" <?=$imoveis->selected('orderBy','DataCadastro-desc') ?> >
+                                 <option value="" >
                                     Ordem padrão
                                  </option>
 
@@ -47,7 +47,7 @@
                                     Data antiga para nova
                                  </option>
 
-                                 <option value="DataCadastro-desc"  >
+                                 <option value="DataCadastro-desc" <?=$imoveis->selected('orderBy','DataCadastro-desc') ?> >
                                     Data nova para antiga
                                  </option>
                               </select>
@@ -82,7 +82,7 @@
                      <!--end property items-->
                      <hr>
                        <!--start Pagination-->
-                     <div class="pagination-main limitText"  style="max-width: 25.3ch;">
+                     <div class="pagination-main limitText"  style="max-width: 25.3ch;" >
                         <form method="post" id="pagination">
                            <input type="num" name="pagina" id="pag" hidden>
                         </form>

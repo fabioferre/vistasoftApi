@@ -5,7 +5,7 @@
    </div>
    <div class="widget-range">
       <div class="widget-body">
-         <form  method="get" action="/<?=pasta?>/Resultado/pesquisa" id="firstSearch" >
+         <form  method="get" action="/<?=pasta?>/Result/index" id="firstSearch" >
             <input type="text" name="&" hidden>
             <div class="range-block rang-form-block">
                <div class="row">

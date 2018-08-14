@@ -13,7 +13,7 @@ if(isset($key['Codigo'])){
                <!-- <span class="label-featured label label-success"></span> -->
                <div class="label-wrap label-right hide-on-list">
                   <span class="label-status label-status-180 label label-default">
-                     <a href="/<?=pasta?>/Imoveis/<?=$key['Status'] == 'locacao'?'locacao':'venda' ?>"><?=$key['Status']?></a>
+                     <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'venda'?'venda': 'locacao'?>"><?=$key['Status']?></a>
                   </span>           
                </div>
 
@@ -28,7 +28,7 @@ if(isset($key['Codigo'])){
                   </span>
                </div>
 
-               <a class="hover-effect limitImg" href="/<?=pasta?>/Imoveis/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>">
+               <a class="hover-effect limitImg" href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>">
                   <img src="<?=$key['FotoDestaque']?>" class="attachment-houzez-property-thumb-image size-houzez-property-thumb-image wp-post-image limitImg" alt="" width="385" height="250">                    
                </a>
                
@@ -57,12 +57,12 @@ if(isset($key['Codigo'])){
             <div class="info-row">
                <div class="label-wrap hide-on-grid">
                   <span class="label-status label-status-180 label label-default">
-                     <a href="/<?=pasta?>/Imoveis/<?=$key['Status'] == 'locacao'?'locacao':'venda'?>"><?=$key['Status']?> </a>
+                     <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'VENDA'?'venda': 'locacao'?>"><?=$key['Status']?> </a>
                   </span>
                </div>
 
                <h2 class="property-title">
-                  <a href="/<?=pasta?>/Imoveis/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>">
+                  <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>">
                      <?=$key['TituloSite']?> - <?=$key['Codigo']?>
                   </a>
                </h2>
@@ -107,7 +107,7 @@ if(isset($key['Codigo'])){
             </div>
 
             <div class="info-row phone text-right">
-               <a href="/<?=pasta?>/Imoveis/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+               <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
             </div>
          </div>
 
@@ -124,7 +124,7 @@ if(isset($key['Codigo'])){
             </div>
             <div class="cell">
                <div class="phone">
-                  <a href="/<?=pasta?>/Imoveis/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                  <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
                </div>
             </div>
          </div>

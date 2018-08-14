@@ -32,13 +32,13 @@
                   </li>
 
                   <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child">
-                    <a href="/<?=pasta?>/Imoveis/index">Portfólio </a>
+                    <a href="/<?=pasta?>/Portfolio/index">Portfólio </a>
                     <ul class="sub-menu">
                        <li id="menu-item-739" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-739">
-                        <a href="/<?=pasta?>/Imoveis/locacao">Locação</a>
+                        <a href="/<?=pasta?>/Portfolio/locacao">Locação</a>
                         </li>
                        <li id="menu-item-741" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-741">
-                        <a href="/<?=pasta?>/Imoveis/venda">Venda</a>
+                        <a href="/<?=pasta?>/Portfolio/venda">Venda</a>
                         </li>
                     </ul>
                   </li>
@@ -52,7 +52,7 @@
                   </li>
 
                   <li id="menu-item-4562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4562">
-                  <a href="/<?=pasta?>/Imoveis/cadastroImovel">Cadastre Seu Imóvel</a>
+                  <a href="/<?=pasta?>/Portfolio/cadastroImovel">Cadastre Seu Imóvel</a>
                   </li>
 
                   <li id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-608">
@@ -84,12 +84,12 @@
                   </li>
 
                   <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child i">
-                    <a href="/<?=pasta?>/Imoveis/index"> Portfólio </a> 
+                    <a href="/<?=pasta?>/Portfolio/index"> Portfólio </a> 
                     <ul class="sub-menu">
                        <li id="menu-item-739" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-739">
-                        <a href="/<?=pasta?>/Imoveis/locacao">Locação</a></li>
+                        <a href="/<?=pasta?>/Portfolio/locacao">Locação</a></li>
                        <li id="menu-item-741" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-741">
-                        <a href="/<?=pasta?>/Imoveis/venda">Venda</a></li>
+                        <a href="/<?=pasta?>/Portfolio/venda">Venda</a></li>
                     </ul>
                     <span class="expand-me"></span>
                   </li>
@@ -103,7 +103,7 @@
                   </li>
 
                   <li id="menu-item-4562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4562">
-                     <a href="/<?=pasta?>/Imoveis/cadastroImovel">Cadastre Seu Imóvel</a>
+                     <a href="/<?=pasta?>/Portfolio/cadastroImovel">Cadastre Seu Imóvel</a>
                   </li>
 
                   <li id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-608">
