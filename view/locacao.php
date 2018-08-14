@@ -16,7 +16,7 @@
       
       <div id="section-body" class="">
          <div class="container">
-            <!--end compare panel-->
+            
             <div class="page-title breadcrumb-top">
                <div class="row">
                   <div class="col-sm-12">

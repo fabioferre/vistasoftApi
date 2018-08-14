@@ -213,6 +213,7 @@ jQuery(document).ready(function ($) {
                 pane: "floatPane",
                 enableEventPropagation: false
             });
+            
             var poiInfo = new InfoBox({
                 disableAutoPan: false,
                 maxWidth: 250,
