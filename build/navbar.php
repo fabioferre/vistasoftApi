@@ -32,7 +32,7 @@
                   </li>
 
                   <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child">
-                    <a href="/<?=pasta?>/Imoveis/vendaElocacao">Portfólio </a>
+                    <a href="/<?=pasta?>/Imoveis/index">Portfólio </a>
                     <ul class="sub-menu">
                        <li id="menu-item-739" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-739">
                         <a href="/<?=pasta?>/Imoveis/locacao">Locação</a>
@@ -84,7 +84,7 @@
                   </li>
 
                   <li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-property_status current-menu-item menu-item-has-children menu-item-740 has-child i">
-                    <a href="/<?=pasta?>/Imoveis/vendaElocacao"> Portfólio </a> 
+                    <a href="/<?=pasta?>/Imoveis/index"> Portfólio </a> 
                     <ul class="sub-menu">
                        <li id="menu-item-739" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-739">
                         <a href="/<?=pasta?>/Imoveis/locacao">Locação</a></li>
