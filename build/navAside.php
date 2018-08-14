@@ -23,37 +23,112 @@
                               Todos os Países
                            </option>
 
-                           <option value="Brasil-like">
+                           <option value="Brasil">
                               Brasil
                            </option>
 
-                           <option value="Portugal-like">
-                               Portugal
+                           <option value="Portugal">
+                              Portugal
                            </option>
 
-                           <option value="Estados Unidos-like">
+                           <option value="Estados Unidos">
                               Estados Unidos
                            </option>
                         </select>
                      </div>
                   </div>
                   
-   <!--                <div class="col-sm-12 col-xs-12">
+
+                  <div class="col-sm-12 col-xs-12">
                      <div class="form-group">
-                        <select class="selectpicker bs-select-hidden" name="" data-live-search="false">
-                           <option value="">Destaques</option>
-                           <option value="arquitetura-assinada"> Arquitetura Assinada</option>
-                           <option value="baixou-o-valor"> Baixou o valor</option>
-                           <option value="lancamentos"> Lançamentos</option>
-                           <option value="novidades"> Novidades</option>
-                           <option value="oportunidades"> Oportunidades</option>
-                           <option value="premium"> Premium</option>
-                           <option value="reforma-total"> Reforma Total</option>
-                           <option value="retrofitados"> Retrofitados</option>
-                           <option value="vista"> Vista</option>
+                        <select name="Cidade" class="selectpicker bs-select-hidden" >
+                           <option value="">
+                              Todos as Cidades
+                           </option>
+                           <option value="Amparo">Amparo</option>
+                           <option value="Avare">Avaré</option>
+                           <option value="Braganca Paulista">Bragança Paulista</option>
+                           <option value="Campos Do Jordao">Campos Do Jordão</option>
+                           <option value="Cotia">Cotia</option>
+                           <option value="Guaruja">Guarujá</option>
+                           <option value="Indaiatuba">Indaiatuba</option>
+                           <option value="Itacare">Itacaré</option>
+                           <option value="Lisboa">Lisboa</option>
+                           <option value="Porto Feliz">Porto Feliz</option>
+                           <option value="Rio De Janeiro">Rio De Janeiro</option>
+                           <option value="Sao Paulo">São Paulo</option>
                         </select>
                      </div>
-                  </div> -->
+                  </div>
+
+                  <div class="col-sm-12 col-xs-12">
+                     <div class="form-group">
+                        <select class="selectpicker bs-select-hidden" name="Bairro" data-live-search="false">
+                           <option value="">Todos os bairros</option>
+                           <option value="Alto De Pinheiros">Alto De Pinheiros</option>
+                           <option value="Balneario Praia Do Pereque">Balneario Praia Do Perequê</option>
+                           <option value="Bela Vista">Bela Vista</option>
+                           <option value="Boaçava">Boacava</option>
+                           <option value="Brooklin Paulista">Brooklin Paulista</option>
+                           <option value="Butanta">Butantã</option>
+                           <option value="Centro">Centro</option>
+                           <option value="Centro (Caucaia Do Alto)">Centro (Caucaia Do Alto)</option>
+                           <option value="Cerqueira Cesar">Cerqueira César</option>
+                           <option value="Chacara Flora">Chácara Flora</option>
+                           <option value="Chacara Itaim">Chácara Itaim</option>
+                           <option value="Cidade Jardim">Cidade Jardim</option>
+                           <option value="Cidade Moncoes">Cidade Monções</option>
+                           <option value="Consolacao">Consolação</option>
+                           <option value="Fazenda Boa Vista">Fazenda Boa Vista</option>
+                           <option value="Helvetia Polo Country">Helvétia Polo Country</option>
+                           <option value="Higienopolis">Higienópolis</option>
+                           <option value="Indianopolis">Indianópolis</option>
+                           <option value="Ipanema">Ipanema</option>
+                           <option value="Itacare">Itacaré</option>
+                           <option value="Itaim Bibi">Itaim Bibi</option>
+                           <option value="Jardim America">Jardim América</option>
+                           <option value="Jardim Europa">Jardim Europa</option>
+                           <option value="Jardim Everest">Jardim Everest</option>
+                           <option value="Jardim Guedala">Jardim Guedala</option>
+                           <option value="Jardim Londrina">Jardim Londrina</option>
+                           <option value="Jardim Miraflores">Jardim Miraflores</option>
+                           <option value="Jardim Morumbi">Jardim Morumbi</option>
+                           <option value="Jardim Panorama">Jardim Panorama</option>
+                           <option value="Jardim Paulista">Jardim Paulista</option>
+                           <option value="Jardim Paulistano">Jardim Paulistano</option>
+                           <option value="Jardim Silvia (Zona Oeste)">Jardim Sílvia (Zona Oeste)</option>
+                           <option value="Jardim Universidade Pinheiros">Jardim Universidade Pinheiros</option>
+                           <option value="Leblon">Leblon</option>
+                           <option value="Loteamento Joao Batista Juliao">Loteamento João Batista Julião</option>
+                           <option value="Moema">Moema</option>
+                           <option value="Morro Dos Ingleses">Morro Dos Ingleses</option>
+                           <option value="Morumbi">Morumbi</option>
+                           <option value="Paineiras Do Morumbi">Paineiras Do Morumbi</option>
+                           <option value="Paraiso">Paraíso</option>
+                           <option value="Parque Anchieta">Parque Anchieta</option>
+                           <option value="Parque Colonial">Parque Colonial</option>
+                           <option value="Parque Sao Jorge">Parque São Jorge</option>
+                           <option value="Perdizes">Perdizes</option>
+                           <option value="Pinheiros">Pinheiros</option>
+                           <option value="Praia De Taguaiba">Praia De Taguaiba</option>
+                           <option value="Quinta Da Baroneza">Quinta Da Baroneza</option>
+                           <option value="Real Parque">Real Parque</option>
+                           <option value="Retiro Morumbi">Retiro Morumbi</option>
+                           <option value="Santa Cecilia">Santa Cecília</option>
+                           <option value="Sumare">Sumaré</option>
+                           <option value="Vila Clementino">Vila Clementino</option>
+                           <option value="Vila Inah">Vila Inah</option>
+                           <option value="Vila Madalena">Vila Madalena</option>
+                           <option value="Vila Mariana">Vila Mariana</option>
+                           <option value="Vila Mascote">Vila Mascote</option>
+                           <option value="Vila Morumbi">Vila Morumbi</option>
+                           <option value="Vila Nova Conceicao">Vila Nova Conceicao</option>
+                           <option value="Vila Olimpia">Vila Olímpia</option>
+                           <option value="Vila Progredior">Vila Progredior</option>
+                           <option value="Vila Tramontano">Vila Tramontano</option>
+                        </select>
+                     </div>
+                  </div>
 
                   <div class="col-sm-12 col-xs-12">
                      <div class="form-group">
@@ -62,47 +137,47 @@
                               Tipos de imóveis
                            </option>
 
-                           <option value="Apartamento-like" >
+                           <option value="apartamento" >
                               Apartamento
                            </option>
 
-                           <option value="Casa-like">
+                           <option value="Casa">
                               Casa
                            </option>
 
-                           <option value="casa de praia-like">
+                           <option value="casa de praia">
                               Casa na Praia
                            </option>
 
-                           <option value="Casa no campo-like">
+                           <option value="Casa no campo">
                               Casa no Campo
                            </option>
 
-                           <option value="Cobertura-like"> 
+                           <option value="Cobertura"> 
                               Cobertura
                            </option>
 
-                           <option value="Salas e Conjunto-like" >
+                           <option value="salas e Conjunto" >
                               Salas e Conjunto
                            </option>
 
-                           <option value="duplex-like">
+                           <option value="duplex">
                               Duplex
                            </option>
 
-                           <option value="Fazenda-like">
+                           <option value="Fazenda">
                               Fazenda
                            </option>
 
-                           <option value="loft-like">
+                           <option value="loft">
                               Loft
                            </option>
 
-                           <option value="terreno-like">
+                           <option value="terreno">
                               Terreno
                            </option>
 
-                           <option value="triplex-like">
+                           <option value="triplex">
                                Triplex
                            </option>
                         </select>

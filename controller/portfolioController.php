@@ -113,7 +113,9 @@ namespace controller;
         
         public function listar(){
         	$imoveis = new \Classes\Imoveis;
-        	print_r($listagem = $imoveis->setCurl("imoveis/listarcampos")->get());
+            echo "<pre>";
+        	print_r($listagem = $imoveis->setCurl("imoveis/listarConteudo")->fields(['Categoria'])->get());
+            echo "</pre>";
         }
 
 

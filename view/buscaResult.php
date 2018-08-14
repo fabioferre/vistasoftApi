@@ -81,11 +81,16 @@
                               <?php if (!empty($f['Codigo'])) {
                                  echo 'Imovel - '. $f['Codigo'];
                               }else{ ?>
-                                 <?=!empty($f['Pais'])? $f['Pais'][0].', ': ''?>
+                                 <?=!empty($params['Pais'])? $params['Pais'].', ': ''?>
 
-                                 <?=!empty($f['Categoria']) ? $f['Categoria'][0]. ', ': ''?>
+                                 <?=!empty($params['Cidade'])? $params['Cidade'].', ': ''?>
 
-                                 <?=!empty($f['Status']) ?  $f['Status'].', ' : ''?>
+                                 <?=!empty($params['Bairro'])? $params['Bairro'].', ': ''?>
+                                 
+                                 <?=!empty($params['Categoria']) ? $params['Categoria']. ', ': ''?>
+
+                                 <?=!empty($params['Status']) ?  $params['Status'].', ' : ''?>
+                                 
                                  <?=!empty($f['EmDestaque']) ?  'Destaques, ' : ''?>
 
                                  <?=!empty($params['min-price'])? "Preço desde - ".$params['min-price']." até ". $params['max-price']:'' ?>
