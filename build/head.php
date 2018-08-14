@@ -82,12 +82,11 @@
 
     <!-- Favicon -->
 
-    <link rel="shortcut icon" href="http://novoterralima.com/wp-content/uploads/2017/10/icon_terralima.png"><!-- Apple iPhone Icon -->
-    <link rel="apple-touch-icon-precomposed" href="http://novoterralima.com/wp-content/uploads/2017/10/icon_terralima.png"><!-- Apple iPhone Retina Icon -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://novoterralima.com/wp-content/uploads/2017/10/icon_terralima.png"><!-- Apple iPhone Icon -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://novoterralima.com/wp-content/uploads/2017/10/icon_terralima.png">
-    <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress.">
-    
+    <link rel="shortcut icon" href="/<?=pasta?>/assets/img/favicon.png"><!-- Apple iPhone Icon -->
+    <link rel="apple-touch-icon-precomposed" href="/<?=pasta?>/assets/img/favicon.png"><!-- Apple iPhone Retina Icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/<?=pasta?>/assets/img/favicon.png"><!-- Apple iPhone Icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/<?=pasta?>/assets/img/favicon.png">
+
     <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://novoterralima.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
     <meta name="generator" content="Powered by Slider Revolution 5.4.5.2 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
     <script type="text/javascript">function setREVStartSize(e){
