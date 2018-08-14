@@ -24,8 +24,8 @@
     $uri = explode('/', $tmp);
 
     $vars = array(
-        'controller'   => (count($uri) > 0 ? array_shift($uri) : 'vendaElocacao'),
-        'action'       => (count($uri) > 0 ? array_shift($uri) : 'vendaElocacao'),
+        'controller'   => (count($uri) > 0 ? array_shift($uri) : 'index'),
+        'action'       => (count($uri) > 0 ? array_shift($uri) : 'index'),
         'params'       => array()
     );
 

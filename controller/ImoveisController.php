@@ -61,7 +61,7 @@ namespace controller;
 
 
 
-        public function vendaELocacao(){
+        public function index(){
         	$imoveis = new \Classes\Imoveis;
         	$listagem = $imoveis
             ->order($_POST)
