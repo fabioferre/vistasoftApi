@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
         var current_marker = 0;
         var has_compare = $('#compare-controller').length;
 
-        var ajaxurl = HOUZEZ_ajaxcalls_vars.admin_url+ 'admin-ajax.php';
+        // var ajaxurl = HOUZEZ_ajaxcalls_vars.admin_url+ 'admin-ajax.php';
         var login_sending = HOUZEZ_ajaxcalls_vars.login_loading;
         var userID = HOUZEZ_ajaxcalls_vars.user_id;
         var login_redirect_type = HOUZEZ_ajaxcalls_vars.redirect_type

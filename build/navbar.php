@@ -19,8 +19,8 @@
      <div class="container-fluid">
         <div class="header-left">
            <div class="logo logo-desktop">
-              <a href="http://novoterralima.com/">
-              <img src="http://novoterralima.com/wp-content/uploads/2018/04/logo_site.png" alt="logo">
+              <a href="http://www.terralimaimoveis.com.br">
+                <img src="/<?=pasta?>/assets/img/logo_site.png" alt="logo">
               </a>
            </div>
            <nav class="navi main-nav">

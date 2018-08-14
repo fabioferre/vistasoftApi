@@ -1,9 +1,6 @@
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="pingback" href="http://novoterralima.com/xmlrpc.php">
-
-    
     <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5&amp;appId=217780371604666"></script>
     <script src="/<?=pasta?>/assets/js/webfont.js" type="text/javascript" async=""></script>
 
@@ -25,18 +22,18 @@
     </script>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//s.w.org">
-    <link rel="alternate" type="application/rss+xml" title="Feed para Terra Lima Imóveis »" href="http://novoterralima.com/feed/">
-    <link rel="alternate" type="application/rss+xml" title="Feed de comentários para Terra Lima Imóveis »" href="http://novoterralima.com/comments/feed/">
-    <link rel="alternate" type="application/rss+xml" title="Feed para Terra Lima Imóveis » Venda / Locação Situação" href="http://novoterralima.com/status/venda-e-locacao/feed/">
+    <!-- <link rel="alternate" type="application/rss+xml" title="Feed para Terra Lima Imóveis »" href="http://novoterralima.com/feed/"> -->
+    <!-- <link rel="alternate" type="application/rss+xml" title="Feed de comentários para Terra Lima Imóveis »" href="http://novoterralima.com/comments/feed/"> -->
+    <!-- <link rel="alternate" type="application/rss+xml" title="Feed para Terra Lima Imóveis » Venda / Locação Situação" href="http://novoterralima.com/status/venda-e-locacao/feed/"> -->
  
 
-    <script type="text/javascript">
-                window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/novoterralima.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.7"}};
+ <!--    <script type="text/javascript">
+                window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/novoterralima.com\/<?=pasta?>\/assets\/js\/wp-emoji-release.min.js?ver=4.9.7"}};
 
                 !function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
     </script>
-    <script src="http://novoterralima.com/wp-includes/js/wp-emoji-release.min.js?ver=4.9.7" type="text/javascript" defer=""></script>
-    <style type="text/css">
+    <script src="http://novoterralima.com/wp-includes/js/wp-emoji-release.min.js?ver=4.9.7" type="text/javascript" defer=""></script> -->
+  <!--   <style type="text/css">
         img.wp-smiley,
         img.emoji {
             display: inline !important;
@@ -49,7 +46,7 @@
             background: none !important;
             padding: 0 !important;
         }
-    </style>
+    </style> -->
     
     
     <link rel="stylesheet" id="rs-plugin-settings-css" href="/<?=pasta?>/assets/css/settings.css?ver=5.4.5.2" type="text/css" media="all">
@@ -66,12 +63,11 @@
     <link rel="stylesheet" id="montserrat-css" href="http://fonts.googleapis.com/css?family=Montserrat%3A300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic&amp;ver=4.9.7" type="text/css" media="all">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat&amp;amp;subset=latin">
     <script type="text/javascript" src="/<?=pasta?>/build/lib/jquery/jquery.js?ver=1.12.4"></script>
-
     <script type="text/javascript" src="/<?=pasta?>/assets/js/jquery-migrate.min.js?ver=1.4.1"></script>
     <script type="text/javascript" src="/<?=pasta?>/assets/js/jquery.themepunch.tools.min.js?ver=5.4.5.2"></script>
     <script type="text/javascript" src="/<?=pasta?>/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.5.2"></script>
     
-    <link rel="https://api.w.org/" href="http://novoterralima.com/wp-json/">
+<!--     <link rel="https://api.w.org/" href="http://novoterralima.com/wp-json/">
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://novoterralima.com/xmlrpc.php?rsd">
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://novoterralima.com/wp-includes/wlwmanifest.xml"> 
     <meta name="generator" content="WordPress 4.9.7">
@@ -82,12 +78,16 @@
             js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=217780371604666";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-    </script>
+    </script> -->
+
     <!-- Favicon -->
-    <link rel="shortcut icon" href="http://novoterralima.com/wp-content/uploads/2017/10/icon_terralima.png"><!-- Apple iPhone Icon --><link rel="apple-touch-icon-precomposed" href="http://novoterralima.com/wp-content/uploads/2017/10/icon_terralima.png"><!-- Apple iPhone Retina Icon -->
+
+    <link rel="shortcut icon" href="http://novoterralima.com/wp-content/uploads/2017/10/icon_terralima.png"><!-- Apple iPhone Icon -->
+    <link rel="apple-touch-icon-precomposed" href="http://novoterralima.com/wp-content/uploads/2017/10/icon_terralima.png"><!-- Apple iPhone Retina Icon -->
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://novoterralima.com/wp-content/uploads/2017/10/icon_terralima.png"><!-- Apple iPhone Icon -->
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://novoterralima.com/wp-content/uploads/2017/10/icon_terralima.png">
     <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress.">
+    
     <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://novoterralima.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
     <meta name="generator" content="Powered by Slider Revolution 5.4.5.2 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
     <script type="text/javascript">function setREVStartSize(e){

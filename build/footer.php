@@ -23,13 +23,13 @@
                      <h3 class="widget-title">Menu</h3>
                   </div>
                   <div class="textwidget">
-                     <p><a href="http://novoterralima.com/empresa/">Sobre Nós</a></p>
-                     <p><a href="http://novoterralima.com/status/venda-e-locacao/">Portfólio</a></p>
-                     <p><a href="http://novoterralima.com/fale-conosco/?yp_rand=683893">Fale Conosco</a></p>
-                     <p><a href="http://novoterralima.com/fale-conosco-2/">Cadastre Seu Imóvel</a></p>
-                     <p><a href="http://novoterralima.com/resultados/">Mapa</a></p>
-                     <p><a href="http://novoterralima.com/category/terra-lima-imoveis/">Blog</a></p>
-                     <p><a href="http://novoterralima.com/corretores-terra-lima/">Corretores</a></p>
+                     <p><a href="#">Sobre Nós</a></p>
+                     <p><a href="#">Portfólio</a></p>
+                     <p><a href="#">Fale Conosco</a></p>
+                     <p><a href="#">Cadastre Seu Imóvel</a></p>
+                     <p><a href="#">Mapa</a></p>
+                     <p><a href="#">Blog</a></p>
+                     <p><a href="#">Corretores</a></p>
                   </div>
                </div>
             </div>
