@@ -18,14 +18,14 @@
     use \controller as controller;
     use \classes as classes;
 
-    $tmp = !empty($_GET['uri']) ? $_GET['uri'] : 'Portfolio'; // Página padrão home
+    $tmp = !empty($_GET['uri']) ? $_GET['uri'] : 'Imoveis'; // Página padrão home
     $tmp = (substr($tmp,-1) === "/") ? header("Location:/".pasta."/".substr($tmp,0,-1)) : $tmp;
     
     $uri = explode('/', $tmp);
 
     $vars = array(
-        'controller'   => (count($uri) > 0 ? array_shift($uri) : 'index'),
-        'action'       => (count($uri) > 0 ? array_shift($uri) : 'index'),
+        'controller'   => (count($uri) > 0 ? array_shift($uri) : 'vendaElocacao'),
+        'action'       => (count($uri) > 0 ? array_shift($uri) : 'vendaElocacao'),
         'params'       => array()
     );
 

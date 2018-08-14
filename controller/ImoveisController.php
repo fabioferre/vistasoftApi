@@ -2,7 +2,7 @@
 
 namespace controller;
 
-    class Portfolio{
+    class Imoveis{
 
         public function imovel(){
             $imoveisdes = new \Classes\Imoveis;
@@ -61,7 +61,7 @@ namespace controller;
 
 
 
-        public function index(){
+        public function vendaELocacao(){
         	$imoveis = new \Classes\Imoveis;
         	$listagem = $imoveis
             ->order($_POST)

@@ -132,15 +132,15 @@
                      <!--end property items-->
                      <hr>
                        <!--start Pagination-->
-                     <div class="pagination-main limitText"  style="max-width: 26ch;" >
+                     <div class="pagination-main limitText"  style="max-width: 25.3ch;" >
                         <form method="post" id="pagination">
                            <input type="num" name="pagina" id="pag" hidden>
                         </form>
 
-                        <ul class="pagination ">
+                        <ul class="pagination" >
 
                         <?php if ($listagem['pagina'] > 1) { ?>  
-                              <li>
+                              <li >
                                  <a class="btnPag"  data-pag="<?=$listagem['pagina']-1?>" aria-label="Previous">
                                     <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
                                  </a>
@@ -154,8 +154,8 @@
                         </li>
 
                         <?php for ($listagem['pagina'] += 1; $listagem['pagina'] < $listagem['paginas']; $listagem['pagina']++) { ?>
-                              <li>
-                                 <a class="btnPag" data-pag="<?=$listagem['pagina']?>"  href="#">
+                              <li >
+                                 <a class="btnPag" data-pag="<?=$listagem['pagina']?>"  href="#" >
                                     <?=$listagem['pagina']?><span class="sr-only"></span>
                                  </a>
                               </li>

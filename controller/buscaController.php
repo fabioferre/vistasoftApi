@@ -2,9 +2,9 @@
 
 namespace controller;
 
-    class Result{
+    class Resultado{
 
-        public function index(){
+        public function pesquisa(){
             $imoveis = new \Classes\Imoveis;
             
             $params = $imoveis->getParams();

@@ -5,7 +5,7 @@
    </div>
    <div class="widget-range">
       <div class="widget-body">
-         <form  method="get" action="/<?=pasta?>/Result/index" id="firstSearch" >
+         <form  method="get" action="/<?=pasta?>/Resultado/pesquisa" id="firstSearch" >
             <input type="text" name="&" hidden>
             <div class="range-block rang-form-block">
                <div class="row">
@@ -267,74 +267,74 @@
    <div class="widget-body">
       <ul class="children">
          <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Apartamento-like">
+            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Apartamento-like">
             Apartamento
             
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Casa-like">
+            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Casa-like">
                Casa
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Casa de Praia-like">
+            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Casa de Praia-like">
                Casa na Praia
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Casa no Campo-like">
+            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Casa no Campo-like">
                Casa no Campo
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Cobertura-like">
+            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Cobertura-like">
                Cobertura
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Conjunto-like">
+            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Conjunto-like">
                Conjunto
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Duplex-like">
+            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Duplex-like">
                Duplex
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Fazenda-like">
+            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Fazenda-like">
                Fazenda
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Loft-like">
+            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Loft-like">
                Loft
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Terreno-like">
+            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Terreno-like">
                Terreno
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Terreno na Praia-like">
+            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Terreno na Praia-like">
                Terreno na Praia
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Triplex-like">
+            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Triplex-like">
                Triplex
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
@@ -419,10 +419,10 @@
                <span class="label-featured label label-success">Destaque</span>
                <div class="label-wrap label-right">
                   <span class="label-status label-status-180 label label-default">
-                     <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'venda'?'venda': 'locacao'?>"><?=$key['Status']?></a>
+                     <a href="/<?=pasta?>/Imoveis/<?=$key['Status'] == 'venda'?'venda': 'locacao'?>"><?=$key['Status']?></a>
                   </span>
                </div>
-               <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="hover-effect">
+               <a href="/<?=pasta?>/Imoveis/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="hover-effect">
                   <img src="<?=$key['FotoDestaque']?>" width="385" height="258">                               
                </a>
 

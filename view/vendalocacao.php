@@ -82,7 +82,7 @@
                      <!--end property items-->
                      <hr>
                      <!--start Pagination-->
-                     <div class="pagination-main limitText"  style="max-width: 26ch;" >
+                     <div class="pagination-main limitText"  style="max-width: 25.3ch;" >
                         <form method="post" id="pagination">
                            <input type="num" name="pagina" id="pag" hidden>
                         </form>

@@ -32,7 +32,7 @@
                               <div class="table-cell hidden-sm hidden-xs">
                                  <span class="label-wrap">
                                     <span class="label-status label-status-23 label label-default">
-                                       <a href="/<?=pasta?>/Portfolio/<?=$e['Status'] == 'VENDA'? 'venda': 'locacao'?>">
+                                       <a href="/<?=pasta?>/Imoveis/<?=$e['Status'] == 'VENDA'? 'venda': 'locacao'?>">
                                           <?=$e['Status']?>
                                        </a>
                                     </span>                
@@ -56,27 +56,27 @@
                            <ul class="actions">
                               <li class="share-btn">
                                  <div class="share_tooltip tooltip_left fade">
-                                    <a href="http://www.facebook.com/sharer.php?u=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                    <a href="http://www.facebook.com/sharer.php?u=http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                                       <i class="fab fa-facebook"></i>
                                     </a>
 
-                                    <a href="https://twitter.com/intent/tweet?text=<?=$e['TituloSite']?>&url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>" onclick="if(!document.getElementById('td_social_networks_buttons')){window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;}">
+                                    <a href="https://twitter.com/intent/tweet?text=<?=$e['TituloSite']?>&url=http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>" onclick="if(!document.getElementById('td_social_networks_buttons')){window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;}">
                                       <i class="fab fa-twitter"></i>
                                     </a>
 
-                                    <a href="http://pinterest.com/pin/create/button/?url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>&amp;media=<?=$e['FotoDestaque']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                    <a href="http://pinterest.com/pin/create/button/?url=http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>&amp;media=<?=$e['FotoDestaque']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                                       <i class="fab fa-pinterest"></i>
                                     </a>
 
-                                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>&title=<?=$e['TituloSite']?>&source=/<?=pasta?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                    <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>&title=<?=$e['TituloSite']?>&source=/<?=pasta?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                                       <i class="fab fa-linkedin"></i>
                                     </a>
 
-                                    <a href="http://plus.google.com/share?url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                    <a href="http://plus.google.com/share?url=http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                                       <i class="fab fa-google-plus"></i>
                                     </a>
 
-                                    <a href="mailto:example.com?subject=<?=$e['TituloSite']?>&body=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>">
+                                    <a href="mailto:example.com?subject=<?=$e['TituloSite']?>&body=http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>">
                                       <i class="fa fa-envelope"></i>
                                     </a>
                                  </div>
@@ -170,27 +170,27 @@
                               <ul class="actions">
                                  <li class="share-btn">
                                     <div class="share_tooltip tooltip_left fade">
-                                       <a href="http://www.facebook.com/sharer.php?u=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                       <a href="http://www.facebook.com/sharer.php?u=http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                                          <i class="fab fa-facebook"></i>
                                        </a>
 
-                                       <a href="https://twitter.com/intent/tweet?text=<?=$e['TituloSite']?>&url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>" onclick="if(!document.getElementById('td_social_networks_buttons')){window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;}">
+                                       <a href="https://twitter.com/intent/tweet?text=<?=$e['TituloSite']?>&url=http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>" onclick="if(!document.getElementById('td_social_networks_buttons')){window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;}">
                                          <i class="fab fa-twitter"></i>
                                        </a>
 
-                                       <a href="http://pinterest.com/pin/create/button/?url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>&amp;media=<?=$e['FotoDestaque']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                       <a href="http://pinterest.com/pin/create/button/?url=http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>&amp;media=<?=$e['FotoDestaque']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                                          <i class="fab fa-pinterest"></i>
                                        </a>
 
-                                       <a href="http://www.linkedin.com/shareArticle?mini=true&url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>&title=<?=$e['TituloSite']?>&source=/<?=pasta?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                       <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>&title=<?=$e['TituloSite']?>&source=/<?=pasta?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                                          <i class="fab fa-linkedin"></i>
                                        </a>
 
-                                       <a href="http://plus.google.com/share?url=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+                                       <a href="http://plus.google.com/share?url=http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
                                          <i class="fab fa-google-plus"></i>
                                        </a>
 
-                                       <a href="mailto:example.com?subject=<?=$e['TituloSite']?>&body=/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>">
+                                       <a href="mailto:example.com?subject=<?=$e['TituloSite']?>&body=http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>">
                                          <i class="fa fa-envelope"></i>
                                        </a>
                                     </div>
@@ -241,10 +241,10 @@
                                        </div>
                                     </div>
                                     <ul class="list-three-col">
-                                       <li class="detail-city"><strong>Cidade:</strong> <?=$e['Cidade'] ?> </li>
-                                       <li class="detail-state"><strong>Estado:</strong> <?=$e['UF'] ?> </li>
-                                       <li class="detail-area"><strong>Bairro:</strong>  <?=$e['Bairro'] ?></li>
-                                       <li class="detail-country"><strong>País:</strong> <?=$e['Pais'] ?> </li>
+                                       <li class="detail-city"><strong>Cidade:</strong> <?=!empty($e['Cidade'])?$e['Cidade']: 'Não informado' ?> </li>
+                                       <li class="detail-state"><strong>Estado:</strong> <?=!empty($e['UF'])?$e['UF']:'Não informado' ?> </li>
+                                       <li class="detail-area"><strong>Bairro:</strong>  <?=!empty($e['Bairro'])?$e['Bairro']:'Não informado' ?></li>
+                                       <li class="detail-country"><strong>País:</strong> <?=!empty($e['Pais'])?$e['Pais']:'Não informado' ?></li>
                                     </ul>
                                  </div>
                               </div>
@@ -263,7 +263,7 @@
                                           </li>
 
                                           <li>
-                                            <?=$e['ValorLocacao'] > 0?"Aluguel - R$".$e['ValorLocacao']."/Por Mês" : '' ?>
+                                            <?=$e['ValorLocacao'] > 0?"Aluguel - R$".$e['ValorLocacao']: '' ?>
                                           </li>
 
                                           <li><strong>Tamanho do imóvel:</strong> 
@@ -307,7 +307,7 @@
                                              $pesquisa = $imoveis->formatStr($pesquisa, ' ','','' );
                                     ?>
 
-                                            <li><a href="/<?=pasta?>/Result/index?&<?=$pesquisa?>=Sim"><?=$key?></a></li>
+                                            <li><a href="/<?=pasta?>/Resultado/pesquisa?&<?=$pesquisa?>=Sim"><?=$key?></a></li>
 
                                     <?php } } ?>
 
@@ -371,10 +371,10 @@
                                        </div>
                                     </div>
 
-                                    <input name="target_email" value="vitorkortez@gmail.com" type="hidden">
+                                    <input name="target_email" value="<?=$e['Corretor'][$e['CodigoCorretor']]['Email']?>" type="hidden">
                                     <input name="agent_contact_form_ajax" value="0b00f3127d" type="hidden">
-                                    <input name="property_permalink" value="/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" type="hidden">
-                                    <input name="property_title" value="<?=$e['TituloSite'].'-'.$e['Codigo']?>" type="hidden">
+                                    <input name="property_permalink" value="http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" type="hidden">
+                                    <input name="property_title" value="<?=$e['Codigo'].'/'.$e['TituloSite']?>" type="hidden">
                                     <input name="action" value="houzez_agent_send_message" type="hidden">
 
                                     <div class="form-group">
