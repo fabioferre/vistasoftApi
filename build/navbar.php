@@ -117,9 +117,9 @@
         </div>
         <!--end mobile nav-->
         <div class="header-logo logo-mobile">
-           <a href="http://novoterralima.com/">
-           <img src="http://novoterralima.com/wp-content/uploads/2018/04/logo_site.png" alt="Mobile logo">
-           </a>        
+            <a href="http://www.terralimaimoveis.com.br">
+              <img src="/<?=pasta?>/assets/img/logo_site.png" alt="logo">
+            </a> 
         </div>
         <div class="header-user">
            <ul class="account-action">

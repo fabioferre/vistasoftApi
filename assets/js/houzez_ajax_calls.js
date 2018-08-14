@@ -600,48 +600,48 @@ jQuery(document).ready(function ($) {
 
                 }); // end .compare-property
             }
-            houzez_compare_listing();
+            // houzez_compare_listing();
 
             // Delete single item from basket
-            $(document).on('click', '#compare-properties-basket .compare-property-remove', function (e) {
-                e.preventDefault();
+            // $(document).on('click', '#compare-properties-basket .compare-property-remove', function (e) {
+            //     e.preventDefault();
 
-                var property_id = jQuery(this).parent().attr('property-id');
+            //     var property_id = jQuery(this).parent().attr('property-id');
 
-                $(this).parent().block({
-                    message: '<i class="' + process_loader_spinner + '"></i>', css: {
-                        border: 'none',
-                        backgroundColor: 'none',
-                        fontSize: '16px',
-                    },
-                });
+            //     $(this).parent().block({
+            //         message: '<i class="' + process_loader_spinner + '"></i>', css: {
+            //             border: 'none',
+            //             backgroundColor: 'none',
+            //             fontSize: '16px',
+            //         },
+            //     });
 
-                var data_ap = {action: 'houzez_compare_add_property', prop_id: property_id};
-                $.post(ajaxurl, data_ap, function (response) {
+            //     var data_ap = {action: 'houzez_compare_add_property', prop_id: property_id};
+            //     $.post(ajaxurl, data_ap, function (response) {
 
-                    var data_ub = {action: 'houzez_compare_update_basket'};
-                    $.post(ajaxurl, data_ub, function (response) {
+            //         var data_ub = {action: 'houzez_compare_update_basket'};
+            //         $.post(ajaxurl, data_ub, function (response) {
 
-                        $('div#compare-properties-basket').replaceWith(response);
-                        compare_panel();
+            //             $('div#compare-properties-basket').replaceWith(response);
+            //             compare_panel();
 
-                    });
+            //         });
 
-                });
+            //     });
 
-                return;
-            }); // End Delete compare
+            //     return;
+            // }); // End Delete compare
 
             // Show / Hide category details
-            jQuery(document).on('click', '.compare-properties-button', function () {
+            // jQuery(document).on('click', '.compare-properties-button', function () {
 
-                if (compare_button_url != "") {
-                    window.location.href = compare_button_url;
-                } else {
-                    alert(compare_page_not_found);
-                }
-                return false;
-            });
+            //     if (compare_button_url != "") {
+            //         window.location.href = compare_button_url;
+            //     } else {
+            //         alert(compare_page_not_found);
+            //     }
+            //     return false;
+            // });
         } // has compare
 
         /*
@@ -1111,29 +1111,29 @@ jQuery(document).ready(function ($) {
 
         var resend_for_approval_perlisting = function( prop_id, currentDiv ) {
 
-            $.ajax({
-                type: 'POST',
-                url: ajaxurl,
-                dataType: 'JSON',
-                data: {
-                    'action' : 'houzez_resend_for_approval_perlisting',
-                    'propid' : prop_id
-                },
-                success: function ( res ) {
+            // $.ajax({
+            //     type: 'POST',
+            //     url: ajaxurl,
+            //     dataType: 'JSON',
+            //     data: {
+            //         'action' : 'houzez_resend_for_approval_perlisting',
+            //         'propid' : prop_id
+            //     },
+            //     success: function ( res ) {
 
-                    if( res.success ) {
-                        currentDiv.parent().empty().append('<span class="label-success label">'+res.msg+'</span>');
-                    } else {
-                        currentDiv.parent().empty().append('<div class="alert alert-danger">'+res.msg+'</div>');
-                    }
+            //         if( res.success ) {
+            //             currentDiv.parent().empty().append('<span class="label-success label">'+res.msg+'</span>');
+            //         } else {
+            //             currentDiv.parent().empty().append('<div class="alert alert-danger">'+res.msg+'</div>');
+            //         }
 
-                },
-                error: function(xhr, status, error) {
-                    var err = eval("(" + xhr.responseText + ")");
-                    console.log(err.Message);
-                }
+            //     },
+            //     error: function(xhr, status, error) {
+            //         var err = eval("(" + xhr.responseText + ")");
+            //         console.log(err.Message);
+            //     }
 
-            });//end ajax
+            // });//end ajax
         }
 
         /*--------------------------------------------------------------------------
@@ -3357,38 +3357,38 @@ jQuery(document).ready(function ($) {
         /*
          * Property Message Notifications
          * -----------------------------*/
-        var houzez_message_notifications = function () {
+        // var houzez_message_notifications = function () {
 
-            $.ajax({
-                url: ajaxurl,
-                data: {
-                    action : 'houzez_chcek_messages_notifications'
-                },
-                method: "POST",
-                dataType: "JSON",
+        //     $.ajax({
+        //         url: ajaxurl,
+        //         data: {
+        //             action : 'houzez_chcek_messages_notifications'
+        //         },
+        //         method: "POST",
+        //         dataType: "JSON",
 
-                beforeSend: function( ) {
-                    // code here...
-                },
-                success: function(response) {
-                    if( response.success ) {
-                        if ( response.notification ) {
-                            $( '.user-alert' ).show();
-                            $( '.msg-alert' ).show();
-                        } else {
-                            $( '.user-alert' ).hide();
-                            $( '.msg-alert' ).hide();
-                        }
-                    }
-                }
-            });
+        //         beforeSend: function( ) {
+        //             // code here...
+        //         },
+        //         success: function(response) {
+        //             if( response.success ) {
+        //                 if ( response.notification ) {
+        //                     $( '.user-alert' ).show();
+        //                     $( '.msg-alert' ).show();
+        //                 } else {
+        //                     $( '.user-alert' ).hide();
+        //                     $( '.msg-alert' ).hide();
+        //                 }
+        //             }
+        //         }
+        //     });
 
-        };
+        // };
 
-        $( document ).ready(function() {
-            houzez_message_notifications();
-            setInterval(function() { houzez_message_notifications(); }, 180000);
-        });
+        // $( document ).ready(function() {
+        //     houzez_message_notifications();
+        //     setInterval(function() { houzez_message_notifications(); }, 180000);
+        // });
 
 
         /*
