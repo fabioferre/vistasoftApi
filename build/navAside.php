@@ -358,7 +358,7 @@
    </div>
 </div>
 
-
+<!-- 
 
 <div id="houzez_agent_search-6" class="widget widget_houzez_agent_search">
    
@@ -416,7 +416,7 @@
       </div>
    </div>
 </div>
-
+ -->
 
 <div id="houzez_featured_properties-5" class="widget widget_houzez_featured_properties">
    <div class="widget-top">

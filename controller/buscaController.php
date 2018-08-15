@@ -10,7 +10,7 @@ namespace controller;
             $params = $imoveis->getParams();
             $f = $imoveis->FormatFilter($params);
 
-            $params = $imoveis->formatStr($params, '%2C','', ','); 
+            // $params = $imoveis->formatStr($params, '%2C','', ','); 
             $params = $imoveis->formatStr($params, 'R%24+','', 'R$');//valores formatado para exibição
             $params = $imoveis->formatStr($params, '%20','', ' '); 
             // print_r($filtros);
