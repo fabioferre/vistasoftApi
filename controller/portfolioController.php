@@ -110,7 +110,7 @@ namespace controller;
         
         public function listar(){
         	$imoveis = new \Classes\Imoveis;
-        	print_r($listagem = $imoveis->setCurl("imoveis/listarConteudo")->fields(['Cidade'])->get());
+        	print_r($listagem = $imoveis->setCurl("imoveis/listarConteudo")->fields(['Finalidade'])->get());
         }
 
 

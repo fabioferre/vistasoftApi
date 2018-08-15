@@ -183,6 +183,22 @@
                         </select>
                      </div>
                   </div>
+
+                  <div class="col-sm-12 col-xs-12">
+                     <div class="form-group">
+                        <select name="Finalidade" class="selectpicker bs-select-hidden" >
+                           <option value="">
+                              Finalidade de imóvel
+                           </option>
+                           <option value="COMERCIAL">Comercial</option>
+                           <option value="RESIDENCIAL">Residencial</option>
+                           <option value="MISTO">Misto</option>
+                           <option value="INVESTIMENTO">Investimento</option>
+                           <option value="PERMUTA">Permuta</option>
+                        </select>
+                     </div>
+                  </div>
+
                   <div class="col-sm-12 col-xs-12">
                      <div class="form-group">
                         <select class="selectpicker bs-select-hidden" id="widget_status" name="Status" >
@@ -267,74 +283,74 @@
    <div class="widget-body">
       <ul class="children">
          <li>
-            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Apartamento-like">
+            <a href="/<?=pasta?>/Result/index?&Categoria=Apartamento">
             Apartamento
             
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Casa-like">
+            <a href="/<?=pasta?>/Result/index?&Categoria=Casa">
                Casa
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Casa de Praia-like">
+            <a href="/<?=pasta?>/Result/index?&Categoria=Casa de Praia">
                Casa na Praia
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Casa no Campo-like">
+            <a href="/<?=pasta?>/Result/index?&Categoria=Casa no Campo">
                Casa no Campo
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Cobertura-like">
+            <a href="/<?=pasta?>/Result/index?&Categoria=Cobertura">
                Cobertura
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Conjunto-like">
+            <a href="/<?=pasta?>/Result/index?&Categoria=Conjunto">
                Conjunto
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Duplex-like">
+            <a href="/<?=pasta?>/Result/index?&Categoria=Duplex">
                Duplex
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Fazenda-like">
+            <a href="/<?=pasta?>/Result/index?&Categoria=Fazenda">
                Fazenda
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Loft-like">
+            <a href="/<?=pasta?>/Result/index?&Categoria=Loft">
                Loft
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Terreno-like">
+            <a href="/<?=pasta?>/Result/index?&Categoria=Terreno">
                Terreno
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Terreno na Praia-like">
+            <a href="/<?=pasta?>/Result/index?&Categoria=Terreno na Praia">
                Terreno na Praia
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>
 
          <li>
-            <a href="/<?=pasta?>/Resultado/pesquisa?&Categoria=Triplex-like">
+            <a href="/<?=pasta?>/Result/index?&Categoria=Triplex">
                Triplex
             </a><!-- <span class="cat-count">(0)</span>-->
          </li>

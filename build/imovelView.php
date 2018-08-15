@@ -107,7 +107,7 @@ if(isset($key['Codigo'])){
             </div>
 
             <div class="info-row phone text-right">
-               <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+               <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary" style="background-color:#727272">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
             </div>
          </div>
 
@@ -124,7 +124,7 @@ if(isset($key['Codigo'])){
             </div>
             <div class="cell">
                <div class="phone">
-                  <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                  <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary"  style="background-color:#727272"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
                </div>
             </div>
          </div>

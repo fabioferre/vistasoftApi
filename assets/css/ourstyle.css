@@ -1,5 +1,5 @@
 /*form cadastre seu imovel*/
- .custom-select{
+.custom-select{
     height: 35px;
     overflow: hidden;
     background: url(../img/caret.png) no-repeat right #fff; /* novo ícone para o <select> */
@@ -9,7 +9,7 @@
     font-weight: 500;
  }
 
- .custom-select select { /* <select> */
+.custom-select select { /* <select> */
     background: transparent; /* importante para exibir o novo ícone */
      width: 115%;
      padding: 5px;
@@ -20,7 +20,6 @@
      height: 34px;
      -webkit-appearance: none;
 }  
-
 
 .btn-salva{
     background-color: #d89265; 
@@ -79,12 +78,19 @@
 .limitImg{
     height: 170px;
 }
+
 .indicePesquisa{
     background: white;
     color: #000;
     font-weight: 400;
     padding-right: 83px;
 }
+
+.tab-pane #detail .alert .list-two-col strong{
+    color: #816665;
+}
+
+
 .advance-search-header, 
 .advanced-search-mobile, 
 .advanced-search-mobile .single-search .form-control,

@@ -16,6 +16,7 @@
          require_once('build/navbar.php');
          include 'build/login.php';
       ?>
+
       <div id="section-body" class="">
        
          <!--start detail top-->
@@ -95,7 +96,7 @@
                               <?=$e['ValorVenda'] > 0?"R$".$e['ValorVenda'] : '' ?>
 
                               <span class="item-sub-price">
-                                <?=$e['ValorLocacao'] > 0?"R$".$e['ValorLocacao']."/Por Mês" : '' ?>
+                                <?=$e['ValorLocacao'] > 0?"R$".$e['ValorLocacao']: '' ?>
                               </span> 
                             </span>
 
@@ -311,7 +312,7 @@
                                              $pesquisa = $imoveis->formatStr($pesquisa, ' ','','' );
                                     ?>
 
-                                            <li><a href="/<?=pasta?>/Resultado/pesquisa?&<?=$pesquisa?>=Sim"><?=$key?></a></li>
+                                            <li><a href="/<?=pasta?>/Result/index?&<?=$pesquisa?>=Sim"><?=$key?></a></li>
 
                                     <?php } } ?>
 

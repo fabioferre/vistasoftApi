@@ -85,10 +85,9 @@
 <script type="text/javascript">
    /* <![CDATA[ */
    var HOUZEZ_ajaxcalls_vars = {
-      "admin_url":"http:\/\/novoterralima.com\/wp-admin\/",
       "houzez_rtl":"no",
       "redirect_type":"same_page",
-      "login_redirect":"http:\/\/novoterralima.com\/status\/venda-e-locacao\/",
+      "login_redirect":"http:\/\/www.terralima.com.br\/status\/venda-e-locacao\/",
       "login_loading":"Sending user info, please wait...",
       "direct_pay_text":"Processing, Please wait...",
       "user_id":"0",
@@ -124,7 +123,7 @@
       "not_found":"We didn't find any results",
       "for_rent":"locacao","for_rent_price_range":"locacao",
       "currency_symbol":"R$ ",
-      "advanced_search_widget_min_price":"100",
+      "advanced_search_widget_min_price":"5000",
       "advanced_search_widget_max_price":"200000000",
       "advanced_search_min_price_range_for_rent":"5000",
       "advanced_search_max_price_range_for_rent":"300000",

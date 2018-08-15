@@ -88,6 +88,8 @@
                                  <?=!empty($params['Categoria']) ? $params['Categoria']. ', ': ''?>
 
                                  <?=!empty($params['Status']) ?  $params['Status'].', ' : ''?>
+
+                                 <?=!empty($params['Finalidade']) ?  $params['Finalidade'].', ' : ''?>
                                  
                                  <?=!empty($f['EmDestaque']) ?  'Destaques, ' : ''?>
 
