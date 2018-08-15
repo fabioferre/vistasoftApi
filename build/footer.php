@@ -182,7 +182,7 @@
       "direct_payment_details":"",
       "measurement_unit":"m\u00b2",
       "header_map_selected_city":"",
-      "thousands_separator":",",
+      "thousands_separator":".",
       "current_tempalte":"",
       "monthly_payment":"Monthly Payment",
       "weekly_payment":"Weekly Payment",
