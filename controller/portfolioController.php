@@ -110,7 +110,10 @@ namespace controller;
         
         public function listar(){
         	$imoveis = new \Classes\Imoveis;
-        	print_r($listagem = $imoveis->setCurl("imoveis/listarConteudo")->fields(['Finalidade'])->get());
+            echo "<pre>";
+        	print_r($listagem = $imoveis->get());
+            echo "</pre>";
+
         }
 
 
@@ -124,7 +127,7 @@ namespace controller;
 
         public function setImovel (){
         $imoveis = new \Classes\Imoveis;
-        print_r($_POST);
+        print_r(json_encode($_POST) );
         $dados = $imoveis->setCurl("imoveis/detalhes")->set(
             'cadastro={"fields":
                             {

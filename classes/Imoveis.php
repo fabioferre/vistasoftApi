@@ -39,14 +39,6 @@ class Imoveis extends App
         return count($retorno['Foto']); ;
     }
 
-    public function countType($categoria){
-        $filter = array('Categoria'=>$categoria);
-        $retorno = $this
-        ->filter($filter)
-        ->get();
-        return $retorno['total'];
-    }
-
 
     public function FormatFilter($params){ //prepara valor da busca para filter
         

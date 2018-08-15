@@ -90,6 +90,12 @@
     color: #816665;
 }
 
+.tab-pane #detail .alert {
+    border: 1px solid #bdbfbf;
+}
+
+
+
 
 .advance-search-header, 
 .advanced-search-mobile, 
