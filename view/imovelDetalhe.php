@@ -324,24 +324,25 @@
                         </div>
                         <!--end detail content tabber-->
 
-
+                        <?php if (isset($sml)) { ?>
                         <div class="property-similer">
                            <div class="detail-title">
                               <h2 class="title-left">Propriedades similares</h2>
                            </div>
                            <div class="property-listing grid-view">
                               <div class="row">
-                                 <?php 
+                                <?php 
+                              
+                                    foreach ($sml as $key) { 
+                                        include 'build/imovelView.php'; 
+                                    }
 
-                                   foreach ($sml as $key) { 
-                                     include 'build/imovelView.php'; 
-                                   }
-                                   
-                                 ?>
+                                ?>
                               </div>
                            </div>
                            <hr>
                         </div>
+                        <?php } ?>
 
                      </div>
                   </div>

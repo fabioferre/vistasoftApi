@@ -46,15 +46,17 @@ class Imoveis extends App
         $params = $this->formatStr($params, '+m%C2%B2','',''); //tirando a string de m2 
         $params = $this->formatStr($params, '%20','',' '); //tirando espaços para filtro
         
-        if (isset($params['Status'])) {
+        if (isset($params['Status']) ) {
+
             if ($params['Status'] == 'ALUGUEL') {
-                $params['ValorLocacao'] = array($param['min-price'], $params['max-price']);
+                $params['ValorLocacao'] = array($params['min-price'], $params['max-price']);
             }elseif ($params['Status'] == 'destaque') {
                 unset($params['Status']);
                 $params['EmDestaque'] = 'sim';
             }
+
         }else{
-            $params['ValorVenda'] = array($params['min-price'], $params['max-price']);
+            $params['ValorVenda'] =  isset($params['min-price'])? array($params['min-price'], $params['max-price']) : '';
         }
     
 
@@ -103,7 +105,7 @@ class Imoveis extends App
     public function formataValor($var, $valor){
         if (!empty($var)) {
            if ($var >= $valor) {
-                $var = number_format($var,0,',',',');
+                $var = number_format($var,0,'.','.');
             }
         }
         return $var;
