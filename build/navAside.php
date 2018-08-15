@@ -276,87 +276,7 @@
    </div>
 </div>
 
-<div id="houzez_propert" class="widget widget-categories">
-   <div class="widget-top">
-      <h3 class="widget-title">Busca Rápida</h3>
-   </div>
-   <div class="widget-body">
-      <ul class="children">
-         <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Apartamento">
-            Apartamento
-            
-            </a><!-- <span class="cat-count">(0)</span>-->
-         </li>
 
-         <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Casa">
-               Casa
-            </a><!-- <span class="cat-count">(0)</span>-->
-         </li>
-
-         <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Casa de Praia">
-               Casa na Praia
-            </a><!-- <span class="cat-count">(0)</span>-->
-         </li>
-
-         <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Casa no Campo">
-               Casa no Campo
-            </a><!-- <span class="cat-count">(0)</span>-->
-         </li>
-
-         <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Cobertura">
-               Cobertura
-            </a><!-- <span class="cat-count">(0)</span>-->
-         </li>
-
-         <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Conjunto">
-               Conjunto
-            </a><!-- <span class="cat-count">(0)</span>-->
-         </li>
-
-         <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Duplex">
-               Duplex
-            </a><!-- <span class="cat-count">(0)</span>-->
-         </li>
-
-         <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Fazenda">
-               Fazenda
-            </a><!-- <span class="cat-count">(0)</span>-->
-         </li>
-
-         <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Loft">
-               Loft
-            </a><!-- <span class="cat-count">(0)</span>-->
-         </li>
-
-         <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Terreno">
-               Terreno
-            </a><!-- <span class="cat-count">(0)</span>-->
-         </li>
-
-         <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Terreno na Praia">
-               Terreno na Praia
-            </a><!-- <span class="cat-count">(0)</span>-->
-         </li>
-
-         <li>
-            <a href="/<?=pasta?>/Result/index?&Categoria=Triplex">
-               Triplex
-            </a><!-- <span class="cat-count">(0)</span>-->
-         </li>
-      </ul>
-   </div>
-</div>
 
 <!-- 
 
@@ -472,6 +392,90 @@
       <?php } } ?>
    </div>
 </div>
+
+
+<div id="houzez_propert" class="widget widget-categories">
+   <div class="widget-top">
+      <h3 class="widget-title">Busca Rápida</h3>
+   </div>
+   <div class="widget-body">
+      <ul class="children">
+         <li>
+            <a href="/<?=pasta?>/Result/index?&Categoria=Apartamento">
+            Apartamento
+            
+            </a><!-- <span class="cat-count">(0)</span>-->
+         </li>
+
+         <li>
+            <a href="/<?=pasta?>/Result/index?&Categoria=Casa">
+               Casa
+            </a><!-- <span class="cat-count">(0)</span>-->
+         </li>
+
+         <li>
+            <a href="/<?=pasta?>/Result/index?&Categoria=Casa de Praia">
+               Casa na Praia
+            </a><!-- <span class="cat-count">(0)</span>-->
+         </li>
+
+         <li>
+            <a href="/<?=pasta?>/Result/index?&Categoria=Casa no Campo">
+               Casa no Campo
+            </a><!-- <span class="cat-count">(0)</span>-->
+         </li>
+
+         <li>
+            <a href="/<?=pasta?>/Result/index?&Categoria=Cobertura">
+               Cobertura
+            </a><!-- <span class="cat-count">(0)</span>-->
+         </li>
+
+         <li>
+            <a href="/<?=pasta?>/Result/index?&Categoria=Conjunto">
+               Conjunto
+            </a><!-- <span class="cat-count">(0)</span>-->
+         </li>
+
+         <li>
+            <a href="/<?=pasta?>/Result/index?&Categoria=Duplex">
+               Duplex
+            </a><!-- <span class="cat-count">(0)</span>-->
+         </li>
+
+         <li>
+            <a href="/<?=pasta?>/Result/index?&Categoria=Fazenda">
+               Fazenda
+            </a><!-- <span class="cat-count">(0)</span>-->
+         </li>
+
+         <li>
+            <a href="/<?=pasta?>/Result/index?&Categoria=Loft">
+               Loft
+            </a><!-- <span class="cat-count">(0)</span>-->
+         </li>
+
+         <li>
+            <a href="/<?=pasta?>/Result/index?&Categoria=Terreno">
+               Terreno
+            </a><!-- <span class="cat-count">(0)</span>-->
+         </li>
+
+         <li>
+            <a href="/<?=pasta?>/Result/index?&Categoria=Terreno na Praia">
+               Terreno na Praia
+            </a><!-- <span class="cat-count">(0)</span>-->
+         </li>
+
+         <li>
+            <a href="/<?=pasta?>/Result/index?&Categoria=Triplex">
+               Triplex
+            </a><!-- <span class="cat-count">(0)</span>-->
+         </li>
+      </ul>
+   </div>
+</div>
+
 
 <div id="houzez_contact-4" class="widget widget-contact">
    <div class="widget-top">
