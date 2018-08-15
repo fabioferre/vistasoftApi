@@ -42,17 +42,21 @@ class Imoveis extends App
 
     public function FormatFilter($params){ //prepara valor da busca para filter
         
-        $params = $this->formatStr($params, '%2C','R%24+', '');
-        $params = $this->formatStr($params, '+m%C2%B2','','');
-        $params = $this->formatStr($params, '%20','',' ');
+        $params = $this->formatStr($params, '.','R%24+', ''); //tirando sifrão e os pontos para busca
+        $params = $this->formatStr($params, '+m%C2%B2','',''); //tirando a string de m2 
+        $params = $this->formatStr($params, '%20','',' '); //tirando espaços para filtro
         
-        if (isset($params['Status']) ) {
+        if (isset($params['Status'])) {
             if ($params['Status'] == 'ALUGUEL') {
                 $params['ValorLocacao'] = array($param['min-price'], $params['max-price']);
-            }else{
-                $params['ValorVenda'] = array($params['min-price'], $params['max-price']);
+            }elseif ($params['Status'] == 'destaque') {
+                unset($params['Status']);
+                $params['EmDestaque'] = 'sim';
             }
+        }else{
+            $params['ValorVenda'] = array($params['min-price'], $params['max-price']);
         }
+    
 
         if (isset($params['min-area'])) {
             if ($params['min-area'] > 10 || $params['max-area'] < 6000 ) {
