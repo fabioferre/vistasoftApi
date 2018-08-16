@@ -33,9 +33,9 @@ if(isset($key['Codigo'])){
                </a>
                
                <ul class="actions">
-                  <li>
+                <!--   <li>
                      <span class="add_fav" data-placement="top" data-toggle="tooltip" data-original-title="Favorito" data-propid="1643"><i class="fa fa-heart"></i></span>
-                  </li>
+                  </li> -->
                   <li>
                      <span data-toggle="tooltip" data-placement="top" title="" data-original-title="<?=$imoveis->countPhoto($key['Codigo']);?>">
                      <i class="fa fa-camera"></i>

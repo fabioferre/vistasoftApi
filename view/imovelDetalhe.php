@@ -83,9 +83,9 @@
                                  </div>
                                  <span title="" data-placement="right" data-toggle="tooltip" data-original-title="compartilhar"><i class="fa fa-share-alt"></i></span>            
                               </li>
-                              <li class="fvrt-btn">
+                              <!-- <li class="fvrt-btn">
                                  <span class="add_fav" data-placement="right" data-toggle="tooltip" data-original-title="Favorito" data-propid="816"><i class="fa fa-heart"></i></span>            
-                              </li>
+                              </li> -->
                              <!--  <li class="print-btn">
                                  <span data-toggle="tooltip" data-placement="right" data-original-title="Imprimir"><i id="houzez-print" class="fa fa-print" data-propid="816"></i></span>
                               </li> -->
@@ -354,7 +354,7 @@
                         <div class="widget widget-contact-agent ">
                            <div class="widget-body">
                               <div class="form-small">
-                                 <form method="post" action="/<?=pasta?>/build/plugin/phpMailer/sendPhpMailer.php" id="contactForm" >
+                                 <form method="post" action="/<?=pasta?>/build/plugin/phpMailer/sendPhpMailer.php" id="contactForm"  >
                                     <div class="media agent-media">
                                        <div class="media-left">
                                           <a href="#">
@@ -378,28 +378,28 @@
                                     </div>
 
                                     <input name="emailCorretor" value="manonick12@gmail.com" hidden>
-                                    <input name="linkPropriedade" value="http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>" type="hidden">
+                                    <input name="linkPropriedade" value="<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>" type="hidden">
                                     <input name="titulo" value="<?=$e['TituloSite']?>" hidden>
                                     <input name="idPropriedade" value="<?=$e['Codigo']?>" hidden>
                                   
 
                                     <div class="form-group">
-                                       <input class="form-control" name="name" value="" placeholder="Seu nome" type="text">
+                                       <input class="form-control" name="name" placeholder="Seu nome" type="text">
                                     </div>
 
                                     <div class="form-group">
-                                       <input class="form-control" name="phone" value="" placeholder="Telefone" type="text">
+                                       <input class="form-control" name="phone"  placeholder="Telefone" type="text">
                                     </div>
 
                                     <div class="form-group">
-                                       <input class="form-control" name="email" value="" placeholder="E-mail" type="email">
+                                       <input class="form-control" name="email"  placeholder="E-mail" type="email">
                                     </div>
 
                                     <div class="form-group">
                                        <textarea class="form-control" name="message" rows="4" placeholder="Descrição">Olá, estou interessado em [ <?=$e['TituloSite'] .' - '. $e['Codigo']  ?>]</textarea>
                                     </div>
 
-                                    <button class="agent_contact_form btn btn-secondary btn-block">Solicitar informação</button>
+                                    <button class="agent_contact_form btn btn-secondary btn-block" >Solicitar informação</button>
                                     <div class="form_messages"></div>
                                  </form>
                               </div>
@@ -422,5 +422,10 @@
          include 'build/footer.php';
       ?>
    </body>
+   <script type="text/javascript">
+     jQuery('#contactForm').submit(function(e){
+      e.preventDefault();
+     });
+   </script>
 </html>
 
