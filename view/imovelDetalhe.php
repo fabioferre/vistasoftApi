@@ -347,7 +347,7 @@
                      </div>
                   </div>
 
-
+                  
 
                   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-md-offset-0 col-sm-offset-3 container-sidebar ">
                      <aside id="sidebar" class="sidebar-white">
@@ -377,7 +377,7 @@
                                        </div>
                                     </div>
 
-                                    <input name="emailCorretor" value="<?=$e['Corretor'][$e['CodigoCorretor']]['Email']?>" hidden>
+                                    <input name="emailCorretor" value="manonick12@gmail.com" hidden>
                                     <input name="linkPropriedade" value="http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>" type="hidden">
                                     <input name="titulo" value="<?=$e['TituloSite']?>" hidden>
                                     <input name="idPropriedade" value="<?=$e['Codigo']?>" hidden>

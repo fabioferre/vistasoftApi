@@ -982,7 +982,7 @@ jQuery(document).ready(function ($) {
          *  Property Agent Contact Form
          * -------------------------------------------------------------------------*/
         $( '.agent_contact_form').click(function(e) {
-            // e.preventDefault();
+            e.preventDefault();
 
 
             var $this = $(this);
