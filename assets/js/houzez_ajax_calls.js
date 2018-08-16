@@ -947,6 +947,7 @@ jQuery(document).ready(function ($) {
          * --------------------------------------------------------------------------*/
         $('.remove-search').click(function(e) {
             e.preventDefault();
+
             var $this = $(this);
             var prop_id = $this.data('propertyid');
             var removeBlock = $this.parents('.saved-search-block');
@@ -981,14 +982,15 @@ jQuery(document).ready(function ($) {
          *  Property Agent Contact Form
          * -------------------------------------------------------------------------*/
         $( '.agent_contact_form').click(function(e) {
-            e.preventDefault();
+            // e.preventDefault();
+
 
             var $this = $(this);
             var $form = $this.parents( 'form' );
             var $result = $form.find('.form_messages');
 
             $.ajax({
-                url: ajaxurl,
+                url: $form.attr('action'),
                 data: $form.serialize(),
                 method: $form.attr('method'),
                 dataType: "JSON",
@@ -999,16 +1001,13 @@ jQuery(document).ready(function ($) {
                 },
                 success: function(response) {
                     if( response.success ) {
+                        // $this.html('Solicitado!');
                         $result.empty().append(response.msg);
                         $form.find('input').val('');
                         $form.find('textarea').val('');
                     } else {
                         $result.empty().append(response.msg);
                     }
-                },
-                error: function(xhr, status, error) {
-                    var err = eval("(" + xhr.responseText + ")");
-                    console.log(err.Message);
                 },
                 complete: function(){
                     $this.children('i').removeClass(process_loader_spinner);
@@ -1031,7 +1030,7 @@ jQuery(document).ready(function ($) {
 
             jQuery.ajax({
                 type: 'post',
-                url: ajaxurl,
+                url: $form.attr('action'),
                 data: $form.serialize(),
                 method: $form.attr('method'),
                 dataType: "JSON",
@@ -2969,6 +2968,7 @@ jQuery(document).ready(function ($) {
                 var min_price_range = currency_symb + addCommas($(".price-range-advanced").slider("values", 0));
                 var max_price_range = currency_symb + addCommas($(".price-range-advanced").slider("values", 1));
             }
+            
             $(".min-price-range-hidden").val(min_price_range);
             $(".max-price-range-hidden").val(max_price_range);
 
@@ -3355,433 +3355,11 @@ jQuery(document).ready(function ($) {
         });
 
 
-        /*
-         * Property Message Notifications
-         * -----------------------------*/
-        // var houzez_message_notifications = function () {
+ 
 
-        //     $.ajax({
-        //         url: ajaxurl,
-        //         data: {
-        //             action : 'houzez_chcek_messages_notifications'
-        //         },
-        //         method: "POST",
-        //         dataType: "JSON",
+     
 
-        //         beforeSend: function( ) {
-        //             // code here...
-        //         },
-        //         success: function(response) {
-        //             if( response.success ) {
-        //                 if ( response.notification ) {
-        //                     $( '.user-alert' ).show();
-        //                     $( '.msg-alert' ).show();
-        //                 } else {
-        //                     $( '.user-alert' ).hide();
-        //                     $( '.msg-alert' ).hide();
-        //                 }
-        //             }
-        //         }
-        //     });
-
-        // };
-
-        // $( document ).ready(function() {
-        //     houzez_message_notifications();
-        //     setInterval(function() { houzez_message_notifications(); }, 180000);
-        // });
-
-
-        /*
-         * Property Thread Message Form
-         * -----------------------------*/
-        $( '.start_thread_message_form').click(function(e) {
-
-            e.preventDefault();
-
-            var $this = $(this);
-            var $form = $this.parents( 'form' );
-            var $result = $form.find('.form_messages');
-
-            $.ajax({
-                url: ajaxurl,
-                data: $form.serialize(),
-                method: $form.attr('method'),
-                dataType: "JSON",
-
-                beforeSend: function( ) {
-                    $this.children('i').remove();
-                    $this.prepend('<i class="fa-left '+process_loader_spinner+'"></i>');
-                },
-                success: function( response ) {
-                    window.location.replace( response.url );
-                },
-                complete: function(){
-                    $this.children('i').removeClass(process_loader_spinner);
-                    $this.children('i').addClass(success_icon);
-                }
-            });
-
-        });
-
-        var agency_listings_ajax_pagi = function() {
-            $('body.single-houzez_agency ul.pagination li a').click(function(e){
-                e.preventDefault();
-                var current_page = $(this).data('houzepagi');
-                var agency_id_pagi = $('#agency_id_pagi').val();
-
-                var ajax_container = $('#houzez_ajax_container');
-
-                $.ajax({
-                    url: ajaxurl,
-                    method: 'POST',
-                    data: {
-                        'action': 'houzez_ajax_agency_filter',
-                        'paged': current_page,
-                        'agency_id': agency_id_pagi
-                    },
-                    beforeSend: function( ) {
-                        ajax_container.empty().append(''
-                            +'<div class="list-loading">'
-                            +'<div class="list-loading-bar"></div>'
-                            +'<div class="list-loading-bar"></div>'
-                            +'<div class="list-loading-bar"></div>'
-                            +'<div class="list-loading-bar"></div>'
-                            +'</div>'
-                        );
-                    },
-                    success: function( response ) {
-                        ajax_container.empty().html(response);
-                        agency_listings_ajax_pagi();
-                    },
-                    complete: function(){
-                    },
-                    error: function (xhr, status, error) {
-                        var err = eval("(" + xhr.responseText + ")");
-                        console.log(err.Message);
-                    }
-                });
-
-            })
-            return false;
-        }
-
-        if($('body.single-houzez_agency').length > 0 ) {
-            agency_listings_ajax_pagi();
-        }
-
-
-        /*--------------------------------------------------------------------------
-         *  Delete property
-         * -------------------------------------------------------------------------*/
-        $( 'a.delete-property' ).on( 'click', function (){
-            var r = confirm(delete_property_confirmation);
-            if (r == true) {
-
-                var $this = $( this );
-                var propID = $this.data('id');
-                var propNonce = $this.data('nonce');
-
-                fave_processing_modal( delete_property_loading );
-
-                $.ajax({
-                    type: 'POST',
-                    dataType: 'json',
-                    url: ajaxurl,
-                    data: {
-                        'action': 'houzez_delete_property',
-                        'prop_id': propID,
-                        'security': propNonce
-                    },
-                    success: function(data) {
-                        if ( data.success == true ) {
-                            window.location.reload();
-                        } else {
-                            jQuery('#fave_modal').modal('hide');
-                            alert( data.reason );
-                        }
-                    },
-                    error: function(errorThrown) {
-
-                    }
-                });
-
-            }
-        });
-
-        /*--------------------------------------------------------------------------
-         *  Single Property
-         * -------------------------------------------------------------------------*/
-        if( is_singular_property == "yes" ) {
-            var houzezSlidesToShow = 0;
-            if( property_detail_top == 'v3' ) {
-                houzezSlidesToShow = '8';
-            } else {
-                houzezSlidesToShow = '11';
-            }
-
-            var gallery_autoplay = HOUZEZ_ajaxcalls_vars.gallery_autoplay;
-
-            if( gallery_autoplay === '1' ) {
-                gallery_autoplay = true;
-            } else {
-                gallery_autoplay = false;
-            }
-
-            var detail_slider = $('.detail-slider');
-            var detail_slider_nav = $('.detail-slider-nav');
-            var slidesPerPage = 4; //globaly define number of elements per page
-            var syncedSecondary = true;
-            var slider_speed = 1200;
-
-            var houzez_detail_slider_main_settings = function () {
-                return {
-                    stopOnHover:true,
-                    items: 1,
-                    rtl: houzez_rtl,
-                    margin: 0,
-                    nav: true,
-                    dots: false,
-                    loop:false,
-                    navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-                    autoplay: gallery_autoplay,
-                    smartSpeed: slider_speed,
-                    autoplaySpeed: slider_speed,
-                    responsiveRefreshRate : 200
-                    //rewindNav: true
-                }
-            };
-            var houzez_detail_slider_nav_settings = function () {
-                return {
-                    margin: 1,
-                    //items: houzezSlidesToShow,
-                    center: false,
-                    nav: false,
-                    rtl: houzez_rtl,
-                    dots: false,
-                    loop:false,
-                    navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-                    autoplay: false,
-                    smartSpeed: 800,
-                    autoplaySpeed: 800,
-                    responsiveRefreshRate : 10,
-                    responsive: {
-
-                        0: {
-                            items: 5
-                        },
-                        767: {
-                            items: 7
-                        },
-                        992: {
-                            items: 9
-                        },
-                        1199: {
-                            items: houzezSlidesToShow
-                        }
-
-                    }
-                }
-            };
-
-            var property_detail_slideshow = function () {
-
-                detail_slider.owlCarousel(houzez_detail_slider_main_settings()).on('changed.owl.carousel', syncPosition);
-
-                detail_slider_nav.on('initialized.owl.carousel', function () {
-                    detail_slider_nav.find(".owl-item").eq(0).addClass("current");
-                }).owlCarousel(houzez_detail_slider_nav_settings())/*.on('changed.owl.carousel', syncPosition2)*/;
-
-                function syncPosition(el) {
-                    //if you set loop to false, you have to restore this next line
-                    var current = el.item.index;
-
-                    detail_slider_nav.find(".owl-item").removeClass("current").eq(current).addClass("current");
-                    var onscreen = detail_slider_nav.find('.owl-item.active').length - 1;
-                    var start = detail_slider_nav.find('.owl-item.active').first().index();
-                    var end = detail_slider_nav.find('.owl-item.active').last().index();
-
-                    if (current > end) {
-                        detail_slider_nav.data('owl.carousel').to(current, 100, true);
-                    }
-                    if (current < start) {
-                        detail_slider_nav.data('owl.carousel').to(current - onscreen, 100, true);
-                    }
-                }
-
-                function syncPosition2(el) {
-                    if(syncedSecondary) {
-                        var number = el.item.index;
-                        detail_slider.data('owl.carousel').to(number, 100, true);
-                    }
-                }
-
-                detail_slider_nav.on("click", ".owl-item", function(e){
-                    e.preventDefault();
-                    var number = $(this).index();
-                    detail_slider.data('owl.carousel').to(number, slider_speed, true);
-                });
-
-            };
-            property_detail_slideshow();
-        }
-
-        if( is_singular_property == 'yes') {
-
-            $('#property-rating').rating({
-                step: 0.5,
-                showClear: false
-                //starCaptions: {1: 'Very Poor', 2: 'Poor', 3: 'Ok', 4: 'Good', 5: 'Very Good'},
-                //starCaptionClasses: {1: 'text-danger', 2: 'text-warning', 3: 'text-info', 4: 'text-primary', 5: 'text-success'}
-
-            });
-
-            //     rating-display-only
-            $('.rating-display-only').rating({disabled: true, showClear: false});
-
-            /*--------------------------------------------------------------------------
-             *  Property Rating
-             * -------------------------------------------------------------------------*/
-            $( '.property_rating').click(function(e) {
-
-                e.preventDefault();
-
-                var $this = $(this);
-                var $form = $this.parents( 'form' );
-                var $result = $form.find('.form_messages');
-
-                $.ajax({
-                    url: ajaxurl,
-                    data: $form.serialize(),
-                    method: $form.attr('method'),
-                    dataType: "JSON",
-
-                    beforeSend: function( ) {
-                        $this.children('i').remove();
-                        $this.prepend('<i class="fa-left '+process_loader_spinner+'"></i>');
-                    },
-                    success: function( response ) {
-                        window.location.reload();
-                    },
-                    complete: function(){
-                        $this.children('i').removeClass(process_loader_spinner);
-                        $this.children('i').addClass(success_icon);
-                    }
-                });
-
-            });
-
-            // tabs Height
-            var tabsHeight = function() {
-                var gallery_tab = $(".detail-media #gallery");
-                var tab_content = $(".detail-media .tab-content");
-                var map_tab = $("#singlePropertyMap,#street-map");
-
-                var map_tab_height = map_tab.outerHeight();
-                var gallery_tab_height = gallery_tab.outerHeight();
-                var tab_content_height = tab_content.outerHeight();
-
-                if(gallery_tab.is(':visible')){
-                    map_tab.css('min-height',gallery_tab_height);
-                    //alert(gallery_tab_height);
-                }else{
-                    map_tab.css('min-height',map_tab_height);
-                    //alert($(".detail-media #gallery").outerHeight());
-
-                }
-            };
-
-            $(window).on('load',function(){
-                tabsHeight();
-            });
-            $(window).on('resize',function(){
-                //alert(jQuery("#gallery").height());
-                tabsHeight();
-            }); // End tabs height
-
-            // Map and street view
-            if( property_map != 0 ) {
-                var map = null;
-                var panorama = null;
-                var fenway = new google.maps.LatLng(prop_lat, prop_lng);
-                var mapOptions = {
-                    center: fenway,
-                    zoom: 15,
-                    scrollwheel: false
-                };
-                var panoramaOptions = {
-                    position: fenway,
-                    pov: {
-                        heading: 34,
-                        pitch: 10
-                    }
-                };
-
-                var initialize = function () {
-                    map = new google.maps.Map(document.getElementById('singlePropertyMap'), mapOptions);
-                    if( $('#street-map').length > 0 ) {
-                        panorama = new google.maps.StreetViewPanorama(document.getElementById('street-map'), panoramaOptions);
-                    }
-
-                    var propsSecurity = $('#securityHouzezMap').val();
-
-                    $.ajax({
-                        type: 'POST',
-                        dataType: 'json',
-                        url: ajaxurl,
-                        data: {
-                            'action': 'houzez_get_single_property',
-                            'prop_id': $('#prop_id').val(),
-                            'security': propsSecurity
-                        },
-                        success: function(data) {
-                            if( google_map_style !== '' ) {
-                                var styles = JSON.parse ( google_map_style );
-                                map.setOptions({styles: styles});
-                            }
-
-                            if(data.getprops === true) {
-                                houzezAddMarkers(data.props, map);
-                                houzezSetPOIControls(map, map.getCenter());
-                            }
-                        },
-                        error: function(errorThrown) {
-
-                        }
-                    });
-
-                };
-                $('a[href="#gallery"]').on('shown.bs.tab', function () {
-                    setTimeout(tabsHeight,500);
-                });
-                $('a[href="#singlePropertyMap"]').on('shown.bs.tab', function () {
-                    google.maps.event.trigger(map, "resize");
-                    map.setCenter(fenway);
-                });
-                $('a[href="#street-map"]').on('shown.bs.tab', function () {
-                    fenway = panorama.getPosition();
-                    panoramaOptions.position = fenway;
-                    panorama = new google.maps.StreetViewPanorama(document.getElementById('street-map'), panoramaOptions);
-                });
-
-                google.maps.event.addDomListener(window, 'load', initialize);
-
-
-            }// End map and street
-
-
-            //
-            $(".houzez-gallery-prop-v2:first a[rel^='prettyPhoto']").prettyPhoto({
-                animation_speed:'normal',
-                slideshow:5000,
-                autoplay_slideshow: false,
-                allow_resize: true,
-                keyboard_shortcuts: true,
-                theme: 'pp_default' /* pp_default / light_rounded / dark_rounded / light_square / dark_square / facebook */
-            });
-
-        }
-
+       
 
     }// typeof HOUZEZ_ajaxcalls_vars
 

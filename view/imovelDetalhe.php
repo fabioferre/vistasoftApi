@@ -354,7 +354,7 @@
                         <div class="widget widget-contact-agent ">
                            <div class="widget-body">
                               <div class="form-small">
-                                 <form method="post" action="#">
+                                 <form method="post" action="/<?=pasta?>/build/plugin/phpMailer/sendPhpMailer.php" id="contactForm" >
                                     <div class="media agent-media">
                                        <div class="media-left">
                                           <a href="#">
@@ -377,11 +377,11 @@
                                        </div>
                                     </div>
 
-                                    <input name="target_email" value="<?=$e['Corretor'][$e['CodigoCorretor']]['Email']?>" type="hidden">
-                                    <input name="agent_contact_form_ajax" value="0b00f3127d" type="hidden">
-                                    <input name="property_permalink" value="http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>" type="hidden">
-                                    <input name="property_title" value="<?=$e['Codigo'].'/'.$e['TituloSite']?>" type="hidden">
-                                    <input name="action" value="houzez_agent_send_message" type="hidden">
+                                    <input name="emailCorretor" value="<?=$e['Corretor'][$e['CodigoCorretor']]['Email']?>" hidden>
+                                    <input name="linkPropriedade" value="http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>" type="hidden">
+                                    <input name="titulo" value="<?=$e['TituloSite']?>" hidden>
+                                    <input name="idPropriedade" value="<?=$e['Codigo']?>" hidden>
+                                  
 
                                     <div class="form-group">
                                        <input class="form-control" name="name" value="" placeholder="Seu nome" type="text">

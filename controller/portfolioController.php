@@ -3,14 +3,60 @@
 namespace controller;
 
     class Portfolio{
+        
+        public function index(){ //view de listagem de imoveis com aluguel e venda
+        	$imoveis = new \Classes\Imoveis;
+        	$listagem = $imoveis
+            ->order($_POST)
+            ->paginacao($_POST)
+            ->get();
 
-        public function imovel(){
+            // print_r($_POST);
+            $imoveisdes = new \Classes\Imoveis;
+            $destaques = $imoveisdes->destaques('');
+        	include 'view/vendalocacao.php';
+        }
+
+
+        public function locacao(){ //view de listagem de imoveis com somente aluguel
+        	$imoveis = new \Classes\Imoveis;
+
+            $listagem = $imoveis
+            ->order($_POST)
+            ->filter(['Status'=>'ALUGUEL'])
+            ->paginacao($_POST)
+            ->get();
+
+            $imoveisdes  = new \Classes\Imoveis; //objeto imoveis destaque
+            $destaques = $imoveisdes ->destaques('ALUGUEL');
+
+            // print_r($listagem);
+        	include 'view/locacao.php';
+            
+        }
+
+
+        public function venda(){ //view de listagem de imoveis com somente venda
+        	$imoveis = new \Classes\Imoveis;
+        	$listagem = $imoveis
+            ->order($_POST)
+            ->filter(['Status'=>'VENDA'])
+            ->paginacao($_POST)
+            ->get();
+            
+            $imoveisdes  = new \Classes\Imoveis;
+            $destaques = $imoveisdes->destaques('VENDA');
+
+        	include 'view/venda.php';
+        }
+
+        public function imovel(){ //view de imovel detalhado
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
 
     
             $idImovel = isset($_GET['params'][0])?$_GET['params'][0]:0;
-            $fields = array(
+            $fields = array( //parametros de dados a serem tragos
                 "Codigo",
                 "Status",
                 "TituloSite",
@@ -59,56 +105,30 @@ namespace controller;
 
         }
 
+        public function mailPhp(){
+            $obj = new \Classes\PhpMailer;
+
+            $Post = filter_input_array(INPUT_POST,FILTER_DEFAULT);
+            $result = $obj->sendEmail($Post['email'], $Post['message'], $Post['emailCorretor']  );
+
+            //variaveis locais
+            echo "<pre>";
+            print_r($Post);
+            echo "</pre>";
 
 
-        public function index(){
-        	$imoveis = new \Classes\Imoveis;
-        	$listagem = $imoveis
-            ->order($_POST)
-            ->paginacao($_POST)
-            ->get();
+            //incluir a classe phpMailer
 
-            // print_r($_POST);
-            $imoveisdes = new \Classes\Imoveis;
-            $destaques = $imoveisdes->destaques('');
-        	include 'view/vendalocacao.php';
+
+
+            // $arr['success'] = true;
+            // $arr['err'] = true;
+            // header('Content-type: Application/json');
+            // echo json_encode($arr);
         }
 
 
-        public function locacao(){
-        	$imoveis = new \Classes\Imoveis;
-
-            $listagem = $imoveis
-            ->order($_POST)
-            ->filter(['Status'=>'ALUGUEL'])
-            ->paginacao($_POST)
-            ->get();
-
-            $imoveisdes  = new \Classes\Imoveis; //objeto imoveis destaque
-            $destaques = $imoveisdes ->destaques('ALUGUEL');
-
-            // print_r($listagem);
-        	include 'view/locacao.php';
-            
-        }
-
-
-        public function venda(){
-        	$imoveis = new \Classes\Imoveis;
-        	$listagem = $imoveis
-            ->order($_POST)
-            ->filter(['Status'=>'VENDA'])
-            ->paginacao($_POST)
-            ->get();
-            
-            $imoveisdes  = new \Classes\Imoveis;
-            $destaques = $imoveisdes->destaques('VENDA');
-
-        	include 'view/venda.php';
-        }
-
-        
-        public function listar(){
+        public function listar(){ //listagem de campos disponiveis da api para usu
         	$imoveis = new \Classes\Imoveis;
             echo "<pre>";
         	print_r($listagem = $imoveis->get());
@@ -118,36 +138,34 @@ namespace controller;
 
 
 
-        public function cadastroImovel(){
+        public function cadastroImovel(){ //view de cadastramento de imovel
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
             include 'view/registerImovel.php';
         }
 
+        public function setImovel (){ //setando informações de imovel
+            $imoveis = new \Classes\Imoveis;
+            print_r(json_encode($_POST) );
+            $dados = $imoveis->setCurl("imoveis/detalhes")->set(
+                'cadastro={"fields":
+                                {
+                                "Categoria":"Apartamento",
+                                "Endereco":"'.$_POST["Endereco"].'",
+                                "Numero":"11111",
+                                "Complemento":"9054",
+                                "Bairro":"'.$_POST["Bairro"].'",
+                                "Cidade":"'.$_POST["Cidade"].'",
+                                "UF":"'.$_POST["UF"].'",
+                                "CEP":"04897340",
+                                "Situacao":"Novo"
+                                 }
+                         }')->post();
 
-        public function setImovel (){
-        $imoveis = new \Classes\Imoveis;
-        print_r(json_encode($_POST) );
-        $dados = $imoveis->setCurl("imoveis/detalhes")->set(
-            'cadastro={"fields":
-                            {
-                            "Categoria":"Apartamento",
-                            "Endereco":"'.$_POST["Endereco"].'",
-                            "Numero":"11111",
-                            "Complemento":"9054",
-                            "Bairro":"'.$_POST["Bairro"].'",
-                            "Cidade":"'.$_POST["Cidade"].'",
-                            "UF":"'.$_POST["UF"].'",
-                            "CEP":"04897340",
-                            "Situacao":"Novo"
-                             }
-                     }')->post();
 
-
-        // print_r($imoveis->codigo);
-       
-        // print_r($imoveis);
-
+            // print_r($imoveis->codigo);
+           
+            // print_r($imoveis);
         }
 
   
