@@ -399,7 +399,7 @@
                                        <textarea class="form-control" name="message" rows="4" placeholder="Descrição">Olá, estou interessado em [ <?=$e['TituloSite'] .' - '. $e['Codigo']  ?>]</textarea>
                                     </div>
 
-                                    <button class="agent_contact_form btn btn-secondary btn-block" >Solicitar informação</button>
+                                    <button type="button" class="agent_contact_form btn btn-secondary btn-block" >Solicitar informação</button>
                                     <div class="form_messages"></div>
                                  </form>
                               </div>
@@ -422,10 +422,5 @@
          include 'build/footer.php';
       ?>
    </body>
-   <script type="text/javascript">
-     jQuery('#contactForm').submit(function(e){
-      e.preventDefault();
-     });
-   </script>
 </html>
 

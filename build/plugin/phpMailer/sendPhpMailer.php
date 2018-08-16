@@ -1,7 +1,5 @@
 <?php
     require_once('PHPMailerAutoload.php');
-    $_POST['email'] = 'vitorkortez@gmail.com';
-    $_POST['name'] = 'vitor korte';
 
   	$e = isset($_POST)? $_POST: '';
     $subject = $e['message'] .' - '. date('H:i'). ' - '. date("d/m/Y");
@@ -45,13 +43,13 @@
   	
 
 
-    $erroCampo = isset($e['email'])?'': ' email '; 
-    $erroCampo .= !empty($e['phone'])?'': ' telefone '; 
+    $erroCampo = !empty($e['email'])?'': ' email '; 
     $erroCampo .= !empty($e['name'])?'': 'nome '; 
+    $erroCampo .= !empty($e['phone'])?'': ' telefone '; 
 
     if (!$mail->send()) {
     	$arr['success'] = false;
-    	$arr['msg'] = "Algo deu errado! Confirme os campos {$erroCampo} e tente novamente {$mail->ErrorInfo} ";
+    	$arr['msg'] = "Preencha os campos <b>{$erroCampo}</b> e tente novamente ";//.$mail->ErrorInfo;
     }else{
     	$arr['success'] = true;
     	$arr['msg'] = 'Foi Cachorro';

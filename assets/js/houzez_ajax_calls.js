@@ -982,13 +982,12 @@ jQuery(document).ready(function ($) {
          *  Property Agent Contact Form
          * -------------------------------------------------------------------------*/
         $( '.agent_contact_form').click(function(e) {
-            e.preventDefault();
+            // e.preventDefault();
 
 
             var $this = $(this);
             var $form = $this.parents( 'form' );
             var $result = $form.find('.form_messages');
-
             $.ajax({
                 url: $form.attr('action'),
                 data: $form.serialize(),
