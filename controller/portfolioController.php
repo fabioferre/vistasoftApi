@@ -8,12 +8,15 @@ namespace controller;
         	$imoveis = new \Classes\Imoveis;
         	$listagem = $imoveis
             ->order($_POST)
+            ->filter(['ExibirNoSite'=>'Sim'])
             ->paginacao($_POST)
             ->get();
 
             // print_r($_POST);
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
+
+            // print_r($listagem);
         	include 'view/vendalocacao.php';
         }
 
@@ -23,7 +26,7 @@ namespace controller;
 
             $listagem = $imoveis
             ->order($_POST)
-            ->filter(['Status'=>'ALUGUEL'])
+            ->filter(['Status'=>'ALUGUEL', 'ExibirNoSite'=>'Sim'])
             ->paginacao($_POST)
             ->get();
 
@@ -40,7 +43,7 @@ namespace controller;
         	$imoveis = new \Classes\Imoveis;
         	$listagem = $imoveis
             ->order($_POST)
-            ->filter(['Status'=>'VENDA'])
+            ->filter(['Status'=>'VENDA', 'ExibirNoSite'=>'Sim'])
             ->paginacao($_POST)
             ->get();
             
@@ -105,33 +108,12 @@ namespace controller;
 
         }
 
-        public function mailPhp(){
-            $obj = new \Classes\PhpMailer;
-
-            $Post = filter_input_array(INPUT_POST,FILTER_DEFAULT);
-            $result = $obj->sendEmail($Post['email'], $Post['message'], $Post['emailCorretor']  );
-
-            //variaveis locais
-            echo "<pre>";
-            print_r($Post);
-            echo "</pre>";
-
-
-            //incluir a classe phpMailer
-
-
-
-            // $arr['success'] = true;
-            // $arr['err'] = true;
-            // header('Content-type: Application/json');
-            // echo json_encode($arr);
-        }
 
 
         public function listar(){ //listagem de campos disponiveis da api para usu
         	$imoveis = new \Classes\Imoveis;
             echo "<pre>";
-        	print_r($listagem = $imoveis->get());
+        	print_r($listagem = $imoveis->setCurl('imoveis/listarcampos')->get());
             echo "</pre>";
 
         }

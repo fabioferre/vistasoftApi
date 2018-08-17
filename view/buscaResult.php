@@ -98,7 +98,7 @@
                                  <?=!empty($f['AreaTerreno'])?', Àrea desde - '. $f['AreaTerreno'][0].'m² até '. $f['AreaTerreno'][1].'m² ': ''?>
 
                                  <?php 
-                                    foreach ($f as $key => $value) { 
+                                    foreach ($params as $key => $value) { 
                                        if ($value == 'Sim') {  
                                           echo " $key ";
                                        } 

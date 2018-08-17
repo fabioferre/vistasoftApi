@@ -377,7 +377,8 @@
                                        </div>
                                     </div>
 
-                                    <input name="emailCorretor" value="manonick12@gmail.com" hidden>
+                                    <input name="emailCorretor" value="vitorkortez@gmail.com" hidden>
+                                    <input name="nomeCorretor" value="<?=$e['CodigoCorretor']['Nome']?>" hidden>
                                     <input name="linkPropriedade" value="<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>" type="hidden">
                                     <input name="titulo" value="<?=$e['TituloSite']?>" hidden>
                                     <input name="idPropriedade" value="<?=$e['Codigo']?>" hidden>

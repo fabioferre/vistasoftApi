@@ -9,7 +9,7 @@ namespace controller;
             
             $params = $imoveis->getParams();
             $f = $imoveis->FormatFilter($params);
-
+            $f['ExibirNoSite'] = 'Sim';
             // $params = $imoveis->formatStr($params, '%2C','', ','); 
             $params = $imoveis->formatStr($params, 'R%24+','', 'R$');//valores formatado para exibição
             $params = $imoveis->formatStr($params, '%20','', ''); 
@@ -26,7 +26,7 @@ namespace controller;
             $imoveisdes = new \Classes\Imoveis;
             $destaques = $imoveisdes->destaques('');
 
-
+            
             // print_r($f);
             include 'view/buscaResult.php';
  
