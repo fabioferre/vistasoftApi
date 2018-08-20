@@ -1,7 +1,7 @@
 <?php
 namespace Classes;
 
-class App
+abstract class App
 {
 
     private $url;

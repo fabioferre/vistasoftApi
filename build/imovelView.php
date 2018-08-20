@@ -85,7 +85,7 @@ if(isset($key['Codigo'])){
             <div class="info-row amenities hide-on-grid">
                <p>
                   <span>Quartos: <?=$key['Dormitorios']?></span>
-                  <span>Banheiros: <?=$key['TotalBanheiros']?></span>
+                  <!-- <span>Banheiros: <?=$key['TotalBanheiros']?></span> -->
                   <span>m²: <?=$key['AreaTerreno']?> </span>
                </p>
 
@@ -117,7 +117,7 @@ if(isset($key['Codigo'])){
                <div class="info-row amenities">
                   <p>
                      <span>Quartos: <?=$key['Dormitorios']?></span>
-                     <span>Banheiros: <?=$key['TotalBanheiros']?></span>
+                     <!-- <span>Banheiros: <?=$key['TotalBanheiros']?></span> -->
                      <span>m²: <?=$key['AreaTerreno']?></span>
                   </p>
                   <p><?=$key['Categoria']?></p>

@@ -4,7 +4,7 @@ namespace Classes;
 
 
 
-class Imoveis extends App
+final class Imoveis extends App
 {
 
     protected $curl = 'imoveis/listar';

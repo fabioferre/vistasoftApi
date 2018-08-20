@@ -2,7 +2,7 @@
 
 namespace controller;
 
-    class Portfolio{
+     class Portfolio{
         
         public function index(){ //view de listagem de imoveis com aluguel e venda
         	$imoveis = new \Classes\Imoveis;
