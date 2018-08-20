@@ -354,7 +354,7 @@
                         <div class="widget widget-contact-agent ">
                            <div class="widget-body">
                               <div class="form-small">
-                                 <form method="post" action="/<?=pasta?>/build/plugin/phpMailer/sendPhpMailer.php" id="contactForm"  >
+                                 <form method="post" action="/<?=pasta?>/build/lib/phpMailer/sendMail.php" id="contactForm"  >
                                     <div class="media agent-media">
                                        <div class="media-left">
                                           <a href="#">

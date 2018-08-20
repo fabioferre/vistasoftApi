@@ -91,7 +91,7 @@ final class Imoveis extends App
             return $retorno;
         }
     }
-
+   
 
     public function formatStr($var, $str,$str2,$rpl){
         $retorno = str_replace($str, $rpl, $var);
