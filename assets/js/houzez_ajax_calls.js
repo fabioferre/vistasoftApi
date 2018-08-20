@@ -988,6 +988,7 @@ jQuery(document).ready(function ($) {
             var $this = $(this);
             var $form = $this.parents( 'form' );
             var $result = $form.find('.form_messages');
+
             $.ajax({
                 url: $form.attr('action'),
                 data: $form.serialize(),
@@ -995,17 +996,18 @@ jQuery(document).ready(function ($) {
                 dataType: "JSON",
 
                 beforeSend: function( ) {
+                    $result.html('');
                     $this.children('i').remove();
                     $this.prepend('<i class="fa-left '+process_loader_spinner+'"></i>');
                 },
                 success: function(response) {
                     if( response.success ) {
                         // $this.html('Solicitado!');
-                        $result.empty().append(response.msg);
+                        $result.html(response.msg);
                         $form.find('input').val('');
                         $form.find('textarea').val('');
                     } else {
-                        $result.empty().append(response.msg);
+                        $result.html(response.msg);
                     }
                 },
                 complete: function(){
@@ -1014,7 +1016,6 @@ jQuery(document).ready(function ($) {
                 }
             });
 
-            // var name = $('#name').val();
         });
 
         /*--------------------------------------------------------------------------

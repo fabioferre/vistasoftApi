@@ -2,9 +2,9 @@
 
 $e = isset($_POST)? $_POST: '';
 $subject = $e['message'] .' - '. date('H:i'). ' - '. date("d/m/Y");
-// echo "<pre>";
-// print_r($e);
-// echo "</pre>";
+echo "<pre>";
+print_r($e);
+echo "</pre>";
 
 $message = '<div style="background-color: #f8f5ec; word-wrap: break-word; border:1px solid #000000;">
                 <h3>'.$e['idPropriedade'].' - '.$e['titulo'].' </h3>
@@ -21,63 +21,61 @@ $message = '<div style="background-color: #f8f5ec; word-wrap: break-word; border
                 </p>
             </div>';
 
+
 if (!$e['email'] || !$e['name'] || !$e['phone']) {
+    if (!$e['email']) {
+        $campos = 'E-mail';
+    }
+    if (!$e['name']) {
+       $campos .= ' Nome ';
+    }
+    if (!$e['phone']) {
+       $campos .= ' Telefone ';
+    }
     $arr['success'] = false;
-    $arr['msg'] = 'Preencha os campos <b>Nome, Telefone e Email</b>';
+    $arr['msg'] = 'Preencha os campos <b>'.$campos.'</b>';
     echo json_encode($arr);
     die();
 }
 
 
 
-require_once("PHPMailerAutoload.php");
-// Inicia a classe PHPMailer
-$mail = new PHPMailer(true);
- 
-// Define os dados do servidor e tipo de conexão
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$mail->IsSMTP(); // Define que a mensagem será SMTP
- 
-try {
-     $mail->Host = 'smtp.gmail.com'; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
-     $mail->SMTPAuth   = false;  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
-     $mail->SMTPSecure = "ssl"; 
-     $mail->Port       = 467; //  Usar 587 porta SMTP
-     $mail->Username = 'vitorkortez@gmail.com'; // Usuário do servidor SMTP (endereço de email)
-     $mail->Password = 'manonickmdjm10'; // Senha do servidor SMTP (senha do email usado)
- 
-     //Define o remetente
-     // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=    
-     $mail->SetFrom($e['email'], $e['name']); //Seu e-mail
-     $mail->AddReplyTo($e['email'], $e['name']); //Seu e-mail
-     $mail->Subject = $subject;//Assunto do e-mail
- 
- 
-     //Define os destinatário(s)
-     //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-     $mail->AddAddress($e['emailCorretor'], $e['nomeCorretor']);
- 
-     //Campos abaixo são opcionais 
-     //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-     //$mail->AddCC('destinarario@dominio.com.br', 'Destinatario'); // Copia
-     //$mail->AddBCC('destinatario_oculto@dominio.com.br', 'Destinatario2`'); // Cópia Oculta
-     //$mail->AddAttachment('images/phpmailer.gif');      // Adicionar um anexo
- 
- 
-     //Define o corpo do email
-     $mail->MsgHTML($message); 
- 
-     ////Caso queira colocar o conteudo de um arquivo utilize o método abaixo ao invés da mensagem no corpo do e-mail.
-     //$mail->MsgHTML(file_get_contents('arquivo.html'));
- 
-     $mail->Send();
-     $arr['success'] = true;
-     $arr['msg'] = 'Solicitação feita com sucesso';
-     echo json_encode($arr);
-    //caso apresente algum erro é apresentado abaixo com essa exceção.
-    }catch (phpmailerException $e) {
-        $arr['success'] = false;
-        $arr['msg'] = $e->errorMessage() ;
-        echo json_encode($arr); //Mensagem de erro costumizada do PHPMailer
+
+require 'PHPMailerAutoload.php';         // https://github.com/PHPMailer/PHPMailer
+
+$mail = new PHPMailer;
+$mail->setLanguage('br');                             // Habilita as saídas de erro em Português
+$mail->CharSet='UTF-8';                               // Habilita o envio do email como 'UTF-8'
+$mail->SMTPDebug = 3;                               // Habilita a saída do tipo "verbose"
+$mail->isSMTP();                                      // Configura o disparo como SMTP
+$mail->Host = 'smtplw.com.br';                        // Especifica o enderço do servidor SMTP da Locaweb
+$mail->SMTPAuth = true;                               // Habilita a autenticação SMTP
+$mail->Username = 'T3RR4L1M4';                        // Usuário do SMTP
+$mail->Password = 'terralima2015';                          // Senha do SMTP
+$mail->SMTPSecure = 'tls';                            // Habilita criptografia TLS | 'ssl' também é possível
+$mail->Port = 587;                                    // Porta TCP para a conexão
+$mail->From = $e['emailCorretor'];                          // Endereço previamente verificado no painel do SMTP
+$mail->FromName = $e['nomeCorretor'];                     // Nome no remetente
+$mail->addAddress($e['email'], $e['name']);// Acrescente um destinatário
+// $mail->addAddress('joao@exemplo.com');                // O nome é opcional
+// $mail->addReplyTo('info@exemplo.com', 'Informação');
+// $mail->addCC('cc@exemplo.com');
+// $mail->addBCC('bcc@exemplo.com');
+
+$mail->isHTML(true);                                  // Configura o formato do email como HTML
+
+$mail->Subject = $subject;
+$mail->Body    = $message;
+// $mail->AltBody = 'Esse é o corpo da mensagem em formato "plain text" para clientes de email não-HTML';
+
+if(!$mail->send()) {
+    echo 'A mensagem não pode ser enviada ';
+    $arr['msg'] = $mail->ErrorInfo;
+    $arr['success'] = false;
+    echo json_encode($arr); //Mensagem de erro costumizada do PHPMailer
+} else {
+    $arr['success'] = true;
+    $arr['msg'] = 'Solicitação feita com sucesso';
+    echo json_encode($arr);
 }
-?>
+
