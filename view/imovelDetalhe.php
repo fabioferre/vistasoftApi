@@ -379,7 +379,7 @@
 
                                     <input name="emailCorretor" value="<?=$e['Corretor'][$e['CodigoCorretor']]['Email']?>" hidden>
                                     <input name="nomeCorretor" value="<?=$e['Corretor'][$e['CodigoCorretor']]['Nome']?>" hidden>
-                                    <input name="linkPropriedade" value="<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>" type="hidden">
+                                    <input name="linkPropriedade" value="http://www.terralimaimoveis.com.br/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>" type="hidden">
                                     <input name="titulo" value="<?=$e['TituloSite']?>" hidden>
                                     <input name="idPropriedade" value="<?=$e['Codigo']?>" hidden>
                                   
@@ -400,7 +400,7 @@
                                        <textarea class="form-control" name="message" rows="4" placeholder="Descrição">Olá, estou interessado em [ <?=$e['TituloSite'] .' - '. $e['Codigo']  ?>]</textarea>
                                     </div>
 
-                                    <button type="submit" class="agent_contact_form btn btn-secondary btn-block" >Solicitar informação</button>
+                                    <button type="button" class="agent_contact_form btn btn-secondary btn-block" >Solicitar informação</button>
                                     <div class="form_messages"></div>
                                  </form>
                               </div>

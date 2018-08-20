@@ -1,21 +1,21 @@
 <?php
 $e = $_POST ;
-$subject = $e['titulo']. ' - '. date('H:i'). ' - '. date("d/m/Y");
+$subject = $e['titulo']. ' ['.$e['idPropriedade'].'] '. date('H:i'). ' - '. date("d/m/Y");
 
 
 require_once('contents.php');
 
-require_once("class.phpmailer.php");
-require_once("class.smtp.php");
+require_once("PHPMailerAutoload.php");
 final class SendMail{
     private $mail;
     function __construct($obj){
         $this->mail = $obj;
-        $this->mail->Host = 'smtp.terralimaimoveis.com.br'; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
+        $this->mail->Host = 'smtp.mailtrap.io'; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
+        $this->mail->SMTPSecure   = 'plain';  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
         $this->mail->SMTPAuth   = true;  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
-        $this->mail->Port       = 587; //  Usar 587 porta SMTP
-        $this->mail->Username = 'contato@terralimaimoveis.com.br'; // Usuário do servidor SMTP (endereço de email)
-        $this->mail->Password = 'terralima@2015'; // Senha do servidor SMTP (senha do email usado)
+        $this->mail->Port       = 2525; //  Usar 587 porta SMTP
+        $this->mail->Username = '692d92c8887da4'; // Usuário do servidor SMTP (endereço de email)
+        $this->mail->Password = '46209a4d199553'; // Senha do servidor SMTP (senha do email usado)
     }
 
     public function checkout($email, $tel, $nome){
@@ -31,10 +31,11 @@ final class SendMail{
 
         if (!empty($campos)) {
             $arr['success'] = false;
-            $arr['msg'] = 'Preencher campos <b>'.$campos.'</b>';
+            $arr['msg'] = 'Preencher campo <b>'.$campos.'</b>';
             echo json_encode($arr);
-            die();
+            exit();
         }
+        return $this;
 
     }
 
@@ -56,6 +57,7 @@ final class SendMail{
 
     public function enviar(){
         $arr = array();
+       
         try{
            $this->mail->Send(); 
            $arr['success'] = true;
@@ -71,18 +73,19 @@ final class SendMail{
 
 
 // Inicia a classe PHPMailer
-$mail = new PHPMailer(true);
+$mail = new PHPMailer();
 $mail->IsSMTP(); // Define que a mensagem será SMTP
-$mail->SMTPDebug = 3; 
+$mail->SMTPDebug = 0; 
 
 $send = new SendMail($mail);
 $send
-// ->checkout($e['email'],$e['phone'],$e['name'])
-->setRemetente('contato@terralimaimoveis.com.br', 'TerraLima')
-->setDestinario('vitor.kevin@tagmus.com.br', 'teste')
+->checkout($e['email'],$e['phone'],$e['name'])
+->setRemetente($e['email'], $e['name'])
+->setDestinario($e['emailCorretor'], $e['nomeCorretor'])
 ->setMenssagem($subject ,$message)
 ->enviar();
 
+// echo $mail->ErrorInfo; 
 
 
 // Define os dados do servidor e tipo de conexão
