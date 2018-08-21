@@ -377,7 +377,7 @@
                                        </div>
                                     </div>
 
-                                    <input name="emailCorretor" value="<?=$e['Corretor'][$e['CodigoCorretor']]['Email']?>" hidden>
+                                    <input name="emailCorretor" value="desenvolvimento@terralimaimoveis.com.br" hidden>
                                     <input name="nomeCorretor" value="<?=$e['Corretor'][$e['CodigoCorretor']]['Nome']?>" hidden>
                                     <input name="linkPropriedade" value="http://www.terralimaimoveis.com.br/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>" type="hidden">
                                     <input name="titulo" value="<?=$e['TituloSite']?>" hidden>
