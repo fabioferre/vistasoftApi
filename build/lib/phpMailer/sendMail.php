@@ -10,12 +10,12 @@ final class SendMail{
     private $mail;
     function __construct($obj){
         $this->mail = $obj;
-        $this->mail->Host = 'smtp.mailtrap.io'; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
-        $this->mail->SMTPSecure   = 'plain';  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
+        $this->mail->Host = 'smtp.terralimaimoveis.com.br'; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
+        $this->mail->SMTPSecure   = 'tsl';  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
         $this->mail->SMTPAuth   = true;  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
-        $this->mail->Port       = 2525; //  Usar 587 porta SMTP
-        $this->mail->Username = '692d92c8887da4'; // Usuário do servidor SMTP (endereço de email)
-        $this->mail->Password = '46209a4d199553'; // Senha do servidor SMTP (senha do email usado)
+        $this->mail->Port       = 587; //  Usar 587 porta SMTP
+        $this->mail->Username = 'desenvolvimento@terralimaimoveis.com.br'; // Usuário do servidor SMTP (endereço de email)
+        $this->mail->Password = 'terralima2015@'; // Senha do servidor SMTP (senha do email usado)
     }
 
     public function checkout($email, $tel, $nome){
@@ -56,18 +56,24 @@ final class SendMail{
     }
 
     public function enviar(){
-        $arr = array();
+        $arr = array('error' => false, 'success'=> false);
        
         try{
-           $this->mail->Send(); 
-           $arr['success'] = true;
-           $arr['msg'] = 'Solicitação Enviada';
+
+           if ($this->mail->Send()) {
+                $arr['success'] = true;
+                $arr['msg'] = 'Solicitação Enviada';
+           }else{
+                $arr['error'] = true;
+                $arr['msg'] = $this->mail->ErrorInfo;
+           }
+
         }catch (phpmailerException $e) {
             $arr['success'] = false;
             $arr['msg'] = $e->errorMessage(); 
         }
+
         echo json_encode($arr);
-        
     }
 }
 

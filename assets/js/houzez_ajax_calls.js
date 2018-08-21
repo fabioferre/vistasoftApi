@@ -1009,6 +1009,10 @@ jQuery(document).ready(function ($) {
                     } else {
                         $result.html(response.msg);
                     }
+
+                    if (response.error) {
+                        console.log(response.msg);
+                    }
                 },
                 complete: function(){
                     $this.children('i').removeClass(process_loader_spinner);
