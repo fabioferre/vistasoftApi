@@ -11,11 +11,18 @@ final class SendMail{
     function __construct($obj){
         $this->mail = $obj;
         $this->mail->Host = 'smtp.terralimaimoveis.com.br'; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
-        $this->mail->SMTPSecure   = 'tsl';  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
+        $this->mail->SMTPSecure   = 'ssl';  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
         $this->mail->SMTPAuth   = true;  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
         $this->mail->Port       = 587; //  Usar 587 porta SMTP
         $this->mail->Username = 'desenvolvimento@terralimaimoveis.com.br'; // Usuário do servidor SMTP (endereço de email)
         $this->mail->Password = 'terralima2015@'; // Senha do servidor SMTP (senha do email usado)
+        $this->mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
     }
 
     public function checkout($email, $tel, $nome){

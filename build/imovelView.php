@@ -86,7 +86,7 @@ if(isset($key['Codigo'])){
                <p>
                   <span>Quartos: <?=$key['Dormitorios']?></span>
                   <!-- <span>Banheiros: <?=$key['TotalBanheiros']?></span> -->
-                  <span>m²: <?=$key['AreaTerreno']?> </span>
+                  <span>m²: <?=!empty($key['AreaTerreno'])? $key['AreaTerreno']: $key['AreaPrivativa']?> </span>
                </p>
 
                <p><?=$key['Categoria']?></p>
@@ -108,7 +108,9 @@ if(isset($key['Codigo'])){
             </div>
 
             <div class="info-row phone text-right">
-               <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary" style="background-color:#727272">Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+               <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary" style="background-color:#727272">
+                  Detalhes <i class="fa fa-angle-right fa-right"></i>
+               </a>
             </div>
          </div>
 
@@ -118,14 +120,16 @@ if(isset($key['Codigo'])){
                   <p>
                      <span>Quartos: <?=$key['Dormitorios']?></span>
                      <!-- <span>Banheiros: <?=$key['TotalBanheiros']?></span> -->
-                     <span>m²: <?=$key['AreaTerreno']?></span>
+                     <span>m²: <?=!empty($key['AreaTerreno'])? $key['AreaTerreno']: $key['AreaPrivativa']?></span>
                   </p>
                   <p><?=$key['Categoria']?></p>
                </div>
             </div>
             <div class="cell">
                <div class="phone">
-                  <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary"  style="background-color:#727272"> Detalhes <i class="fa fa-angle-right fa-right"></i></a>
+                  <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary" style="background-color:#727272"> 
+                     Detalhes <i class="fa fa-angle-right fa-right"></i>
+                  </a>
                </div>
             </div>
          </div>

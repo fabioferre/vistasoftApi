@@ -8,7 +8,7 @@ final class Imoveis extends App
 {
 
     protected $curl = 'imoveis/listar';
-    protected $dados = ['fields' => ['Finalidade','ValorLocacao','ValorVenda','Bairro','Cidade','Dormitorios','Status','FotoDestaque','TotalBanheiros','AreaTerreno','AreaConstruida','Categoria','ExibirNoSite','DescricaoWeb','TituloSite','Codigo','CEP','Pais','UF','EmDestaque', 'SuperDestaqueWeb','DataCadastro'],];
+    protected $dados = ['fields' => ['Finalidade','ValorLocacao','ValorVenda','Bairro','Cidade','Dormitorios','Status','FotoDestaque','TotalBanheiros','AreaTerreno','AreaConstruida','AreaPrivativa' ,'Categoria','ExibirNoSite','DescricaoWeb','TituloSite','Codigo','CEP','Pais','UF','EmDestaque', 'SuperDestaqueWeb','DataCadastro'],];
 
     public function setCurl($curl){
         $this->curl = $curl;
