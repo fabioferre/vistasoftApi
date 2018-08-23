@@ -13,7 +13,7 @@ if(isset($key['Codigo'])){
                <!-- <span class="label-featured label label-success"></span> -->
                <div class="label-wrap label-right hide-on-list">
                   <span class="label-status label-status-180 label label-default">
-                     <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'venda'?'venda': 'locacao'?>"><?=$key['Status']?></a>
+                     <a href="/<?=pasta?>/Portfolio/<?=$key['Status'] == 'locacao'?'locacao': 'venda'?>"><?=$key['Status']?></a>
                   </span>           
                </div>
 
@@ -75,7 +75,7 @@ if(isset($key['Codigo'])){
 
                   <?=!empty($key['UF'])?' - '.$key['UF'].' ': '' ?>
 
-                  <?=!empty($key['CEP'])?','. $key['CEP'].', ': '' ?>
+                  <!-- <?=!empty($key['CEP'])?','. $key['CEP'].', ': '' ?> -->
 
                   <?=!empty($key['Pais'])? $key['Pais']: '' ?>
 
@@ -127,7 +127,7 @@ if(isset($key['Codigo'])){
             </div>
             <div class="cell">
                <div class="phone">
-                  <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary" style="background-color:#727272"> 
+                  <a href="/<?=pasta?>/Portfolio/imovel/<?=$key['Codigo']?>/<?=$key['TituloSite']?>" class="btn btn-primary" style="background-color:#727272; border:none"> 
                      Detalhes <i class="fa fa-angle-right fa-right"></i>
                   </a>
                </div>
