@@ -22,9 +22,9 @@
     </script>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//s.w.org">
-    <link rel="alternate" type="application/rss+xml" title="Feed para Terra Lima Imóveis »" href="http://novoterralima.com/feed/">
-    <link rel="alternate" type="application/rss+xml" title="Feed de comentários para Terra Lima Imóveis »" href="http://novoterralima.com/comments/feed/">
-    <link rel="alternate" type="application/rss+xml" title="Feed para Terra Lima Imóveis » Venda / Locação Situação" href="http://novoterralima.com/status/venda-e-locacao/feed/">
+    <link rel="alternate" type="application/rss+xml" title="Feed para Terra Lima Imóveis »" href="http://terralimaimoveis.com.br/feed/">
+    <link rel="alternate" type="application/rss+xml" title="Feed de comentários para Terra Lima Imóveis »" href="http://terralimaimoveis.com.br/comments/feed/">
+    <link rel="alternate" type="application/rss+xml" title="Feed para Terra Lima Imóveis » Venda / Locação Situação" href="http://terralimaimoveis.com.br/status/venda-e-locacao/feed/">
  
 
 <!--     <script type="text/javascript">

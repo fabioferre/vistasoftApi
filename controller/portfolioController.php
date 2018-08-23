@@ -95,7 +95,9 @@ namespace controller;
             
             if (empty($e['status']) ) { //verifica se tem algum erro com codigo
                 $similares = new \Classes\Imoveis;
-                $sml = $similares->filter(['Status' => $e['Status'], 'Categoria'=> $e['Categoria'] ]) ->paginacao(['quantidade'=> 4])->get(); //imóveis similares
+                $sml = $similares
+                ->filter(['Status' => $e['Status'], 'Categoria'=> $e['Categoria'] ])
+                ->order([''])->paginacao(['quantidade'=> 4])->get(); //imóveis similares
 
                 $e['ValorVenda'] = $imoveis->formataValor($e['ValorVenda'], 1000);
                 $e['ValorLocacao'] = $imoveis->formataValor($e['ValorLocacao'], 100);

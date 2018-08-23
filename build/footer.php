@@ -11,7 +11,7 @@
                   <div class="textwidget">
                      <p>AV. BRG. FARIA LIMA, 1982, 12° ANDAR<br>
                         +55 11 3628-4111<br>
-                        CONTATO@TERRALIMAIMOVEIS.COM.BR
+                        CONTATO@novoterralima.com
                      </p>
                      <p>CRECI: J27088</p>
                   </div>
@@ -87,7 +87,7 @@
    var HOUZEZ_ajaxcalls_vars = {
       "houzez_rtl":"no",
       "redirect_type":"same_page",
-      "login_redirect":"http:\/\/www.terralima.com.br\/status\/venda-e-locacao\/",
+      "login_redirect":"http:\/\/www.terralima.com.br\/imoveis\/Portfolio\/",
       "login_loading":"Sending user info, please wait...",
       "direct_pay_text":"Processing, Please wait...",
       "user_id":"0",

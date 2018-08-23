@@ -160,18 +160,21 @@
                                      <span class="sr-only">Próximo</span>
                                    </a>
                                  </div>
+
+                                 
                               </div>
+
                            </div>
 
 
                            <div class="media-tabs">
-                         <!--      <ul class="media-tabs-list">
-                                 <li data-placement="bottom" data-toggle="tooltip" data-original-title="Map View">
-                                    <a href="#singlePropertyMap" data-toggle="tab">
-                                    <i class="fa fa-map"></i>
+                              <ul class="media-tabs-list">
+                                 <li data-placement="bottom" data-toggle="tooltip" data-original-title="3d view">
+                                    <a  data-toggle="modal" href="#myModal">
+                                      <i class="far fa-eye"></i>
                                     </a>
                                  </li>
-                              </ul> -->
+                              </ul>
                               <ul class="actions">
                                  <li class="share-btn">
                                     <div class="share_tooltip tooltip_left fade">
@@ -419,9 +422,68 @@
          <!--end detail content-->
       </div>
 
+
+
+      
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Visualização 3d </h4>
+            </div>
+
+     
+            <div class="modal-body">
+                <iframe src="https://my.matterport.com/showcase-beta?m=mR3ZRrLscgA&play=1" 
+                frameborder="0" allowfullscreen allow="vr" id="showcase_iframe"  style="height: 450px; width: 100%;">
+    
+                </iframe>
+            </div>
+
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
       <?php
          include 'build/footer.php';
       ?>
+
+
    </body>
+   <script type="text/javascript">
+
+    jQuery('#view3d').click(function(){
+        var iframe = jQuery('#showcase_iframe');
+        iframe.addEventListener('load', showcaseLoader, true);
+
+        function showcaseLoader() {
+            try {
+                showcase = window.SHOWCASE_SDK.connect(
+                iframe, // Obtained earlier
+                    'Terralima2015', // Your API key
+                    '3.0' // SDK version you are using
+                    // Use the latest version you can for your app
+                ).then(loadedShowcaseHandler).catch(handleError);
+
+                // What to do if action was successful
+                function successCallback(message) { 
+                    // console.log(message); 
+                }
+
+                // What to do if the action failed
+                function errorCallback(err) {
+                    console.error(err); 
+                }
+            }
+            catch (e) {
+                console.error(e);
+            }
+        }
+
+      });
+   </script>
 </html>
 
