@@ -31,6 +31,7 @@
                               <div class="table-cell limitText ">
                                  <h1><?=$e['Codigo']?> - <?=$e['TituloSite']?> </h1>
                               </div>
+
                               <div class="table-cell hidden-sm hidden-xs">
                                  <span class="label-wrap">
                                     <span class="label-status label-status-23 label label-default">
@@ -169,13 +170,13 @@
 
 
                            <div class="media-tabs">
-                              <ul class="media-tabs-list">
+                             <!--  <ul class="media-tabs-list">
                                  <li data-placement="bottom" data-toggle="tooltip" data-original-title="3d view">
                                     <a  data-toggle="modal" href="#myModal">
                                       <i class="far fa-eye"></i>
                                     </a>
                                  </li>
-                              </ul>
+                              </ul> -->
                               <ul class="actions">
                                  <li class="share-btn">
                                     <div class="share_tooltip tooltip_left fade">
@@ -428,7 +429,7 @@
       
 
       <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+     <!--  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content ">
             <div class="modal-header">
@@ -444,9 +445,9 @@
                 </iframe>
             </div>
 
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+          </div>
+        </div>
+      </div> -->
 
       <?php
          include 'build/footer.php';
