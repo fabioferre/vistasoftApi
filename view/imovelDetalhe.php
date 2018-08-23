@@ -2,13 +2,14 @@
 <html lang="pt-BR">
    <head>
       <title><?=$e['TituloSite']?></title>
-      <meta property='og:url' content='http://novoterralima.com/imovel/apartamento-reformado-e-mobiliado-tl1639/'/>
-      <meta property='og:title' content='Reformado e mobiliado TL1639'/>
-      <meta property='og:description' content='Descrição'/>
+      <meta property='og:url' content='http://www.terralimaimoveis.com.br/<?=pasta?>/Imoveis/imovel/<?=$e['Codigo']?>/<?=$e['TituloSite']?>'/>
+      <meta property='og:title' content='<?=$e['TituloSite']?>'/>
+      <meta property='og:description' content='<?=$e['DescricaoWeb']?>'/>
        <?php
          include 'build/head.php';
       ?>
       <link rel="stylesheet" type="text/css" href="/<?=pasta?>/assets/css/mediaqueries.css">
+      <link rel="stylesheet" type="text/css" href="src='https://static.matterport.com/showcase-sdk/1.2.0-0-g1d0799d/sdk.js'>">
    </head>
 
    <body class="property-template-default single single-property postid-816  transparent- wpb-js-composer js-comp-ver-5.2.1 vc_responsive">
