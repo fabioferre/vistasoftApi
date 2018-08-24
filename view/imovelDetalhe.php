@@ -359,7 +359,7 @@
                         <div class="widget widget-contact-agent ">
                            <div class="widget-body">
                               <div class="form-small">
-                                 <form method="post" action="/<?=pasta?>/build/lib/phpMailer/sendMail.php" id="contactForm"  >
+                                 <form method="post" action="/<?=pasta?>/Imoveis/leadMail" id="contactForm"  >
                                     <div class="media agent-media">
                                        <div class="media-left">
                                           <a href="#">
@@ -382,8 +382,7 @@
                                        </div>
                                     </div>
 
-                                    <input name="emailCorretor" value="desenvolvimento@terralimaimoveis.com.br" hidden>
-                                    <input name="nomeCorretor" value="<?=$e['Corretor'][$e['CodigoCorretor']]['Nome']?>" hidden>
+                                    
                                     <input name="linkPropriedade" value="http://www.terralimaimoveis.com.br/<?=pasta?>/Portfolio/imovel/<?=$e['Codigo']?>" type="hidden">
                                     <input name="titulo" value="<?=$e['TituloSite']?>" hidden>
                                     <input name="idPropriedade" value="<?=$e['Codigo']?>" hidden>
