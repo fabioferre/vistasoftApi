@@ -15,7 +15,7 @@ namespace controller;
         $email = new \SendGrid\Mail\Mail(); 
         $email->setFrom($_POST['email'], $_POST['name']);
         $email->setSubject($subject);
-        $email->addTo("contato@tagmus.com.br", "Contato");
+        $email->addTo("contato@terralimaimoveis.com.br", "Contato");
        
         $email->addContent(
             "text/html", "<a href=".$_POST['linkPropriedade']."><strong>".$_POST['titulo']."</strong></a>
