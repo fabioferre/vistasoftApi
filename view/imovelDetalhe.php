@@ -277,7 +277,7 @@
                                           </li>
 
                                           <li><strong>Tamanho do imóvel:</strong> 
-                                            <?=$e['AreaConstruida'] > 0? $e['AreaConstruida'].' m²': 'não infomado' ?>
+                                            <?=$e['AreaConstruida'] > 0? $e['AreaConstruida'].' m²': $e['AreaPrivativa'].' m²'?>
                                           </li>
 
                                           <li><strong>Área do terreno:</strong> 

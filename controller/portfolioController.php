@@ -74,6 +74,7 @@ namespace controller;
                 "Vagas",
                 "AreaConstruida",
                 "AreaTerreno",
+                "AreaPrivativa",
                 "DescricaoWeb",
                 "UF",
                 "Pais",
